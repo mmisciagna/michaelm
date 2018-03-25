@@ -15,6 +15,13 @@
     <link href="/dist/css/main.min.css" rel="stylesheet">
   </head>
   <body>
+    {% import '/partials/macros.jinja' as macros %}
+    {% include "/partials/header.jinja" %}
+    {% include "/partials/mobile-nav.jinja" %}
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+    {% include "/partials/footer.jinja" %}
     <script src="/dist/js/main.min.js"></script>
   </body>
 </html>

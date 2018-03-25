@@ -56,7 +56,7 @@ gulp.task('serve', ['scripts', 'sass'], function() {
 
   gulp.watch(Config.JS_SRC_DIR + '**', ['scripts']);
   gulp.watch(Config.SCSS_SRC_DIR + '**', ['sass']);
-  gulp.watch('www/**.html').on('change', browserSync.reload);
+  gulp.watch('www/**/*.jinja').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);

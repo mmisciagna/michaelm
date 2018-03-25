@@ -30,3 +30,4 @@ dist/
 *.sketch
 *.psd
 _deps
+*.pyc

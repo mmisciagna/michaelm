@@ -1,0 +1,24 @@
+<div class="header--offset"></div>
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <h1 style="display: none;">Michael Misciagna</h1>
+      <a href="/">
+        <img src="/dist/img/logo.svg"
+            alt="Michael M."
+            border="0">
+      </a>
+    </div>
+    <div class="header__menu">
+      <button class="header__button js-menu-btn"
+          aria-label="open mobile nav">
+        <i class="material-icons">menu</i>
+      </button>
+      <button class="header__button js-close-btn hide"
+          aria-label="close mobile nav">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+    {% include "/partials/nav.jinja" %}
+  </div>
+</header>
