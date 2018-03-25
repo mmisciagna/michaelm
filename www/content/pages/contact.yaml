@@ -1,0 +1,20 @@
+title: Contact
+path: /contact/
+order: 3
+
+partials:
+  - partial: section
+    headline: Whether you need a Front End Developer, Web Designer or just some technical advice, send me a line.
+
+  - partial: form
+    fields:
+      - type: text
+        label: Name
+      - type: textarea
+        label: Message
+    btns:
+      - type: submit
+        label: Send
+      - type: reset
+        label: Reset
+        reverse: true

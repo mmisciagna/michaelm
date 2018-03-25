@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Michael Misciagna" name="author">
-    <meta name="description" content="{{ description }}">
+    <meta name="description" content="Hello, my name is Michael. I am a Front End Developer and Web Designer living in the San Francisco Bay Area.">
     <title>{{ title }} | Michael M.</title>
     <link href="/dist/img/favicon-48x48.png" rel="icon" sizes="48x48">
     <link href="/dist/img/favicon-72x72.png" rel="icon" sizes="72x72">
@@ -19,25 +19,17 @@
     {% include "/partials/header.jinja" %}
     {% include "/partials/mobile-nav.jinja" %}
     <main class="main">
-      {% for section in content %}
-        <section class="section">
-          {% if section.headline %}
-            {% include "/partials/headline.jinja" %}
-          {% endif %}
-
-          {% if section.title %}
-            {% include "/partials/title.jinja" %}
-          {% endif %}
-
-          {% if section.figure %}
-            {% include "/partials/figure.jinja" %}
-          {% endif %}
-
-          {% if section.paragraphs %}
-            {% include "/partials/paragraphs.jinja" %}
-          {% endif %}
-        </section>
-      {% endfor %}
+      {% if content.partials %}
+        {% for field in content.partials %}
+          {% set partial_filename = [field.partial, '.jinja']|join('') %}
+          {% set partial_path = ['partials/', partial_filename]|join('') %}
+          {% with partial = field %}
+            {% include partial_path ignore missing with context %}
+          {% endwith %}
+        {% endfor %}
+      {% else %}
+        {% block content %}{% endblock %}
+      {% endif %}
     </main>
     {% include "/partials/footer.jinja" %}
     <script src="/dist/js/main.min.js"></script>

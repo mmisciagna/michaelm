@@ -1,0 +1,7 @@
+title: Work
+path: /work/
+order: 2
+
+partials:
+  - partial: section
+    headline: Take a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.

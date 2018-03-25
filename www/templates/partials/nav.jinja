@@ -3,13 +3,13 @@
   <ul class="nav__list"
       role="menubar"
       aria-label="Navigation menubar">
-    {% for item in nav %}
+    {% for item in nav|sort(attribute='order') %}
       <li class="nav__list-item"
           role="none">
-        <a class="nav__link {% if item.label == title %}nav__link--active{% endif %}"
+        <a class="nav__link {% if item.label|lower == content.title|lower %}nav__link--active{% endif %}"
             href="{{ item.path }}"
             role="menuitem">
-          {{ item.label }}
+          {{ item.label|capitalize }}
         </a>
       </li>
     {% endfor %}

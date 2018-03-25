@@ -1,0 +1,30 @@
+<section class="section">
+  <form class="form"
+      action="contact.php"
+      method="post"
+      enctype="text/plain">
+    {% for field in partial.fields %}
+      <div class="form__field">
+        <div class="form__label">
+          {{ field.label }} <sup>*</sup>
+        </div>
+        {% if field.type != "textarea" %}
+          <input class="form__input"
+              type="{{ field.type }}"
+              name="{{ field.label|lower }}"
+              required>
+        {% else %}
+          <textarea class="form__input"
+              type="{{ field.type }}"
+              name="{{ field.label|lower }}"
+              required></textarea>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <div class="form__actions">
+      {% for btn in partial.btns %}
+        {% include "/partials/button.jinja" %}
+      {% endfor %}
+    </div>
+  </form>
+</section>

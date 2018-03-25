@@ -5,13 +5,13 @@
     <ul class="mobile-nav__list"
         role="menu"
         aria-label="Navigation menu">
-      {% for item in nav %}
+      {% for item in nav|sort(attribute='order') %}
         <li class="mobile-nav__list-item"
             role="none">
-          <a class="mobile-nav__link mobile-nav__link--{{ loop.index }} {% if item.label == title %}mobile-nav__link--active{% endif %}"
+          <a class="mobile-nav__link mobile-nav__link--{{ loop.index }} {% if item.label|lower == content.title|lower %}mobile-nav__link--active{% endif %}"
               href="{{ item.path }}"
               role="menuitem">
-            {{ item.label }}
+            {{ item.label|capitalize }}
           </a>
         </li>
       {% endfor %}

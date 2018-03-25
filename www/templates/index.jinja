@@ -1,0 +1,24 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+  {{ stuff }}
+  {% for section in content %}
+    <section class="section">
+      {% if section.headline %}
+        {% include "/partials/headline.jinja" %}
+      {% endif %}
+
+      {% if section.title %}
+        {% include "/partials/title.jinja" %}
+      {% endif %}
+
+      {% if section.figure %}
+        {% include "/partials/figure.jinja" %}
+      {% endif %}
+
+      {% if section.paragraphs %}
+        {% include "/partials/paragraphs.jinja" %}
+      {% endif %}
+    </section>
+  {% endfor %}
+{% endblock %}

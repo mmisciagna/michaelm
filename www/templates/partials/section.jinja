@@ -1,0 +1,17 @@
+<section class="section">
+  {% if partial.headline %}
+    {% include "/partials/headline.jinja" ignore missing %}
+  {% endif %}
+
+  {% if partial.title %}
+    {% include "/partials/title.jinja" %}
+  {% endif %}
+
+  {% if partial.figure %}
+    {% include "/partials/figure.jinja" %}
+  {% endif %}
+
+  {% if partial.paragraphs %}
+    {% include "/partials/paragraphs.jinja" %}
+  {% endif %}
+</section>

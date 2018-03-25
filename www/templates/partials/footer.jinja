@@ -2,13 +2,13 @@
   <div class="footer__inner">
     <ul class="footer__list"
         role="menubar">
-      {% for item in nav %}
+      {% for item in nav|sort(attribute='order') %}
         <li class="footer__list-item"
             role="none">
-          <a class="footer__link {% if item.label == title %}footer__link--active{% endif %}"
+          <a class="footer__link {% if item.label|lower == content.title|lower %}footer__link--active{% endif %}"
               href="{{ item.path }}"
               role="menuitem">
-            {{ item.label }}
+            {{ item.label|capitalize }}
           </a>
         </li>
       {% endfor %}
