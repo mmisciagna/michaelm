@@ -1,0 +1,46 @@
+.header {
+  background: $color-primary-dark;
+  color: $color-white;
+  height: $header-height;
+  left: 0;
+  padding-left: $buffer-3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  @include ipad-portrait-up {
+    padding-right: $buffer-3;
+  }
+
+  &--offset {
+    height: $header-height;
+  }
+
+  &__inner {
+    @include content-max-width(0, $breakpoint-ipad-landscape);
+    align-items: center;
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    height: 100%;
+  }
+
+  &__button {
+    color: $color-primary;
+    height: 100%;
+    padding: 0 $buffer-3;
+    transition: color .3s ease-out;
+
+    @include ipad-portrait-up {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.nav {
+  display: none;
+  height: 100%;
+
+  @include ipad-portrait-up {
+    display: block;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    height: 100%;
+  }
+
+  &__link {
+    color: $color-primary;
+    display: block;
+    font-family: $font-stack-sans;
+    font-weight: $font-weight-r;
+    height: 100%;
+    line-height: $header-height;
+    padding: 0 $buffer-3;
+    transition: color .3s ease-out;
+
+    &--active {
+      background: $color-primary;
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.mobile-nav {
+  background: $color-primary-dark;
+  border-top: 1px solid $color-primary;
+  height: calc(100% - #{$header-height});
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  position: fixed;
+  top: $header-height;
+  transition: opacity .3s ease-out;
+  width: 100%;
+  z-index: 1;
+
+  @include ipad-portrait-up {
+    display: none;
+  }
+
+  &--opened {
+    opacity: 1;
+    pointer-events: auto;
+
+    .mobile-nav__link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__menu {
+    display: table;
+    height: 100%;
+    left: 0;
+    padding: $buffer-3 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__list {
+    display: table-cell;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  &__link {
+    color: $color-primary;
+    display: block;
+    font-family: $font-stack-sans;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-l;
+    line-height: 1;
+    opacity: 0;
+    padding: $buffer-2 $buffer-3;
+    text-align: center;
+    transition: color .3s ease-out,
+                opacity .6s ease-out,
+                transform .6s ease-out;
+    white-space: nowrap;
+
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        transform: translateY(-$buffer-3 * $i);
+      }
+    }
+
+    &--active {
+      background: $color-primary;
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

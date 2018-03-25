@@ -1,0 +1,83 @@
+.section {
+  @include content-max-width($buffer-6, $breakpoint-ipad-landscape);
+
+  &__drop-cap {
+    color: $color-accent;
+    display: inline-block;
+    float: left;
+    font-size: 86px;
+    line-height: 72px;
+    margin-left: -8px;
+    margin-right: 4px;
+    position: relative;
+    top: 5px;
+  }
+
+  &__headline {
+    @include content-max-width($buffer-3, $content-max-width);
+    color: $color-primary-dark;
+    font-size: $font-size-l;
+    font-weight: $font-weight-sb;
+    line-height: $line-height-s;
+  }
+
+  &__title {
+    @include content-max-width($buffer-3, $content-max-width);
+    border-bottom: 1px solid $color-primary-light;
+    color: $color-primary-dark;
+    font-family: $font-stack-sans;
+    font-size: $font-size-m;
+    line-height: $line-height-xs;
+    padding: 0 0 $buffer-1;
+  }
+
+  &__subtitle {
+    @include content-max-width($buffer-2, $content-max-width);
+    color: $color-accent;
+    font-family: $font-stack-sans;
+    font-size: $font-size-s;
+    font-weight: $font-weight-sb;
+    letter-spacing: 1px;
+    line-height: $line-height-xs;
+    text-transform: uppercase;
+
+    & + .section__paragraph {
+      margin-top: 0;
+    }
+  }
+
+  &__paragraph {
+    @include content-max-width($buffer-3, $content-max-width);
+
+    & + .section__subtitle {
+      margin-top: $buffer-5;
+    }
+
+    a {
+      @include hover-state($color-accent);
+    }
+  }
+
+  &__figure {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__figure-aspect-ratio {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: $aspect-ratio;
+    position: relative;
+    width: 100%;
+  }
+
+  &__figure-caption {
+    font-size: $font-size-xs;
+    font-style: italic;
+    line-height: $line-height-s;
+    margin: $buffer-1 0 0;
+    text-align: right;
+  }
+}

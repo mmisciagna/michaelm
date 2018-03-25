@@ -1,0 +1,49 @@
+.form {
+  @include content-max-width($buffer-3, $content-max-width-s);
+
+  &__label {
+    margin: 0;
+
+    sup {
+      color: $color-accent;
+      font-size: $font-size-xs;
+      line-height: 1;
+    }
+  }
+
+  &__field {
+    margin: $buffer-3 0;
+  }
+
+  &__input {
+    background: $color-white;
+    border: 1px solid $color-primary-light;
+    border-radius: $buffer-1 / 2;
+    box-shadow: inset 1px 1px $color-primary-light;
+    color: $color-primary-dark;
+    font-family: $font-stack-sans;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    padding: $buffer-1;
+    width: 100%;
+
+    &[type='textarea'] {
+      min-height: 150px;
+    }
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: $buffer-3 0;
+
+    .btn {
+      margin-left: $buffer-1;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

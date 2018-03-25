@@ -1,0 +1,37 @@
+.btn {
+  -webkit-appearance: none;
+  background: $color-primary-dark;
+  border: 0;
+  border-radius: $buffer-1 / 2;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-stack-serif;
+  font-size: $font-size-s;
+  font-style: italic;
+  font-weight: $font-weight-r;
+  height: $buffer-4;
+  min-width: $buffer-11;
+  padding: 0 $buffer-2;
+  position: relative;
+  text-align: center;
+  transition: opacity .3s ease-out;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &--reverse {
+    background: none;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    transition: border-color .3s ease-out,
+                color .3s ease-out;
+
+    &:hover {
+      border-color: $color-primary-dark;
+      color: $color-primary-dark;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+// Colors.
+$color-primary: #607d8b;
+$color-primary-dark: #263238;
+$color-primary-light: #cfd8dc;
+$color-accent: #f4511e;
+$color-white: #fff;
+
+// Font.
+$font-stack-serif: 'Source Serif Pro', Georgia, serif;
+$font-stack-sans: 'Source Sans Pro', Arial, sans-serif;
+
+$font-size-xl: 44px;
+$font-size-l: 26px;
+$font-size-m: 18px;
+$font-size: 16px;
+$font-size-s: 14px;
+$font-size-xs: 12px;
+
+$font-weight-sb: 600;
+$font-weight-r: 400;
+$font-weight-l: 100;
+
+$line-height: 1.75;
+$line-height-s: 1.5em;
+$line-height-xs: 1.25;
+
+$font: #{$font-weight-r} #{$font-size}/#{$line-height} #{$font-stack-serif};
+
+// Buffers and dimensions.
+$buffer-base: 8px;
+$buffer-1: $buffer-base;
+$buffer-2: $buffer-base * 2;
+$buffer-3: $buffer-base * 3;
+$buffer-4: $buffer-base * 4;
+$buffer-5: $buffer-base * 5;
+$buffer-6: $buffer-base * 6;
+$buffer-11: $buffer-base * 11;
+
+$header-height: 50px;
+$max-width: 1024px;
+$content-max-width: 800px;
+$content-max-width-s: 500px;
+$aspect-ratio: (9 / 16) * 100%;
+
+// Breakpoints and media queries.
+$breakpoint-tablet: 600px;
+$breakpoint-ipad-portrait: 768px;
+$breakpoint-tablet-landscape: 900px;
+$breakpoint-ipad-landscape: 1024px;
+
+@mixin tablet-up {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin ipad-portrait-up {
+  @media only screen and (min-width: $breakpoint-ipad-portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-up {
+  @media only screen and (min-width: $breakpoint-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape-up {
+  @media only screen and (min-width: $breakpoint-ipad-landscape) {
+    @content;
+  }
+}
+
+// Mixins.
+@mixin hover-state($border_color) {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    background: $border_color;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition: all .15s ease-out;
+    width: 0
+  }
+
+  &:hover {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@mixin content-max-width($margin, $width) {
+  margin: $margin auto;
+  max-width: $width;
+}
