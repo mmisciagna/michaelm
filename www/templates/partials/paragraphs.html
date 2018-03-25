@@ -1,0 +1,10 @@
+{% for p in partial.paragraphs %}
+  {% if p.subtitle %}
+    <h4 class="section__subtitle">
+      {{ p.subtitle }}
+    </h4>
+  {% endif %}
+  <p class="section__paragraph">
+    {{ p.text|safe }}
+  </p>
+{% endfor %}

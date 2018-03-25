@@ -3,29 +3,15 @@
   <ul class="nav__list"
       role="menubar"
       aria-label="Navigation menubar">
-    <li class="nav__list-item"
-        role="none">
-      <a class="nav__link nav__link--active"
-          href="/"
-          role="menuitem">
-        About
-      </a>
-    </li>
-    <li class="nav__list-item"
-        role="none">
-      <a class="nav__link"
-          href="work/"
-          role="menuitem">
-        Work
-      </a>
-    </li>
-    <li class="nav__list-item"
-        role="none">
-      <a class="nav__link"
-          href="contact/"
-          role="menuitem">
-        Contact
-      </a>
-    </li>
+    {% for item in nav %}
+      <li class="nav__list-item"
+          role="none">
+        <a class="nav__link {% if item.label == title %}nav__link--active{% endif %}"
+            href="{{ item.path }}"
+            role="menuitem">
+          {{ item.label }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </nav>

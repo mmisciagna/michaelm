@@ -4,7 +4,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Michael Misciagna" name="author">
     <meta name="description" content="">
-    <title>About | Michael M.</title>
+    <title>{{ title }} | Michael M.</title>
     <link href="/dist/img/favicon-48x48.png" rel="icon" sizes="48x48">
     <link href="/dist/img/favicon-72x72.png" rel="icon" sizes="72x72">
     <link href="/dist/img/favicon-96x96.png" rel="icon" sizes="96x96">
@@ -19,7 +19,25 @@
     {% include "/partials/header.jinja" %}
     {% include "/partials/mobile-nav.jinja" %}
     <main class="main">
-      {% block content %}{% endblock %}
+      {% for section in content %}
+        <section class="section">
+          {% if section.headline %}
+            {% include "/partials/headline.jinja" %}
+          {% endif %}
+
+          {% if section.title %}
+            {% include "/partials/title.jinja" %}
+          {% endif %}
+
+          {% if section.figure %}
+            {% include "/partials/figure.jinja" %}
+          {% endif %}
+
+          {% if section.paragraphs %}
+            {% include "/partials/paragraphs.jinja" %}
+          {% endif %}
+        </section>
+      {% endfor %}
     </main>
     {% include "/partials/footer.jinja" %}
     <script src="/dist/js/main.min.js"></script>
