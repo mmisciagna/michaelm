@@ -3,6 +3,8 @@ import logging
 
 from flask import Flask
 
+description = "Hello, my name is Michael. I am a Front End Developer and Web Designer living in the San Francisco Bay Area."
+
 nav = [
   {
     "label": "About",
@@ -61,18 +63,21 @@ def index():
 
   return flask.render_template('base.jinja',
       content=content,
+      description=description,
       nav=nav,
       title='About')
 
 @app.route('/work/')
 def work():
   return flask.render_template('base.jinja',
+      description=description,
       nav=nav,
       title='Work')
 
 @app.route('/contact/')
 def contact():
   return flask.render_template('base.jinja',
+      description=description,
       nav=nav,
       title='Contact')
 
