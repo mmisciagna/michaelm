@@ -23,6 +23,22 @@ const Aria_ = {
 /** @private @const {number} */
 const MAX_WIDTH_ = 768;
 
+/** @private @const {string} */
+const TABBABLES_ = 'select, input, textarea, button, a';
+
+/** @private @const {!Array<!Element>} */
+const MAIN_TABBABLES_ = Array.from(
+  document.querySelector('.main').querySelectorAll(TABBABLES_)
+);
+
+/** @private @const {!Array<!Element>} */
+const FOOTER_TABBABLES_ = Array.from(
+  document.querySelector('.footer').querySelectorAll(TABBABLES_)
+);
+
+/** @private @const {!Array<!Element>} */
+const ALL_TABBABLES_ = MAIN_TABBABLES_.concat(FOOTER_TABBABLES_);
+
 
 /**
  * Toggles the mobile nav.
@@ -56,6 +72,16 @@ class MobileNav {
     this.root_.classList.toggle(ClassNames_.OPENED, !this.isRootVisible_());
     document.body.classList.toggle(ClassNames_.NO_SCROLL,
         this.isRootVisible_());
+    this.toggleTabIndexing_();
+  }
+
+  /** private */
+  toggleTabIndexing_() {
+    if (this.isRootVisible_()) {
+      ALL_TABBABLES_.forEach((el) => el.setAttribute('tabindex', '-1'));
+    } else {
+      ALL_TABBABLES_.forEach((el) => el.removeAttribute('tabindex'));
+    }
   }
 
   /** private */
@@ -84,6 +110,13 @@ class MobileNav {
   }
 
   /** private */
+  handleKeyEvents_(e) {
+    if (e.key == 'Escape' && this.isRootVisible_()) {
+      this.handleToggle_();
+    }
+  }
+
+  /** private */
   registerEvents_() {
     utils.delegate(document, Selectors_.OPEN_BTN, 'click',
         this.handleToggle_.bind(this));
@@ -91,6 +124,7 @@ class MobileNav {
         this.handleToggle_.bind(this));
 
     window.addEventListener('resize', this.handleResize_.bind(this));
+    window.addEventListener('keyup', this.handleKeyEvents_.bind(this));
   }
 }
 
