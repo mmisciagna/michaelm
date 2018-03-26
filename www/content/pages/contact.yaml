@@ -10,11 +10,18 @@ partials:
     fields:
       - type: text
         label: Name
+        error_msg: Name is required.
+      - type: email
+        label: Email
+        error_msg: Email should be in correct format (jsmith@example.com).
       - type: textarea
         label: Message
+        error_msg: Message is required.
     btns:
       - type: submit
         label: Send
+        extra_classes: js-form-submit-btn
       - type: reset
         label: Reset
         reverse: true
+    sent_msg: Success! I'll be in touch shortly. <a href="/contact/">Send another message</a>.

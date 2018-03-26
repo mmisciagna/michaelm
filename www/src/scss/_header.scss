@@ -9,10 +9,6 @@
   width: 100%;
   z-index: 1;
 
-  @include ipad-portrait-up {
-    padding-right: $buffer-3;
-  }
-
   &--offset {
     height: $header-height;
   }

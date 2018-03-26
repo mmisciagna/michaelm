@@ -1,24 +1,24 @@
 <section class="section">
-  <form class="form"
-      action="contact.php"
-      method="post"
-      enctype="text/plain">
+  <form class="form js-form" novalidate>
     {% for field in partial.fields %}
       <div class="form__field">
         <div class="form__label">
           {{ field.label }} <sup>*</sup>
         </div>
         {% if field.type != "textarea" %}
-          <input class="form__input"
+          <input class="form__input js-form-input"
               type="{{ field.type }}"
               name="{{ field.label|lower }}"
               required>
         {% else %}
-          <textarea class="form__input"
+          <textarea class="form__input js-form-input"
               type="{{ field.type }}"
               name="{{ field.label|lower }}"
               required></textarea>
         {% endif %}
+        <div class="form__error-msg js-form-error-msg hide">
+          {{ field.error_msg }}
+        </div>
       </div>
     {% endfor %}
     <div class="form__actions">
@@ -27,4 +27,7 @@
       {% endfor %}
     </div>
   </form>
+  <div class="form__sent js-form-sent hide">
+    {{ partial.sent_msg }}
+  </div>
 </section>

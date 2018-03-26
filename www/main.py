@@ -1,27 +1,14 @@
+import config
 import flask
 import logging
 import os
 import yaml
 
-from flask import Flask
+from flask import Flask, request
+from google.appengine.api import mail
 
 
-description = "Hello, my name is Michael. I am a Front End Developer and Web Designer living in the San Francisco Bay Area."
-
-nav = [
-  {
-    "label": "About",
-    "path": "/",
-  },
-  {
-    "label": "Work",
-    "path": "/work/",
-  },
-  {
-    "label": "Contact",
-    "path": "/contact/",
-  },
-]
+app = Flask(__name__, static_folder='dist')
 
 
 def getContent():
@@ -45,20 +32,42 @@ def getNav():
   return nav
 
 
-app = Flask(__name__, static_folder='dist')
-
 @app.route('/', defaults={'path': 'home'})
 @app.route('/<path>/')
-def index(path):
+def pages(path):
   if path:
     contentKey = path
-
   content = getContent()[contentKey]
 
   return flask.render_template('base.jinja',
       content=content,
       nav=getNav(),
       title=content['title'])
+
+
+@app.route('/contact-form/', methods=['POST'])
+def contact_form():
+  form_entries = {}
+  form_entries['name'] = request.form.get('name')
+  form_entries['email'] = request.form.get('email')
+  form_entries['message'] = request.form.get('message')
+
+  sender = (config.mail['SENDER']
+            .format('_'.join(form_entries['name'].split(' ')))
+           )
+  body = (config.mail['BODY']
+          .format(form_entries['message'],
+                  form_entries['name'],
+                  form_entries['email'])
+         )
+
+  mail.send_mail(sender=sender,
+                 to=config.mail['TO'],
+                 subject=config.mail['SUBJECT'],
+                 body=body)
+
+  return flask.jsonify(form_entries)
+
 
 @app.errorhandler(500)
 def server_error(e):

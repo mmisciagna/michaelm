@@ -6,6 +6,10 @@ handlers:
 - url: /.*
   script: www.main.app
 
+libraries:
+- name: ssl
+  version: latest
+
 skip_files:
 - \.gitignore
 - ^\.git/.*

@@ -1,4 +1,4 @@
-<button class="btn {% if btn.reverse %}btn--reverse{% endif %}"
+<button class="btn{% if btn.reverse %} btn--reverse{% endif %}{% if btn.extra_classes %} {{ btn.extra_classes }}{% endif %}"
     {% if btn.type %}type="{{ btn.type }}"{% endif %}>
   {{ btn.label }}
 </button>

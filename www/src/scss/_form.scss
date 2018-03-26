@@ -35,7 +35,7 @@
   &__actions {
     align-items: center;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin: $buffer-3 0;
 
     .btn {
@@ -44,6 +44,28 @@
       &:first-child {
         margin-left: 0;
       }
+    }
+  }
+
+  &__error-msg {
+    color: $color-accent;
+    font-size: $font-size-s;
+    font-style: italic;
+    line-height: $line-height-xs;
+    margin: $buffer-1 0;
+  }
+
+  &__sent {
+    @include content-max-width($buffer-3, $content-max-width);
+    background: $color-white-6;
+    border: 1px solid $color-primary-light;
+    border-radius: $buffer-1 / 2;
+    font-size: $font-size-m;
+    padding: $buffer-2;
+    text-align: center;
+
+    a {
+      @include hover-state($color-accent);
     }
   }
 }

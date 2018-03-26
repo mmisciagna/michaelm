@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "deploy": "gcloud app deploy --project michaelm -v master",
-    "deploy:beta": "gcloud app deploy --project michaelm -v beta",
+    "deploy:beta": "gcloud app deploy --project michaelm -v beta --no-promote",
     "dev": "dev_appserver.py ."
   },
   "repository": {
