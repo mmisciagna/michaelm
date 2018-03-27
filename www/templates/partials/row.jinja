@@ -1,0 +1,27 @@
+<section class="section">
+  {% if partial.title %}
+    {% include "/partials/title.jinja" %}
+  {% endif %}
+
+  <div class="row{% if partial.reverse %} row--reverse{% endif %}">
+    {% if partial.figure %}
+      <div class="row__item row__item--figure">
+        {% include "/partials/figure.jinja" %}
+      </div>
+    {% endif %}
+
+    {% if partial.paragraphs %}
+      <div class="row__item row__item--paragraphs">
+        {% include "/partials/paragraphs.jinja" %}
+
+        {% if partial.cta %}
+          <div class="section__cta">
+            {% with btn = partial.cta %}
+              {% include "/partials/button.jinja" %}
+            {% endwith %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>

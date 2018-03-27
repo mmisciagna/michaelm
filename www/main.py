@@ -4,16 +4,15 @@ import logging
 import os
 import yaml
 
-from flask import Flask, request
+from flask import Flask, redirect, request, send_from_directory
 from google.appengine.api import mail
 
 
 app = Flask(__name__, static_folder='dist')
 
-
-def getContent():
+def getContent(dir):
   content = {}
-  path = os.getcwd() + '/www/content/pages/'
+  path = os.getcwd() + dir + '/'
   for root, dirs, filenames in os.walk(path):
     for f in filenames:
       with open(root + f, 'r') as ymlfile:
@@ -22,7 +21,7 @@ def getContent():
 
 def getNav():
   nav = []
-  content = getContent()
+  content = getContent(config.content_path + 'pages')
   for key in content:
     nav.append({
       'label': content[key]['title'],
@@ -32,17 +31,25 @@ def getNav():
   return nav
 
 
-@app.route('/', defaults={'path': 'home'})
-@app.route('/<path>/')
-def pages(path):
-  if path:
-    contentKey = path
-  content = getContent()[contentKey]
+@app.route('/', defaults={'page': 'home', 'project': None})
+@app.route('/<page>/', defaults={'project': None})
+@app.route('/<page>/<project>/')
+def pages(page, project):
+  contentDir = 'pages'
+  contentKey = page
+
+  if project:
+    if page != 'work':
+      return redirect('/')
+    contentDir = 'projects'
+    contentKey = project
+
+  content = getContent(config.content_path + contentDir)[contentKey]
 
   return flask.render_template('base.jinja',
-      content=content,
-      nav=getNav(),
-      title=content['title'])
+                               content=content,
+                               nav=getNav(),
+                               title=content['title'])
 
 
 @app.route('/contact-form/', methods=['POST'])
@@ -69,7 +76,16 @@ def contact_form():
   return flask.jsonify(form_entries)
 
 
+@app.route('/favicon.ico')
+def favicon():
+  return send_from_directory(os.path.join(app.root_path, 'static'),
+                             'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+
 @app.errorhandler(500)
 def server_error(e):
-  logging.exception('An error occurred during a request: ' + str(e))
-  return 'An internal error occurred.', 500
+  if config.env == 'dev':
+    logging.exception('An error occurred during a request: ' + str(e))
+    return 'An internal error occurred.', 500
+
+  return redirect('/')

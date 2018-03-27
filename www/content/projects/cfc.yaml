@@ -1,11 +1,6 @@
 title: Work
-path: /work/
-order: 2
 
 partials:
-  - partial: section
-    headline: Take a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.
-
   - partial: row
     title: YouTube Creators for Change
     figure:
@@ -15,6 +10,3 @@ partials:
     paragraphs:
       - text: My day job is web developing and designing YouTube marketing sites for Google. In the evening, I enjoy spending time at home catching up on my favorite shows, blogs and news. I also like to inspect elements on interesting sites. But most of all, I love spending good ol' fashioned quality time with my wife and kid.
       - text: Oh! And travelling abroad!
-    cta:
-      label: See more
-      link: cfc/

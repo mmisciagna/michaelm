@@ -6,7 +6,8 @@
     {% for item in nav|sort(attribute='order') %}
       <li class="nav__list-item"
           role="none">
-        <a class="nav__link {% if item.label|lower == content.title|lower %}nav__link--active{% endif %}"
+        {% set isActive = item.label|lower == content.title|lower %}
+        <a class="nav__link {% if isActive %}nav__link--active{% endif %}"
             href="{{ item.path }}"
             role="menuitem">
           {{ item.label|capitalize }}

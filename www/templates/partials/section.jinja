@@ -13,5 +13,13 @@
 
   {% if partial.paragraphs %}
     {% include "/partials/paragraphs.jinja" %}
+
+    {% if partial.cta %}
+      <div class="section__cta">
+        {% with btn = partial.cta %}
+          {% include "/partials/button.jinja" %}
+        {% endwith %}
+      </div>
+    {% endif %}
   {% endif %}
 </section>

@@ -107,8 +107,11 @@ class Contact {
       }
 
       http.onreadystatechange = () => {
+        console.log(http.readyState, http.status);
         if (http.readyState == 4 && http.status == 200) {
           this.showSentMsg_();
+        } else if (http.status == 500) {
+          // console.log('Sorry, something went wrong. Please try again.');
         }
 
         this.submitBtn_.removeAttribute('disabled');

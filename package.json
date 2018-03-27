@@ -6,7 +6,8 @@
   "scripts": {
     "deploy": "gcloud app deploy --project michaelm -v master",
     "deploy:beta": "gcloud app deploy --project michaelm -v beta --no-promote",
-    "dev": "dev_appserver.py ."
+    "dev": "dev_appserver.py .",
+    "dev:mail": "dev_appserver.py . --enable_sendmail"
   },
   "repository": {
     "type": "git",

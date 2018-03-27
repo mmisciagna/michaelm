@@ -1,0 +1,27 @@
+.row {
+  @include ipad-portrait-up {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 -#{$buffer-3 / 2};
+  }
+
+  &__item {
+    @include ipad-portrait-up {
+      padding: 0 $buffer-3 / 2;
+    }
+
+    &--figure {
+      @include ipad-portrait-up {
+        width: 55%;
+      }
+    }
+
+    &--paragraphs {
+      @include ipad-portrait-up {
+        width: 45%;
+      }
+    }
+  }
+}

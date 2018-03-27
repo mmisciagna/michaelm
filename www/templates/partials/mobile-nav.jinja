@@ -8,7 +8,8 @@
       {% for item in nav|sort(attribute='order') %}
         <li class="mobile-nav__list-item"
             role="none">
-          <a class="mobile-nav__link mobile-nav__link--{{ loop.index }} {% if item.label|lower == content.title|lower %}mobile-nav__link--active{% endif %}"
+          {% set isActive = item.label|lower == content.title|lower %}
+          <a class="mobile-nav__link mobile-nav__link--{{ loop.index }} {% if isActive %}mobile-nav__link--active{% endif %}"
               href="{{ item.path }}"
               role="menuitem">
             {{ item.label|capitalize }}
