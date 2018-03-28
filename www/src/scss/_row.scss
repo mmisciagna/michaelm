@@ -1,26 +1,56 @@
 .row {
+  margin-top: -#{$buffer-3};
+  overflow: hidden;
+
   @include ipad-portrait-up {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 0 -#{$buffer-3 / 2};
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    .row__item {
+      @include ipad-portrait-up {
+        &:first-child {
+          padding-left: $buffer-3 / 2;
+          padding-right: 0;
+        }
+
+        &:last-child {
+          padding-left: 0;
+          padding-right: $buffer-3 / 2;
+        }
+      }
+    }
   }
 
   &__item {
     @include ipad-portrait-up {
-      padding: 0 $buffer-3 / 2;
+      &:first-child {
+        padding-right: $buffer-3 / 2;
+      }
+
+      &:last-child {
+        padding-left: $buffer-3 / 2;
+      }
     }
 
     &--figure {
       @include ipad-portrait-up {
-        width: 55%;
+        width: 70%;
       }
     }
 
     &--paragraphs {
       @include ipad-portrait-up {
-        width: 45%;
+        width: 30%;
+      }
+
+      .section__subtitle {
+        margin-bottom: $buffer-1 / 2;
       }
     }
   }

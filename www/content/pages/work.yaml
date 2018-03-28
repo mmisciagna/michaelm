@@ -7,14 +7,124 @@ partials:
     headline: Take a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.
 
   - partial: row
+    title: YouTube Creators Hub
+    figure:
+      position: left top
+      image: project-creators-hub.jpg
+      alt: YouTube Creators Hub
+    paragraphs:
+      - subtitle: For
+        text: YouTube
+      - subtitle: My Role
+        text: Front End Developer
+    cta:
+      label: See the Details
+      link: ytcreators/
+
+  - partial: row
     title: YouTube Creators for Change
     figure:
-      image: michael-amalfi-coast.jpg
-      alt: Michael on a boat in the waters off the Amalfi Coast
-      caption: Here we see Michael on a boat in the waters off the Amalfi Coast.
+      position: left top
+      image: project-cfc.jpg
+      alt: YouTube Creators for Change home page
     paragraphs:
-      - text: My day job is web developing and designing YouTube marketing sites for Google. In the evening, I enjoy spending time at home catching up on my favorite shows, blogs and news. I also like to inspect elements on interesting sites. But most of all, I love spending good ol' fashioned quality time with my wife and kid.
-      - text: Oh! And travelling abroad!
+      - subtitle: For
+        text: YouTube
+      - subtitle: My role
+        text: Front End Developer
     cta:
-      label: See more
-      link: cfc/
+      label: See the Details
+      link: ytcfc/
+
+  - partial: row
+    title: YouTube Impact Lab
+    figure:
+      position: left top
+      image: project-impactlab.jpg
+      alt: YouTube Impact Lab
+    paragraphs:
+      - subtitle: For
+        text: YouTube
+      - subtitle: My role
+        text: Front End Developer
+    cta:
+      label: See the Details
+      link: ytimpactlab/
+
+  - partial: row
+    title: YouTube Studio
+    figure:
+      border: true
+      position: left top
+      image: project-studio.jpg
+      alt: YouTube Studio
+    paragraphs:
+      - subtitle: For
+        text: YouTube
+      - subtitle: My role
+        text: Front End Developer
+    cta:
+      label: See the Details
+      link: ytstudio/
+
+  - partial: row
+    title: My Fiber
+    figure:
+      border: true
+      position: left top
+      image: project-myfiber.jpg
+      alt: My Fiber
+    paragraphs:
+      - subtitle: For
+        text: Google Fiber
+      - subtitle: My role
+        text: Prototyper
+    cta:
+      label: See the Details
+      link: myfiber/
+
+  - partial: row
+    title: Google Fiber Global Nav
+    figure:
+      border: true
+      position: left top
+      image: project-googlefiber-globalnav.jpg
+      alt: Google Fiber Global Nav
+    paragraphs:
+      - subtitle: For
+        text: Google Fiber
+      - subtitle: My role
+        text: Prototyper
+    cta:
+      label: See the Details
+      link: googlefiber-globalnav/
+
+  - partial: row
+    title: Warner Bros. YouTube Channel
+    figure:
+      position: left top
+      image: project-wb.jpg
+      alt: Warner Bros. YouTube Channel
+    paragraphs:
+      - subtitle: For
+        text: Warner Bros.
+      - subtitle: My Role
+        text: Designer
+    cta:
+      label: See the Details
+      link: wb/
+
+  - partial: row
+    title: Century21 YouTube Channel
+    figure:
+      position: left top
+      image: project-c21.jpg
+      alt: Century21 YouTube Channel
+    paragraphs:
+      - subtitle: For
+        text: Century21
+      - subtitle: My Role
+        text: Designer
+    cta:
+      label: See the Details
+      link: c21/

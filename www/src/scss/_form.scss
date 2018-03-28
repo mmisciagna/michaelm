@@ -56,11 +56,11 @@
   }
 
   &__sent {
-    @include content-max-width($buffer-3, $content-max-width);
     background: $color-white-6;
     border: 1px solid $color-primary-light;
     border-radius: $buffer-1 / 2;
     font-size: $font-size-m;
+    margin: $buffer-3 auto;
     padding: $buffer-2;
     text-align: center;
 

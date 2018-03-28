@@ -2,9 +2,9 @@
   <form class="form js-form" novalidate>
     {% for field in partial.fields %}
       <div class="form__field">
-        <div class="form__label">
+        <label class="form__label" id="{{ field.label|lower }}">
           {{ field.label }} <sup>*</sup>
-        </div>
+        </label>
         {% if field.type != "textarea" %}
           <input class="form__input js-form-input"
               type="{{ field.type }}"

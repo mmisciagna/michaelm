@@ -27,6 +27,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-browserify": "^0.5.1",
+    "gulp-image": "^4.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0"

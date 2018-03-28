@@ -1,7 +1,7 @@
 <figure class="section__figure"
     aria-label="{{ partial.figure.alt }}">
-  <div class="section__figure-aspect-ratio"
-      style="background-image: url(/dist/img/{{ partial.figure.image }})">
+  <div class="section__figure-aspect-ratio{% if partial.figure.border %} section__figure-aspect-ratio--with-border{% endif %}"
+      style="background-image: url(/dist/img/{{ partial.figure.image }});{% if partial.figure.position %} background-position: {{ partial.figure.position }}{% endif %}">
   </div>
   {% if partial.figure.caption %}
     <figcaption class="section__figure-caption">

@@ -1,8 +1,8 @@
 import config
 import flask
+import hashlib
 import logging
 import os
-import yaml
 
 from flask import Flask, redirect, request, send_from_directory
 from google.appengine.api import mail
@@ -10,25 +10,10 @@ from google.appengine.api import mail
 
 app = Flask(__name__, static_folder='dist')
 
-def getContent(dir):
-  content = {}
-  path = os.getcwd() + dir + '/'
-  for root, dirs, filenames in os.walk(path):
-    for f in filenames:
-      with open(root + f, 'r') as ymlfile:
-        content[f.split('.')[0]] = yaml.load(ymlfile)
-  return content
 
-def getNav():
-  nav = []
-  content = getContent(config.content_path + 'pages')
-  for key in content:
-    nav.append({
-      'label': content[key]['title'],
-      'path': content[key]['path'],
-      'order': content[key]['order']
-    })
-  return nav
+# @app.template_filter('md5')
+# def md5(value):
+#   return hashlib.sha224(value).hexdigest()
 
 
 @app.route('/', defaults={'page': 'home', 'project': None})
@@ -44,11 +29,11 @@ def pages(page, project):
     contentDir = 'projects'
     contentKey = project
 
-  content = getContent(config.content_path + contentDir)[contentKey]
+  content = config.getContent(config.content_path + contentDir)[contentKey]
 
   return flask.render_template('base.jinja',
                                content=content,
-                               nav=getNav(),
+                               nav=config.getNav(),
                                title=content['title'])
 
 

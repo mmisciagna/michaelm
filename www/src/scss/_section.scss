@@ -22,13 +22,18 @@
   }
 
   &__title {
-    @include content-max-width($buffer-3, $content-max-width);
     border-bottom: 1px solid $color-primary-light;
     color: $color-primary-dark;
     font-family: $font-stack-sans;
     font-size: $font-size-m;
     line-height: $line-height-xs;
+    margin: $buffer-3 auto;
     padding: 0 0 $buffer-1;
+  }
+
+  &__title-inner {
+    @include content-max-width(0, $content-max-width);
+    display: block;
   }
 
   &__subtitle {
@@ -71,6 +76,10 @@
     padding-bottom: $aspect-ratio;
     position: relative;
     width: 100%;
+
+    &--with-border {
+      border: 1px solid $color-primary-light;
+    }
   }
 
   &__figure-caption {
