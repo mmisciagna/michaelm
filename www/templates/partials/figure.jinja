@@ -1,12 +1,7 @@
 <figure class="section__figure"
     aria-label="{{ partial.figure.alt }}">
   <div class="section__figure-aspect-ratio{% if partial.figure.border %} section__figure-aspect-ratio--with-border{% endif %}"
-      {% if partial.figure.image %}
-        style="background-image: url(/dist/img/{{ partial.figure.image }});{% if partial.figure.position %} background-position: {{ partial.figure.position }}{% endif %}"
-      {% endif %}>
-    {% if partial.figure.video %}
-      <div class="section__video" data-video="{{ partial.figure.video }}">
-    {% endif %}
+      style="background-image: url(/dist/img/{{ partial.figure.image }});{% if partial.figure.position %} background-position: {{ partial.figure.position }}{% endif %}">
   </div>
   {% if partial.figure.caption %}
     <figcaption class="section__figure-caption">

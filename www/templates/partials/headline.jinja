@@ -4,4 +4,11 @@
   {% else %}
     {{ partial.headline.text }}
   {% endif %}
+  {% if partial.subheadline %}
+    <span class="section__subheadline">
+      <span class="accent-color">For:</span> {{ partial.subheadline.for }}
+      <span class="section__subheadline-spacer"></span>
+      <span class="accent-color">My Role:</span> {{ partial.subheadline.role }}
+    </span>
+  {% endif %}
 </h2>

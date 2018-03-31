@@ -7,6 +7,10 @@
     {% include "/partials/title.jinja" %}
   {% endif %}
 
+  {% if partial.video %}
+    {% include "/partials/video.jinja" %}
+  {% endif %}
+
   {% if partial.figure %}
     {% include "/partials/figure.jinja" %}
   {% endif %}

@@ -21,9 +21,9 @@ $font-weight-sb: 600;
 $font-weight-r: 400;
 $font-weight-l: 100;
 
-$line-height: 1.75;
+$line-height: 1.75em;
 $line-height-s: 1.5em;
-$line-height-xs: 1.25;
+$line-height-xs: 1.25em;
 
 $font: #{$font-weight-r} #{$font-size}/#{$line-height} #{$font-stack-serif};
 
@@ -40,7 +40,7 @@ $header-height: 50px;
 $max-width: 1024px;
 $content-max-width: 800px;
 $content-max-width-s: 500px;
-$aspect-ratio: (9 / 16) * 100%;
+$aspect-ratio: (9 / 16) * 100%; // YT video.
 
 // Breakpoints and media queries.
 $breakpoint-tablet: 600px;

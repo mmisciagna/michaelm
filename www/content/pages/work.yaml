@@ -12,8 +12,8 @@ partials:
     title: YouTube Creators
     figure:
       position: left top
-      image: project-creators-hub.jpg
-      alt: YouTube Creators Hub
+      image: projects/creators.jpg
+      alt: YouTube Creators
     paragraphs:
       - subtitle: For
         text: YouTube
@@ -21,14 +21,29 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
-      link: yt-creators/
+      link: youtube-creators/
+
+  - partial: row
+    title: YouTube Creators Design Concept
+    figure:
+      position: left top
+      image: projects/creators-design-concept.jpg
+      alt: YouTube Creators Design Concept
+    paragraphs:
+      - subtitle: For
+        text: YouTube
+      - subtitle: My Role
+        text: Designer
+    cta:
+      label: See the Details
+      link: youtube-creators/
 
   - partial: row
     title: YouTube Creators for Change
     figure:
       position: left top
-      image: project-cfc.jpg
-      alt: YouTube Creators for Change home page
+      image: projects/cfc.jpg
+      alt: YouTube Creators for Change
     paragraphs:
       - subtitle: For
         text: YouTube
@@ -36,13 +51,13 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
-      link: ytcfc/
+      link: youtube-creators-for-change/
 
   - partial: row
     title: YouTube Impact Lab
     figure:
       position: left top
-      image: project-impactlab.jpg
+      image: projects/impactlab.jpg
       alt: YouTube Impact Lab
     paragraphs:
       - subtitle: For
@@ -51,14 +66,14 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
-      link: ytimpactlab/
+      link: youtube-impact-lab/
 
   - partial: row
     title: YouTube Studio
     figure:
       border: true
       position: left top
-      image: project-studio.jpg
+      image: projects/studio.jpg
       alt: YouTube Studio
     paragraphs:
       - subtitle: For
@@ -67,45 +82,45 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
-      link: ytstudio/
+      link: youtube-studio/
 
   - partial: row
     title: My Fiber
     figure:
       border: true
       position: left top
-      image: project-myfiber.jpg
+      image: projects/myfiber.jpg
       alt: My Fiber
     paragraphs:
       - subtitle: For
         text: Google Fiber
       - subtitle: My role
-        text: Prototyper
+        text: Front End Developer
     cta:
       label: See the Details
-      link: myfiber/
+      link: my-fiber-prototype/
 
   - partial: row
     title: Google Fiber Global Nav
     figure:
       border: true
       position: left top
-      image: project-googlefiber-globalnav.jpg
+      image: projects/fiber-globalnav.jpg
       alt: Google Fiber Global Nav
     paragraphs:
       - subtitle: For
         text: Google Fiber
       - subtitle: My role
-        text: Prototyper
+        text: Front End Developer
     cta:
       label: See the Details
-      link: googlefiber-globalnav/
+      link: google-fiber-global-nav/
 
   - partial: row
     title: Warner Bros. YouTube Channel
     figure:
       position: left top
-      image: project-wb.jpg
+      image: projects/wb.jpg
       alt: Warner Bros. YouTube Channel
     paragraphs:
       - subtitle: For
@@ -114,13 +129,13 @@ partials:
         text: Designer
     cta:
       label: See the Details
-      link: wb/
+      link: warner-bros-youtube-channel/
 
   - partial: row
     title: Century21 YouTube Channel
     figure:
       position: left top
-      image: project-c21.jpg
+      image: projects/c21.jpg
       alt: Century21 YouTube Channel
     paragraphs:
       - subtitle: For
@@ -129,4 +144,4 @@ partials:
         text: Designer
     cta:
       label: See the Details
-      link: c21/
+      link: century21-youtube-channel/

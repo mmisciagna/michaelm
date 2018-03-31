@@ -52,7 +52,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('images', function () {
-  gulp.src(Config.IMG_SRC_DIR + '*')
+  gulp.src(Config.IMG_SRC_DIR + '**/*')
     .pipe(image({
       quiet: true
     }))
@@ -68,7 +68,7 @@ gulp.task('serve', ['scripts', 'sass', 'images'], function() {
 
   gulp.watch(Config.JS_SRC_DIR + '**', ['scripts']);
   gulp.watch(Config.SCSS_SRC_DIR + '**', ['sass']);
-  gulp.watch(Config.IMG_SRC_DIR + '**', ['image']);
+  gulp.watch(Config.IMG_SRC_DIR + '**', ['images']);
   gulp.watch('www/**/*.jinja').on('change', browserSync.reload);
 });
 
