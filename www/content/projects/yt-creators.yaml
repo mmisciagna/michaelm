@@ -1,0 +1,10 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: YouTube Creators
+
+  - partial: section
+    figure:
+      video: gapXvVjoHo4

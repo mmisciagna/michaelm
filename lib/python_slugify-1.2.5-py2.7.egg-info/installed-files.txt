@@ -1,0 +1,12 @@
+../slugify/slugify.py
+../slugify/__init__.py
+../slugify/slugify.pyc
+../slugify/__init__.pyc
+.
+PKG-INFO
+SOURCES.txt
+entry_points.txt
+requires.txt
+top_level.txt
+dependency_links.txt
+../../../bin/slugify

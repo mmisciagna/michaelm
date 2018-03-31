@@ -4,7 +4,9 @@ order: 3
 
 partials:
   - partial: section
-    headline: Whether you need a Front End Developer, Web Designer or just some technical advice, send me a line.
+    headline:
+      drop_cap: true
+      text: Whether you need a Front End Developer, Web Designer or just some technical advice, send me a line.
 
   - partial: form
     fields:

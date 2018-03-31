@@ -1,3 +1,7 @@
 <h2 class="section__headline">
-  {{ macros.drop_cap(partial.headline) }}
+  {% if partial.headline.drop_cap %}
+    {{ macros.drop_cap(partial.headline.text) }}
+  {% else %}
+    {{ partial.headline.text }}
+  {% endif %}
 </h2>

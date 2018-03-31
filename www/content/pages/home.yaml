@@ -4,7 +4,9 @@ order: 1
 
 partials:
   - partial: section
-    headline: My name is Michael. I am a Front End Developer and Web Designer living in the Bay Area.
+    headline:
+      drop_cap: true
+      text: My name is Michael. I am a Front End Developer and Web Designer living in the Bay Area.
 
   - partial: section
     title: About

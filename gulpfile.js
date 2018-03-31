@@ -51,14 +51,16 @@ gulp.task('sass', function () {
       .pipe(browserSync.stream());
 });
 
-gulp.task('image', function () {
+gulp.task('images', function () {
   gulp.src(Config.IMG_SRC_DIR + '*')
-    .pipe(image())
+    .pipe(image({
+      quiet: true
+    }))
     .pipe(gulp.dest(Config.IMG_DEST_DIR))
     .pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['scripts', 'sass', 'image'], function() {
+gulp.task('serve', ['scripts', 'sass', 'images'], function() {
   browserSync.init({
     open: false,
     proxy: 'http://localhost:8080'

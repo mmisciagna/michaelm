@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+lipsum/__init__.py
+lipsum/generator.py
+lipsum/reader.py
+lipsum/utils.py
+lipsum.egg-info/PKG-INFO
+lipsum.egg-info/SOURCES.txt
+lipsum.egg-info/dependency_links.txt
+lipsum.egg-info/top_level.txt
+lipsum/data/definibus.txt

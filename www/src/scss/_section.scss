@@ -93,4 +93,12 @@
   &__cta {
     margin: $buffer-3 0;
   }
+
+  &__video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }

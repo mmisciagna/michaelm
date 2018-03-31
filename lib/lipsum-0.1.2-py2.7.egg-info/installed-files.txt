@@ -1,0 +1,14 @@
+../lipsum/__init__.py
+../lipsum/reader.py
+../lipsum/generator.py
+../lipsum/utils.py
+../lipsum/data/definibus.txt
+../lipsum/__init__.pyc
+../lipsum/reader.pyc
+../lipsum/generator.pyc
+../lipsum/utils.pyc
+.
+PKG-INFO
+SOURCES.txt
+top_level.txt
+dependency_links.txt

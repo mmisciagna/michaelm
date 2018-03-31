@@ -4,10 +4,12 @@ order: 2
 
 partials:
   - partial: section
-    headline: Take a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.
+    headline:
+      drop_cap: true
+      text: Take a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.
 
   - partial: row
-    title: YouTube Creators Hub
+    title: YouTube Creators
     figure:
       position: left top
       image: project-creators-hub.jpg
@@ -19,7 +21,7 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
-      link: ytcreators/
+      link: yt-creators/
 
   - partial: row
     title: YouTube Creators for Change
