@@ -1,0 +1,55 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: YouTube Creators Design Concept
+    subheadline:
+      for: YouTube
+      role: Designer
+
+  - partial: section
+    title: Tools
+    list:
+      - text: Sketch
+      - text: Photoshop
+
+  - partial: section
+    title: Hero
+    image:
+      border: true
+      src: projects/creators-hero-concept.jpg
+      alt: YouTube Creators hero concept
+    paragraphs:
+      - text: For the hero, I removed the carousel in favor of a simple image of a popular YouTube Creator. Studies show that carousel are in effective for displaying content because users ignore anything after the first frame.
+      - text: The copy states exactly what this site is — a resource hub for YouTube creators — with clear calls to action.
+
+  - partial: section
+    title: Social Feeds
+    image:
+      border: true
+      src: projects/creators-social-feed-concept.jpg
+      alt: YouTube Creators social feed concept
+    paragraphs:
+      - text: Instead of making the user interact with more carousels to view the social feeds, I displayed them in plain sight. The exception is the Twitter feed which is a carousel but in "ticker tape" style (i.e. it will scroll across the page automatically).
+
+  - partial: section
+    title: Sitemap
+    image:
+      src: projects/creators-sitemap-concept.jpg
+      alt: YouTube Creators sitemap
+    paragraphs:
+      - text: The homepage contains a sitemap in that it displays all available pages on the YouTube Creators site. Nothing is hidden.
+
+  - partial: section
+    image:
+      border: true
+      src: projects/creators-pages-concept.jpg
+      alt: YouTube Creators pages
+
+  - partial: section
+    title: Full Homepage Concept
+    image:
+      border: true
+      src: projects/creators-homepage-concept.jpg
+      alt: YouTube Creators homepage

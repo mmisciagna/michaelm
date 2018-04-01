@@ -36,4 +36,8 @@
       {% endwith %}
     </div>
   {% endif %}
+
+  {% if partial.image %}
+    {% include "/partials/image.jinja" %}
+  {% endif %}
 </section>

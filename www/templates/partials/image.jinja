@@ -1,0 +1,10 @@
+<figure class="section__figure">
+  <img class="section__image{% if partial.image.border %} section__image--with-border{% endif %}"
+      src="/dist/img/{{ partial.image.src }}"
+      alt="{{ partial.image.alt }}">
+  {% if partial.image.caption %}
+    <figcaption class="section__figure-caption">
+      {{ partial.image.caption }}
+    </figcaption>
+  {% endif %}
+</figure>
