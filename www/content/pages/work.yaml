@@ -21,6 +21,7 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
+      icon: trending_flat
       link: youtube-creators/
 
   - partial: row
@@ -36,7 +37,8 @@ partials:
         text: Designer
     cta:
       label: See the Details
-      link: youtube-creators/
+      icon: trending_flat
+      link: youtube-creators-design-concept/
 
   - partial: row
     title: YouTube Creators for Change
@@ -51,6 +53,7 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
+      icon: trending_flat
       link: youtube-creators-for-change/
 
   - partial: row
@@ -66,6 +69,7 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
+      icon: trending_flat
       link: youtube-impact-lab/
 
   - partial: row
@@ -82,6 +86,7 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
+      icon: trending_flat
       link: youtube-studio/
 
   - partial: row
@@ -98,6 +103,7 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
+      icon: trending_flat
       link: my-fiber-prototype/
 
   - partial: row
@@ -114,34 +120,37 @@ partials:
         text: Front End Developer
     cta:
       label: See the Details
+      icon: trending_flat
       link: google-fiber-global-nav/
 
-  - partial: row
-    title: Warner Bros. YouTube Channel
-    figure:
-      position: left top
-      image: projects/wb.jpg
-      alt: Warner Bros. YouTube Channel
-    paragraphs:
-      - subtitle: For
-        text: Warner Bros.
-      - subtitle: My Role
-        text: Designer
-    cta:
-      label: See the Details
-      link: warner-bros-youtube-channel/
-
-  - partial: row
-    title: Century21 YouTube Channel
-    figure:
-      position: left top
-      image: projects/c21.jpg
-      alt: Century21 YouTube Channel
-    paragraphs:
-      - subtitle: For
-        text: Century21
-      - subtitle: My Role
-        text: Designer
-    cta:
-      label: See the Details
-      link: century21-youtube-channel/
+  # - partial: row
+  #   title: Warner Bros. YouTube Channel
+  #   figure:
+  #     position: left top
+  #     image: projects/wb.jpg
+  #     alt: Warner Bros. YouTube Channel
+  #   paragraphs:
+  #     - subtitle: For
+  #       text: Warner Bros.
+  #     - subtitle: My Role
+  #       text: Designer
+  #   cta:
+  #     label: See the Details
+  #     icon: trending_flat
+  #     link: warner-bros-youtube-channel/
+  #
+  # - partial: row
+  #   title: Century21 YouTube Channel
+  #   figure:
+  #     position: left top
+  #     image: projects/c21.jpg
+  #     alt: Century21 YouTube Channel
+  #   paragraphs:
+  #     - subtitle: For
+  #       text: Century21
+  #     - subtitle: My Role
+  #       text: Designer
+  #   cta:
+  #     label: See the Details
+  #     icon: trending_flat
+  #     link: century21-youtube-channel/

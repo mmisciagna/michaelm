@@ -22,8 +22,10 @@ partials:
     btns:
       - type: submit
         label: Send
+        icon: send
         extra_classes: js-form-submit-btn
       - type: reset
         label: Reset
+        icon: restore
         reverse: true
     sent_msg: Success! I'll be in touch shortly. <a href="/contact/">Send another message</a>.

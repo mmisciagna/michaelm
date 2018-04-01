@@ -69,6 +69,7 @@ gulp.task('serve', ['scripts', 'sass', 'images'], function() {
   gulp.watch(Config.JS_SRC_DIR + '**', ['scripts']);
   gulp.watch(Config.SCSS_SRC_DIR + '**', ['sass']);
   gulp.watch(Config.IMG_SRC_DIR + '**', ['images']);
+  gulp.watch('www/**/*.yaml').on('change', browserSync.reload);
   gulp.watch('www/**/*.jinja').on('change', browserSync.reload);
 });
 

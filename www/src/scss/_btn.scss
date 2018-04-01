@@ -19,8 +19,20 @@
   transition: opacity .3s ease-out;
   white-space: nowrap;
 
+  .material-icons {
+    display: inline-block;
+    font-size: $font-size;
+    margin: 0 0 $buffer-1 / 2 $buffer-1;
+    transition: transform .3s ease-out;
+    vertical-align: middle;
+  }
+
   &:hover {
     opacity: .8;
+
+    .material-icons {
+      transform: translateX(2px);
+    }
   }
 
   &[disabled] {

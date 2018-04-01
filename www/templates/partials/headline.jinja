@@ -1,4 +1,4 @@
-<h2 class="section__headline">
+<h2 class="section__headline{% if not partial.headline.drop_cap %} section__headline--no-drop-cap{% endif %}">
   {% if partial.headline.drop_cap %}
     {{ macros.drop_cap(partial.headline.text) }}
   {% else %}
@@ -6,9 +6,9 @@
   {% endif %}
   {% if partial.subheadline %}
     <span class="section__subheadline">
-      <span class="accent-color">For:</span> {{ partial.subheadline.for }}
+      <strong>For:</strong> {{ partial.subheadline.for }}
       <span class="section__subheadline-spacer"></span>
-      <span class="accent-color">My Role:</span> {{ partial.subheadline.role }}
+      <strong>My Role:</strong> {{ partial.subheadline.role }}
     </span>
   {% endif %}
 </h2>

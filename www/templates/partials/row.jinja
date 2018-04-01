@@ -10,7 +10,7 @@
       </div>
     {% endif %}
 
-    {% if partial.paragraphs %}
+    {% if partial.paragraphs or partial.cta %}
       <div class="row__item row__item--paragraphs">
         {% include "/partials/paragraphs.jinja" %}
 

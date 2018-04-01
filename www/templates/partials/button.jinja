@@ -2,10 +2,17 @@
   <button class="btn{% if btn.reverse %} btn--reverse{% endif %}{% if btn.extra_classes %} {{ btn.extra_classes }}{% endif %}"
       {% if btn.type %}type="{{ btn.type }}"{% endif %}>
     {{ btn.label }}
+    {% if btn.icon %}
+      <i class="material-icons">{{ btn.icon }}</i>
+    {% endif %}
   </button>
 {% else %}
   <a class="btn{% if btn.reverse %} btn--reverse{% endif %}{% if btn.extra_classes %} {{ btn.extra_classes }}{% endif %}"
-      href="{{ btn.link }}">
+      href="{{ btn.link }}"
+      {% if btn.new_tab %}target="_blank"{% endif %}>
     {{ btn.label }}
+    {% if btn.icon %}
+      <i class="material-icons">{{ btn.icon }}</i>
+    {% endif %}
   </a>
 {% endif %}

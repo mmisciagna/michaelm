@@ -17,13 +17,23 @@
 
   {% if partial.paragraphs %}
     {% include "/partials/paragraphs.jinja" %}
+  {% endif %}
 
-    {% if partial.cta %}
-      <div class="section__cta">
-        {% with btn = partial.cta %}
-          {% include "/partials/button.jinja" %}
-        {% endwith %}
-      </div>
-    {% endif %}
+  {% if partial.list %}
+    <ul class="section__list">
+      {% for item in partial.list %}
+        <li class="section__list-item">
+          {{ item.text }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if partial.cta %}
+    <div class="section__cta">
+      {% with btn = partial.cta %}
+        {% include "/partials/button.jinja" %}
+      {% endwith %}
+    </div>
   {% endif %}
 </section>
