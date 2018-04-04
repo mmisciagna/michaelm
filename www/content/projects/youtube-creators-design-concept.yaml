@@ -21,7 +21,7 @@ partials:
       src: projects/creators-hero-concept.jpg
       alt: YouTube Creators hero concept
     paragraphs:
-      - text: For the hero, I removed the carousel in favor of a simple image of a popular YouTube Creator. Studies show that carousel are in effective for displaying content because users ignore anything after the first frame.
+      - text: I removed the carousel in favor of an image of a popular YouTube Creator. Mulitples <a href="http://shouldiuseacarousel.com/" target="_blank">studies</a> have shown that carousels are ineffective for displaying content because most ignore anything after the first frame.
       - text: The copy states exactly what this site is — a resource hub for YouTube creators — with clear calls to action.
 
   - partial: section

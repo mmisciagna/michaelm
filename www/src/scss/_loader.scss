@@ -1,13 +1,7 @@
 .loader {
-  align-items: center;
+  @include cover();
+  @include flex-center();
   background: transparent;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
 
   &__spinner {
     height: $buffer-3 * 2;
@@ -22,16 +16,12 @@
     }
 
     .circular {
+      @include cover();
       animation: loader-rotate 2s linear infinite;
       bottom: 0;
-      height: 100%;
-      left: 0;
       margin: auto;
-      position: absolute;
       right: 0;
-      top: 0;
       transform-origin: center center;
-      width: 100%;
 
       .path {
         animation: loader-dash 1.5s ease-in-out infinite, loader-color 6s ease-in-out infinite;

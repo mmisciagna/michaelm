@@ -1,4 +1,5 @@
 .mobile-nav {
+  @include transition(opacity);
   background: $color-primary-dark;
   border-top: 1px solid $color-primary;
   height: calc(100% - #{$header-height});
@@ -9,7 +10,6 @@
   pointer-events: none;
   position: fixed;
   top: $header-height;
-  transition: opacity .3s ease-out;
   width: 100%;
   z-index: 1;
 
@@ -28,13 +28,9 @@
   }
 
   &__menu {
+    @include cover();
     display: table;
-    height: 100%;
-    left: 0;
     padding: $buffer-3 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
 
   &__list {

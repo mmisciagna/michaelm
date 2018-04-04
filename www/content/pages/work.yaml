@@ -6,7 +6,7 @@ partials:
   - partial: section
     headline:
       drop_cap: true
-      text: Take a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.
+      text: Have a look at some of the work I've done. Here you'll find both Front End Development and Web Design projects.
 
   - partial: row
     title: YouTube Creators

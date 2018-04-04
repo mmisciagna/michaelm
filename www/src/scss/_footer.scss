@@ -10,16 +10,13 @@
     @include content-max-width(0, $breakpoint-ipad-landscape);
 
     @include ipad-portrait-up {
-      align-items: center;
-      display: flex;
+      @include flex-center();
       justify-content: space-between;
     }
   }
 
   &__list {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    @include flex-center();
     list-style: none;
     margin: 0 0 $buffer-2;
     padding: 0;

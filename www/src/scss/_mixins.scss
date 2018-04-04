@@ -1,0 +1,69 @@
+@mixin tablet-up {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin ipad-portrait-up {
+  @media only screen and (min-width: $breakpoint-ipad-portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-up {
+  @media only screen and (min-width: $breakpoint-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape-up {
+  @media only screen and (min-width: $breakpoint-ipad-landscape) {
+    @content;
+  }
+}
+
+@mixin transition($style: all) {
+  transition: .3s $style ease-out;
+}
+
+@mixin hover-state($border_color) {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    background: $border_color;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition: all .15s ease-out;
+    width: 0
+  }
+
+  &:hover {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@mixin content-max-width($margin, $width) {
+  margin: $margin auto;
+  max-width: $width;
+}
+
+@mixin flex-center() {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin cover() {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

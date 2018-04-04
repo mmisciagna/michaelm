@@ -1,0 +1,26 @@
+.video {
+  @include cover();
+
+  &__poster {
+    @include cover();
+    background-position: center;
+    background-size: cover;
+    display: block;
+  }
+
+  &__icon {
+    @include cover();
+    @include flex-center();
+    @include transition(opacity);
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .material-icons {
+      color: $color-white;
+      font-size: $buffer-1 * 11;
+    }
+  }
+}

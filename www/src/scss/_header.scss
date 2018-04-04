@@ -15,8 +15,7 @@
 
   &__inner {
     @include content-max-width(0, $breakpoint-ipad-landscape);
-    align-items: center;
-    display: flex;
+    @include flex-center();
     height: $header-height;
     justify-content: space-between;
   }
@@ -26,10 +25,10 @@
   }
 
   &__button {
+    @include transition(color);
     color: $color-primary;
     height: 100%;
     padding: 0 $buffer-3;
-    transition: color .3s ease-out;
 
     @include ipad-portrait-up {
       display: none;

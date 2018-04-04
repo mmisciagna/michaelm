@@ -33,8 +33,7 @@
   }
 
   &__actions {
-    align-items: center;
-    display: flex;
+    @include flex-center();
     justify-content: flex-end;
     margin: $buffer-3 0;
 

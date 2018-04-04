@@ -1,6 +1,14 @@
 <figure class="section__figure">
   <div class="section__figure-aspect-ratio">
     {% include "partials/loader.jinja" %}
-    <div class="section__video" data-video="{{ partial.video }}"></div>
+    <div class="video" data-video="{{ partial.video.id }}"></div>
+    <button class="video__poster hide"
+        data-play="{{ partial.video.id }}"
+        aria-label="Play video"
+        style="background-image: url(/dist/img/{{ partial.video.poster }});">
+      <span class="video__icon">
+        <i class="material-icons">play_circle_outline</i>
+      </span>
+    </button>
   </div>
 </figure>

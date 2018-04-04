@@ -1,0 +1,40 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: YouTube Creators for Change
+    subheadline:
+      for: YouTube
+      role: Front End Developer
+
+  - partial: section
+    title: Description
+    paragraphs:
+      - text: A global initiative that supports YouTube creators who are tackling social issues and promoting awareness, tolerance and empathy on their YouTube channels.
+    cta:
+      label: Launch Site
+      new_tab: true
+      reverse: true
+      icon: open_in_new
+      link: https://www.youtube.com/yt/creators-for-change/
+
+  - partial: section
+    video:
+      id: hFdvE1EbOMU
+      poster: projects/cfc.jpg
+
+  - partial: section
+    title: Goal
+
+  - partial: section
+    title: Challenges
+
+  - partial: section
+    title: Tools
+    list:
+      - text: Vanilla JavaScript
+      - text: HTML
+      - text: Jinja2
+      - text: SCSS
+      - text: Gulp

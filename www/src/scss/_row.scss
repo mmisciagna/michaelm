@@ -3,8 +3,7 @@
   overflow: hidden;
 
   @include ipad-portrait-up {
-    align-items: center;
-    display: flex;
+    @include flex-center();
     flex-wrap: nowrap;
     justify-content: space-between;
   }

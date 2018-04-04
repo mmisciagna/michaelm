@@ -21,8 +21,13 @@
     line-height: $line-height-s;
 
     &--no-drop-cap {
-      font-size: $font-size-xl;
-      line-height: 1em;
+      font-size: $font-size-l;
+      line-height: $line-height-xs;
+
+      @include tablet-up {
+        font-size: $font-size-xl;
+        line-height: 1em;
+      }
     }
   }
 
@@ -36,7 +41,7 @@
     margin-top: $buffer-1;
 
     strong {
-      color: $color-primary-dark;
+      color: $color-accent;
       font-size: $font-size-xs;
       font-weight: $font-weight-sb;
       letter-spacing: 1px;
@@ -130,14 +135,6 @@
 
   &__cta {
     @include content-max-width($buffer-3, $content-max-width);
-  }
-
-  &__video {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
 
   &__image {
