@@ -19,10 +19,10 @@ partials:
         text: YouTube
       - subtitle: My Role
         text: Front End Developer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: youtube-creators/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: youtube-creators/
 
   - partial: row
     title: YouTube Creators Design Concept
@@ -35,10 +35,10 @@ partials:
         text: YouTube
       - subtitle: My Role
         text: Designer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: youtube-creators-design-concept/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: youtube-creators-design-concept/
 
   - partial: row
     title: YouTube Creators for Change
@@ -51,10 +51,10 @@ partials:
         text: YouTube
       - subtitle: My role
         text: Front End Developer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: youtube-creators-for-change/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: youtube-creators-for-change/
 
   - partial: row
     title: YouTube Impact Lab
@@ -67,10 +67,10 @@ partials:
         text: YouTube
       - subtitle: My role
         text: Front End Developer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: youtube-impact-lab/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: youtube-impact-lab/
 
   - partial: row
     title: YouTube Studio
@@ -84,10 +84,10 @@ partials:
         text: YouTube
       - subtitle: My role
         text: Front End Developer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: youtube-studio/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: youtube-studio/
 
   - partial: row
     title: My Fiber
@@ -101,10 +101,10 @@ partials:
         text: Google Fiber
       - subtitle: My role
         text: Front End Developer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: my-fiber-prototype/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: my-fiber-prototype/
 
   - partial: row
     title: Google Fiber Global Nav
@@ -118,39 +118,7 @@ partials:
         text: Google Fiber
       - subtitle: My role
         text: Front End Developer
-    cta:
-      label: See the Details
-      icon: trending_flat
-      link: google-fiber-global-nav/
-
-  # - partial: row
-  #   title: Warner Bros. YouTube Channel
-  #   figure:
-  #     position: left top
-  #     image: projects/wb.jpg
-  #     alt: Warner Bros. YouTube Channel
-  #   paragraphs:
-  #     - subtitle: For
-  #       text: Warner Bros.
-  #     - subtitle: My Role
-  #       text: Designer
-  #   cta:
-  #     label: See the Details
-  #     icon: trending_flat
-  #     link: warner-bros-youtube-channel/
-  #
-  # - partial: row
-  #   title: Century21 YouTube Channel
-  #   figure:
-  #     position: left top
-  #     image: projects/c21.jpg
-  #     alt: Century21 YouTube Channel
-  #   paragraphs:
-  #     - subtitle: For
-  #       text: Century21
-  #     - subtitle: My Role
-  #       text: Designer
-  #   cta:
-  #     label: See the Details
-  #     icon: trending_flat
-  #     link: century21-youtube-channel/
+    ctas:
+      - label: See Details
+        icon: trending_flat
+        link: google-fiber-global-nav/

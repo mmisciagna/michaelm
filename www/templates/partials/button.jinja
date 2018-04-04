@@ -1,6 +1,7 @@
 {% if not btn.link %}
   <button class="btn{% if btn.reverse %} btn--reverse{% endif %}{% if btn.extra_classes %} {{ btn.extra_classes }}{% endif %}"
-      {% if btn.type %}type="{{ btn.type }}"{% endif %}>
+      {% if btn.type %}type="{{ btn.type }}"{% endif %}
+      {% if btn.play_video %}data-play="{{ btn.play_video }}"{% endif %}>
     {{ btn.label }}
     {% if btn.icon %}
       <i class="material-icons">{{ btn.icon }}</i>

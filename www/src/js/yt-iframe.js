@@ -4,6 +4,7 @@ const utils = require('./utils');
 /** @private @enum {string} */
 const Attrs_ = {
   PLAY: 'data-play',
+  POSTER: 'data-poster',
 };
 
 /** @private @enum {string} */
@@ -35,7 +36,7 @@ class YTIframe {
 
     /** @private @const {!Element} */
     this.poster_ = document.querySelector(
-      `[${Attrs_.PLAY}='${this.playerId_}']`
+      `[${Attrs_.POSTER}='${this.playerId_}']`
     );
 
     this.renderPlayer_();
@@ -115,8 +116,11 @@ class YTIframe {
   play_(target) {
     const videoId = target.dataset.play;
 
-    target.classList.add(ClassNames_.HIDE);
     Players_[videoId].playVideo();
+
+    setTimeout(() => {
+      this.poster_.classList.add(ClassNames_.HIDE);
+    }, 300);
   }
 
   /** private */

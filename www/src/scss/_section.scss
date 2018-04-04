@@ -133,8 +133,18 @@
     text-align: right;
   }
 
-  &__cta {
+  &__ctas {
     @include content-max-width($buffer-3, $content-max-width);
+    @include flex-center();
+    justify-content: flex-start;
+  }
+
+  &__cta {
+    margin-left: $buffer-1;
+
+    &:first-child {
+      margin: 0;
+    }
   }
 
   &__image {

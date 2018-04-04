@@ -29,11 +29,15 @@
     </ul>
   {% endif %}
 
-  {% if partial.cta %}
-    <div class="section__cta">
-      {% with btn = partial.cta %}
-        {% include "/partials/button.jinja" %}
-      {% endwith %}
+  {% if partial.ctas %}
+    <div class="section__ctas">
+      {% for cta in partial.ctas %}
+        <div class="section__cta">
+          {% with btn = cta %}
+            {% include "/partials/button.jinja" %}
+          {% endwith %}
+        </div>
+      {% endfor %}
     </div>
   {% endif %}
 

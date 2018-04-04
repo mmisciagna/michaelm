@@ -3,7 +3,7 @@ title: Work
 partials:
   - partial: section
     headline:
-      text: YouTube Creators for Change
+      text: YouTube Impact Lab
     subheadline:
       for: YouTube
       role: Front End Developer
@@ -11,7 +11,7 @@ partials:
   - partial: section
     title: Description
     paragraphs:
-      - text: A global initiative that supports YouTube creators who are tackling social issues and promoting awareness, tolerance and empathy on their YouTube channels.
+      - text: YouTube Impact Lab's audience is non-profits. Their mission is to harness YouTube's scale, technology and talent to ignite and sustain movements that drive measurable social change.
     ctas:
       - label: Play Video
         icon: play_arrow
@@ -20,22 +20,23 @@ partials:
         new_tab: true
         reverse: true
         icon: open_in_new
-        link: https://www.youtube.com/yt/creators-for-change/
+        link: https://www.youtube.com/yt/impactlab/
 
   - partial: section
     video:
       id: hFdvE1EbOMU
-      poster: projects/cfc.jpg
+      poster: projects/impactlab.jpg
 
   - partial: section
     title: Goal
     paragraphs:
-      - text: Showcase YouTube creators who have made significant advancements in addressing awareness on their YouTube channels. This site makes it known that YouTube Creators for Change is truely a global initiative by displaying the creators' country of origin and all of the various global chapters.
+      - text: ???
 
   - partial: section
     title: Tools
     list:
       - text: Vanilla JavaScript
+      - text: Python
       - text: HTML
       - text: Jinja2
       - text: SCSS

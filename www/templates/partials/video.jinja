@@ -3,6 +3,7 @@
     {% include "partials/loader.jinja" %}
     <div class="video" data-video="{{ partial.video.id }}"></div>
     <button class="video__poster hide"
+        data-poster="{{ partial.video.id }}"
         data-play="{{ partial.video.id }}"
         aria-label="Play video"
         style="background-image: url(/dist/img/{{ partial.video.poster }});">

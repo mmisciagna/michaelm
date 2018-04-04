@@ -12,12 +12,15 @@ partials:
     title: Description
     paragraphs:
       - text: The YouTube Creators site is a resource hub for all YouTube creators, whether they are just getting starting or already have 1,000,000+ subscribers. There they'll find video tutorials, contest sign ups, the latest news from the Creators social feeds and general information on how to optimize their YouTube Channel.
-    cta:
-      label: Launch Site
-      new_tab: true
-      reverse: true
-      icon: open_in_new
-      link: https://www.youtube.com/yt/creators/
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: 0XcOLeOeFEc
+      - label: Launch Site
+        new_tab: true
+        reverse: true
+        icon: open_in_new
+        link: https://www.youtube.com/yt/creators/
 
   - partial: section
     video:
