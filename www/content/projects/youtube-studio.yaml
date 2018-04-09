@@ -1,0 +1,42 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: YouTube Studio
+    subheadline:
+      for: YouTube
+      role: Front End Developer
+
+  - partial: section
+    title: Description
+    paragraphs:
+      - text: The YouTube Studio Beta provides all new features and freshly designed site to help you manage your YouTube channel.
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: MqW-GOGS7pI
+      - label: Launch Site
+        new_tab: true
+        reverse: true
+        icon: open_in_new
+        link: https://www.youtube.com/yt/studio/
+
+  - partial: section
+    video:
+      id: MqW-GOGS7pI
+      poster: projects/studio.jpg
+
+  - partial: section
+    title: Goal
+    paragraphs:
+      - text: Get YouTube usrs to sign up and try  the YouTube Studio Beta and provide feedback.
+
+  - partial: section
+    title: Tools
+    list:
+      - text: Vanilla JavaScript
+      - text: HTML
+      - text: Jinja2
+      - text: SCSS
+      - text: Gulp

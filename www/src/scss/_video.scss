@@ -21,6 +21,7 @@
     .material-icons {
       color: $color-white;
       font-size: $buffer-1 * 11;
+      text-shadow: 0 0 $buffer-3 $color-primary-light;
     }
   }
 }

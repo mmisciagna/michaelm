@@ -6,15 +6,9 @@ import os
 
 from flask import Flask, redirect, request, send_from_directory
 from google.appengine.api import mail
-from slugify import slugify
 
 
 app = Flask(__name__, static_folder='dist')
-
-
-@app.template_filter('slug')
-def filter_slugify(str):
-  return slugify(str)
 
 
 @app.route('/', defaults={'page': 'home', 'project': None})

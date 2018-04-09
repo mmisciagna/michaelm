@@ -20,7 +20,7 @@ partials:
       - subtitle: My Role
         text: Front End Developer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: youtube-creators/
 
@@ -36,7 +36,7 @@ partials:
       - subtitle: My Role
         text: Designer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: youtube-creators-design-concept/
 
@@ -52,7 +52,7 @@ partials:
       - subtitle: My role
         text: Front End Developer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: youtube-creators-for-change/
 
@@ -68,7 +68,7 @@ partials:
       - subtitle: My role
         text: Front End Developer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: youtube-impact-lab/
 
@@ -85,7 +85,7 @@ partials:
       - subtitle: My role
         text: Front End Developer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: youtube-studio/
 
@@ -102,7 +102,7 @@ partials:
       - subtitle: My role
         text: Front End Developer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: my-fiber-prototype/
 
@@ -119,6 +119,6 @@ partials:
       - subtitle: My role
         text: Front End Developer
     ctas:
-      - label: See Details
+      - label: Details
         icon: trending_flat
         link: google-fiber-global-nav/
