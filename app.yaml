@@ -8,7 +8,7 @@ handlers:
 
 libraries:
 - name: ssl
-  version: latest
+  version: 2.7.11
 
 skip_files:
 - \.gitignore
