@@ -1,0 +1,38 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: Rich Media HTML5 Toolkit
+    subheadline:
+      for: DoubleClick Rich Media by Google
+      role: Front End Developer
+
+  - partial: section
+    title: Goal
+    paragraphs:
+      - text: Build a client-facing app to live on RichMediaGallery.com that will help agencies and advertisers to make the switch from Flash to HTML5 for all of their rich media ads.
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: 6oVx5Kq1Cfs
+
+  - partial: section
+    video:
+      id: 6oVx5Kq1Cfs
+      poster: projects/html5-toolkit.jpg
+
+  - partial: section
+    title: Challenges
+    paragraphs:
+      - text: Because RichMediaGallery.com is kept by a separate team while our team wanted to be able to update content as needed without going through a middle man. To do this, I used Firebase to house all of the content so that no one would need to update code to make changes or additions.
+      - text: Angular has a handy built in filtering system, but this app required you to be able to filter categories and the items within the categories within the same search bar which required a bit of custom code.
+
+  - partial: section
+    title: Tools
+    list:
+      - text: Material AngularJS
+      - text: Firebase Database
+      - text: Google App Engine
+      - text: HTML
+      - text: CSS

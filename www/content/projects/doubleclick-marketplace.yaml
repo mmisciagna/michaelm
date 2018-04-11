@@ -1,0 +1,42 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: DoubleClick Marketplace
+    subheadline:
+      for: DoubleClick by Google
+      role: Front End Developer
+
+  - partial: section
+    title: Description
+    paragraphs:
+      - text: Marketplace prototype for the DoubleClick.
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: ZRjDUbOgins
+
+  - partial: section
+    video:
+      id: ZRjDUbOgins
+      poster: projects/doubleclick-marketplace.jpg
+
+  - partial: section
+    title: Goal
+    paragraphs:
+      - text: Rapidly prototype new Marketplace design workflow for user testing using static mocks in conjunction with interactive components.
+
+  - partial: section
+    title: Challenges
+    paragraphs:
+      - text: For this prototype, it was important to show off animations, such as, accordion-style table rows and material cards.
+      - text: Testing was to begin the following week when I was brought into this project, so I only had 3 days to complete the first iteration. I was able to do this by building a prototype that includes both static and interactive mocks. This took a lot of collaboration with the designer and researcher to decide what features had the highest priority and therefore required coding.
+
+  - partial: section
+    title: Tools
+    list:
+      - text: Material AngularJS
+      - text: Google App Engine
+      - text: HTML
+      - text: CSS

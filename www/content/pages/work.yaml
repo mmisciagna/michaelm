@@ -122,3 +122,54 @@ partials:
       - label: Details
         icon: trending_flat
         link: google-fiber-global-nav/
+
+  - partial: row
+    title: DoubleClick Marketplace
+    figure:
+      border: true
+      position: left top
+      image: projects/doubleclick-marketplace.jpg
+      alt: DoubleClick Marketplace
+    paragraphs:
+      - subtitle: For
+        text: DoubleClick by Google
+      - subtitle: My role
+        text: Front End Developer
+    ctas:
+      - label: Details
+        icon: trending_flat
+        link: doubleclick-marketplace/
+
+  - partial: row
+    title: Google ACUX Doc Center
+    figure:
+      border: true
+      position: left top
+      image: projects/acux-doc-center.jpg
+      alt: Google ACUX Doc Center
+    paragraphs:
+      - subtitle: For
+        text: Google Ads & Commerce User Experience
+      - subtitle: My role
+        text: Front End Developer
+    ctas:
+      - label: Details
+        icon: trending_flat
+        link: acux-doc-center/
+
+  - partial: row
+    title: Rich Media HTML5 Toolkit
+    figure:
+      border: true
+      position: left top
+      image: projects/html5-toolkit.jpg
+      alt: Rich Media HTML5 Toolkit
+    paragraphs:
+      - subtitle: For
+        text: DoubleClick Rich Media by Google
+      - subtitle: My role
+        text: Front End Developer
+    ctas:
+      - label: Details
+        icon: trending_flat
+        link: html5-toolkit/

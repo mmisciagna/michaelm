@@ -9,12 +9,18 @@ partials:
       role: Front End Developer
 
   - partial: section
-    video: 0iQQ4iBIOw4
-
-  - partial: section
     title: Goal
     paragraphs:
       - text: Build a responsive prototype to the designer's pixel-perfect specs for mobile testing using Material design elements.
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: YSMDyjB-LDc
+
+  - partial: section
+    video:
+      id: YSMDyjB-LDc
+      poster: projects/myfiber.jpg
 
   - partial: section
     title: Challenges

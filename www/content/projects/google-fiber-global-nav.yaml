@@ -1,0 +1,37 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: Google Fiber Global Nav
+    subheadline:
+      for: Google Fiber
+      role: Front End Developer
+
+  - partial: section
+    title: Goal
+    paragraphs:
+      - text: Design and prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: Ft9qsS7l52U
+
+  - partial: section
+    video:
+      id: Ft9qsS7l52U
+      poster: projects/fiber-globalnav.jpg
+
+  - partial: section
+    title: Challenges
+    paragraphs:
+      - text: The Google Fiber portal at the time was bacically composed of two different sites. You start on the home page, designed and built by marketing, and then when you navigate into the site it becomes a site built by engineers with an iframed navigation component. Because of this, users easily got lost in the flow. This proposed solution solves that problem as well as keeping the architecture and design consistent across all devices.
+      - text: Fiber needs to be able to scale from 8 cities to X number without having to change the architecture of the site. The navigation proposed here, allows for such scaling by seamlessly adding a scrollable area within the expanded Cities nav item.
+
+  - partial: section
+    title: Tools
+    list:
+      - text: Material AngularJS
+      - text: Google App Engine
+      - text: HTML
+      - text: CSS

@@ -1,0 +1,37 @@
+title: Work
+
+partials:
+  - partial: section
+    headline:
+      text: Google ACUX Doc Center
+    subheadline:
+      for: Google ACUX
+      role: Front End Developer
+
+  - partial: section
+    title: Goal
+    paragraphs:
+      - text: Design and prototype an experience that would make it easy for agencies with one to hundreds of clients to find any document in one centralized, filterable location. 
+    ctas:
+      - label: Play Video
+        icon: play_arrow
+        play_video: d-b98ep59ZQ
+
+  - partial: section
+    video:
+      id: d-b98ep59ZQ
+      poster: projects/acux-doc-center.jpg
+
+  - partial: section
+    title: Challenges
+    paragraphs:
+      - text: Google has an international customer base. This means that transactions with them can involve many different currencies, not just US dollars. This project needed to be able to scale and accommodate for such cases by being smart enough to recognize that and have different actions for different currencies. In this example, there are 2 Brazillian documents that have options to open the document in a new window.
+
+  - partial: section
+    title: Tools
+    list:
+      - text: ACUX specs
+      - text: AngularJS
+      - text: Google App Engine
+      - text: HTML
+      - text: CSS
