@@ -6,8 +6,8 @@
   "scripts": {
     "deploy": "gcloud app deploy --project michaelm -v master",
     "deploy:beta": "gcloud app deploy --project michaelm -v beta --no-promote",
-    "dev": "dev_appserver.py .",
-    "dev:mail": "dev_appserver.py . --enable_sendmail"
+    "dev": "dev_appserver.py . & gulp",
+    "dev:mail": "dev_appserver.py . --enable_sendmail & gulp"
   },
   "repository": {
     "type": "git",
