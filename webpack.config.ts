@@ -16,43 +16,18 @@ module.exports = {
   mode: 'development',
   entry: [
     path.resolve(__dirname, 'src', 'index.tsx'),
-    path.resolve(__dirname, 'src', 'styles.scss'),
+    path.resolve(__dirname, 'src', 'index.scss'),
   ],
   output: {
     filename: 'static/index.min.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
-      inject: false,
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'static/styles.min.css',
-    }),
-    // new StylelintPlugin({
-    //   files: 'src/**/*.scss',
-    // }),
-    // Browsersync for development server, only runs with --watch flag.
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      proxy: 'http://localhost:8080',
-      notify: false,
-      startPath: '/',
-      open: false,
-      middleware: [compress()],
-      reloadDelay: 1000,
-      files: 'src/**/*',
-    }),
-    new ForkTsCheckerWebpackPlugin(),
-    new ForkTsCheckerNotifierWebpackPlugin({excludeWarnings: true}),
-  ],
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(js|ts)x?$/,
         enforce: 'pre',
         exclude: /node_modules/,
         use: 'ts-loader',
@@ -97,10 +72,35 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
-  devtool: 'inline-source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      inject: false,
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'static/index.min.css',
+    }),
+    new StylelintPlugin({
+      files: 'src/**/*.scss',
+      configBasedir: 'src/styelint-scss.yml',
+    }),
+    // Browsersync for development server, only runs with --watch flag.
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:8080',
+      notify: false,
+      startPath: '/',
+      open: false,
+      middleware: [compress()],
+      reloadDelay: 1000,
+      files: 'src/**/*',
+    }),
+    new ForkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerNotifierWebpackPlugin({excludeWarnings: true}),
+  ],
   optimization: {
     minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers
       new TerserPlugin({
         extractComments: false,
       }),

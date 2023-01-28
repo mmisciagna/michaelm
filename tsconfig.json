@@ -1,12 +1,7 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
   "ts-node": {
     "files": true
   },
-  "files": [
-    // Add any ambient server types here.
-    // "./types.d.ts"
-  ],
   "moduleResolution": "node",
   "compilerOptions": {
     "allowJs": true,

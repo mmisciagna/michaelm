@@ -2,7 +2,7 @@
   color: rebeccapurple;
   display: flex;
   margin: 24px 0;
-  transition: all ease-out .3s;
+  transition: all ease-out .3s !important;
 
   &--blue {
     color: cornflowerblue;
