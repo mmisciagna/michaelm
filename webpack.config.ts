@@ -1,6 +1,6 @@
-import * as path from 'path';
-import HtmlWebpackPlugin  from 'html-webpack-plugin';
-
+const path = require('path');
+const TerserPlugin = require("terser-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
@@ -15,7 +15,7 @@ const compress= require('compression');
 module.exports = {
   mode: 'development',
   entry: [
-    path.resolve(__dirname, 'src', 'index.ts'),
+    path.resolve(__dirname, 'src', 'index.tsx'),
     path.resolve(__dirname, 'src', 'styles.scss'),
   ],
   output: {
@@ -52,26 +52,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|js)x?$/,
+        test: /\.tsx?$/,
         enforce: 'pre',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/typescript",
-            ],
-            plugins: [
-              "@babel/proposal-class-properties",
-              "@babel/proposal-object-rest-spread",
-              "@babel/plugin-proposal-optional-chaining",
-              "@babel/plugin-proposal-nullish-coalescing-operator",
-              "@babel/plugin-proposal-numeric-separator",
-            ]
-          }
-        },
+        use: 'ts-loader',
       },
       {
         test: /\.s?css$/,
@@ -117,17 +101,10 @@ module.exports = {
   optimization: {
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers
-      '...',
+      new TerserPlugin({
+        extractComments: false,
+      }),
       new CssMinimizerPlugin(),
     ],
   },
-  // devServer: {
-  //   compress: true,
-  //   static: {
-  //     directory: path.join(__dirname, 'dist'),
-  //   },
-  //   proxy: {
-  //     '/': 'http://localhost:3000',
-  //   }
-  // },
 };

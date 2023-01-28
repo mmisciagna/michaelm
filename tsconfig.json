@@ -7,6 +7,7 @@
     // Add any ambient server types here.
     // "./types.d.ts"
   ],
+  "moduleResolution": "node",
   "compilerOptions": {
     "allowJs": true,
     "baseUrl": ".",
@@ -23,7 +24,7 @@
       "es2021",
       "dom"
     ],
-    "module": "commonjs",
+    "module": "es6",
     "moduleResolution": "node",
     "noEmitOnError": false,
     "noErrorTruncation": false,
@@ -42,7 +43,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "stripInternal": true,
-    "target": "es2018",
+    "target": "es5",
     "useUnknownInCatchVariables": false,
   },
   "compileOnSave": false,

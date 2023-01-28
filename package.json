@@ -5,11 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "IF exist dist (rmdir /q /s dist && npm run build:prod) ELSE (npm run build:prod)",
-    "build:prod": "webpack --mode=production",
-    "clean": "rmdir /q /s dist node_modules && DEL /q /s package-lock.json ",
-    "dev": "run-p webpack:watch",
-    "webpack:start": "webpack serve",
-    "webpack:watch": "webpack --watch --config webpack.config.ts"
+    "build:prod": "webpack --mode=production --devtool=false",
+    "clean": "rmdir /q /s dist node_modules && DEL /q /s package-lock.json",
+    "dev": "run-p webpack:start",
+    "webpack:start": "webpack serve"
   },
   "author": "Michael Misciagna",
   "license": "UNLICENSED",
@@ -58,6 +57,7 @@
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "stylelint-webpack-plugin": "^3.3.0",
+    "terser-webpack-plugin": "^5.3.6",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
