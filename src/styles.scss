@@ -1,0 +1,14 @@
+.hello {
+  color: rebeccapurple;
+  display: flex;
+  margin: 24px 0;
+  transition: all ease-out .3s;
+
+  &--blue {
+    color: cornflowerblue;
+  }
+
+  &--green {
+    color: seagreen;
+  }
+}
