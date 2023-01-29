@@ -2,6 +2,7 @@ import * as React from 'react';
 
 
 export const Header = () => {  
+  console.log('header')
   return (
     <>
       <header className="mm-header">
