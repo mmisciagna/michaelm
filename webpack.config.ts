@@ -42,6 +42,7 @@ module.exports = {
             options: {
               postcssOptions: {
                 ident: 'postcss',
+                parser: "postcss-scss",
                 plugins: [
                   AutoPrefixerPlugin(),
                 ],
@@ -56,7 +57,7 @@ module.exports = {
                 includePaths: [path.resolve(__dirname, 'node_modules')],
               },
             },
-          }
+          },
         ],
       },
       {

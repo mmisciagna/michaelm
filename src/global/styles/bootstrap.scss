@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  font: 400 16px/1.4em Baskerville, Georgia, serif;
+  flex-direction: column;
+  margin: unset;
+  min-height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a,
+button,
+select,
+iframe,
+[role='button'] {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  margin: unset;
+  padding: unset;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 500;
+  margin: .5em 0;
+}
+
+p {
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.mm-root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}

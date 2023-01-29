@@ -1,14 +1,5 @@
-.hello {
-  color: rebeccapurple;
-  display: flex;
-  margin: 24px 0;
-  transition: all ease-out .3s !important;
+// Global
+@import './global/styles/bootstrap';
 
-  &--blue {
-    color: cornflowerblue;
-  }
-
-  &--green {
-    color: seagreen;
-  }
-}
+// Components
+@import './components/header';

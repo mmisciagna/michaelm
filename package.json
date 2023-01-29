@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Michel Misciagna, Sr. UX Engineer",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "IF exist dist (rmdir /q /s dist && npm run build:prod) ELSE (npm run build:prod)",
     "build:prod": "webpack --mode=production --devtool=false",
     "clean": "rmdir /q /s dist node_modules && DEL /q /s package-lock.json",
     "dev": "run-p webpack:start",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "webpack:start": "webpack serve"
   },
   "author": "Michael Misciagna",
@@ -19,6 +19,7 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/stylelint": "^14.0.0",
     "@types/webpack": "^5.28.0",
     "autoprefixer": "^10.4.13",
     "browser-sync-webpack-plugin": "^2.3.0",
@@ -38,6 +39,7 @@
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-scss": "^4.3.0",
     "stylelint-webpack-plugin": "^3.3.0",
     "terser-webpack-plugin": "^5.3.6",

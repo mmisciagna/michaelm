@@ -42,4 +42,7 @@
     "useUnknownInCatchVariables": false,
   },
   "compileOnSave": false,
+  "exclude": [
+    "node_modules"
+  ]
 }

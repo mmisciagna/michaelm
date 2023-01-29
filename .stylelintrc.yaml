@@ -13,6 +13,8 @@ reportInvalidScopeDisables: &disable-exemptions
 reportNeedlessDisables: *disable-exemptions
 reportDescriptionlessDisables: true
 
+extends: ["stylelint-config-standard-scss"]
+
 rules:
   # This list is to be verified with tests in `e2e_test.js`, in order to verify that each rule is
   # functioning, and that this file does not contain typos.
@@ -50,7 +52,9 @@ rules:
   # Need to check if units are required for some flex properties in some browsers.
   # length-zero-no-unit
   no-duplicate-at-import-rules: true
+  no-missing-end-of-source-newline: false
   no-unknown-animations: true
+  number-leading-zero: false
   # Requires known-css-parser, not yet imported into third_party.
   # property-no-unknown: true
   rule-empty-line-before:
@@ -94,6 +98,7 @@ rules:
   # https://github.com/kristerkari/stylelint-scss/issues/452, b/146236561, b/148542732
   # scss/operator-no-unspaced: true
   shorthand-property-no-redundant-values: true
+  string-quotes: "single"
   unit-no-unknown:
     - true
     - ignoreUnits:
