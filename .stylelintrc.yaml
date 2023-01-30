@@ -23,7 +23,7 @@ rules:
     - ignoreAtRules:
       - if
       - else
-  block-no-empty: false
+  block-no-empty: null
   color-hex-length: short
   color-no-invalid-hex: true
   declaration-block-no-duplicate-properties:
@@ -49,12 +49,13 @@ rules:
   function-url-no-scheme-relative: true
   function-url-quotes: never
   media-feature-name-case: lower
+  no-descending-specificity: false
   # Need to check if units are required for some flex properties in some browsers.
   # length-zero-no-unit
   no-duplicate-at-import-rules: true
-  no-missing-end-of-source-newline: false
+  no-missing-end-of-source-newline: null
   no-unknown-animations: true
-  number-leading-zero: false
+  number-leading-zero: null
   # Requires known-css-parser, not yet imported into third_party.
   # property-no-unknown: true
   rule-empty-line-before:

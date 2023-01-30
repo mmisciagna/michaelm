@@ -1,0 +1,17 @@
+:root {
+  --base-padding: 24px;
+  --font-stack-raleway: 'raleway', 'arial', sans-serif;
+  --main-padding-x: var(--base-padding);
+  --main-padding-y: var(--base-padding);
+  --body-text-max-width: 720px;
+
+  @include ipad-portrait-up {
+    --main-padding-x: calc(var(--base-padding) * 2);
+    --main-padding-y: calc(var(--base-padding) * 2);
+  }
+
+  @include desktop-up {
+    --main-padding-x: calc(var(--base-padding) * 3);
+    --main-padding-y: calc(var(--base-padding) * 3);
+  }
+}

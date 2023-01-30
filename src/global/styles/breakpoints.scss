@@ -1,0 +1,21 @@
+$breakpoint-tablet: 600px;
+$breakpoint-ipad-portrait: 768px;
+$breakpoint-desktop: 1200px;
+
+@mixin tablet-up {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin ipad-portrait-up {
+  @media (min-width: #{$breakpoint-ipad-portrait}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
