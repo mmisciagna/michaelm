@@ -49,7 +49,7 @@ rules:
   function-url-no-scheme-relative: true
   function-url-quotes: never
   media-feature-name-case: lower
-  no-descending-specificity: false
+  no-descending-specificity: null
   # Need to check if units are required for some flex properties in some browsers.
   # length-zero-no-unit
   no-duplicate-at-import-rules: true

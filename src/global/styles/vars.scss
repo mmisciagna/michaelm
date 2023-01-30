@@ -1,17 +1,20 @@
 :root {
-  --base-padding: 24px;
-  --font-stack-raleway: 'raleway', 'arial', sans-serif;
-  --main-padding-x: var(--base-padding);
-  --main-padding-y: var(--base-padding);
+  --base-unit: 24px;
   --body-text-max-width: 720px;
+  --default-font-size: 16px;
+  --font-stack-raleway: 'raleway', 'arial', sans-serif;
+  --header-height: calc(var(--base-unit) * 2);
+  --main-padding-x: var(--base-unit);
+  --main-padding-y: var(--base-unit);
 
   @include ipad-portrait-up {
-    --main-padding-x: calc(var(--base-padding) * 2);
-    --main-padding-y: calc(var(--base-padding) * 2);
+    --header-height: calc(var(--base-unit) * 3);
+    --main-padding-x: calc(var(--base-unit) * 2);
+    --main-padding-y: calc(var(--base-unit) * 2);
   }
 
   @include desktop-up {
-    --main-padding-x: calc(var(--base-padding) * 3);
-    --main-padding-y: calc(var(--base-padding) * 3);
+    --main-padding-x: calc(var(--base-unit) * 3);
+    --main-padding-y: calc(var(--base-unit) * 3);
   }
 }

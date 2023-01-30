@@ -5,65 +5,76 @@
   font-family: var(--font-stack-raleway);
   font-size: 14px;
   font-weight: 700;
+  left: 0;
   letter-spacing: 1px;
+  position: sticky;
   text-transform: uppercase;
+  top: 0;
   justify-content: space-between;
 
   @include tablet-up {
     flex-direction: row;
+    height: var(--header-height);
   }
 
   &__branding {
+    align-items: center;
     background: var(--color-dark-green);
     color: var(--color-white);
+    display: flex;
     flex: 1;
+    flex-basis: var(--header-height);
+    justify-content: center;
     overflow: hidden;
-    padding: var(--base-padding) var(--main-padding-x);
+    padding: 0 var(--main-padding-x);
     position: relative;
-    text-align: center;
     width: 100%;
 
     @include tablet-up {
-      text-align: left;
+      justify-content: flex-start;
+      height: 100%;
+    }
 
-      &::after {
-        background: var(--color-white);
-        border-radius: 50%;
-        content: '';
-        height: 200px;
-        position: absolute;
-        right: 0;
+    &::before {
+      background: var(--color-white);
+      bottom: 0;
+      content: '';
+      height: var(--default-font-size);
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 50%);
+      width: var(--main-padding-x);
+
+      @include tablet-up {
+        bottom: auto;
+        left: -4px;
         top: 50%;
-        transform: translate(95%, -50%);
-        width: 200px;
+        transform: translateY(-50%);
       }
     }
   }
 
   &__nav {
-    align-items: center;
+    align-items: flex-end;
+    backdrop-filter: blur(5px);
     display: flex;
+    height: 100%;
     justify-content: center;
-    padding: var(--base-padding) 0;
+    padding: var(--base-unit) 0;
+    width: 100%;
 
-    @include desktop-up {
+    @include tablet-up {
       padding: unset;
+      width: unset;
     }
   }
 
   &__nav-item {
     display: inline-block;
-    margin: 0 calc(var(--base-padding) / 2);
+    margin: 0 calc(var(--base-unit) / 2);
     position: relative;
-    opacity: .8;
+    opacity: .7;
     transition: opacity var(--default-speed-ease);
-
-    @include desktop-up {
-      font-size: 2em;
-      font-weight: 500;
-      line-height: 1.2em;
-      margin: 0 var(--base-padding);
-    }
 
     &::after {
       background: var(--color-dark-green);
@@ -71,7 +82,7 @@
       height: 2px;
       position: absolute;
       left: 0;
-      top: 100%;
+      top: -4px;
       transition: width var(--default-speed-ease);
       width: 0;
     }

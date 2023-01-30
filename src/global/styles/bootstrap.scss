@@ -13,12 +13,11 @@ html {
 body {
   color: var(--color-dark-green);
   display: flex;
-  font: 400 16px/1.4em Baskerville, Georgia, serif;
+  font: 400 #{var(--default-font-size)}/1.4em Baskerville, Georgia, serif;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   margin: unset;
   min-height: 100%;
-  overflow-x: hidden;
   width: 100%;
 }
 

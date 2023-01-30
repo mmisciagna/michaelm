@@ -2,6 +2,7 @@
   "ts-node": {
     "files": true
   },
+  "files": ["types.d.ts"],
   "moduleResolution": "node",
   "compilerOptions": {
     "allowJs": true,
