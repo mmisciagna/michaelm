@@ -1,6 +1,7 @@
 const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
@@ -74,13 +75,18 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
   devServer: {
-    // 404 fallback to index.html. Needed to get React Router to work in dev.
+    // 404 fallback to index.html. Using with React Router.
     historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
       inject: false,
+    }),
+    new CopyPlugin({
+      patterns: [
+        {from: 'src/static/imgs', to: 'static/imgs'},
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: 'static/index.min.css',

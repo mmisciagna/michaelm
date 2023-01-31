@@ -53,6 +53,7 @@ rules:
   # Need to check if units are required for some flex properties in some browsers.
   # length-zero-no-unit
   no-duplicate-at-import-rules: true
+  no-invalid-double-slash-comments: null
   no-missing-end-of-source-newline: null
   no-unknown-animations: true
   number-leading-zero: null
@@ -95,6 +96,7 @@ rules:
       # go/sass-stack-variables
       - "stv-toggled"
       - "stv-else"
+  scss/double-slash-comment-empty-line-before: null
   # Disable until a few bugs are worked out, e.g.
   # https://github.com/kristerkari/stylelint-scss/issues/452, b/146236561, b/148542732
   # scss/operator-no-unspaced: true

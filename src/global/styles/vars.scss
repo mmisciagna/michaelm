@@ -3,9 +3,11 @@
   --body-text-max-width: 720px;
   --default-font-size: 16px;
   --font-stack-raleway: 'raleway', 'arial', sans-serif;
+  --footer-height: calc(var(--base-unit) * 4);
   --header-height: calc(var(--base-unit) * 2);
   --main-padding-x: var(--base-unit);
   --main-padding-y: var(--base-unit);
+  --section-max-width: 1200px;
 
   @include ipad-portrait-up {
     --header-height: calc(var(--base-unit) * 3);

@@ -64,14 +64,19 @@ img {
   width: 100%;
 }
 
-.mm-main {
+.mm-root {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 0 var(--main-padding-x);
   width: 100%;
 }
 
+.mm-main {
+  flex: 1;
+  padding: 0 var(--main-padding-x);
+}
+
 .mm-section {
-  margin: var(--main-padding-y) 0;
+  margin: var(--main-padding-y) auto;
+  max-width: var(--section-max-width);
 }

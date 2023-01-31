@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {PATHS} from '../global/global.constants';
-import {getHomepageDetails} from '../global/global.utils';
+import {PATHS, getHomepageDetails} from '../../routes/root';
 
 
 export const Header = (props: {path: string}) => {
@@ -12,7 +11,7 @@ export const Header = (props: {path: string}) => {
       <header className="mm-header">
         <div className="mm-header__branding">
           <Link to={`/${homepageDetails.path}`} aria-label={homepageDetails.label}>
-            Michael Misciagna
+            <span>Michael Misciagna</span>
           </Link>
         </div>
         <nav className="mm-header__nav">

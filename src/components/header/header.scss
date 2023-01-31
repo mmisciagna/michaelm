@@ -5,12 +5,12 @@
   font-family: var(--font-stack-raleway);
   font-size: 14px;
   font-weight: 700;
+  justify-content: space-between;
   left: 0;
   letter-spacing: 1px;
   position: sticky;
   text-transform: uppercase;
   top: 0;
-  justify-content: space-between;
 
   @include tablet-up {
     flex-direction: row;
@@ -30,27 +30,30 @@
     position: relative;
     width: 100%;
 
+    span {
+      background: var(--color-dark-green);
+      padding: 0 calc(var(--base-unit) / 2);
+      position: relative;
+
+      @include tablet-up {
+        margin-left: calc(-1 * (var(--base-unit) / 2));
+      }
+    }
+
     @include tablet-up {
       justify-content: flex-start;
       height: 100%;
     }
 
     &::before {
-      background: var(--color-white);
-      bottom: 0;
+      background: var(--color-light-green);
       content: '';
-      height: var(--default-font-size);
-      left: 50%;
+      height: 1px;
+      left: var(--base-unit);
       position: absolute;
-      transform: translate(-50%, 50%);
-      width: var(--main-padding-x);
-
-      @include tablet-up {
-        bottom: auto;
-        left: -4px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      top: 50%;
+      transform: translateY(-50%);
+      width: 94%;
     }
   }
 
@@ -67,17 +70,21 @@
       padding: unset;
       width: unset;
     }
+
+    @include desktop-up {
+      padding: 0 var(--base-unit);
+    }
   }
 
   &__nav-item {
+    color: var(--color-dark-green);
     display: inline-block;
     margin: 0 calc(var(--base-unit) / 2);
     position: relative;
-    opacity: .7;
-    transition: opacity var(--default-speed-ease);
+    transition: color var(--default-speed-ease);
 
     &::after {
-      background: var(--color-dark-green);
+      background: var(--color-bronze);
       content: '';
       height: 2px;
       position: absolute;
@@ -89,8 +96,7 @@
 
     &:hover,
     &--active {
-      color: var(--color-dark-green);
-      opacity: 1;
+      color: var(--color-bronze);
 
       &::after {
         width: 25%;

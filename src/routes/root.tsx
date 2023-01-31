@@ -1,11 +1,35 @@
 import * as React from 'react';
 import {useParams, Outlet} from 'react-router-dom';
-import {PATHS} from '../global/global.constants';
-import {getHomepageDetails} from '../global/global.utils';
-import {Header} from '../components/header';
+import {Header} from '../components/header/header';
+import {Footer} from '../components/footer/footer';
+import {About} from './about';
+import {Projects} from './projects';
 
 
-const HOMEPAGE_DETAILS = getHomepageDetails();
+export const PATHS: PathDetails[] = [
+  {
+    path: '',
+    element: <Projects />,
+    label: 'Projects',
+  },  
+  {
+    path: 'about',
+    element: <About />,
+    label: 'About',
+  },
+];
+
+export const getHomepageDetails = (): PathDetails => {
+  let homepageDetails = PATHS.find((details: PathDetails) => {
+    return details.path === '';
+  });
+
+  if (homepageDetails) {
+    return homepageDetails;
+  } else {
+    return PATHS[0];
+  }
+};
 
 const getPageDetails = (path: string): PathDetails => {
   let details = PATHS.find((details: PathDetails) => {
@@ -21,7 +45,7 @@ const getPageDetails = (path: string): PathDetails => {
 
 export const Page = () => {
   let {path} = useParams();
-  if (!path) path = HOMEPAGE_DETAILS.path;
+  if (!path) path = getHomepageDetails().path;
   const pageElement = getPageDetails(path).element;
   return (pageElement);
 };
@@ -36,6 +60,7 @@ export const Root = () => {
       <main className={`mm-main mm-main--${path || 'overview'}`}>
         <Outlet />
       </main>
+      <Footer path={path} />
     </>
   );
 };
