@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {RESUME_CONTENT} from './resume';
+import {GlobalString} from '../../global/global.constants';
 
 const Intro = () => {
   return (
@@ -7,18 +8,20 @@ const Intro = () => {
       <section className="mm-section mm-about__intro">
         <div className=" mm-grid">
           <div className="mm-grid__col-r">
-            <h1 className="mm-page-title">Howdy, I am Michael Misciagna.</h1>
-            <h2 className="mm-page-subtext">pronounced [mee-shah-nyah]</h2>
+            <h1 className="mm-page-title">Hello, I am Michael Misciagna.</h1>
+            <h2 className="mm-page-subtext">pronounced {GlobalString.pronunciation}</h2>
           </div>
         </div>
       </section>
       <section className="mm-section mm-section--full-bleed mm-about__tldr">
         <div className="mm-grid mm-section__inner">
           <div className="mm-grid__col-l">
-            <img src="/static/imgs/profile-pic.webp" alt="Profile picture" />
+            <div className="mm-frame">
+              <img src="/static/imgs/profile-pic.webp" alt="Profile picture of Michael" />
+            </div>
           </div>
           <div className="mm-grid__col-r">
-            <h2>Sr. UX Engineer at Google, with over 12+ years of experience.</h2>
+            <h2>Sr. UX Engineer at Google, with 12+ years of experience.</h2>
             <p>I have developed and designed the front-ends of massively trafficked websites.</p>
             <p>The current state of web production requires developers to have a design eye and understanding of user experience. No longer does it suffice to have designers and developers work in silos. Instead, they need to collaborate and understand the other’s role and capabilities. Having worked as both a front-end developer and designer, I have a proven ability to bridge the gap between these cross-disciplinary teams.</p>
             <h2>Technical prowess</h2>
@@ -47,8 +50,18 @@ const Resume = () => {
               {section.entries ? section.entries.map((entry: any) => {
                 return (
                   <div className="mm-resume__entry" key={entry.header}>
-                    {entry.header ? <h3>{entry.header}{entry.ancillaryHeader ? <span> / {entry.ancillaryHeader}</span> : ''}</h3> : ''}
-                    {entry.dates ? <p className="mm-resume__dates">{entry.dates}</p> : ''}
+                    {entry.header ?
+                      <h3>
+                        {entry.header}{entry.ancillaryHeader ? <span> / {entry.ancillaryHeader}</span> : ''}
+                      </h3> :
+                      ''
+                    }
+                    {entry.dates ?
+                      <p className="mm-resume__dates">
+                        {entry.dates}
+                      </p> :
+                      ''
+                    }
                     {entry.details.map((details: any, i: number) => {
                       const isList = details.type && details.type === 'list';
                       return (

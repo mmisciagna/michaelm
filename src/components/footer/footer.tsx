@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {GCP_STORAGE_BUCKET} from '../../global/global.constants';
+import {GCP_STORAGE_BUCKET, GlobalString} from '../../global/global.constants';
 import {PATHS} from '../../routes/root';
 
 
@@ -24,6 +24,7 @@ export const Footer = (props: {path: string}) => {
             )
           })}
         </nav>
+        <p>Misciagna is Italian and is pronounced <span>{GlobalString.pronunciation}</span>.</p>
         <div className='mm-footer__ancillary-links'>
           <a href={`${GCP_STORAGE_BUCKET}/michael-misciagna-resume.pdf`} target="_blank" aria-label="CV" download>
             CV

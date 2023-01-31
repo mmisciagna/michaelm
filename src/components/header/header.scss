@@ -9,8 +9,8 @@
   left: 0;
   letter-spacing: 1px;
   position: sticky;
-  text-transform: uppercase;
   top: 0;
+  z-index: 100;
 
   @include tablet-up {
     flex-direction: row;
@@ -28,6 +28,7 @@
     overflow: hidden;
     padding: 0 var(--main-padding-x);
     position: relative;
+    font-style: italic;
     width: 100%;
 
     span {
@@ -66,6 +67,7 @@
     justify-content: center;
     padding: var(--base-unit) 0;
     position: relative;
+    text-transform: uppercase;
     width: 100%;
 
     @include tablet-up {

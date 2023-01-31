@@ -5,7 +5,7 @@
   --footer-height: calc(var(--base-unit) * 4);
   --header-height: calc(var(--base-unit) * 2);
   --main-padding-x: var(--base-unit);
-  --main-padding-y: var(--base-unit);
+  --main-padding-y: calc(var(--base-unit) * 3);
   --negate-main-padding-x: calc(-1 * var(--main-padding-x));
   --section-max-width: 1200px;
 
@@ -13,11 +13,9 @@
     --default-font-size: 16px;
     --header-height: calc(var(--base-unit) * 3);
     --main-padding-x: calc(var(--base-unit) * 2);
-    --main-padding-y: calc(var(--base-unit) * 2);
   }
 
   @include desktop-up {
     --main-padding-x: calc(var(--base-unit) * 3);
-    --main-padding-y: calc(var(--base-unit) * 3);
   }
 }

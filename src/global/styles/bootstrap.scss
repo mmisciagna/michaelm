@@ -89,6 +89,7 @@ ul {
 img {
   max-width: 100%;
   width: 100%;
+  vertical-align: middle;
 }
 
 .mm-root {
@@ -128,4 +129,31 @@ img {
   color: var(--color-bronze);
   font-style: italic;
   margin: unset;
+}
+
+.mm-frame {
+  --pos-unit: -6px;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    border: 16px solid var(--color-white);
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    right: var(--pos-unit);
+    top: var(--pos-unit);
+  }
+
+  &::after {
+    border-right-color: transparent;
+    border-top-color: transparent;
+    bottom: var(--pos-unit);
+    left: var(--pos-unit);
+  }
 }

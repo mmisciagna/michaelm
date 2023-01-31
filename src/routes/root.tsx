@@ -10,13 +10,13 @@ import {Projects} from './projects/projects';
 export const PATHS: PathDetails[] = [
   {
     path: '',
-    element: <Projects />,
-    label: 'Projects',
-  },
-  {
-    path: 'about',
     element: <About />,
     label: 'About',
+  },
+  {
+    path: 'projects',
+    element: <Projects />,
+    label: 'Projects',
   },
 ];
 

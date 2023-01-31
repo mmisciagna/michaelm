@@ -3,21 +3,38 @@
   background: var(--color-dark-green);
   color: var(--color-light-green);
   display: flex;
-  font-family: var(--font-stack-raleway);
+  flex-wrap: wrap;
   font-size: 14px;
   font-weight: 500;
-  height: var(--footer-height);
   justify-content: space-between;
   letter-spacing: 1px;
-  padding: 0 var(--main-padding-x);
-  text-transform: uppercase;
+  padding: var(--main-padding-x);
 
   &__nav,
   &__ancillary-links {
     color: var(--color-light-green);
     display: flex;
+    font-family: var(--font-stack-raleway);
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--base-unit) / 2);
+    text-transform: uppercase;
+  }
+
+  p {
+    flex: 1;
+    flex-basis: 100%;
+    order: 3;
+
+    @include desktop-up {
+      flex-basis: unset;
+      order: unset;
+      text-align: center;
+    }
+
+    span {
+      color: var(--color-white);
+      font-style: italic;
+    }
   }
 
   a {
