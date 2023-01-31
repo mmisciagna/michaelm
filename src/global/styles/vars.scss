@@ -1,7 +1,6 @@
 :root {
   --base-unit: 24px;
-  --body-text-max-width: 720px;
-  --default-font-size: 16px;
+  --default-font-size: 14px;
   --font-stack-raleway: 'raleway', 'arial', sans-serif;
   --footer-height: calc(var(--base-unit) * 4);
   --header-height: calc(var(--base-unit) * 2);
@@ -11,6 +10,7 @@
   --section-max-width: 1200px;
 
   @include ipad-portrait-up {
+    --default-font-size: 16px;
     --header-height: calc(var(--base-unit) * 3);
     --main-padding-x: calc(var(--base-unit) * 2);
     --main-padding-y: calc(var(--base-unit) * 2);

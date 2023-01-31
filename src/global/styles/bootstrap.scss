@@ -13,7 +13,7 @@ html {
 body {
   color: var(--color-dark-green);
   display: flex;
-  font: 400 #{var(--default-font-size)}/1.4em Source Serif Pro, Georgia, serif;
+  font: 400 #{var(--default-font-size)}/1.6em Source Serif Pro, Georgia, serif;
   font-variant-ligatures: normal;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
@@ -46,12 +46,14 @@ h2,
 h3,
 h4 {
   font-family: var(--font-stack-raleway);
-  font-size: 2em;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.4em;
-  margin: .5em 0;
-  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 h2 {
@@ -66,14 +68,12 @@ h3 {
 h4 {
   font-size: 14px;
   font-weight: 700;
-  margin-top: 2em;
 }
 
 p,
 li {
   font-size: 1em;
   margin: 1em 0;
-  max-width: var(--body-text-max-width);
 }
 
 li {
@@ -118,4 +118,14 @@ img {
     margin: 0 auto;
     max-width: var(--section-max-width);
   }
+}
+
+.mm-page-title {
+  margin: unset;
+}
+
+.mm-page-subtext {
+  color: var(--color-bronze);
+  font-style: italic;
+  margin: unset;
 }
