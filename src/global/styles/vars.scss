@@ -7,6 +7,7 @@
   --header-height: calc(var(--base-unit) * 2);
   --main-padding-x: var(--base-unit);
   --main-padding-y: var(--base-unit);
+  --negate-main-padding-x: calc(-1 * var(--main-padding-x));
   --section-max-width: 1200px;
 
   @include ipad-portrait-up {

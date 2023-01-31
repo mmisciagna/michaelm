@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {useParams, Outlet} from 'react-router-dom';
+import slugify from 'react-slugify';
 import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
 import {About} from './about/about';
@@ -53,11 +54,13 @@ export const Page = () => {
 export const Root = () => {
   let {path} = useParams();
   if (!path) path = '';
+  const pageLabel = getPageDetails(path).label;
+  const className = slugify(pageLabel);
 
   return (
     <>
       <Header path={path} />
-      <main className={`mm-main mm-main--${path || 'overview'}`}>
+      <main className={`mm-main mm-${className}`}>
         <Outlet />
       </main>
       <Footer path={path} />

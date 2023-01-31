@@ -69,10 +69,21 @@ h4 {
   margin-top: 2em;
 }
 
-p {
+p,
+li {
   font-size: 1em;
   margin: 1em 0;
   max-width: var(--body-text-max-width);
+}
+
+li {
+  margin: .5em 0;
+}
+
+ul {
+  list-style-position: outside;
+  margin: 1em 0;
+  padding-left: var(--base-unit);
 }
 
 img {
@@ -95,4 +106,16 @@ img {
 .mm-section {
   margin: var(--main-padding-y) auto;
   max-width: var(--section-max-width);
+
+  &--full-bleed {
+    background: var(--color-light-green);
+    margin: var(--main-padding-y) var(--negate-main-padding-x);
+    max-width: unset;
+    padding: var(--main-padding-x);
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: var(--section-max-width);
+  }
 }

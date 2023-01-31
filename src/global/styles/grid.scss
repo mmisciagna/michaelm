@@ -1,17 +1,28 @@
 .mm-grid {
-  column-gap: var(--base-unit);
-  display: grid;
+  column-gap: calc(var(--base-unit) * 2);
+  display: block;
   grid-template-columns: repeat(12, 1fr);
 
-  &__cell {
+  @include ipad-portrait-up {
+    display: grid;
+  }
+
+  &__col-l,
+  &__col-r {
     grid-column: 1 / 13;
+    width: 100%;
+  }
 
-    &--span-5 {
-      grid-column: 1 / 6;
+  &__col-l {
+    @include ipad-portrait-up {
+      grid-column: 2 / 5;
+      text-align: right;
     }
+  }
 
-    &--span-7 {
-      grid-column: 1 / 8;
+  &__col-r {
+    @include ipad-portrait-up {
+      grid-column: 5 / 12;
     }
   }
 }

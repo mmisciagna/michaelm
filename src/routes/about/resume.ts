@@ -3,8 +3,8 @@ export const RESUME_CONTENT = [
     title: 'Experience',
     entries: [
       {
-        place: 'Google, YouTube, Alphabet',
-        role: 'UX Engineer',
+        header: 'Google, YouTube, Alphabet',
+        ancillaryHeader: 'UX Engineer',
         dates: 'Aug 2012 - Jan 2023, San Francisco Bay Area',
         details: [
           {
@@ -35,8 +35,8 @@ export const RESUME_CONTENT = [
         ],
       },
       {
-        place: 'Wildfire Interactive',
-        role: 'Front-end Engineer and Designer',
+        header: 'Wildfire Interactive',
+        ancillaryHeader: 'Front-end Engineer and Designer',
         dates: 'Mar 2011 - Aug 2012, San Francisco Bay Area',
         details: [
           {
@@ -47,8 +47,8 @@ export const RESUME_CONTENT = [
         ],
       },
       {
-        place: 'TravelCLICK',
-        role: 'Interaction Designer',
+        header: 'TravelCLICK',
+        ancillaryHeader: 'Interaction Designer',
         dates: 'Mar 2010 - Mar 2011, Baltimore, MD',
         details: [
           {
@@ -64,9 +64,10 @@ export const RESUME_CONTENT = [
     title: 'Skills',
     entries: [
       {
-        place: 'Technical',
+        header: 'Technical',
         details: [
           {
+            type: 'list',
             description: [
               `Proficiency in TypeScript and JavaScript`,
               `Experience in multiple front-end platforms, e.g. Lit, Angular, Polymer, React, etc…`,
@@ -82,9 +83,10 @@ export const RESUME_CONTENT = [
         ],
       },
       {
-        place: 'Design',
+        header: 'Design',
         details: [
           {
+            type: 'list',
             description: [
               `User experience & interface design`,
               `Responsive design`,
@@ -95,9 +97,10 @@ export const RESUME_CONTENT = [
         ],
       },
       {
-        place: 'Soft',
+        header: 'Soft',
         details: [
           {
+            type: 'list',
             description: [
               `Project managing`,
               `Agency liaison and management`,
@@ -112,11 +115,12 @@ export const RESUME_CONTENT = [
     title: 'Education',
     entries: [
       {
-        place: 'Savannah College of Art and Design',
-        role: 'BFA in Graphic Design',
+        header: 'Savannah College of Art and Design',
+        ancillaryHeader: 'BFA in Graphic Design',
         dates: 'Sept 2005 - May 2009,  Savannah, GA',
         details: [
           {
+            type: 'list',
             description: [
               `Magna Cum Laude`,
               `Outstanding Achievement Award`,
