@@ -4,7 +4,11 @@
 @import './global/styles/colors';
 @import './global/styles/animation';
 @import './global/styles/bootstrap';
+@import './global/styles/grid';
 
 // Components
 @import './components/header/header';
 @import './components/footer/footer';
+
+// Routes
+@import './routes/about/about';

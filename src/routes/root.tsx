@@ -2,8 +2,8 @@ import * as React from 'react';
 import {useParams, Outlet} from 'react-router-dom';
 import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
-import {About} from './about';
-import {Projects} from './projects';
+import {About} from './about/about';
+import {Projects} from './projects/projects';
 
 
 export const PATHS: PathDetails[] = [
@@ -11,7 +11,7 @@ export const PATHS: PathDetails[] = [
     path: '',
     element: <Projects />,
     label: 'Projects',
-  },  
+  },
   {
     path: 'about',
     element: <About />,

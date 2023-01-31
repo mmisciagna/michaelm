@@ -25,7 +25,7 @@ export const Footer = (props: {path: string}) => {
           })}
         </nav>
         <div className='mm-footer__ancillary-links'>
-          <a href={`${GCP_STORAGE_BUCKET}/michael-misciagna-resume.pdf`}  aria-label="CV" download>
+          <a href={`${GCP_STORAGE_BUCKET}/michael-misciagna-resume.pdf`} target="_blank" aria-label="CV" download>
             CV
           </a>
           |

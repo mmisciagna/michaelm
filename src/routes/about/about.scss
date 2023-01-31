@@ -1,0 +1,57 @@
+.mm-resume {
+  column-gap: calc(var(--base-unit) * 2);
+  display: block;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include ipad-portrait-up {
+    display: grid;
+  }
+
+  &__col-l,
+  &__col-r {
+    grid-column: 1 / 13;
+    width: 100%;
+  }
+
+  &__col-l {
+    @include ipad-portrait-up {
+      grid-column: 2 / 5;
+      text-align: right;
+    }
+  }
+
+  &__col-r {
+    @include ipad-portrait-up {
+      grid-column: 5 / 12;
+    }
+  }
+
+  h2,
+  &__entry {
+    margin-bottom: calc(var(--base-unit) * 2);
+  }
+
+  h3 {
+    position: relative;
+
+    &::after {
+      background: var(--color-dark-green);
+      content: '';
+      height: 2px;
+      position: absolute;
+      left: 0;
+      top: -8px;
+      width: var(--base-unit);
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__dates {
+    color: var(--color-bronze);
+    font-weight: 500;
+    margin-top: 0;
+  }
+}

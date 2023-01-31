@@ -1,0 +1,17 @@
+.mm-grid {
+  column-gap: var(--base-unit);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__cell {
+    grid-column: 1 / 13;
+
+    &--span-5 {
+      grid-column: 1 / 6;
+    }
+
+    &--span-7 {
+      grid-column: 1 / 8;
+    }
+  }
+}
