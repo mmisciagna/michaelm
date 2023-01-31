@@ -24,7 +24,7 @@ export const Header = (props: {path: string}) => {
               <Link key={item.label}
                   className={`mm-header__nav-item ${activeClassName}`}
                   to={`/${item.path}`}>
-                {item.label}
+                <span>{item.label}</span>
               </Link>
             )
           })}

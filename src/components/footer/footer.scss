@@ -25,11 +25,18 @@
     position: relative;
     transition: color var(--default-speed-ease);
 
+    svg {
+      fill: var(--color-light-green);
+      height: var(--default-font-size);
+      transition: fill var(--default-speed-ease);
+      width: var(--default-font-size);
+    }
+
     &:hover {
-      color: var(--color-bronze);
+      color: var(--color-white);
 
       svg {
-        fill: var(--color-bronze);
+        fill: var(--color-white);
       }
     }
   }
@@ -43,19 +50,11 @@
       align-items: center;
       display: flex;
     }
-
-    svg {
-      fill: var(--color-light-green);
-      height: var(--base-unit);
-      margin: 0 2px;
-      transition: fill var(--default-speed-ease);
-      width: var(--base-unit);
-    }
   }
 
   &__nav-item {
     &::after {
-      background: var(--color-bronze);
+      background: var(--color-white);
       content: '';
       height: 2px;
       position: absolute;
@@ -67,14 +66,14 @@
 
     &:hover,
     &--active {
-      color: var(--color-bronze);
+      color: var(--color-white);
 
       &::after {
         width: 25%;
       }
 
       svg {
-        fill: var(--color-bronze);
+        fill: var(--color-white);
       }
     }
   }
