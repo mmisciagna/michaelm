@@ -40,6 +40,7 @@
     "postcss-loader": "^7.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.4.1",
     "react-router-dom": "^6.8.0",
     "react-slugify": "^3.0.2",
     "sass": "^1.57.1",
