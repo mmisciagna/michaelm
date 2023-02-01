@@ -16,15 +16,17 @@ export const Footer = (props: {path: string}) => {
                 isActiveItem ? 'mm-footer__nav-item--active' : ''
 
             return (
-              <Link key={item.label}
-                  className={`mm-footer__nav-item ${activeClassName}`}
-                  to={`/${item.path}`}>
-                {item.label}
-              </Link>
+              <React.Fragment key={item.label}>
+                <Link
+                    className={`mm-footer__nav-item ${activeClassName}`}
+                    to={`/${item.path}`}>
+                  {item.label}
+                </Link>
+                |
+              </React.Fragment>
             )
           })}
         </nav>
-        <p>Misciagna is Italian🇮🇹 and is pronounced <span>{GlobalString.pronunciation}</span>.</p>
         <div className='mm-footer__ancillary-links'>
           <a href={`${GCP_STORAGE_BUCKET}/michael-misciagna-resume.pdf`} target="_blank" aria-label="CV" download>
             CV

@@ -1,0 +1,54 @@
+.mm-root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mm-main {
+  flex: 1;
+  padding: 0 var(--main-padding-x);
+}
+
+.mm-section {
+  margin: var(--main-padding-y) auto;
+  max-width: var(--section-max-width);
+
+  &--full-bleed {
+    background: var(--color-almost-white);
+    background:
+      (
+        linear-gradient(
+          180deg,
+          var(--color-almost-white) 0%,
+          var(--color-white) 100%
+        )
+      );
+    margin: var(--main-padding-y) var(--negate-main-padding-x);
+    max-width: unset;
+    padding: var(--main-padding-x) var(--main-padding-x) 0;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: var(--section-max-width);
+  }
+}
+
+.mm-page-title {
+  margin: unset;
+
+  span {
+    white-space: nowrap;
+  }
+}
+
+.mm-page-subtext {
+  font-style: italic;
+  margin: unset;
+
+  span {
+    color: var(--color-bronze);
+    white-space: nowrap;
+  }
+}

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {PATHS, getHomepageDetails} from '../../routes/root';
+import {PATHS, getRouteDetails} from '../../routes/root';
 import {GlobalString} from '../../global/global.constants';
 
 
 export const Header = (props: {path: string}) => {
-  const homepageDetails = getHomepageDetails();
+  const homepageDetails = getRouteDetails('');
 
   return (
     <>
@@ -19,7 +19,8 @@ export const Header = (props: {path: string}) => {
           {PATHS.map((item: PathDetails) => {
             const path = item.path;
             const isActiveItem = path === props.path;
-            const activeClassName = isActiveItem ? 'mm-header__nav-item--active' : ''
+            const activeClassName =
+                isActiveItem ? 'mm-header__nav-item--active' : ''
 
             return (
               <Link key={item.label}

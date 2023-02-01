@@ -5,10 +5,12 @@
 @import './global/styles/animation';
 @import './global/styles/bootstrap';
 @import './global/styles/grid';
+@import './global/styles/layout';
 
 // Components
 @import './components/header/header';
 @import './components/footer/footer';
+@import './components/resume/resume';
 
 // Routes
 @import './routes/about/about';

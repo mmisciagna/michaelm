@@ -20,19 +20,7 @@ export const PATHS: PathDetails[] = [
   },
 ];
 
-export const getHomepageDetails = (): PathDetails => {
-  let homepageDetails = PATHS.find((details: PathDetails) => {
-    return details.path === '';
-  });
-
-  if (homepageDetails) {
-    return homepageDetails;
-  } else {
-    return PATHS[0];
-  }
-};
-
-const getPageDetails = (path: string): PathDetails => {
+export const getRouteDetails = (path: string): PathDetails => {
   let details = PATHS.find((details: PathDetails) => {
     return details.path === path;
   });
@@ -46,15 +34,15 @@ const getPageDetails = (path: string): PathDetails => {
 
 export const Page = () => {
   let {path} = useParams();
-  if (!path) path = getHomepageDetails().path;
-  const pageElement = getPageDetails(path).element;
+  if (!path) path = '';
+  const pageElement = getRouteDetails(path).element;
   return (pageElement);
 };
 
 export const Root = () => {
   let {path} = useParams();
   if (!path) path = '';
-  const pageLabel = getPageDetails(path).label;
+  const pageLabel = getRouteDetails(path).label;
   const className = slugify(pageLabel);
 
   return (

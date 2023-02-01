@@ -1,28 +1,43 @@
-@import './resume';
-
 .mm-about {
   &__jump-links {
-    align-items: center;
-    display: flex;
-    font-family: var(--font-stack-raleway);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    list-style: none;
-    margin-bottom: unset;
-    margin-top: var(--base-unit);
-    padding: unset;
-    text-transform: uppercase;
-
-    li {
-      margin: 0 var(--base-unit) 0 0;
+    hr {
+      background: var(--color-almost-white);
+      border: 0;
+      height: 1px;
+      margin: var(--base-unit) 0 calc(var(--base-unit) / 3);
     }
 
-    a {
-      transition: var(--default-speed-ease) color;
+    ul {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-stack-raleway);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      list-style: none;
+      margin: unset;
+      padding: unset;
+      text-transform: uppercase;
 
-      &:hover {
-        color: var(--color-bronze);
+      @include tablet-up {
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      li {
+        @include tablet-up {
+          margin: 0 0 0 var(--base-unit);
+        }
+      }
+
+      a {
+        transition: var(--default-speed-ease) color;
+
+        &:hover {
+          color: var(--color-bronze);
+        }
       }
     }
   }
