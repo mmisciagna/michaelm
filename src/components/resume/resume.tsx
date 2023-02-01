@@ -14,47 +14,34 @@ interface ExtraJumpLinks {
   append?: JumpLink[];
 }
 
-export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {}) => {
+export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {
+  prepend: [],
+  append: [],
+}) => {
   const prepend = extraLinks.prepend;
   const append = extraLinks.append;
 
+  const listItem = (label: string, hash?: string) => {
+    return (
+      <li key={hash || label}>
+        <a href={`#${slugify(hash || label)}`}>
+          {label}
+        </a>
+      </li>
+    )
+  }
+
   return (
     <ul>
-      {prepend ?
-        prepend.map((link: JumpLink) => {
-          return (
-            <li key={link.hash}>
-              <a href={`#${slugify(link.hash)}`}>
-                {link.label}
-              </a>
-            </li>
-          )
-        })
-      :
-        ''
-      }
-      {RESUME_CONTENT.map((section: any) => {
-        return (
-          <li key={section.title}>
-            <a href={`#${slugify(section.title)}`}>
-              {section.title}
-            </a>
-          </li>
-        )
+      {prepend && prepend.map((link: JumpLink) => {
+        return listItem(link.label, link.hash);
       })}
-      {append ?
-        append.map((link: JumpLink) => {
-          return (
-            <li key={link.hash}>
-              <a href={`#${slugify(link.hash)}`}>
-                {link.label}
-              </a>
-            </li>
-          )
-        })
-      :
-        ''
-      }
+      {RESUME_CONTENT.map((section: any) => {
+        return listItem(section.title);
+      })}
+      {append && append.map((link: JumpLink) => {
+        return listItem(link.label, link.hash);
+      })}
     </ul>
   )
 };
@@ -71,7 +58,7 @@ export const Resume = () => {
                 id={slugify(section.title)}>
               <h2>{section.title}</h2>
             </div>
-            <div className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-grid__col-r`}>
+            <div className="mm-grid__col-r">
               {section.entries ? section.entries.map((entry: any) => {
                 const setRefs = useInViewRef();
                 return (
@@ -92,6 +79,7 @@ export const Resume = () => {
                     }
                     {entry.details.map((details: any, i: number) => {
                       const isList = details.type && details.type === 'list';
+                      const setRefs = useInViewRef();
                       return (
                         <React.Fragment key={i}>
                           {isList ?
@@ -107,7 +95,12 @@ export const Resume = () => {
                               })}
                             </ul> :
                             <div>
-                              {details.subhead ? <h4>{details.subhead}</h4> : ''}
+                              {details.subhead ?
+                                <h4 ref={setRefs.ref} className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                                  {details.subhead}
+                                </h4> :
+                                ''
+                              }
                               {details.description.map((p: string) => {
                                 const setRefs = useInViewRef();
                                 return (

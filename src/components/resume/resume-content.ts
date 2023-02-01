@@ -10,20 +10,20 @@ export const RESUME_CONTENT = [
           {
             subhead: 'Engineering Excellence',
             description: [
-              `Responsible for building and maintaining all of YouTube's marketing websites, totaling X millions of monthly users, with an average Lighthouse score of 99%`,
+              `Responsible for building and maintaining all of YouTube's marketing websites, totaling 50+ million of monthly users. All were built with accessibility (i.e. a11y) in mind and were responsible for millions of dollars of conversions.`,
+            ],
+          },
+          {
+            subhead: 'Leadership',
+            description: [
+              `Independently led projects, such as youtube.com/ads, utilizing strong project management skills, in absence of dedicated project management staff. This includes overseeing our vendor’s engineering team, Cybage, on projects that required more than one engineer.`,
             ],
           },
           {
             subhead: 'Scalable Solutions',
             description: [
-              `Owner and creator of a JavaScript component library; emphasizing scalability and accessibility, styled it with YouTube standards`,
+              `Owner and creator of a JavaScript component library; emphasizing scalability and accessibility, styled using YouTube standards`,
               `Led the development of brand guidelines in collaboration with YouTube's user experience designers. These guidelines are applied to all of YouTube's websites and must be approved by stakeholders before launch.`,
-            ],
-          },
-          {
-            subhead: 'Working Independently',
-            description: [
-              `Independently led projects, such as youtube.com/ads/, utilizing strong project management skills, in absence of dedicated project management staff`,
             ],
           },
           {
@@ -41,7 +41,7 @@ export const RESUME_CONTENT = [
         details: [
           {
             description: [
-              `Expertly designed and developed marketing websites and brand campaigns for a diverse clientele including Fortune 500 companies. A fast-paced work ethic and creative problem-solving skills resulted in a $350M Google acquisition in 2012.`,
+              `Expertly designed and developed marketing websites and brand campaigns for a diverse clientele including Fortune 500 companies. A fast-paced work environment and creative problem-solving skills resulted in a $350M Google acquisition in 2012.`,
             ],
           },
         ],
@@ -70,7 +70,7 @@ export const RESUME_CONTENT = [
             type: 'list',
             description: [
               `Proficiency in TypeScript and JavaScript`,
-              `Experience in multiple front-end platforms, e.g. Lit, Angular, Polymer, React, etc…`,
+              `Experience in multiple front-end platforms, e.g. React, Lit, Angular, etc…`,
               `Experience in server-side platforms and languages, e.g. Node and Express`,
               `Experience in Python`,
               `Experience in Google Cloud Projects`,
