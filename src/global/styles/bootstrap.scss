@@ -109,10 +109,18 @@ img {
   max-width: var(--section-max-width);
 
   &--full-bleed {
-    background: var(--color-light-green);
+    background: var(--color-almost-white);
+    background:
+      (
+        linear-gradient(
+          180deg,
+          var(--color-almost-white) 0%,
+          var(--color-white) 100%
+        )
+      );
     margin: var(--main-padding-y) var(--negate-main-padding-x);
     max-width: unset;
-    padding: var(--main-padding-x);
+    padding: var(--main-padding-x) var(--main-padding-x) 0;
   }
 
   &__inner {
