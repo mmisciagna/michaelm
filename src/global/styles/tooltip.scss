@@ -5,8 +5,7 @@
   position: relative;
 
   &__bubble {
-    background: var(--color-light-green);
-    border: 2px solid var(--color-white);
+    background: var(--color-almost-white);
     border-radius: 8px;
     bottom: 100%;
     display: inline-block;
@@ -24,7 +23,7 @@
     transition: var(--default-speed-ease) opacity;
 
     &::after {
-      border: 8px solid var(--color-light-green);
+      border: 8px solid var(--color-almost-white);
       border-bottom-color: transparent;
       border-left-color: transparent;
       border-right-color: transparent;

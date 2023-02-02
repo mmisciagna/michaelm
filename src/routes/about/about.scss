@@ -1,4 +1,8 @@
 .mm-about {
+  &__tldr {
+    margin-top: unset;
+  }
+
   &__intro {
     align-items: center;
     display: flex;
