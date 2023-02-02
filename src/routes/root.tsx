@@ -18,6 +18,11 @@ export const PATHS: PathDetails[] = [
     element: <Work />,
     label: 'Work',
   },
+  {
+    path: 'contact',
+    element: <Work />,
+    label: 'Contact',
+  },
 ];
 
 export const getRouteDetails = (path: string): PathDetails => {

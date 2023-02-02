@@ -15,12 +15,12 @@
   max-width: var(--section-max-width);
 
   &--full-bleed {
-    background: var(--color-almost-white);
+    background: var(--color-light-green);
     background:
       (
         linear-gradient(
           180deg,
-          var(--color-almost-white) 0%,
+          var(--color-light-green) 0%,
           var(--color-white) 100%
         )
       );
@@ -38,17 +38,15 @@
 .mm-page-title {
   margin: unset;
 
-  span {
+  span :not(.mm-tooltip__bubble) {
     white-space: nowrap;
   }
 }
 
 .mm-page-subtext {
   font-style: italic;
-  margin: unset;
 
   span {
     color: var(--color-bronze);
-    white-space: nowrap;
   }
 }

@@ -1,0 +1,52 @@
+.mm-tooltip {
+  border-bottom: 2px dotted var(--color-bronze);
+  cursor: pointer;
+  display: inline;
+  position: relative;
+
+  &__bubble {
+    background: var(--color-light-green);
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    bottom: 100%;
+    display: inline-block;
+    font-size: 14px;
+    font-style: italic;
+    left: 50%;
+    line-height: 1.6em;
+    max-width: 200px;
+    opacity: 0;
+    padding: calc(var(--base-unit) / 2) var(--base-unit);
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: var(--default-speed-ease) opacity;
+
+    &::after {
+      border: 8px solid var(--color-light-green);
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 100%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      color: var(--color-bronze);
+      white-space: nowrap;
+    }
+  }
+
+  &:hover {
+    border-color: var(--color-dark-green);
+
+    .mm-tooltip__bubble {
+      opacity: 1;
+      pointer-events: initial;
+      z-index: 100;
+    }
+  }
+}

@@ -96,3 +96,15 @@ img {
   width: 100%;
   vertical-align: middle;
 }
+
+figure {
+  margin: unset;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6em;
+  text-align: initial;
+}

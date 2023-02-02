@@ -36,7 +36,7 @@ export const RESUME_CONTENT = [
       },
       {
         header: 'Wildfire Interactive',
-        ancillaryHeader: 'Front-end Engineer and Designer',
+        ancillaryHeader: 'Frontend Engineer and Designer',
         dates: 'Mar 2011 - Aug 2012, San Francisco Bay Area',
         details: [
           {
@@ -70,11 +70,11 @@ export const RESUME_CONTENT = [
             type: 'list',
             description: [
               `Proficiency in TypeScript and JavaScript`,
-              `Experience in multiple front-end platforms, e.g. React, Lit, Angular, etc…`,
+              `Experience in multiple frontend platforms, e.g. React, Lit, Angular, etc…`,
               `Experience in server-side platforms and languages, e.g. Node and Express`,
               `Experience in Python`,
               `Experience in Google Cloud Projects`,
-              `Front-end library development and maintenance`,
+              `Frontend library development and maintenance`,
               `Responsive coding, from mobile to desktop to TV`,
               `Rapid prototyping of designs, in browser`,
               `Developing for accessibility (i.e. a11y)`,

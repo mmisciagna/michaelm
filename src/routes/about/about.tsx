@@ -12,25 +12,31 @@ const Intro = () => {
     <>
       <section className="mm-section mm-about__intro">
         <h1 className="mm-page-title">
-          Hello, I am <span>Michael Misciagna.</span>
+          Hello, I am <span className="mm-tooltip">
+            Michael Misciagna.
+            <span className="mm-tooltip__bubble">
+              Pronounced <span>{GlobalString.PRONUNCIATION}</span>
+            </span>
+          </span>
         </h1>
         <h2 className="mm-page-subtext">
-          pronounced <span>{GlobalString.PRONUNCIATION}</span>
+          <span>Frontend engineer</span> and <span>designer</span> extraordinaire.
         </h2>
         <div className="mm-about__jump-links">
           <hr />
-          {ResumeJumpLinks({
-            prepend: [{
-              hash: 'tldr',
-              label: 'TL;DR',
-            }]
-          })}
+          {ResumeJumpLinks({prepend: [{hash: 'tldr', label: 'TL;DR'}]})}
         </div>
       </section>
       <section className="mm-section mm-section--full-bleed mm-about__tldr" id="tldr">
         <div className="mm-grid mm-section__inner">
           <div ref={setRefs.ref} className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-grid__col-l mm-about__profile-pic`}>
-            <img src="/static/imgs/profile-pic.webp" alt="Profile picture of Michael" />
+            <figure>
+              <img src="/static/imgs/profile-pic.webp" alt="Profile picture of Michael" />
+              <figcaption>
+                My son, Theo, at age one. They say we look alike.
+              </figcaption>
+            </figure>
+
           </div>
           <div className={`mm-grid__col-r`}>
             {INTRO.map((content: any) => {

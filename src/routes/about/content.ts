@@ -2,14 +2,14 @@ export const INTRO = [
   {
     header: 'Sr. UX Engineer at Google, with 12+ years of experience.',
     paragraphs: [
-      `I have engineered and designed the front-ends of massively-trafficked websites, responsible for millions of dollars of conversions.`,
-      `The current state of web production requires developers to have a design eye and understanding of user experience. No longer does it suffice to have designers and developers work in silos. Instead, they need to collaborate and understand the other’s role and capabilities. Having worked as both a front-end developer and designer, I have a proven ability to bridge the gap between these cross-disciplinary teams.`,
+      `I have engineered and designed the frontends of massively-trafficked websites, responsible for millions of dollars of conversions.`,
+      `The current state of web production requires developers to have a design eye and understanding of user experience. No longer does it suffice to have designers and developers work in silos. Instead, they need to collaborate and understand the other’s role and capabilities. Having worked as both a frontend developer and designer, I have a proven ability to bridge the gap between these cross-disciplinary teams.`,
     ],
   },
   {
     header: 'Technical prowess.',
     paragraphs: [
-      `I am not beholden to any one front-end platform but am not against them either. I believe in using the right tool for the right project. I am proficient in JavaScript and TypeScript, and that affords me the ability to quickly become an expert in the platform du jour. The advantage of being an experienced developer is having the flexibility and wherewithal to use the best tool for the project.`,
+      `I am not beholden to any one frontend platform but am not against them either. I believe in using the right tool for the right project. I am proficient in JavaScript and TypeScript, and that affords me the ability to quickly become an expert in the platform du jour. The advantage of being an experienced developer is having the flexibility and wherewithal to use the best tool for the project.`,
     ],
   },
   {
