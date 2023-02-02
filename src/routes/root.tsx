@@ -57,6 +57,8 @@ export const Page = () => {
     if (workDetails && path === 'work') {
       path = 'workDetails';
     } else {
+      // TODO: Update a state called "path" in order to re-render the
+      // header and the footer.
       window.history.pushState({}, '', '/');
       path = '';
     }

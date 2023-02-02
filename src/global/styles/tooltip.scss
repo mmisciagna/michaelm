@@ -3,6 +3,7 @@
   cursor: pointer;
   display: inline;
   position: relative;
+  white-space: nowrap;
 
   &__bubble {
     background: var(--color-almost-white);
@@ -21,6 +22,7 @@
     position: absolute;
     transform: translateX(-50%);
     transition: var(--default-speed-ease) opacity;
+    white-space: normal;
 
     &::after {
       border: 8px solid var(--color-almost-white);

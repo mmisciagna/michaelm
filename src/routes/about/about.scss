@@ -8,7 +8,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: unset;
+    margin-top: unset;
     min-height: 50vh;
+    position: relative;
 
     .mm-page-title,
     .mm-page-subtext {
@@ -17,6 +20,10 @@
 
     .mm-page-subtext {
       margin-top: .35em;
+    }
+
+    + .mm-section {
+      margin-top: unset;
     }
   }
 
