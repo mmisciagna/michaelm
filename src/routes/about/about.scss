@@ -1,11 +1,30 @@
 .mm-about {
+  &__intro {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+
+    .mm-page-title,
+    .mm-page-subtext {
+      width: 100%;
+    }
+
+    .mm-page-subtext {
+      margin-top: .35em;
+    }
+  }
+
   &__jump-links {
+    width: 100%;
+
     hr {
       background: var(--color-light-green);
       border: 0;
       display: none;
       height: 1px;
-      margin: var(--base-unit) 0 calc(var(--base-unit) / 3);
+      margin: 0 0 calc(var(--base-unit) / 3);
 
       @include tablet-up {
         display: block;

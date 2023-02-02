@@ -13,7 +13,7 @@ html {
 body {
   color: var(--color-dark-green);
   display: flex;
-  font: 400 #{var(--default-font-size)}/1.6em Source Serif Pro, Georgia, serif;
+  font: 400 #{var(--default-font-size)}/1.6em var(--font-stack-source-serif);
   font-variant-ligatures: normal;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
@@ -58,20 +58,20 @@ h4 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 700;
 }
 
