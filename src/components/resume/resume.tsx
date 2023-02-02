@@ -1,5 +1,6 @@
 import * as React from 'react';
 import slugify from 'react-slugify';
+import {Link} from 'react-scroll';
 import {RESUME_CONTENT} from './resume-content';
 import {useInViewRef, setAnimateInClassName} from '../../global/global.utils';
 
@@ -14,19 +15,19 @@ interface ExtraJumpLinks {
   append?: JumpLink[];
 }
 
-export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {
-  prepend: [],
-  append: [],
-}) => {
+export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {}) => {
   const prepend = extraLinks.prepend;
   const append = extraLinks.append;
 
   const listItem = (label: string, hash?: string) => {
     return (
       <li key={hash || label}>
-        <a href={`#${slugify(hash || label)}`}>
+        <Link to={slugify(hash || label)}
+            smooth={true}
+            offset={-96}
+            duration={500}>
           {label}
-        </a>
+        </Link>
       </li>
     )
   }

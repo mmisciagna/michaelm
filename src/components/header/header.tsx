@@ -12,7 +12,7 @@ export const Header = (props: {path: string}) => {
       <header className="mm-header">
         <div className="mm-header__branding">
           <Link to={`/${homepageDetails.path}`} aria-label={homepageDetails.label}>
-            <span>{GlobalString.pronunciation}</span>
+            <span>{GlobalString.PRONUNCIATION}</span>
           </Link>
         </div>
         <nav className="mm-header__nav">

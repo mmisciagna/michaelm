@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {GlobalString} from '../../global/global.constants';
-import {useInViewRef, setAnimateInClassName} from '../../global/global.utils';
+import {useInViewRef, setAnimateInClassName, usePageTitleEffect} from '../../global/global.utils';
 import {INTRO} from './content';
 import {ResumeJumpLinks, Resume} from '../../components/resume/resume';
 
@@ -15,7 +15,7 @@ const Intro = () => {
           Hello, I am <span>Michael Misciagna.</span>
         </h1>
         <h2 className="mm-page-subtext">
-          pronounced <span>{GlobalString.pronunciation}</span>
+          pronounced <span>{GlobalString.PRONUNCIATION}</span>
         </h2>
         <div className="mm-about__jump-links">
           <hr />
@@ -61,6 +61,8 @@ const Intro = () => {
 };
 
 export const About = () => {
+  usePageTitleEffect('About');
+
   return (
     <>
       <Intro />

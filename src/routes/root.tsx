@@ -4,7 +4,7 @@ import slugify from 'react-slugify';
 import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
 import {About} from './about/about';
-import {Projects} from './projects/projects';
+import {Work} from './work/work';
 
 
 export const PATHS: PathDetails[] = [
@@ -14,9 +14,9 @@ export const PATHS: PathDetails[] = [
     label: 'About',
   },
   {
-    path: 'projects',
-    element: <Projects />,
-    label: 'Projects',
+    path: 'work',
+    element: <Work />,
+    label: 'Work',
   },
 ];
 

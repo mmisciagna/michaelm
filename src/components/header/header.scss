@@ -24,6 +24,7 @@
     display: flex;
     flex: 1;
     flex-basis: var(--header-height);
+    height: var(--header-height);
     justify-content: center;
     overflow: hidden;
     padding: 0 var(--main-padding-x);
@@ -60,18 +61,19 @@
   }
 
   &__nav {
-    align-items: flex-end;
+    align-items: center;
     backdrop-filter: blur(5px);
     display: flex;
-    height: 100%;
+    height: var(--header-height);
     justify-content: center;
-    padding: var(--base-unit) 0;
     position: relative;
     text-transform: uppercase;
     width: 100%;
 
     @include tablet-up {
+      align-items: flex-end;
       background: unset;
+      height: 100%;
       padding: unset;
       width: unset;
     }
