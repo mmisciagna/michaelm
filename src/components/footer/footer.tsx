@@ -13,18 +13,19 @@ export const Footer = (props: {path: string}) => {
             const path = item.path;
             const isActiveItem = path === props.path;
             const activeClassName =
-                isActiveItem ? 'mm-footer__nav-item--active' : ''
+                isActiveItem ? 'mm-footer__nav-item--active' : '';
+            const el = item.label ?
+                <React.Fragment key={item.label}>
+                  <Link
+                      className={`mm-footer__nav-item ${activeClassName}`}
+                      to={`/${item.path}`}>
+                    {item.label}
+                  </Link>
+                  |
+                </React.Fragment>
+                : '';
 
-            return (
-              <React.Fragment key={item.label}>
-                <Link
-                    className={`mm-footer__nav-item ${activeClassName}`}
-                    to={`/${item.path}`}>
-                  {item.label}
-                </Link>
-                |
-              </React.Fragment>
-            )
+            return el;
           })}
         </nav>
         <div className='mm-footer__ancillary-links'>

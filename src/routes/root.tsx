@@ -5,6 +5,8 @@ import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
 import {About} from './about/about';
 import {Work} from './work/work';
+import {WORK} from './work/content';
+import {Contact} from './contact/contact';
 
 
 export const PATHS: PathDetails[] = [
@@ -20,8 +22,12 @@ export const PATHS: PathDetails[] = [
   },
   {
     path: 'contact',
-    element: <Work />,
+    element: <Contact />,
     label: 'Contact',
+  },
+  {
+    path: 'workDetails',
+    element: <h1>Work details</h1>,
   },
 ];
 
@@ -38,8 +44,24 @@ export const getRouteDetails = (path: string): PathDetails => {
 };
 
 export const Page = () => {
-  let {path} = useParams();
+  let {path, work} = useParams();
+  let workDetails: any = undefined;
+
   if (!path) path = '';
+
+  if (work) {
+    workDetails = WORK.find((item: any) => {
+      return work === slugify(item.title);
+    });
+
+    if (workDetails && path === 'work') {
+      path = 'workDetails';
+    } else {
+      window.history.pushState({}, '', '/');
+      path = '';
+    }
+  }
+
   const pageElement = getRouteDetails(path).element;
   return (pageElement);
 };

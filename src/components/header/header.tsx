@@ -20,15 +20,15 @@ export const Header = (props: {path: string}) => {
             const path = item.path;
             const isActiveItem = path === props.path;
             const activeClassName =
-                isActiveItem ? 'mm-header__nav-item--active' : ''
+                isActiveItem ? 'mm-header__nav-item--active' : '';
+            const el = item.label ?
+                <Link key={item.label}
+                    className={`mm-header__nav-item ${activeClassName}`}
+                    to={`/${item.path}`}>
+                  <span>{item.label}</span>
+                </Link> : '';
 
-            return (
-              <Link key={item.label}
-                  className={`mm-header__nav-item ${activeClassName}`}
-                  to={`/${item.path}`}>
-                <span>{item.label}</span>
-              </Link>
-            )
+            return (el);
           })}
         </nav>
       </header>
