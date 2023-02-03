@@ -1,4 +1,4 @@
-export const WORK = [
+export const SHOWCASES = [
   {
     title: 'Work 1',
   },

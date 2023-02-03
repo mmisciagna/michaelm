@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 import {usePageTitleEffect} from '../../global/global.utils';
 
 
@@ -7,18 +8,17 @@ export const Work = () => {
 
   return (
     <>
-      <section className="mm-section">
-        <h1>My Work</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab id necessitatibus non vel, quae voluptas? Quidem quaerat at quis, laborum praesentium omnis, repellendus ea adipisci culpa atque, voluptates ex sequi.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab id necessitatibus non vel, quae voluptas? Quidem quaerat at quis, laborum praesentium omnis, repellendus ea adipisci culpa atque, voluptates ex sequi.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab id necessitatibus non vel, quae voluptas? Quidem quaerat at quis, laborum praesentium omnis, repellendus ea adipisci culpa atque, voluptates ex sequi.
-        </p>
-      </section>
+      <Link to="work-1">
+        Work-1
+      </Link>
+      <br />
+      <Link to="work-2">
+        Work-2
+      </Link>
+      <br />
+      <Link to="work-3">
+        Work-3
+      </Link>
     </>
   )
 };

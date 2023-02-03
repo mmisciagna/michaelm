@@ -1,12 +1,16 @@
 import * as React from 'react';
+import {useEffect} from 'react';
 import {useParams, Outlet} from 'react-router-dom';
 import slugify from 'react-slugify';
-import {getRouteDetails} from '../global/global.utils';
+import {Provider} from 'react-redux';
+import {store, useAppSelector, useAppDispatch} from '../global/global.store';
+import {updatePath} from '../global/global.store.slice';
+import {getRouteDetails, redirectRoute} from '../global/global.utils';
 import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
 import {About} from './about/about';
 import {Work} from './work/work';
-import {WORK} from './work/content';
+import {SHOWCASES} from './work/showcases';
 import {Contact} from './contact/contact';
 
 
@@ -27,41 +31,58 @@ export const PATHS: PathDetails[] = [
     label: 'Contact',
   },
   {
-    path: 'showcase',
-    element: <h1>Work details</h1>,
+    path: 'showcaseDetails',
+    element: <h1>Showcase</h1>,
   },
 ];
 
 export const Page = () => {
-  let {path, work} = useParams();
-  let showcase: any = undefined;
+  let path = useAppSelector((state) => state.path.value);
+  let {showcase} = useParams();
+  let showcaseDetails: any = undefined;
+  const dispatch = useAppDispatch();
 
-  if (!path) path = '';
-
-  if (work) {
-    showcase = WORK.find((item: any) => {
-      return work === slugify(item.title);
+  if (showcase) {
+    showcaseDetails = SHOWCASES.find((item: any) => {
+      return showcase === slugify(item.title);
     });
 
-    if (showcase && path === 'work') {
-      path = 'showcase';
+    if (path === 'work') {
+      if (showcaseDetails) {
+        path = 'showcaseDetails';
+      } else {
+        redirectRoute('work', dispatch);
+      }
     } else {
-      // TODO: Update a state called "path" in order to re-render the
-      // header and the footer.
-      window.history.pushState({}, '', '/');
-      path = '/';
+      if (showcase) {
+        redirectRoute('', dispatch);
+      }
     }
   }
 
-  const pageElement = getRouteDetails(path).element;
-  return (pageElement);
+  const pageDetails = getRouteDetails(path);
+  const pageElement = pageDetails ? pageDetails.element :
+      (getRouteDetails('') as PathDetails).element;
+
+  return pageElement;
 };
 
-export const Root = () => {
-  let {path} = useParams();
-  if (!path) path = '';
-  const pageLabel = getRouteDetails(path).label;
-  const className = slugify(pageLabel);
+const Layout = () => {
+  let {path: pathOnLoad} = useParams();
+  if (!pathOnLoad) pathOnLoad = '';
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(updatePath(pathOnLoad));
+  }, []);
+
+  const path = useAppSelector((state) => state.path.value);
+
+  if (!getRouteDetails(path)) {
+    redirectRoute('', dispatch);
+  }
+
+  const className = path || slugify(getRouteDetails('')?.label);
 
   return (
     <>
@@ -71,5 +92,13 @@ export const Root = () => {
       </main>
       <Footer path={path} />
     </>
+  )
+};
+
+export const Root = () => {
+  return (
+    <Provider store={store}>
+      <Layout />
+    </Provider>
   );
 };
