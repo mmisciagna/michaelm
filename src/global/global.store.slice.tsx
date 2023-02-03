@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
+import {GlobalString} from './global.constants';
 
 
 // Define a type for the slice state
@@ -8,10 +9,10 @@ interface PathState {
 
 // Define the initial state using that type
 const initialState: PathState = {
-  value: '',
+  value: GlobalString.HOME_PATH,
 };
 
-export const pathUpdate = createSlice({
+const pathUpdate = createSlice({
   name: 'path',
   initialState,
   reducers: {

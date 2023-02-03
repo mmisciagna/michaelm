@@ -4,7 +4,7 @@ import {useInView} from 'react-intersection-observer';
 import {GlobalClassNames, GlobalString} from './global.constants';
 import type {AppDispatch} from './global.store';
 import {updatePath} from './global.store.slice';
-import {PATHS} from '../routes/root';
+import {ROUTE_DETAILS} from '../routes/root';
 
 
 export const usePageTitleEffect = (pageTitle: string) => {
@@ -43,8 +43,8 @@ export const setAnimateInClassName = (inView: boolean): string => {
   return '';
 };
 
-export const getRouteDetails = (path: string): PathDetails|undefined => {
-  let details = PATHS.find((details: PathDetails) => {
+export const getRouteDetails = (path: string): RouteDetails|undefined => {
+  let details = ROUTE_DETAILS.find((details: RouteDetails) => {
     return details.path === path;
   });
 

@@ -1,15 +1,19 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {GCP_STORAGE_BUCKET, GlobalString} from '../../global/global.constants';
-import {PATHS} from '../../routes/root';
+import {GCP_STORAGE_BUCKET} from '../../global/global.constants';
+import {useAppDispatch} from '../../global/global.store';
+import {updatePath} from '../../global/global.store.slice';
+import {ROUTE_DETAILS} from '../../routes/root';
 
 
 export const Footer = (props: {path: string}) => {
+  const dispatch = useAppDispatch();
+
   return (
     <>
       <footer className="mm-footer">
         <nav className="mm-footer__nav">
-          {PATHS.map((item: PathDetails) => {
+          {ROUTE_DETAILS.map((item: RouteDetails) => {
             const path = item.path;
             const isActiveItem = path === props.path;
             const activeClassName =
@@ -18,7 +22,8 @@ export const Footer = (props: {path: string}) => {
                 <React.Fragment key={item.label}>
                   <Link
                       className={`mm-footer__nav-item ${activeClassName}`}
-                      to={`/${item.path}`}>
+                      to={`/${item.path}`}
+                      onClick={() => dispatch(updatePath(path))}>
                     {item.label}
                   </Link>
                   |
