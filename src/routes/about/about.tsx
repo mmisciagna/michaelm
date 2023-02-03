@@ -20,7 +20,7 @@ const Intro = () => {
           </span>
         </h1>
         <h2 className="mm-page-subtext">
-          <span>Frontend engineer</span> and <span>designer</span> extraordinaire.
+          <span className="mm-highlight">Frontend engineer</span> and <span className="mm-highlight">designer</span> extraordinaire.
         </h2>
         <div className="mm-about__jump-links">
           <hr />

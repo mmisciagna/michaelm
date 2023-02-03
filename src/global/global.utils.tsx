@@ -1,9 +1,10 @@
 import {useCallback, useRef, useEffect} from 'react';
 import {useInView} from 'react-intersection-observer';
 import {GlobalClassNames, GlobalString} from './global.constants';
+import {PATHS} from '../routes/root';
 
 
-export const usePageTitleEffect = (pageTitle: string, ) => {
+export const usePageTitleEffect = (pageTitle: string) => {
   return useEffect(() => {
     document.title = `${pageTitle} - ${GlobalString.PRONUNCIATION}`;
   }, []);
@@ -37,4 +38,16 @@ export const useInViewRef = () => {
 export const setAnimateInClassName = (inView: boolean): string => {
   if (inView) return GlobalClassNames.ANIMATE_IN;
   return '';
+};
+
+export const getRouteDetails = (path: string): PathDetails => {
+  let details = PATHS.find((details: PathDetails) => {
+    return details.path === path;
+  });
+
+  if (details) {
+    return details;
+  } else {
+    return PATHS[0];
+  }
 };

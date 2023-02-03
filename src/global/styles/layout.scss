@@ -46,8 +46,12 @@
 
 .mm-page-subtext {
   font-style: italic;
+}
 
-  span {
-    color: var(--color-bronze);
-  }
+.mm-highlight {
+  background: var(--color-bronze);
+  border-radius: 2px;
+  color: var(--color-white);
+  display: inline-block;
+  padding: 0 8px;
 }

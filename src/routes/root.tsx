@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {useParams, Outlet} from 'react-router-dom';
 import slugify from 'react-slugify';
+import {getRouteDetails} from '../global/global.utils';
 import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
 import {About} from './about/about';
@@ -30,18 +31,6 @@ export const PATHS: PathDetails[] = [
     element: <h1>Work details</h1>,
   },
 ];
-
-export const getRouteDetails = (path: string): PathDetails => {
-  let details = PATHS.find((details: PathDetails) => {
-    return details.path === path;
-  });
-
-  if (details) {
-    return details;
-  } else {
-    return PATHS[0];
-  }
-};
 
 export const Page = () => {
   let {path, work} = useParams();

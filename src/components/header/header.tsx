@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
-import {PATHS, getRouteDetails} from '../../routes/root';
+import {PATHS} from '../../routes/root';
 import {GlobalString} from '../../global/global.constants';
+import {getRouteDetails} from '../../global/global.utils';
 
 
 export const Header = (props: {path: string}) => {
