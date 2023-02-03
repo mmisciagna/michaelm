@@ -73,7 +73,7 @@ export const Resume = () => {
                     }
                     {entry.dates ?
                       <p ref={setRefs.ref}
-                          className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-highlight mm-resume__dates`}>
+                          className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-resume__dates`}>
                         {entry.dates}
                       </p> :
                       ''

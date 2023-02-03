@@ -5,9 +5,8 @@
   }
 
   h3 {
-    margin-bottom: unset;
+    margin-bottom: 4px;
     position: relative;
-    text-transform: uppercase;
 
     &::after {
       background: var(--color-dark-green);
@@ -30,6 +29,7 @@
   }
 
   &__dates {
+    color: var(--color-bronze);
     font-weight: 500;
     margin-top: 0;
   }

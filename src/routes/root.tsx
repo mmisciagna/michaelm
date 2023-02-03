@@ -27,29 +27,29 @@ export const PATHS: PathDetails[] = [
     label: 'Contact',
   },
   {
-    path: 'workDetails',
+    path: 'showcase',
     element: <h1>Work details</h1>,
   },
 ];
 
 export const Page = () => {
   let {path, work} = useParams();
-  let workDetails: any = undefined;
+  let showcase: any = undefined;
 
   if (!path) path = '';
 
   if (work) {
-    workDetails = WORK.find((item: any) => {
+    showcase = WORK.find((item: any) => {
       return work === slugify(item.title);
     });
 
-    if (workDetails && path === 'work') {
-      path = 'workDetails';
+    if (showcase && path === 'work') {
+      path = 'showcase';
     } else {
       // TODO: Update a state called "path" in order to re-render the
       // header and the footer.
       window.history.pushState({}, '', '/');
-      path = '';
+      path = '/';
     }
   }
 
