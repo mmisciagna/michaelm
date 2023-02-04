@@ -9,7 +9,7 @@ import {ResumeJumpLinks, Resume} from '../../components/resume/resume';
 
 const Intro = () => {
   const setRefs = useInViewRef();
-  const path = useAppSelector((state) => state.path.value);
+  const path = useAppSelector((state) => state.store.path);
 
   return (
     <>

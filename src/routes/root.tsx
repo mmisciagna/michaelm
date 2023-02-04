@@ -13,6 +13,7 @@ import {About} from './about/about';
 import {Work} from './work/work';
 import {SHOWCASES} from '../global/content/showcases';
 import {Contact} from './contact/contact';
+import {Showcase} from './showcase/showcase';
 
 
 export const ROUTE_DETAILS: RouteDetails[] = [
@@ -34,12 +35,12 @@ export const ROUTE_DETAILS: RouteDetails[] = [
   },
   {
     path: GlobalString.SHOWCASE_PATH,
-    element: <h1>Showcase</h1>,
+    element: <Showcase />,
   },
 ];
 
 export const Page = () => {
-  let path = useAppSelector((state) => state.path.value);
+  let path = useAppSelector((state) => state.store.path);
   let {showcase} = useParams();
   let showcaseDetails: Showcase|undefined = undefined;
   const dispatch = useAppDispatch();
@@ -80,7 +81,7 @@ const Layout = () => {
     dispatch(updatePath(pathOnLoad));
   }, []);
 
-  const path = useAppSelector((state) => state.path.value);
+  const path = useAppSelector((state) => state.store.path);
 
   if (!getRouteDetails(path)) {
     redirectRoute(GlobalString.HOME_PATH, dispatch);

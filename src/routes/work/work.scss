@@ -43,7 +43,7 @@
     align-items: center;
     background: var(--color-primary);
     background: rgba(46, 55, 67, .98);
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 0);
+    clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 100%);
     color: var(--color-secondary);
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@
     text-align: center;
     top: 0;
     transition:
-      var(--medium-speed-ease) clip-path,
+      var(--default-speed-ease) clip-path,
       var(--default-speed-ease) opacity;
     width: 100%;
   }

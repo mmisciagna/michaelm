@@ -3,17 +3,19 @@ import {GlobalString} from './global.constants';
 
 
 // Define a type for the slice state
-interface PathState {
-  value: string;
+interface StoreState {
+  path: string;
+  showcase?: Showcase;
 }
 
 // Define the initial state using that type
-const initialState: PathState = {
-  value: GlobalString.HOME_PATH,
+const initialState: StoreState = {
+  path: GlobalString.HOME_PATH,
+  showcase: undefined,
 };
 
-const pathUpdate = createSlice({
-  name: 'path',
+const storeUpdate = createSlice({
+  name: 'store',
   initialState,
   reducers: {
     updatePath: (state, payload) => {
@@ -21,12 +23,15 @@ const pathUpdate = createSlice({
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.value = payload.payload;
+      state.path = payload.payload;
+    },
+    updateShowcase: (state, payload) => {
+      state.showcase = payload.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {updatePath} = pathUpdate.actions;
+export const {updatePath, updateShowcase} = storeUpdate.actions;
 
-export default pathUpdate.reducer;
+export default storeUpdate.reducer;

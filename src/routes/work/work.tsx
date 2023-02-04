@@ -1,11 +1,16 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom';
+import slugify from 'react-slugify';
 import {usePageTitleEffect} from '../../global/global.utils';
 import {GlobalString} from '../../global/global.constants';
 import {SHOWCASES} from '../../global/content/showcases';
+import {useAppDispatch} from '../../global/global.store';
+import {updateShowcase} from '../../global/global.store.slice';
 
 
 const Showcase = (props: Record<string, Showcase>) => {
   const details = props.showcase;
+  const dispatch = useAppDispatch();
 
   return (
     <div className="mm-work__showcase">
@@ -21,9 +26,11 @@ const Showcase = (props: Record<string, Showcase>) => {
         <h3>{details.title}</h3>
         <h4>{details.role}</h4>
         <span>{details.tools}</span>
-        <button className="mm-button mm-button--reverse">
+        <Link className="mm-button mm-button--reverse"
+            to={`/work/${slugify(details.title)}`}
+            onClick={() => dispatch(updateShowcase(details))}>
           View details
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import {configureStore,} from '@reduxjs/toolkit';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
-import pathReducer from './global.store.slice';
+import storeUpdate from './global.store.slice';
 
 
 export const store = configureStore({
   reducer: {
-    path: pathReducer,
+    store: storeUpdate,
   },
 });
 
