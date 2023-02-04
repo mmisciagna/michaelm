@@ -4,16 +4,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 70vh;
     position: relative;
 
     .mm-page-title,
     .mm-page-subtext {
       width: 100%;
-    }
-
-    .mm-page-subtext {
-      margin-top: .5em;
     }
   }
 

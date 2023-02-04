@@ -26,6 +26,11 @@
     }
   }
 
+  &--3-cols {
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   &--50-50 {
     grid-gap: calc(var(--base-unit) * 2);
     grid-template-columns: 1fr 1fr;
