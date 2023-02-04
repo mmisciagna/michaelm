@@ -23,9 +23,10 @@ const Showcase = (props: Record<string, Showcase>) => {
         </div>
       </div>
       <div className="mm-work__info-panel">
-        <h3>{details.title}</h3>
-        <h4>{details.role}</h4>
-        <p>{details.tools}</p>
+        <div>
+          <h3>{details.title}</h3>
+          <h4>{details.role}</h4>
+        </div>
         <Link className="mm-button mm-button--reverse"
             to={`/work/${slugify(details.title)}`}
             onClick={() => dispatch(updateShowcase(details))}>

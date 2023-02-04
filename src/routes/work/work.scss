@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: center;
+    justify-content: space-between;
     left: 0;
     opacity: 0;
     padding: calc(var(--base-unit) * 2) var(--base-unit);
@@ -59,12 +59,12 @@
     width: 100%;
 
     h3 {
-      margin: 8px 0;
+      margin: unset;
     }
 
-    h4,
-    p {
-      margin: 4px 0;
+    h4 {
+      font-weight: 500;
+      margin: 4px 0 0;
     }
   }
 }
