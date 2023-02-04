@@ -40,10 +40,9 @@
   }
 
   &__info-panel {
-    align-items: center;
     background: var(--color-primary);
     background: rgba(46, 55, 67, .98);
-    clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 100%);
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
     color: var(--color-secondary);
     display: flex;
     flex-direction: column;
@@ -53,11 +52,19 @@
     opacity: 0;
     padding: calc(var(--base-unit) * 2) var(--base-unit);
     position: absolute;
-    text-align: center;
     top: 0;
     transition:
       var(--default-speed-ease) clip-path,
       var(--default-speed-ease) opacity;
     width: 100%;
+
+    h3 {
+      margin: 8px 0;
+    }
+
+    h4,
+    p {
+      margin: 4px 0;
+    }
   }
 }

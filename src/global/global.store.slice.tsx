@@ -1,17 +1,18 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {GlobalString} from './global.constants';
+import {SHOWCASES} from '../global/content/showcases';
 
 
 // Define a type for the slice state
 interface StoreState {
   path: string;
-  showcase?: Showcase;
+  showcase: Showcase;
 }
 
 // Define the initial state using that type
 const initialState: StoreState = {
   path: GlobalString.HOME_PATH,
-  showcase: undefined,
+  showcase: SHOWCASES[0],
 };
 
 const storeUpdate = createSlice({

@@ -5,7 +5,7 @@ import {useParams, Outlet} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {GlobalString} from '../global/global.constants';
 import {store, useAppSelector, useAppDispatch} from '../global/global.store';
-import {updatePath} from '../global/global.store.slice';
+import {updatePath, updateShowcase} from '../global/global.store.slice';
 import {getRouteDetails, redirectRoute} from '../global/global.utils';
 import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
@@ -58,10 +58,6 @@ export const Page = () => {
       } else {
         redirectRoute(routeDetails.path, dispatch);
       }
-    } else {
-      if (showcase) {
-        redirectRoute(GlobalString.HOME_PATH, dispatch);
-      }
     }
   }
 
@@ -73,12 +69,18 @@ export const Page = () => {
 };
 
 const Layout = () => {
-  let {path: pathOnLoad} = useParams();
+  let {path: pathOnLoad, showcase} = useParams();
   if (!pathOnLoad) pathOnLoad = GlobalString.HOME_PATH;
+
+  const showcaseDetails = SHOWCASES.find((item: Showcase) => {
+    return slugify(item.title) === showcase;
+  });
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(updatePath(pathOnLoad));
+    if (showcaseDetails) dispatch(updateShowcase(showcaseDetails));
   }, []);
 
   const path = useAppSelector((state) => state.store.path);

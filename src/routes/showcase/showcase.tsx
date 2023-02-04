@@ -4,7 +4,7 @@ import {useAppSelector} from '../../global/global.store';
 
 
 export const Showcase = () => {
-  const details = useAppSelector((state) => state.store.showcase)!;
+  const details = useAppSelector((state) => state.store.showcase);
   usePageTitleEffect(details.title);
 
   return (
