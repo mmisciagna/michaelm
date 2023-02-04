@@ -15,8 +15,8 @@
   max-width: var(--section-max-width);
 
   &--full-bleed {
-    background: var(--color-secondary);
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-secondary);
     margin: var(--main-padding-y) var(--negate-main-padding-x);
     max-width: unset;
     padding: var(--main-padding-y) var(--main-padding-x);
@@ -42,7 +42,7 @@
 }
 
 .mm-highlight {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 2px;
   display: inline-block;
   margin: 1px 0;

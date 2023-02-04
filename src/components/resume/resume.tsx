@@ -1,7 +1,7 @@
 import * as React from 'react';
 import slugify from 'react-slugify';
 import {Link} from 'react-scroll';
-import {RESUME_CONTENT} from './resume-content';
+import {RESUME} from '../../global/content/resume';
 import {useInViewRef, setAnimateInClassName} from '../../global/global.utils';
 
 
@@ -37,7 +37,7 @@ export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {}) => {
       {prepend && prepend.map((link: JumpLink) => {
         return listItem(link.label, link.hash);
       })}
-      {RESUME_CONTENT.map((section: any) => {
+      {RESUME.map((section: any) => {
         return listItem(section.title);
       })}
       {append && append.map((link: JumpLink) => {
@@ -50,7 +50,7 @@ export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {}) => {
 export const Resume = () => {
   return (
     <section className="mm-section mm-grid mm-resume">
-      {RESUME_CONTENT.map((section: any) => {
+      {RESUME.map((section: any) => {
         const setRefs = useInViewRef();
         return (
           <React.Fragment key={section.title}>

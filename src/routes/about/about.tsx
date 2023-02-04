@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {GlobalString} from '../../global/global.constants';
 import {useInViewRef, setAnimateInClassName, usePageTitleEffect} from '../../global/global.utils';
-import {INTRO} from './content';
+import {INTRO} from '../../global/content/intro';
 import {ResumeJumpLinks, Resume} from '../../components/resume/resume';
 
 
@@ -10,7 +10,7 @@ const Intro = () => {
 
   return (
     <>
-      <section className="mm-section mm-about__intro">
+      <section className="mm-section mm-about__intro" id="intro">
         <h1 className="mm-page-title">
           Hello, I am <span className="mm-tooltip">
             Michael Misciagna.

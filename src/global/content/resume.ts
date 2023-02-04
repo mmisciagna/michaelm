@@ -1,4 +1,4 @@
-export const RESUME_CONTENT = [
+export const RESUME = [
   {
     title: 'Experience',
     entries: [
@@ -16,7 +16,7 @@ export const RESUME_CONTENT = [
           {
             subhead: 'Leadership',
             description: [
-              `Independently led projects, such as youtube.com/ads, utilizing strong project management skills, in absence of dedicated project management staff. This includes overseeing our vendor’s engineering team, Cybage, on projects that required more than one engineer.`,
+              `Independently led projects, such as youtube.com/ads, utilizing strong project management skills, in absence of dedicated project management staff. This includes overseeing our vendor's engineering team, Cybage, on projects that required more than one engineer.`,
             ],
           },
           {

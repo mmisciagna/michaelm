@@ -3,20 +3,27 @@
   background: var(--color-secondary);
   color: var(--color-primary);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   font-size: 14px;
-  font-weight: 500;
-  justify-content: center;
+  font-weight: 700;
+  justify-content: space-between;
   letter-spacing: 1px;
   padding: var(--main-padding-x);
+
+  @include tablet-up {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__nav,
   &__ancillary-links {
     display: flex;
     font-family: var(--font-stack-raleway);
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--base-unit) / 2);
     text-transform: uppercase;
+
+    @include tablet-up {
+      margin-left: calc(-1 * var(--base-unit) / 2);
+    }
   }
 
   a {
@@ -41,9 +48,14 @@
   }
 
   &__ancillary-links {
-    margin-left: unset;
-    margin-right: calc(-1 * var(--base-unit) / 2);
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-up {
+      justify-content: flex-end;
+      margin-left: unset;
+      margin-right: calc(-1 * var(--base-unit) / 2);
+    }
 
     a {
       align-items: center;

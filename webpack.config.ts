@@ -77,6 +77,12 @@ module.exports = {
   devServer: {
     // 404 fallback to index.html. Using with React Router.
     historyApiFallback: true,
+    client: {
+      overlay: {
+        errors: false,
+        warnings: false,
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

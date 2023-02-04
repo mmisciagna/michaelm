@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
+import {Link as Scroll} from 'react-scroll';
 import {GCP_STORAGE_BUCKET} from '../../global/global.constants';
 import {useAppDispatch} from '../../global/global.store';
 import {updatePath} from '../../global/global.store.slice';
@@ -13,7 +14,7 @@ export const Footer = (props: {path: string}) => {
     <>
       <footer className="mm-footer">
         <nav className="mm-footer__nav">
-          {ROUTE_DETAILS.map((item: RouteDetails) => {
+          {ROUTE_DETAILS.map((item: RouteDetails, i: number) => {
             const path = item.path;
             const isActiveItem = path === props.path;
             const activeClassName =
@@ -26,7 +27,6 @@ export const Footer = (props: {path: string}) => {
                       onClick={() => dispatch(updatePath(path))}>
                     {item.label}
                   </Link>
-                  |
                 </React.Fragment>
                 : '';
 
@@ -34,6 +34,13 @@ export const Footer = (props: {path: string}) => {
           })}
         </nav>
         <div className='mm-footer__ancillary-links'>
+          <Scroll to="intro"
+              smooth={true}
+              offset={-96}
+              duration={500}>
+            Back to top
+          </Scroll>
+          |
           <a href={`${GCP_STORAGE_BUCKET}/michael-misciagna-resume.pdf`} target="_blank" aria-label="CV" download>
             CV
           </a>

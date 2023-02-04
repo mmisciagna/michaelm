@@ -11,7 +11,7 @@ import {Header} from '../components/header/header';
 import {Footer} from '../components/footer/footer';
 import {About} from './about/about';
 import {Work} from './work/work';
-import {SHOWCASES} from './work/showcases';
+import {SHOWCASES} from '../global/content/showcases';
 import {Contact} from './contact/contact';
 
 

@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
-import slugify from 'react-slugify';
 import {usePageTitleEffect} from '../../global/global.utils';
 import {GlobalString} from '../../global/global.constants';
-import {SHOWCASES} from './showcases';
+import {SHOWCASES} from '../../global/content/showcases';
 
 
 export const Work = () => {
@@ -11,17 +9,17 @@ export const Work = () => {
 
   return (
     <section className="mm-section mm-grid mm-grid--50-50">
-      {SHOWCASES.map((showcase: Showcase) => {
-        return (
-          <div key={showcase.title}>
-            <Link to={slugify(showcase.title)}>
+      <>
+        {SHOWCASES.map((showcase: Showcase) => {
+          return (
+            <div key={showcase.title}>
               {showcase.title}
-            </Link>
-            <img src={`${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img}`}
-                aria-label={showcase.title} />
-          </div>
-        )
-      })}
+              <img src={`${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img}`}
+                  aria-label={showcase.title} />
+            </div>
+          )
+        })}
+      </>
     </section>
   )
 };

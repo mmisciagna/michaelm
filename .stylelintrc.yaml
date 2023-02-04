@@ -16,6 +16,7 @@ reportDescriptionlessDisables: true
 extends: ["stylelint-config-standard-scss"]
 
 rules:
+  alpha-value-notation: null
   # This list is to be verified with tests in `e2e_test.js`, in order to verify that each rule is
   # functioning, and that this file does not contain typos.
   block-closing-brace-newline-after:
@@ -25,6 +26,7 @@ rules:
       - else
   block-no-empty: null
   color-hex-length: short
+  color-function-notation: null
   color-no-invalid-hex: true
   declaration-block-no-duplicate-properties:
     - true
@@ -106,5 +108,4 @@ rules:
     - true
     - ignoreUnits:
       - /^[-+][\d$(]/
-  # This lint rule is enforced on map keys, which we may not want now, and has caused confusion.
-  # value-keyword-case: lower
+  value-list-comma-newline-after: null

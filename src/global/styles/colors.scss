@@ -1,7 +1,7 @@
 :root {
   // Main pallete
-  --color-primary: #e6f2ea;
-  --color-secondary: #10231b;
+  --color-primary: #2E4340;
+  --color-secondary: #fff9f2;
 
   // Accents
   --color-accent: #cd7f32;
@@ -11,8 +11,8 @@
 }
 
 [theme='dark'] {
-  --color-primary: #10231b;
-  --color-secondary: #e6f2ea;
+  --color-primary: #fff9f2;
+  --color-secondary: #2E4340;
   --color-accent: #cd7f32;
-  --color-background: #000;
+  --color-background: #1b2423;
 }
