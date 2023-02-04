@@ -1,10 +1,15 @@
 .mm-about {
+  .mm-header {
+    margin: 0 var(--negate-main-padding-x);
+  }
+
   &__intro {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 70vh;
+    margin-top: unset;
+    min-height: calc(100vh - var(--main-padding-y));
     position: relative;
 
     .mm-page-title,
@@ -13,11 +18,15 @@
     }
   }
 
+  &__tldr {
+    margin-top: unset;
+  }
+
   &__jump-links {
     width: 100%;
 
     hr {
-      background: var(--color-secondary);
+      background: var(--color-background);
       border: 0;
       display: none;
       height: 1px;
@@ -61,7 +70,7 @@
       }
 
       a {
-        background: var(--color-secondary);
+        background: var(--color-background);
         display: block;
         padding: calc(var(--base-unit) / 2) var(--base-unit);
         transition: var(--default-speed-ease) color;

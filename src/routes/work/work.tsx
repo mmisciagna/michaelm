@@ -19,9 +19,11 @@ const Showcase = (props: Record<string, Showcase>) => {
       </div>
       <div className="mm-work__info-panel">
         <h3>{details.title}</h3>
-        <span>{details.role}</span>
-        <span>Tools</span>
-        <button className="mm-button mm-button--reverse">View details</button>
+        <h4>{details.role}</h4>
+        <span>{details.tools}</span>
+        <button className="mm-button mm-button--reverse">
+          View details
+        </button>
       </div>
     </div>
   );

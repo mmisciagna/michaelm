@@ -27,8 +27,16 @@
   }
 
   &--3-cols {
-    grid-gap: 0;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include ipad-portrait-up {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   &--50-50 {

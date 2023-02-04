@@ -91,7 +91,7 @@ const Layout = () => {
 
   return (
     <>
-      <Header path={path} />
+      {path === GlobalString.HOME_PATH ? '' : <Header path={path} />}
       <main className={`mm-main mm-${className}`}>
         <Outlet />
       </main>

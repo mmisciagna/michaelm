@@ -24,7 +24,7 @@ export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {}) => {
       <li key={hash || label}>
         <Link to={slugify(hash || label)}
             smooth={true}
-            offset={-96}
+            offset={-48}
             duration={500}>
           {label}
         </Link>

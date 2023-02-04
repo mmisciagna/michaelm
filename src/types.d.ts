@@ -11,4 +11,5 @@ interface Showcase {
   img: string;
   role: string;
   title: string;
+  tools: string;
 }

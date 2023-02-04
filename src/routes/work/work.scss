@@ -3,12 +3,21 @@
     align-items: flex-end;
     display: flex;
     flex-direction: column;
+    margin: var(--base-unit) 0;
     position: relative;
+
+    @include tablet-up {
+      margin: unset;
+    }
+
+    .mm-button {
+      margin-top: var(--base-unit);
+    }
 
     &:hover {
       .mm-work__info-panel {
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
         opacity: 1;
-        pointer-events: initial;
       }
     }
   }
@@ -19,7 +28,7 @@
 
   &__img-aspect-ratio {
     background-blend-mode: luminosity;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     background-repeat: no-repeat;
     background-size: cover;
     left: 0;
@@ -34,6 +43,7 @@
     align-items: center;
     background: var(--color-primary);
     background: rgba(46, 55, 67, .98);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 0);
     color: var(--color-secondary);
     display: flex;
     flex-direction: column;
@@ -42,11 +52,12 @@
     left: 0;
     opacity: 0;
     padding: calc(var(--base-unit) * 2) var(--base-unit);
-    pointer-events: none;
     position: absolute;
     text-align: center;
     top: 0;
-    transition: var(--default-speed-ease) opacity;
+    transition:
+      var(--medium-speed-ease) clip-path,
+      var(--default-speed-ease) opacity;
     width: 100%;
   }
 }

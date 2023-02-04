@@ -1,32 +1,36 @@
 import * as React from 'react';
 import {GlobalString} from '../../global/global.constants';
 import {useInViewRef, setAnimateInClassName, usePageTitleEffect} from '../../global/global.utils';
+import {useAppSelector} from '../../global/global.store';
+import {Header} from '../../components/header/header';
 import {INTRO} from '../../global/content/intro';
 import {ResumeJumpLinks, Resume} from '../../components/resume/resume';
 
 
 const Intro = () => {
   const setRefs = useInViewRef();
+  const path = useAppSelector((state) => state.path.value);
 
   return (
     <>
       <section className="mm-section mm-about__intro" id="intro">
         <h1 className="mm-page-title">
-          Hello, I am <span className="mm-tooltip">
-            Michael Misciagna.
+          Hello, I am <span className="mm-tooltip mm-highlight">
+            Michael Misciagna
             <span className="mm-tooltip__bubble">
               Pronounced <span>{GlobalString.PRONUNCIATION}</span>
             </span>
           </span>
         </h1>
         <h2 className="mm-page-subtext">
-          <span className="mm-highlight">Frontend engineer</span> and <span className="mm-highlight">designer</span> extraordinaire.
+          <span className="mm-highlight">Frontend engineer</span> and <span className="mm-highlight">designer</span> extraordinaire
         </h2>
         <div className="mm-about__jump-links">
           <hr />
           {ResumeJumpLinks({prepend: [{hash: 'tldr', label: 'TL;DR'}]})}
         </div>
       </section>
+      <Header path={path} />
       <section className="mm-section mm-section--full-bleed mm-about__tldr" id="tldr">
         <div className="mm-grid mm-section__inner">
           <div ref={setRefs.ref} className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-grid__col-l mm-about__profile-pic`}>

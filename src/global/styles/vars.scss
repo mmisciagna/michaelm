@@ -16,7 +16,6 @@
   }
 
   @include desktop-up {
-    --header-height: calc(var(--base-unit) * 3);
     --main-padding-x: calc(var(--base-unit) * 3);
   }
 }

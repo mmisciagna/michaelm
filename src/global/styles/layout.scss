@@ -43,7 +43,7 @@
 }
 
 .mm-highlight {
-  background: var(--color-secondary);
+  background: var(--color-background);
   border-radius: 2px;
   display: inline-block;
   margin: 1px 0;
@@ -52,6 +52,7 @@
 }
 
 .mm-button {
+  background: transparent;
   border: 2px solid var(--color-accent);
   color: var(--color-primary);
   font-family: var(--font-stack-raleway);
@@ -62,6 +63,14 @@
   padding: 8px var(--base-unit);
   text-align: center;
   text-transform: uppercase;
+  transition:
+    var(--default-speed-ease) background,
+    var(--default-speed-ease) color;
+
+  &:hover {
+    background: var(--color-accent);
+    color: var(--color-secondary);
+  }
 
   &--reverse {
     color: var(--color-secondary);

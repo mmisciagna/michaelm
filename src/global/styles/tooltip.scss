@@ -1,8 +1,24 @@
 .mm-tooltip {
-  border-bottom: 2px dotted var(--color-primary);
   cursor: pointer;
   display: inline;
   position: relative;
+  white-space: normal;
+
+  &::after {
+    align-items: center;
+    background: var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-secondary);
+    content: '?';
+    display: inline-flex;
+    height: var(--base-unit);
+    font-size: 16px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: top;
+    width: var(--base-unit);
+  }
 
   @include tablet-up {
     white-space: nowrap;
@@ -11,33 +27,30 @@
   &__bubble {
     background: var(--color-primary);
     border-radius: 8px;
-    bottom: 100%;
+    bottom: calc(100% + 16px);
     color: var(--color-secondary);
     display: inline-block;
     font-family: var(--font-stack-source-pro);
     font-size: 14px;
     font-style: italic;
-    left: 50%;
     line-height: 1.6em;
     max-width: 200px;
     opacity: 0;
     padding: calc(var(--base-unit) / 2) var(--base-unit);
     pointer-events: none;
     position: absolute;
-    transform: translateX(-50%);
+    right: 0;
     transition: var(--default-speed-ease) opacity;
     white-space: normal;
 
     &::after {
-      border: 8px solid var(--color-primary);
+      border: 6px solid var(--color-primary);
       border-bottom-color: transparent;
       border-left-color: transparent;
-      border-right-color: transparent;
       content: '';
-      left: 50%;
       position: absolute;
+      right: 8px;
       top: 100%;
-      transform: translateX(-50%);
     }
 
     span {
