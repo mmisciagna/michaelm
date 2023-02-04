@@ -19,8 +19,8 @@
 
   &__branding {
     align-items: center;
-    background: var(--color-dark-green);
-    color: var(--color-white);
+    background: var(--color-primary);
+    color: var(--color-secondary);
     display: flex;
     flex: 1;
     flex-basis: var(--header-height);
@@ -33,7 +33,7 @@
     width: 100%;
 
     span {
-      background: var(--color-dark-green);
+      background: var(--color-primary);
       padding: 0 calc(var(--base-unit) / 2);
       position: relative;
       z-index: 1;
@@ -49,7 +49,7 @@
     }
 
     &::before {
-      background: var(--color-light-green);
+      background: var(--color-background);
       content: '';
       height: 1px;
       left: calc(var(--main-padding-x) / 2);
@@ -62,7 +62,7 @@
 
   &__nav {
     align-items: center;
-    backdrop-filter: blur(5px);
+    background: var(--color-primary);
     display: flex;
     height: var(--header-height);
     justify-content: center;
@@ -71,8 +71,7 @@
     width: 100%;
 
     @include tablet-up {
-      align-items: flex-end;
-      background: unset;
+      border-left: 1px solid var(--color-background);
       height: 100%;
       padding: unset;
       width: unset;
@@ -80,7 +79,7 @@
   }
 
   &__nav-item {
-    color: var(--color-dark-green);
+    color: var(--color-secondary);
     display: inline-block;
     margin: 0 calc(var(--base-unit) / 2);
     position: relative;
@@ -103,19 +102,19 @@
     }
 
     &::after {
-      background: var(--color-bronze);
+      background: var(--color-accent);
       content: '';
       height: 2px;
       position: absolute;
       left: 0;
-      top: -4px;
+      top: 0;
       transition: width var(--default-speed-ease);
       width: 0;
     }
 
     &:hover,
     &--active {
-      color: var(--color-bronze);
+      color: var(--color-accent);
 
       &::after {
         width: 25%;

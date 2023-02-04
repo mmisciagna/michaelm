@@ -25,4 +25,9 @@
       grid-column: 4 / 13;
     }
   }
+
+  &--50-50 {
+    grid-gap: calc(var(--base-unit) * 2);
+    grid-template-columns: 1fr 1fr;
+  }
 }

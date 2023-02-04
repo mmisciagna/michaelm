@@ -15,18 +15,11 @@
   max-width: var(--section-max-width);
 
   &--full-bleed {
-    background: var(--color-light-green);
-    background:
-      (
-        linear-gradient(
-          180deg,
-          var(--color-light-green) 0%,
-          var(--color-white) 100%
-        )
-      );
+    background: var(--color-secondary);
+    color: var(--color-primary);
     margin: var(--main-padding-y) var(--negate-main-padding-x);
     max-width: unset;
-    padding: var(--main-padding-x) var(--main-padding-x) 0;
+    padding: var(--main-padding-y) var(--main-padding-x);
   }
 
   &__inner {
@@ -49,9 +42,8 @@
 }
 
 .mm-highlight {
-  background: var(--color-bronze);
+  background: var(--color-primary);
   border-radius: 2px;
-  color: var(--color-white);
   display: inline-block;
   margin: 1px 0;
   padding: 0 8px;

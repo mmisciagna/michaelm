@@ -1,14 +1,30 @@
 export const SHOWCASES = [
   {
-    title: 'Work 1',
+    title: 'YouTube Studio',
+    client: 'YouTube',
+    role: 'Frontend Engineer',
+    img: 'youtube-studio.jpeg',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
   {
-    title: 'Work 2',
+    title: 'YouTube Creators',
+    client: 'YouTube',
+    role: 'Frontend Engineer',
+    img: 'youtube-creators.jpeg',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
   {
-    title: 'Work 3',
+    title: 'YouTube Creators, design concept',
+    client: 'YouTube',
+    role: 'UX Designer',
+    img: 'youtube-creators-design.jpeg',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
   {
-    title: 'Work 4',
+    title: 'My Fiber',
+    client: 'Google',
+    role: 'Frontend Engineer',
+    img: 'my-fiber.jpeg',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
 ];

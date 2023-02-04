@@ -9,7 +9,7 @@
     position: relative;
 
     &::after {
-      background: var(--color-dark-green);
+      background: var(--color-secondary);
       content: '';
       height: 2px;
       position: absolute;
@@ -29,7 +29,7 @@
   }
 
   &__dates {
-    color: var(--color-bronze);
+    color: var(--color-accent);
     font-weight: 500;
     margin-top: 0;
   }

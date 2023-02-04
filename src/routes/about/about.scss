@@ -1,15 +1,9 @@
 .mm-about {
-  &__tldr {
-    margin-top: unset;
-  }
-
   &__intro {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: unset;
-    margin-top: unset;
     min-height: 50vh;
     position: relative;
 
@@ -19,11 +13,7 @@
     }
 
     .mm-page-subtext {
-      margin-top: .35em;
-    }
-
-    + .mm-section {
-      margin-top: unset;
+      margin-top: .5em;
     }
   }
 
@@ -31,11 +21,10 @@
     width: 100%;
 
     hr {
-      background: var(--color-light-green);
+      background: var(--color-primary);
       border: 0;
       display: none;
       height: 1px;
-      margin: 0 0 calc(var(--base-unit) / 3);
 
       @include tablet-up {
         display: block;
@@ -47,8 +36,7 @@
       display: flex;
       flex-wrap: wrap;
       font-family: var(--font-stack-raleway);
-      font-size: 14px;
-      font-weight: 700;
+      font-weight: 500;
       letter-spacing: 1px;
       list-style: none;
       margin: var(--base-unit) 0;
@@ -76,7 +64,7 @@
       }
 
       a {
-        border: 1px solid var(--color-light-green);
+        border: 1px solid var(--color-primary);
         display: block;
         padding: calc(var(--base-unit) / 2) var(--base-unit);
         transition: var(--default-speed-ease) color;
@@ -87,7 +75,7 @@
         }
 
         &:hover {
-          color: var(--color-bronze);
+          color: var(--color-accent);
         }
       }
     }

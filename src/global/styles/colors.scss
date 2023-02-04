@@ -1,12 +1,18 @@
 :root {
-  // Pallete
-  --color-light-green: #e6f2ea;
-  --color-dark-green: #10231b;
+  // Main pallete
+  --color-primary: #e6f2ea;
+  --color-secondary: #10231b;
 
   // Accents
-  --color-almost-white: #f5f8f6;
-  --color-bronze: #cd7f32;
+  --color-accent: #cd7f32;
 
-  // Absolutes
-  --color-white: #fff;
+  // Backgrounds
+  --color-background: #fff;
+}
+
+[theme='dark'] {
+  --color-primary: #10231b;
+  --color-secondary: #e6f2ea;
+  --color-accent: #cd7f32;
+  --color-background: #000;
 }

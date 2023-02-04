@@ -41,15 +41,14 @@ export const ROUTE_DETAILS: RouteDetails[] = [
 export const Page = () => {
   let path = useAppSelector((state) => state.path.value);
   let {showcase} = useParams();
-  // TODO: Define type.
-  let showcaseDetails: any = undefined;
+  let showcaseDetails: Showcase|undefined = undefined;
   const dispatch = useAppDispatch();
 
   if (showcase) {
     const routeDetails = getRouteDetails(path) as RouteDetails;
+
     if (routeDetails.showcasePortal === true) {
-      // TODO: Define type.
-      showcaseDetails = SHOWCASES.find((item: any) => {
+      showcaseDetails = SHOWCASES.find((item: Showcase) => {
         return showcase === slugify(item.title);
       });
 

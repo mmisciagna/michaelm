@@ -1,7 +1,7 @@
 .mm-footer {
   align-items: center;
-  background: var(--color-dark-green);
-  color: var(--color-light-green);
+  background: var(--color-secondary);
+  color: var(--color-primary);
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
@@ -25,17 +25,17 @@
     transition: color var(--default-speed-ease);
 
     svg {
-      fill: var(--color-light-green);
+      fill: var(--color-primary);
       height: var(--base-unit);
       transition: fill var(--default-speed-ease);
       width: var(--base-unit);
     }
 
     &:hover {
-      color: var(--color-bronze);
+      color: var(--color-accent);
 
       svg {
-        fill: var(--color-bronze);
+        fill: var(--color-accent);
       }
     }
   }
@@ -53,7 +53,7 @@
 
   &__nav-item {
     &::after {
-      background: var(--color-bronze);
+      background: var(--color-accent);
       content: '';
       height: 2px;
       position: absolute;
@@ -64,14 +64,14 @@
     }
 
     &--active {
-      color: var(--color-bronze);
+      color: var(--color-accent);
 
       &::after {
         width: 25%;
       }
 
       svg {
-        fill: var(--color-bronze);
+        fill: var(--color-accent);
       }
     }
   }

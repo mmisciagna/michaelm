@@ -4,6 +4,7 @@ export const GCP_STORAGE_BUCKET =
 export enum GlobalString {
   HOME_PATH = '',
   PRONUNCIATION = '[ mē-shah-nyah ]',
+  SHOWCASE_IMG_SRC_BASE = '/static/imgs/showcase',
   SHOWCASE_PATH = 'showcaseDetails',
 }
 

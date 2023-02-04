@@ -1,8 +1,8 @@
 :root {
   --base-unit: 24px;
-  --default-font-size: 14px;
+  --default-font-size: 18px;
   --font-stack-raleway: 'raleway', 'arial', sans-serif;
-  --font-stack-source-serif: 'Source Serif Pro', 'Georgia', serif;
+  --font-stack-source-pro: 'Source Sans Pro', 'Georgia', serif;
   --footer-height: calc(var(--base-unit) * 4);
   --header-height: calc(var(--base-unit) * 2);
   --main-padding-x: var(--base-unit);
@@ -11,7 +11,7 @@
   --section-max-width: 1200px;
 
   @include ipad-portrait-up {
-    --default-font-size: 16px;
+    --default-font-size: 20px;
     --main-padding-x: calc(var(--base-unit) * 2);
   }
 

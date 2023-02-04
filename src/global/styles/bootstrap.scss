@@ -11,9 +11,10 @@ html {
 }
 
 body {
-  color: var(--color-dark-green);
+  background: var(--color-background);
+  color: var(--color-secondary);
   display: flex;
-  font: 400 #{var(--default-font-size)}/1.6em var(--font-stack-source-serif);
+  font: 400 #{var(--default-font-size)}/1.6em var(--font-stack-source-pro);
   font-variant-ligatures: normal;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;

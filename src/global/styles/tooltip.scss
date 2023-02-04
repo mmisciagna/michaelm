@@ -1,16 +1,20 @@
 .mm-tooltip {
-  border-bottom: 2px dotted var(--color-bronze);
+  border-bottom: 2px dotted var(--color-secondary);
   cursor: pointer;
   display: inline;
   position: relative;
-  white-space: nowrap;
+
+  @include tablet-up {
+    white-space: nowrap;
+  }
 
   &__bubble {
-    background: var(--color-almost-white);
+    background: var(--color-secondary);
     border-radius: 8px;
     bottom: 100%;
+    color: var(--color-primary);
     display: inline-block;
-    font-family: var(--font-stack-source-serif);
+    font-family: var(--font-stack-source-pro);
     font-size: 14px;
     font-style: italic;
     left: 50%;
@@ -25,7 +29,7 @@
     white-space: normal;
 
     &::after {
-      border: 8px solid var(--color-almost-white);
+      border: 8px solid var(--color-secondary);
       border-bottom-color: transparent;
       border-left-color: transparent;
       border-right-color: transparent;
@@ -37,13 +41,12 @@
     }
 
     span {
-      color: var(--color-bronze);
       white-space: nowrap;
     }
   }
 
   &:hover {
-    border-color: var(--color-dark-green);
+    border-color: var(--color-accent);
 
     .mm-tooltip__bubble {
       opacity: 1;
