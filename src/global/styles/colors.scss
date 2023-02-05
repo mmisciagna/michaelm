@@ -1,6 +1,8 @@
 :root {
   // Main pallete
   --color-primary: #2e3743;
+  --color-primary-shade: #000;
+  --color-primary-90: rgba(46, 55, 67, .9);
   --color-secondary: #fff9f2;
 
   // Accents
@@ -12,7 +14,9 @@
 
 [theme='dark'] {
   --color-primary: #fff9f2;
+  --color-primary-shade: #999;
+  --color-primary-90: rgba(255, 249, 242, .9);
   --color-secondary: #2e3743;
   --color-accent: #cd7f32;
-  --color-background: #1b2423;
+  --color-background: #000;
 }

@@ -40,12 +40,12 @@ export const ROUTE_DETAILS: RouteDetails[] = [
 ];
 
 export const Page = () => {
+  const dispatch = useAppDispatch();
   let path = useAppSelector((state) => state.store.path);
   let {showcase} = useParams();
   let showcaseDetails: Showcase|undefined = undefined;
-  const dispatch = useAppDispatch();
 
-  console.log(path)
+  console.log(path, showcase)
 
   if (showcase) {
     const routeDetails = getRouteDetails(path) as RouteDetails;
@@ -56,6 +56,7 @@ export const Page = () => {
       });
 
       if (showcaseDetails) {
+        dispatch(updateShowcase(showcaseDetails));
         path = GlobalString.SHOWCASE_PATH;
       } else {
         redirectRoute(routeDetails.path, dispatch);
@@ -75,15 +76,15 @@ const Layout = () => {
   let {path: pathOnLoad, showcase} = useParams();
   if (!pathOnLoad) pathOnLoad = GlobalString.HOME_PATH;
 
-  const showcaseDetails = SHOWCASES.find((item: Showcase) => {
-    return slugify(item.title) === showcase;
-  });
+  // const showcaseDetails = SHOWCASES.find((item: Showcase) => {
+  //   return slugify(item.title) === showcase;
+  // });
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(updatePath(pathOnLoad));
-    if (showcaseDetails) dispatch(updateShowcase(showcaseDetails));
+    // if (showcaseDetails) dispatch(updateShowcase(showcaseDetails));
   }, []);
 
   const path = useAppSelector((state) => state.store.path);

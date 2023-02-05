@@ -42,7 +42,7 @@
   &__info-panel {
     backdrop-filter: blur(5px);
     background: var(--color-primary);
-    background: rgba(46, 55, 67, .9);
+    background: var(--color-primary-90);
     clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
     color: var(--color-secondary);
     display: flex;
@@ -60,11 +60,10 @@
     width: 100%;
 
     &::after {
-      border-bottom: 16px solid var(--color-primary);
-      border-left: 16px solid var(--color-primary);
-      border-right: 16px solid var(--color-background);
-      border-top: 16px solid var(--color-background);
-      box-shadow: -2px 1px 5px rgba(0, 0, 0, .35);
+      border-bottom: 16px solid var(--color-primary-shade);
+      border-left: 16px solid var(--color-primary-shade);
+      border-right: 16px solid var(--color-secondary);
+      border-top: 16px solid var(--color-secondary);
       top: 0;
       content: '';
       position: absolute;
