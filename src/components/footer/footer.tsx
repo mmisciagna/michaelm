@@ -23,7 +23,7 @@ export const Footer = (props: {path: string}) => {
                 <React.Fragment key={item.label}>
                   <Link
                       className={`mm-footer__nav-item ${activeClassName}`}
-                      to={`/${item.path}`}
+                      to={`/#/${item.path}`}
                       onClick={() => dispatch(updatePath(path))}>
                     {item.label}
                   </Link>

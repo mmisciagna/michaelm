@@ -23,6 +23,7 @@ module.exports = {
     filename: 'static/index.min.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
   },
   devtool: 'inline-source-map',
   module: {

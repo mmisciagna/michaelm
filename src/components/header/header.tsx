@@ -30,7 +30,7 @@ export const Header = (props: {path: string}) => {
             const el = item.label ?
                 <Link key={item.label}
                     className={`mm-header__nav-item ${activeClassName}`}
-                    to={`/${item.path}`}
+                    to={`/#/${item.path}`}
                     onClick={() => dispatch(updatePath(path))}>
                   <span>{item.label}</span>
                 </Link> : '';

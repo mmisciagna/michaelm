@@ -45,6 +45,8 @@ export const Page = () => {
   let showcaseDetails: Showcase|undefined = undefined;
   const dispatch = useAppDispatch();
 
+  console.log(path)
+
   if (showcase) {
     const routeDetails = getRouteDetails(path) as RouteDetails;
 
