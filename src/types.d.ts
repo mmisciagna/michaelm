@@ -6,10 +6,13 @@ interface RouteDetails {
 }
 
 interface Showcase {
-  description: string;
+  apis?: string;
+  description: string[];
   client: string;
   img: string;
   role: string;
+  siteLink?: string;
   title: string;
   tools: string;
+  videoId?: string;
 }

@@ -40,8 +40,9 @@
   }
 
   &__info-panel {
+    backdrop-filter: blur(5px);
     background: var(--color-primary);
-    background: rgba(46, 55, 67, .98);
+    background: rgba(46, 55, 67, .9);
     clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
     color: var(--color-secondary);
     display: flex;
