@@ -1,24 +1,25 @@
 .mm-tooltip {
+  border-bottom: 2px dotted var(--color-primary);
   cursor: pointer;
   display: inline;
   position: relative;
   white-space: normal;
 
-  &::after {
-    align-items: center;
-    background: var(--color-primary);
-    border-radius: 50%;
-    color: var(--color-secondary);
-    content: '?';
-    display: inline-flex;
-    height: var(--base-unit);
-    font-size: 16px;
-    font-weight: 700;
-    justify-content: center;
-    line-height: 1;
-    vertical-align: top;
-    width: var(--base-unit);
-  }
+  // &::after {
+  //   align-items: center;
+  //   background: var(--color-primary);
+  //   border-radius: 50%;
+  //   color: var(--color-secondary);
+  //   content: '?';
+  //   display: inline-flex;
+  //   height: var(--base-unit);
+  //   font-size: 16px;
+  //   font-weight: 700;
+  //   justify-content: center;
+  //   line-height: 1;
+  //   vertical-align: top;
+  //   width: var(--base-unit);
+  // }
 
   @include tablet-up {
     white-space: nowrap;
@@ -46,10 +47,10 @@
     &::after {
       border: 6px solid var(--color-primary);
       border-bottom-color: transparent;
-      border-left-color: transparent;
+      border-right-color: transparent;
       content: '';
+      left: 8px;
       position: absolute;
-      right: 8px;
       top: 100%;
     }
 
