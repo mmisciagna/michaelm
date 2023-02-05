@@ -65,6 +65,7 @@ export const Page = () => {
   const pageElement = pageDetails ? pageDetails.element :
       (getRouteDetails(GlobalString.HOME_PATH) as RouteDetails).element;
 
+  window.scrollTo(0, 0);
   return pageElement;
 };
 

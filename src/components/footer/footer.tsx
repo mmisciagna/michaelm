@@ -14,7 +14,7 @@ export const Footer = (props: {path: string}) => {
     <>
       <footer className="mm-footer">
         <nav className="mm-footer__nav">
-          {ROUTE_DETAILS.map((item: RouteDetails, i: number) => {
+          {ROUTE_DETAILS.map((item: RouteDetails) => {
             const path = item.path;
             const isActiveItem = path === props.path;
             const activeClassName =
@@ -34,7 +34,7 @@ export const Footer = (props: {path: string}) => {
           })}
         </nav>
         <div className='mm-footer__ancillary-links'>
-          <Scroll to="intro"
+          <Scroll to="top"
               smooth={true}
               offset={-96}
               duration={500}>

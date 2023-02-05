@@ -13,7 +13,7 @@ const Intro = () => {
 
   return (
     <>
-      <section className="mm-section mm-about__intro" id="intro">
+      <section className="mm-section mm-about__intro">
         <h1 className="mm-page-title">
           Hello, I am <span className="mm-tooltip mm-highlight">
             Michael Misciagna
