@@ -1,6 +1,6 @@
 export const SHOWCASES = [
   {
-    title: 'YouTube Trends - Top Ten Lists 2022',
+    title: 'YouTube Trends, Top Ten Lists 2022',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-trends-2022.webp',
@@ -12,7 +12,7 @@ export const SHOWCASES = [
     siteLink: 'http://youtube.com/trends/2022',
   },
   {
-    title: 'How YouTube Works - U.S. of YouTube',
+    title: 'How YouTube Works, U.S. of YouTube',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-us-of-youtube.webp',
@@ -24,7 +24,7 @@ export const SHOWCASES = [
     siteLink: 'https://www.youtube.com/intl/en_us/howyoutubeworks/progress-impact/impact/us-of-youtube/',
   },
   {
-    title: 'How YouTube Works - Creator Economy',
+    title: 'How YouTube Works, Creator Economy',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-creator-economy.webp',
@@ -46,6 +46,18 @@ export const SHOWCASES = [
     tools: 'TypeScript, SCSS, Jinja2, Webpack, Python',
     videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/ads',
+  },
+  {
+    title: 'YouTube Find My Audience',
+    client: 'YouTube',
+    role: 'Frontend Engineer',
+    img: 'youtube-find-my-audience.webp',
+    description: [
+      `Lorem ipsum...`,
+    ],
+    tools: 'Python, Firebase Database, Fireabse Cloud Function',
+    videoId: 'MqW-GOGS7pI',
+    siteLink: 'https://www.thinkwithgoogle.com/feature/findmyaudience/',
   },
   {
     title: 'YouTube Studio',
