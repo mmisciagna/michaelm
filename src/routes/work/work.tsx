@@ -8,28 +8,27 @@ import {useAppDispatch} from '../../global/global.store';
 import {updateShowcase} from '../../global/global.store.slice';
 
 
-const Showcase = (props: Record<string, Showcase>) => {
-  const details = props.showcase;
+const Showcase = ({showcase}) => {
   const dispatch = useAppDispatch();
 
   return (
     <div className="mm-work__showcase">
       <div className="mm-work__img-wrapper">
         <div className="mm-work__img-aspect-ratio"
-            aria-label={details.title}
+            aria-label={showcase.title}
             style={{
-              backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${details.img})`,
+              backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
             }}>
         </div>
       </div>
       <div className="mm-work__info-panel">
         <div>
-          <h3>{details.title}</h3>
-          <h4>{details.role}</h4>
+          <h3>{showcase.title}</h3>
+          <h4>{showcase.role}</h4>
         </div>
         <Link className="mm-button mm-button--reverse"
-            to={`/work/${slugify(details.title)}`}
-            onClick={() => dispatch(updateShowcase(details))}>
+            to={`/work/${slugify(showcase.title)}`}
+            onClick={() => dispatch(updateShowcase(showcase))}>
           View details
         </Link>
       </div>

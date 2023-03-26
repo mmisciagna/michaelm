@@ -26,14 +26,15 @@ export const Header = (props: {path: string}) => {
             const path = item.path;
             const isActiveItem = path === props.path;
             const activeClassName =
-                isActiveItem ? 'mm-header__nav-item--active' : '';
-            const el = item.label ?
+                isActiveItem && 'mm-header__nav-item--active';
+
+            const el = item.label &&
                 <Link key={item.label}
-                    className={`mm-header__nav-item ${activeClassName}`}
+                    className={`mm-header__nav-item ${activeClassName || ''}`}
                     to={`/#/${item.path}`}
                     onClick={() => dispatch(updatePath(path))}>
                   <span>{item.label}</span>
-                </Link> : '';
+                </Link>;
 
             return (el);
           })}

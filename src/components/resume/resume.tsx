@@ -60,23 +60,21 @@ export const Resume = () => {
               <h2>{section.title}</h2>
             </div>
             <div className="mm-grid__col-r">
-              {section.entries ? section.entries.map((entry: any) => {
+              {section.entries && section.entries.map((entry: any) => {
                 const setRefs = useInViewRef();
                 return (
                   <div className="mm-resume__entry" key={entry.header}>
-                    {entry.header ?
+                    {entry.header &&
                       <h3 ref={setRefs.ref}
                           className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
-                        {entry.header}{entry.ancillaryHeader ? <span> / {entry.ancillaryHeader}</span> : ''}
-                      </h3> :
-                      ''
+                        {entry.header}{entry.ancillaryHeader && <span> / {entry.ancillaryHeader}</span>}
+                      </h3>
                     }
-                    {entry.dates ?
+                    {entry.dates &&
                       <p ref={setRefs.ref}
                           className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-resume__dates`}>
                         {entry.dates}
-                      </p> :
-                      ''
+                      </p>
                     }
                     {entry.details.map((details: any, i: number) => {
                       const isList = details.type && details.type === 'list';
@@ -96,11 +94,10 @@ export const Resume = () => {
                               })}
                             </ul> :
                             <div>
-                              {details.subhead ?
+                              {details.subhead &&
                                 <h4 ref={setRefs.ref} className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
                                   {details.subhead}
-                                </h4> :
-                                ''
+                                </h4>
                               }
                               {details.description.map((p: string) => {
                                 const setRefs = useInViewRef();
@@ -115,11 +112,10 @@ export const Resume = () => {
                           }
                         </React.Fragment>
                       )
-
                     })}
                   </div>
                 )
-              }) : ''}
+              })}
             </div>
           </React.Fragment>
         )
