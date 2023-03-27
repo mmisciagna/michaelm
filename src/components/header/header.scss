@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-stack-raleway);
+  font-family: var(--font-stack-display);
   font-size: 14px;
   font-weight: 700;
   justify-content: space-between;
@@ -61,8 +61,8 @@
     }
   }
 
-  &__nav {
-    align-items: flex-end;
+  .mm-nav {
+    align-items: center;
     background: var(--color-secondary);
     display: flex;
     height: var(--header-height);
@@ -72,53 +72,54 @@
     width: 100%;
 
     @include tablet-up {
+      align-items: flex-end;
       border-left: 1px solid var(--color-background);
       height: 100%;
       padding: unset;
       width: unset;
     }
-  }
 
-  &__nav-item {
-    color: var(--color-primary);
-    display: inline-block;
-    margin: 0 calc(var(--base-unit) / 2);
-    position: relative;
-    transition: color var(--default-speed-ease);
+    &__item {
+      color: var(--color-primary);
+      display: inline-block;
+      margin: 0 calc(var(--base-unit) / 2);
+      position: relative;
+      transition: color var(--default-speed-ease);
 
-    @include desktop-up {
-      margin: 0 var(--base-unit);
-    }
-
-    &:first-child {
-      @include tablet-up {
-        margin-left: var(--main-padding-x);
+      @include desktop-up {
+        margin: 0 var(--base-unit);
       }
-    }
 
-    &:last-child {
-      @include tablet-up {
-        margin-right: var(--main-padding-x);
+      &:first-child {
+        @include tablet-up {
+          margin-left: var(--main-padding-x);
+        }
       }
-    }
 
-    &::after {
-      background: var(--color-accent);
-      content: '';
-      height: 2px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: width var(--default-speed-ease);
-      width: 0;
-    }
-
-    &:hover,
-    &--active {
-      color: var(--color-accent);
+      &:last-child {
+        @include tablet-up {
+          margin-right: var(--main-padding-x);
+        }
+      }
 
       &::after {
-        width: 25%;
+        background: var(--color-accent);
+        content: '';
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: width var(--default-speed-ease);
+        width: 0;
+      }
+
+      &:hover,
+      &.active {
+        color: var(--color-accent);
+
+        &::after {
+          width: 25%;
+        }
       }
     }
   }

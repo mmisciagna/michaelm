@@ -1,20 +1,16 @@
-import {useCallback, useRef, useEffect} from 'react';
-import {redirect} from 'react-router-dom';
-import {useInView} from 'react-intersection-observer';
-import {GlobalClassNames, GlobalString} from './global.constants';
-import type {AppDispatch} from './global.store';
-import {updatePath} from './global.store.slice';
-import {ROUTE_DETAILS} from '../routes/root';
+import { useCallback, useRef, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { GlobalString } from './global.constants';
 
-
-export const usePageTitleEffect = (pageTitle: string) => {
+export const usePageTitleEffect = (pageTitle: string, props: any[] = []) => {
   return useEffect(() => {
     document.title = `${pageTitle} - ${GlobalString.PRONUNCIATION}`;
-  }, []);
+  }, props);
 };
 
 export const useInViewRef = () => {
   const ref = useRef();
+
   const {ref: inViewRef, inView} = useInView({
     triggerOnce: true,
     threshold: .3,
@@ -39,20 +35,6 @@ export const useInViewRef = () => {
 };
 
 export const setAnimateInClassName = (inView: boolean): string => {
-  if (inView) return GlobalClassNames.ANIMATE_IN;
+  if (inView) return 'mm-animate--in';
   return '';
-};
-
-export const getRouteDetails = (path: string): RouteDetails|undefined => {
-  let details = ROUTE_DETAILS.find((details: RouteDetails) => {
-    return details.path === path;
-  });
-
-  return details;
-};
-
-export const redirectRoute = (path: string, dispatch: AppDispatch) => {
-  window.history.pushState({}, '', path || '/');
-  dispatch(updatePath(path));
-  redirect(`/${path}`);
 };

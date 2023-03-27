@@ -3,7 +3,7 @@
 @import './global/styles/vars';
 @import './global/styles/colors';
 @import './global/styles/animation';
-@import './global/styles/bootstrap';
+@import './global/styles/reset';
 @import './global/styles/grid';
 @import './global/styles/layout';
 @import './global/styles/tooltip';
@@ -13,6 +13,7 @@
 @import './components/footer/footer';
 @import './components/resume/resume';
 
-// Routes
-@import './routes/about/about';
-@import './routes/work/work';
+// Pages
+@import './pages/about/about';
+@import './pages/projects/projectsLayout';
+@import './pages/showcase/showcase';

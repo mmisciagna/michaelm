@@ -115,7 +115,7 @@ export const RESUME = [
     title: 'Education',
     entries: [
       {
-        header: 'Savannah College of Art and Design',
+        header: 'Savannah College of Art and Design (SCAD)',
         ancillaryHeader: 'BFA in Graphic Design',
         dates: 'Sept 2005 - May 2009,  Savannah, GA',
         details: [
@@ -124,6 +124,7 @@ export const RESUME = [
             description: [
               `Magna Cum Laude`,
               `Outstanding Achievement Award`,
+              `President of AIGA, SCAD chapter`,
               `Study abroad - Lacoste, France`,
             ],
           },

@@ -1,51 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import slugify from 'react-slugify';
-import {Link} from 'react-scroll';
-import {RESUME} from '../../global/content/resume';
-import {useInViewRef, setAnimateInClassName} from '../../global/global.utils';
+import { RESUME } from '../../global/content/resume';
+import { useInViewRef, setAnimateInClassName } from '../../global/global.utils';
 
-
-interface JumpLink {
-  hash: string;
-  label: string;
-}
-
-interface ExtraJumpLinks {
-  prepend?: JumpLink[];
-  append?: JumpLink[];
-}
-
-export const ResumeJumpLinks = (extraLinks: ExtraJumpLinks = {}) => {
-  const prepend = extraLinks.prepend;
-  const append = extraLinks.append;
-
-  const listItem = (label: string, hash?: string) => {
-    return (
-      <li key={hash || label}>
-        <Link to={slugify(hash || label)}
-            smooth={true}
-            offset={-48}
-            duration={500}>
-          {label}
-        </Link>
-      </li>
-    )
-  }
-
-  return (
-    <ul>
-      {prepend && prepend.map((link: JumpLink) => {
-        return listItem(link.label, link.hash);
-      })}
-      {RESUME.map((section: any) => {
-        return listItem(section.title);
-      })}
-      {append && append.map((link: JumpLink) => {
-        return listItem(link.label, link.hash);
-      })}
-    </ul>
-  )
-};
 
 export const Resume = () => {
   return (
@@ -67,7 +24,7 @@ export const Resume = () => {
                     {entry.header &&
                       <h3 ref={setRefs.ref}
                           className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
-                        {entry.header}{entry.ancillaryHeader && <span> / {entry.ancillaryHeader}</span>}
+                        {entry.header}{entry.ancillaryHeader && <span><br />{entry.ancillaryHeader}</span>}
                       </h3>
                     }
                     {entry.dates &&

@@ -8,9 +8,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: unset;
     margin-top: unset;
-    min-height: calc(100vh - var(--main-padding-y));
+    min-height: calc(100vh - (2 * var(--header-height)));
     position: relative;
+
+    @include ipad-portrait-up {
+      min-height: calc(100vh - (var(--header-height)));
+    }
 
     .mm-page-title,
     .mm-page-subtext {
@@ -41,7 +46,7 @@
       align-items: flex-end;
       display: flex;
       flex-wrap: wrap;
-      font-family: var(--font-stack-raleway);
+      font-family: var(--font-stack-display);
       font-weight: 500;
       letter-spacing: 1px;
       list-style: none;
@@ -84,14 +89,6 @@
           color: var(--color-accent);
         }
       }
-    }
-  }
-
-  &__profile-pic {
-    display: none;
-
-    @include ipad-portrait-up {
-      display: block;
     }
   }
 }
