@@ -12,25 +12,17 @@ declare global {
   }
 }
 
-let player: any = undefined;
+let globalPlayer: any = null;
+
 
 function Video({showcase, ready}: {showcase: Showcase, ready: boolean}) {
   const playerRef = useRef(null);
 
-  if (player) {
-    player.cueVideoById(showcase.videoId);
-  }
+  useRenderPlayer(playerRef, showcase.videoId!);
 
-  useEffect(() => {
-    window.onYouTubeIframeAPIReady = () => {
-      player = new window.YT.Player(playerRef.current, {
-        videoId: showcase.videoId,
-        playerVars: {
-          'playsinline': 1
-        },
-      });
-    }
-  }, [ready]);
+  if (globalPlayer) {
+    globalPlayer.cueVideoById(showcase.videoId);
+  }
 
   return (
     <section className="mm-section mm-section--full-bleed mm-showcase__video-bg">
@@ -61,7 +53,9 @@ function Showcase() {
   usePageTitleEffect(`Showcase - ${showcase.title}`, [showcase.title]);
 
   // Loads YT Iframe API, if not present already.
-  useIframeApi(ytReady).then(() => setYTReady(true));
+  useIframeApi(ytReady).then(() => {
+    setYTReady(true);
+  });
 
   return (
     <div className="mm-showcase">
@@ -87,17 +81,16 @@ function Showcase() {
           </p>
         </div>
       </section>
-      {showcase.videoId && <Video showcase={showcase} ready={ytReady} /> }
+      {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
     </div>
   )
 }
 
 function useIframeApi(loaded: boolean) {
-  const loadPromise = new Promise((resolve, reject) => {
+  const loadPromise = new Promise((resolve) => {
     useEffect(() => {
       if (loaded) {
-        reject();
-        console.log('YT iframe API already loaded');
+        resolve(true);
       } else {
         // setTimeout(() => {
           const tag = document.createElement('script');
@@ -111,6 +104,35 @@ function useIframeApi(loaded: boolean) {
   });
 
   return loadPromise;
+}
+
+function useRenderPlayer(ref: {current: HTMLElement|null}, id: string) {
+  useEffect(() => {
+    if (window.YT) {
+      globalPlayer = renderPlayer(ref.current!, id);
+    } else {
+      window.onYouTubeIframeAPIReady = () => {
+        globalPlayer = renderPlayer(ref.current!, id);
+      };
+    }
+
+    return (() => {
+      globalPlayer = null;
+    });
+  }, []);
+}
+
+function renderPlayer(node: HTMLElement, id: string) {
+  return new window.YT.Player(node, {
+    videoId: id,
+    playerVars: {
+      color: 'white',
+      enablejsapi: 1,
+      loop: 1,
+      modestbranding: 1,
+      playsinline: 1,
+    },
+  });
 }
 
 export default Showcase;
