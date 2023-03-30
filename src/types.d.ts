@@ -6,6 +6,6 @@ interface Showcase {
   role: string;
   siteLink?: string;
   title: string;
-  tools: string;
+  stack: string;
   videoId?: string;
 }

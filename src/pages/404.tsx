@@ -7,7 +7,7 @@ function NotFound() {
 
   useEffect(() => {
     setTimeout(() => navigate(-1), 1500);
-  });
+  }, []);
 
   return (
     <section className="mm-section">

@@ -76,3 +76,17 @@
     color: var(--color-secondary);
   }
 }
+
+.mm-video {
+  padding-bottom: calc(100% * (9 / 16));
+  position: relative;
+  width: 100%;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
