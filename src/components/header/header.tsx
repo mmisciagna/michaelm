@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { GlobalString } from '../../global/global.constants';
+import { GlobalString } from '../../global/constants';
 import Nav from '../nav/Nav';
 
 

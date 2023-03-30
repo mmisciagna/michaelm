@@ -2,15 +2,16 @@
   &__title {
     font-size: 2.5em;
     font-weight: 700;
-    margin-bottom: unset;
+    margin: unset;
   }
 
   &__stack {
     align-items: flex-end;
-    border-top: 1px solid var(--color-primary);
+    border-top: 1px solid var(--color-secondary);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-bottom: unset;
 
     @include tablet-up {
       align-items: center;
@@ -19,8 +20,8 @@
   }
 
   &__stack-label {
-    border-bottom: 1px solid var(--color-primary);
-    border-right: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-secondary);
+    border-right: 1px solid var(--color-secondary);
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
@@ -31,24 +32,31 @@
   }
 
   &__video-bg {
-    padding: unset;
+    margin-top: unset;
+    padding-left: unset;
+    padding-right: unset;
 
     @include ipad-portrait-up {
       padding: var(--main-padding-y) var(--main-padding-x);
     }
   }
 
-  &__video {
+  &__video,
+  &__video-placeholder {
     padding-bottom: calc(100% * (9 / 16));
     position: relative;
     width: 100%;
 
-    iframe {
+    > :first-child {
       height: 100%;
       left: 0;
       position: absolute;
       top: 0;
       width: 100%;
     }
+  }
+
+  &__video-placeholder {
+    background: red;
   }
 }

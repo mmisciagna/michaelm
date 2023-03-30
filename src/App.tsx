@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import About from './pages/about/About';
 import Projects from './pages/projects/Projects';
-import ProjectsLayout from './pages/projects/ProjectsLayout';
+import ProjectsLayout from './layouts/projects/ProjectsLayout';
 import Showcase from './pages/showcase/Showcase';
 import NotFound from './pages/404';
 

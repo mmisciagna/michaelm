@@ -1,6 +1,6 @@
 export const SHOWCASES = [
   {
-    title: 'YouTube Trends, Top Ten Lists 2022',
+    title: 'YouTube Trends Top Ten Lists 2022',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-trends-2022.webp',

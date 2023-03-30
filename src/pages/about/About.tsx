@@ -2,8 +2,8 @@ import React from 'react';
 import { Link as AutoScroll } from 'react-scroll';
 import slugify from 'react-slugify';
 import Header from '../../components/header/Header';
-import { GlobalString } from '../../global/global.constants';
-import { usePageTitleEffect, useInViewRef, setAnimateInClassName } from '../../global/global.utils';
+import { GlobalString } from '../../global/constants';
+import { usePageTitleEffect, useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 import { INTRO } from '../../global/content/intro';
 import { RESUME } from '../../global/content/resume';
 import { Resume } from '../../components/resume/resume';
@@ -66,7 +66,7 @@ function Intro() {
   return (
     <section className="mm-section mm-section--full-bleed mm-about__tldr" id="tldr">
       <div className="mm-grid mm-section__inner">
-        <div ref={setRefs.ref} className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-grid__col-l mm-about__profile-pic`}>
+        <div ref={setRefs.ref} className={`mm-animate ${useSetAnimateClassName(setRefs.inView)} mm-grid__col-l mm-about__profile-pic`}>
           <figure>
             <img src="/static/imgs/profile-pic.webp" alt="Profile picture of Michael" />
             <figcaption>
@@ -81,14 +81,14 @@ function Intro() {
             return (
               <React.Fragment key={content.header}>
                 <h2 ref={setRefs.ref}
-                    className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                    className={`mm-animate ${useSetAnimateClassName(setRefs.inView)}`}>
                   {content.header}
                 </h2>
                 {content.paragraphs.map((p: string) => {
                   const setRefs = useInViewRef();
                   return (
                     <p ref={setRefs.ref} key={p}
-                        className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                        className={`mm-animate ${useSetAnimateClassName(setRefs.inView)}`}>
                       {p}
                     </p>
                   );

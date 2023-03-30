@@ -1,7 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { Link as AutoScroll } from 'react-scroll';
-import { GCP_STORAGE_BUCKET } from '../../global/global.constants';
+import { GCP_STORAGE_BUCKET } from '../../global/constants';
 import Nav from '../nav/Nav';
 
 

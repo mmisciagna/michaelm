@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePageTitleEffect } from '../../global/global.utils';
+import { usePageTitleEffect } from '../../global/hooks';
 
 
 function Projects() {

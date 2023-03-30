@@ -1,7 +1,7 @@
 import React from 'react';
 import slugify from 'react-slugify';
 import { RESUME } from '../../global/content/resume';
-import { useInViewRef, setAnimateInClassName } from '../../global/global.utils';
+import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
 export const Resume = () => {
@@ -12,7 +12,7 @@ export const Resume = () => {
         return (
           <React.Fragment key={section.title}>
             <div ref={setRefs.ref}
-                className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-grid__col-l`}
+                className={`mm-animate ${useSetAnimateClassName(setRefs.inView)} mm-grid__col-l`}
                 id={slugify(section.title)}>
               <h2>{section.title}</h2>
             </div>
@@ -23,13 +23,13 @@ export const Resume = () => {
                   <div className="mm-resume__entry" key={entry.header}>
                     {entry.header &&
                       <h3 ref={setRefs.ref}
-                          className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                          className={`mm-animate ${useSetAnimateClassName(setRefs.inView)}`}>
                         {entry.header}{entry.ancillaryHeader && <span><br />{entry.ancillaryHeader}</span>}
                       </h3>
                     }
                     {entry.dates &&
                       <p ref={setRefs.ref}
-                          className={`mm-animate ${setAnimateInClassName(setRefs.inView)} mm-resume__dates`}>
+                          className={`mm-animate ${useSetAnimateClassName(setRefs.inView)} mm-resume__dates`}>
                         {entry.dates}
                       </p>
                     }
@@ -44,7 +44,7 @@ export const Resume = () => {
                                 const setRefs = useInViewRef();
                                 return (
                                   <li key={li} ref={setRefs.ref}
-                                      className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                                      className={`mm-animate ${useSetAnimateClassName(setRefs.inView)}`}>
                                     {li}
                                   </li>
                                 );
@@ -52,7 +52,7 @@ export const Resume = () => {
                             </ul> :
                             <div>
                               {details.subhead &&
-                                <h4 ref={setRefs.ref} className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                                <h4 ref={setRefs.ref} className={`mm-animate ${useSetAnimateClassName(setRefs.inView)}`}>
                                   {details.subhead}
                                 </h4>
                               }
@@ -60,7 +60,7 @@ export const Resume = () => {
                                 const setRefs = useInViewRef();
                                 return (
                                   <p key={p} ref={setRefs.ref}
-                                      className={`mm-animate ${setAnimateInClassName(setRefs.inView)}`}>
+                                      className={`mm-animate ${useSetAnimateClassName(setRefs.inView)}`}>
                                     {p}
                                   </p>
                                 );

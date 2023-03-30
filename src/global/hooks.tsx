@@ -1,6 +1,6 @@
 import { useCallback, useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { GlobalString } from './global.constants';
+import { GlobalString } from './constants';
 
 export const usePageTitleEffect = (pageTitle: string, props: any[] = []) => {
   return useEffect(() => {
@@ -24,8 +24,7 @@ export const useInViewRef = () => {
       // Callback refs, like the one from `useInView`, is a function that takes
       // the node as an argument.
       inViewRef(node);
-    },
-    [inViewRef],
+    }, [inViewRef],
   );
 
   return {
@@ -34,7 +33,7 @@ export const useInViewRef = () => {
   };
 };
 
-export const setAnimateInClassName = (inView: boolean): string => {
+export const useSetAnimateClassName = (inView: boolean): string => {
   if (inView) return 'mm-animate--in';
   return '';
 };

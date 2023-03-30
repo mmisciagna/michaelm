@@ -2,7 +2,7 @@ import React from 'react';
 import { SHOWCASES } from '../../global/content/showcases';
 import { Link, Outlet, useParams } from 'react-router-dom';
 import slugify from 'react-slugify';
-import { GlobalString } from '../../global/global.constants';
+import { GlobalString } from '../../global/constants';
 
 
 function Showcase({showcase, currentId}) {
