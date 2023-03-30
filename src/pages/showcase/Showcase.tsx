@@ -3,16 +3,15 @@ import { Navigate, useParams }  from 'react-router-dom';
 import slugify from 'react-slugify';
 import { SHOWCASES } from '../../global/content/showcases';
 import { usePageTitleEffect } from '../../global/global.utils';
-import { GlobalString } from '../../global/global.constants';
 
 
-function Media({showcase}: {showcase: Showcase}) {
+function Video({showcase}: {showcase: Showcase}) {
   const src = `https://www.youtube-nocookie.com/embed/${showcase.videoId}`;
 
   return (
-    <section className="mm-section mm-section--full-bleed mm-showcase__media-bg">
+    <section className="mm-section mm-section--full-bleed mm-showcase__video-bg">
       <div className="mm-section__inner">
-        <div className="mm-video">
+        <div className="mm-showcase__video">
           <iframe
             src={src}
             title="YouTube video player"
@@ -42,11 +41,18 @@ function Showcase() {
         <h1 className="mm-showcase__title">
           {showcase.title}
         </h1>
-        <p>
-          <strong>Stack</strong>: {showcase.stack}
+        <p className="mm-showcase__stack">
+          {showcase.stack.map((label: string) => {
+            return (
+              <span key={label}
+                  className="mm-showcase__stack-label">
+                {label}
+              </span>
+            )
+          })}
         </p>
       </section>
-      {showcase.videoId ? <Media showcase={showcase} /> : 'No video'}
+      {showcase.videoId ? <Video showcase={showcase} /> : 'No video'}
     </div>
   )
 }

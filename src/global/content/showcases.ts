@@ -7,7 +7,7 @@ export const SHOWCASES = [
     description: [
       `Lorem ipsum...`,
     ],
-    stack: 'TypeScript, LitElement/HTML, SCSS, Express, Webpack',
+    stack: ['TypeScript', 'Lit', 'SCSS', 'Express.js', 'Webpack'],
     videoId: '3N8kXXzU9-Y',
     siteLink: 'http://youtube.com/trends/2022',
   },
@@ -19,7 +19,7 @@ export const SHOWCASES = [
     description: [
       `Lorem ipsum...`,
     ],
-    stack: 'TypeScript, SCSS, Jinja2, Webpack, Python',
+    stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
     videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/intl/en_us/howyoutubeworks/progress-impact/impact/us-of-youtube/',
   },
@@ -31,7 +31,7 @@ export const SHOWCASES = [
     description: [
       `Lorem ipsum...`,
     ],
-    stack: 'TypeScript, SCSS, Jinja2, Webpack, Python',
+    stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
     videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/howyoutubeworks/progress-impact/impact/creator-economy/',
   },
@@ -43,7 +43,7 @@ export const SHOWCASES = [
     description: [
       `Lorem ipsum...`,
     ],
-    stack: 'TypeScript, SCSS, Jinja2, Webpack, Python',
+    stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
     videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/ads',
   },
@@ -55,7 +55,7 @@ export const SHOWCASES = [
     description: [
       `Lorem ipsum...`,
     ],
-    stack: 'Python, Firebase Database, Fireabse Cloud Function',
+    stack: ['Python', 'Firebase Database', 'Firebase Cloud Function'],
     videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.thinkwithgoogle.com/feature/findmyaudience/',
   },
@@ -68,7 +68,7 @@ export const SHOWCASES = [
       `The YouTube Creators site is a resource hub for all YouTube creators, whether they are just getting starting or already have 1,000,000+ subscribers. There they'll find video tutorials, contest sign ups, the latest news from the Creators social feeds and general information on how to optimize their YouTube Channel.`,
       `Provide a hub for non-profits who want to work with YouTube where they can find general information and showcase some success stories and campaigns and to help non-profits register for the program.`,
     ],
-    stack: 'JavaScript, SCSS, Jinja2, Gulp, Python',
+    stack: ['JavaScript', 'SCSS', 'Jinja2', 'Gulp', 'Python'],
     apis: 'YouTube Data, Blogger, Twitter',
     videoId: 'MqW-GOGS7pI',
   },
@@ -80,7 +80,7 @@ export const SHOWCASES = [
     description: [
       `Build a responsive prototype to the designer's pixel-perfect specs for mobile testing using Material design elements.`,
     ],
-    stack: 'AngularJS, Firebase Database, Google App Engine, HTML, SCSS',
+    stack: ['AngularJS', 'Firebase Database', 'Google App Engine', 'HTML', 'SCSS'],
     videoId: 'YSMDyjB-LDc',
   },
   {
@@ -91,7 +91,7 @@ export const SHOWCASES = [
     description: [
       `Design and prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.`,
     ],
-    stack: 'AngularJS, Google App Engine, HTML, SCSS',
+    stack: ['AngularJS', 'Google App Engine', 'HTML', 'SCSS'],
     videoId: 'Ft9qsS7l52U',
   },
   {
@@ -102,7 +102,7 @@ export const SHOWCASES = [
     description: [
       `Targeting non-profits, YouTube Impact Lab's mission is to harness YouTube's scale, technology and talent to ignite and sustain movements that drive measurable social change.`,
     ],
-    stack: 'AngularJS, Firebase Database, Google App Engine, HTML, SCSS',
+    stack: ['AngularJS', 'Firebase Database', 'Google App Engine', 'HTML', 'SCSS'],
     videoId: 'Xvb6DIUf6MA',
     siteLink: 'https://socialimpact.youtube.com/',
   },
@@ -114,7 +114,7 @@ export const SHOWCASES = [
     description: [
       `The YouTube Creators site is a resource hub for all YouTube creators, whether they are just getting starting or already have 1,000,000+ subscribers. There they'll find video tutorials, contest sign ups, the latest news from the Creators social feeds and general information on how to optimize their YouTube Channel.`,
     ],
-    stack: 'Python, Jinja, JS, SCSS, HTML',
+    stack: ['Python', 'Jinja', 'JS', 'SCSS', 'HTML'],
     siteLink: 'https://www.youtube.com/creators/',
   },
   {
@@ -126,7 +126,7 @@ export const SHOWCASES = [
       `I removed the carousel in favor of an image of a popular YouTube Creator. Mulitples studies have shown that carousels are ineffective for displaying content because most ignore anything after the first frame.`,
       `The copy states exactly what this site is — a resource hub for YouTube creators — with clear calls to action.`,
     ],
-    stack: 'Sketch, Photoshop',
+    stack: ['Sketch', 'Photoshop'],
   },
   {
     title: 'Google ACUX Doc Center',
@@ -137,7 +137,7 @@ export const SHOWCASES = [
       `Design and prototype an experience that would make it easy for agencies with one to hundreds of clients to find any document in one centralized, filterable location.`,
       `Google has an international customer base. This means that transactions with them can involve many different currencies, not just US dollars. This project needed to be able to scale and accommodate for such cases by being smart enough to recognize that and have different actions for different currencies. In this example, there are 2 Brazillian documents that have options to open the document in a new window.`,
     ],
-    stack: 'ACUX specs, AngularJS, Google App Engine, SCSS, HTML',
+    stack: ['ACUX specs', 'AngularJS', 'Google App Engine', 'SCSS', 'HTML'],
     videoId: 'd-b98ep59ZQ',
   },
   {
@@ -149,7 +149,7 @@ export const SHOWCASES = [
       `A global initiative that supports YouTube creators who are tackling social issues and promoting awareness, tolerance and empathy on their YouTube channels.`,
       `Showcase YouTube creators who have made significant advancements in addressing awareness on their YouTube channels. This site makes it known that YouTube Creators for Change is truely a global initiative by displaying the creators' country of origin and all of the various global chapters.`,
     ],
-    stack: 'JavaScript, SCSS, Jinja2, Gulp, Python',
+    stack: ['JavaScript', 'SCSS', 'Jinja2', 'Gulp', 'Python'],
     videoId: 'hFdvE1EbOMU',
   },
 ];
