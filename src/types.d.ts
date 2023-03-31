@@ -1,6 +1,6 @@
 interface Showcase {
   apis?: string;
-  description: string[];
+  description: string;
   client: string;
   img: string;
   role: string;
