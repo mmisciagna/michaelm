@@ -3,16 +3,18 @@ import { SHOWCASES } from '../../global/content/showcases';
 import { Link, Outlet, useParams } from 'react-router-dom';
 import slugify from 'react-slugify';
 import { GlobalString } from '../../global/constants';
+import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
 function Showcase({showcase, currentId}) {
   const slug = slugify(showcase.title);
   const isActive = slug === currentId;
-  let classNames = 'mm-projects-layout__showcase';
+  let classNames = 'mm-animate mm-projects-layout__showcase';
   if (isActive) classNames += ' active';
+  const setRefs = useInViewRef();
 
   return (
-    <div className={classNames}>
+    <div className={`${classNames} ${useSetAnimateClassName(setRefs.inView)}`} ref={setRefs.ref}>
       <div className="mm-projects-layout__img-wrapper">
         <div className="mm-projects-layout__img-aspect-ratio"
             aria-label={showcase.title}

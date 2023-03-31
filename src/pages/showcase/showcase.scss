@@ -77,6 +77,8 @@
   }
 
   &__play-btn {
+    background-blend-mode: exclusion;
+    background-color: var(--color-primary);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,41 +91,41 @@
       pointer-events: none;
     }
 
-    &::before {
-      backdrop-filter: blur(5px);
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+    &:hover .mm-showcase__play-icon {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, .5);
 
-    &::after {
-      background: var(--color-accent);
-      border-radius: 50px;
-      box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
-      color: var(--color-secondary);
-      content: 'Play';
-      font-family: var(--font-stack-display);
-      font-size: 14px;
-      font-weight: 700;
-      left: 50%;
-      letter-spacing: 1px;
-      padding: 12px 48px;
-      position: absolute;
-      text-transform: uppercase;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      transition: (
+      svg {
+        fill: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  &__play-icon {
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, .25);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    min-width: 320px;
+    padding: 48px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+      (
         background var(--default-speed-ease),
-        box-shadow var(--default-speed-ease),
+        backdrop-filter var(--default-speed-ease),
       );
-    }
+    width: 50%;
 
-    &:hover::after {
-      background: var(--color-primary);
-      box-shadow: 1px 2px 0 rgba(0, 0, 0, 1);
+    svg {
+      fill: rgba(255, 255, 255, .7);
+      transition: fill var(--default-speed-ease);
+      width: 64px;
     }
   }
 }

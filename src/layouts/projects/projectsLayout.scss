@@ -30,7 +30,7 @@
   }
 
   &__img-aspect-ratio {
-    background-blend-mode: luminosity;
+    background-blend-mode: exclusion;
     background-color: var(--color-primary);
     background-repeat: no-repeat;
     background-size: cover;

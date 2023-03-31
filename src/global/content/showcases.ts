@@ -12,7 +12,7 @@ export const SHOWCASES = [
     siteLink: 'http://youtube.com/trends/2022',
   },
   {
-    title: 'How YouTube Works, U.S. of YouTube',
+    title: 'U.S. of YouTube',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-us-of-youtube.webp',
@@ -20,11 +20,11 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
-    // videoId: 'MqW-GOGS7pI',
+    videoId: '7o4KEQ7vJEc',
     siteLink: 'https://www.youtube.com/intl/en_us/howyoutubeworks/progress-impact/impact/us-of-youtube/',
   },
   {
-    title: 'How YouTube Works, Creator Economy',
+    title: 'YouTube Creator Economy',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-creator-economy.webp',
@@ -32,7 +32,7 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
-    // videoId: 'MqW-GOGS7pI',
+    videoId: 'gveZUoCxNGM',
     siteLink: 'https://www.youtube.com/howyoutubeworks/progress-impact/impact/creator-economy/',
   },
   {
@@ -44,7 +44,7 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
-    // videoId: 'MqW-GOGS7pI',
+    videoId: '9aZZBjkKleA',
     siteLink: 'https://www.youtube.com/ads',
   },
   {
