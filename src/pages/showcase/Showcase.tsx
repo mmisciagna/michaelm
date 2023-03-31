@@ -25,8 +25,7 @@ function Video({showcase, ready}: VideoProps) {
   const btnRef = useRef(null);
 
   function toggleBtn(show: boolean = false) {
-    const val = show ? 'block' : 'none';
-    (btnRef.current! as HTMLElement).style.display = val;
+    (btnRef.current! as HTMLElement).classList.toggle('active', !show);
   }
 
   window.onPlayerStateChange = (e: any) => {
