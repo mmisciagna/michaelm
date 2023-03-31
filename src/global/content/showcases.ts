@@ -20,7 +20,7 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
-    videoId: 'MqW-GOGS7pI',
+    // videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/intl/en_us/howyoutubeworks/progress-impact/impact/us-of-youtube/',
   },
   {
@@ -32,7 +32,7 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
-    videoId: 'MqW-GOGS7pI',
+    // videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/howyoutubeworks/progress-impact/impact/creator-economy/',
   },
   {
@@ -44,7 +44,7 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
-    videoId: 'MqW-GOGS7pI',
+    // videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.youtube.com/ads',
   },
   {
@@ -56,7 +56,7 @@ export const SHOWCASES = [
       `Lorem ipsum...`,
     ],
     stack: ['Python', 'Firebase Database', 'Firebase Cloud Function'],
-    videoId: 'MqW-GOGS7pI',
+    // videoId: 'MqW-GOGS7pI',
     siteLink: 'https://www.thinkwithgoogle.com/feature/findmyaudience/',
   },
   {
@@ -116,6 +116,7 @@ export const SHOWCASES = [
     ],
     stack: ['Python', 'Jinja', 'JS', 'SCSS', 'HTML'],
     siteLink: 'https://www.youtube.com/creators/',
+    videoId: '0XcOLeOeFEc',
   },
   {
     title: 'YouTube Creators, design concept',

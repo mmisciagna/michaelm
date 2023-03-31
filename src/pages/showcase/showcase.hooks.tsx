@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 
 
 export let globalPlayer: any = null;
@@ -43,6 +43,9 @@ function renderPlayer(node: HTMLElement, id: string) {
       loop: 1,
       modestbranding: 1,
       playsinline: 1,
+    },
+    events: {
+      'onStateChange': window.onPlayerStateChange,
     },
   });
 }

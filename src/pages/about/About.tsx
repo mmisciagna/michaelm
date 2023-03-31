@@ -41,22 +41,20 @@ function JumpLinks() {
 
 function Hero() {
   return (
-    <div className="mm-about">
-      <section className="mm-section mm-about__intro">
-        <h1 className="mm-page-title">
-          Hello, I am <span className="mm-tooltip mm-highlight">
-            Michael Misciagna
-            <span className="mm-tooltip__bubble">
-              Pronounced <span>{GlobalString.PRONUNCIATION}</span>
-            </span>
+    <section className="mm-section mm-about__intro">
+      <h1 className="mm-page-title">
+        Hello, I am <span className="mm-tooltip mm-highlight">
+          Michael Misciagna
+          <span className="mm-tooltip__bubble">
+            Pronounced <span>{GlobalString.PRONUNCIATION}</span>
           </span>
-        </h1>
-        <h2 className="mm-page-subtext">
-          <span className="mm-highlight">Frontend engineer</span> and <span className="mm-highlight">designer</span> extraordinaire
-        </h2>
-        <JumpLinks />
-      </section>
-    </div>
+        </span>
+      </h1>
+      <h2 className="mm-page-subtext">
+        <span className="mm-highlight">Frontend engineer</span> and <span className="mm-highlight">designer</span> extraordinaire
+      </h2>
+      <JumpLinks />
+    </section>
   )
 }
 

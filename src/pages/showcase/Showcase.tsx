@@ -1,7 +1,8 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import { Navigate, useParams }  from 'react-router-dom';
 import slugify from 'react-slugify';
 import { SHOWCASES } from '../../global/content/showcases';
+import { GlobalString } from '../../global/constants';
 import { usePageTitleEffect } from '../../global/hooks';
 import { useRenderPlayer, useIframeApi, globalPlayer } from './showcase.hooks';
 
@@ -10,13 +11,32 @@ declare global {
   interface Window {
     YT: any;
     onYouTubeIframeAPIReady: any;
+    onPlayerStateChange: any;
   }
 }
 
-function Video({showcase, ready}: {showcase: Showcase, ready: boolean}) {
+interface VideoProps {
+  showcase: Showcase;
+  ready: boolean;
+}
+
+function Video({showcase, ready}: VideoProps) {
   const playerRef = useRef(null);
+  const btnRef = useRef(null);
+
+  function toggleBtn(show: boolean = false) {
+    const val = show ? 'block' : 'none';
+    (btnRef.current! as HTMLElement).style.display = val;
+  }
+
+  window.onPlayerStateChange = (e: any) => {
+    if (e.data == window.YT.PlayerState.PLAYING) {
+      toggleBtn();
+    }
+  };
 
   if (globalPlayer) {
+    toggleBtn(true);
     globalPlayer.cueVideoById(showcase.videoId);
   }
 
@@ -28,6 +48,13 @@ function Video({showcase, ready}: {showcase: Showcase, ready: boolean}) {
         {ready ?
           <div className="mm-showcase__video">
             <div ref={playerRef}></div>
+            <button className="mm-showcase__play-btn"
+                style={{
+                  backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
+                }}
+                ref={btnRef}
+                onClick={() => {globalPlayer.playVideo()}}>
+            </button>
           </div> :
           <div className="mm-showcase__video-placeholder"></div>
         }
@@ -67,16 +94,23 @@ function Showcase() {
           <h1 className="mm-showcase__title">
             {showcase.title}
           </h1>
-          <p className="mm-showcase__stack">
-            {showcase.stack.map((label: string) => {
-              return (
-                <span key={label}
-                    className="mm-showcase__stack-label">
-                  {label}
-                </span>
-              )
-            })}
-          </p>
+          <div className="mm-showcase__stack">
+            <p className="mm-showcase__stack-title">
+              <span className="mm-showcase__stack-label">
+                Stack
+              </span>
+            </p>
+            <p className="mm-showcase__stack-list">
+              {showcase.stack.map((label: string) => {
+                return (
+                  <span key={label}
+                      className="mm-showcase__stack-label">
+                    {label}
+                  </span>
+                )
+              })}
+            </p>
+          </div>
         </div>
       </section>
       {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
