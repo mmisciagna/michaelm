@@ -3,6 +3,7 @@ import { Navigate, useParams }  from 'react-router-dom';
 import slugify from 'react-slugify';
 import { SHOWCASES } from '../../global/content/showcases';
 import { usePageTitleEffect } from '../../global/hooks';
+import { useRenderPlayer, useIframeApi, globalPlayer } from './showcase.hooks';
 
 
 declare global {
@@ -12,17 +13,14 @@ declare global {
   }
 }
 
-let globalPlayer: any = null;
-
-
 function Video({showcase, ready}: {showcase: Showcase, ready: boolean}) {
   const playerRef = useRef(null);
-
-  useRenderPlayer(playerRef, showcase.videoId!);
 
   if (globalPlayer) {
     globalPlayer.cueVideoById(showcase.videoId);
   }
+
+  useRenderPlayer(playerRef, showcase.videoId!);
 
   return (
     <section className="mm-section mm-section--full-bleed mm-showcase__video-bg">
@@ -84,55 +82,6 @@ function Showcase() {
       {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
     </div>
   )
-}
-
-function useIframeApi(loaded: boolean) {
-  const loadPromise = new Promise((resolve) => {
-    useEffect(() => {
-      if (loaded) {
-        resolve(true);
-      } else {
-        // setTimeout(() => {
-          const tag = document.createElement('script');
-          tag.src = "https://www.youtube.com/iframe_api";
-          const firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
-          resolve(true);
-        // }, 2000);
-      }
-    }, []);
-  });
-
-  return loadPromise;
-}
-
-function useRenderPlayer(ref: {current: HTMLElement|null}, id: string) {
-  useEffect(() => {
-    if (window.YT) {
-      globalPlayer = renderPlayer(ref.current!, id);
-    } else {
-      window.onYouTubeIframeAPIReady = () => {
-        globalPlayer = renderPlayer(ref.current!, id);
-      };
-    }
-
-    return (() => {
-      globalPlayer = null;
-    });
-  }, []);
-}
-
-function renderPlayer(node: HTMLElement, id: string) {
-  return new window.YT.Player(node, {
-    videoId: id,
-    playerVars: {
-      color: 'white',
-      enablejsapi: 1,
-      loop: 1,
-      modestbranding: 1,
-      playsinline: 1,
-    },
-  });
 }
 
 export default Showcase;

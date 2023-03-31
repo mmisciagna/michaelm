@@ -9,9 +9,9 @@ const rootEL = document.querySelector(GlobalSelector.ROOT) as HTMLElement;
 const root = createRoot(rootEL);
 
 root.render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
-  // </React.StrictMode>
+  </React.StrictMode>
 );
