@@ -13,7 +13,8 @@
     }
 
     .mm-button {
-      margin-top: var(--base-unit);
+      display: block;
+      margin-top: 12px;
     }
 
     &:hover,

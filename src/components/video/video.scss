@@ -40,7 +40,6 @@
     }
 
     &:hover .mm-video__play-icon {
-      backdrop-filter: blur(10px);
       background: rgba(255, 255, 255, .5);
 
       svg {
@@ -57,23 +56,23 @@
     display: flex;
     justify-content: center;
     left: 50%;
-    min-width: 320px;
-    padding: 48px;
+    max-width: 320px;
+    padding: 24px 48px;
     position: absolute;
     text-transform: uppercase;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition:
-      (
-        background var(--default-speed-ease),
-        backdrop-filter var(--default-speed-ease),
-      );
+    transition: background var(--default-speed-ease);
     width: 50%;
 
     svg {
       fill: rgba(255, 255, 255, .7);
       transition: fill var(--default-speed-ease);
-      width: 64px;
+      width: 48px;
+
+      @include ipad-portrait-up {
+        width: 64px;
+      }
     }
   }
 }

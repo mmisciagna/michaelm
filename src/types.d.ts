@@ -9,3 +9,5 @@ interface Showcase {
   stack: string[];
   videoId?: string;
 }
+
+declare module '*.md'

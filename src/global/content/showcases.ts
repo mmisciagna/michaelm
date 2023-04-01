@@ -1,10 +1,15 @@
+import YTTrendsMd from './showcase-md/yt-trends.md';
+import YTStudio from './showcase-md/yt-studio.md';
+import YTCreators from './showcase-md/yt-creators.md';
+
+
 export const SHOWCASES = [
   {
     title: 'YouTube Trends Top Ten Lists 2022',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-trends-2022.webp',
-    description: '### Description Header\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.',
+    description: YTTrendsMd,
     stack: ['Lit', 'TypeScript', 'SCSS', 'Express.js', 'Webpack'],
     videoId: '3N8kXXzU9-Y',
     siteLink: 'http://youtube.com/trends/2022',
@@ -37,7 +42,7 @@ export const SHOWCASES = [
     description: `Lorem ipsum...`,
     stack: ['TypeScript', 'SCSS', 'Jinja2', 'Webpack', 'Python'],
     videoId: '9aZZBjkKleA',
-    siteLink: 'https://www.youtube.com/ads',
+    siteLink: 'https://www.youtube.com/ads/video-creation-tips/',
   },
   {
     title: 'YouTube Find My Audience',
@@ -46,18 +51,13 @@ export const SHOWCASES = [
     img: 'youtube-find-my-audience.webp',
     description: `Lorem ipsum...`,
     stack: ['Python', 'Firebase Database', 'Firebase Cloud Function'],
-    // videoId: 'MqW-GOGS7pI',
-    siteLink: 'https://www.thinkwithgoogle.com/feature/findmyaudience/',
   },
   {
     title: 'YouTube Studio',
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-studio.webp',
-    description: [
-      `The YouTube Creators site is a resource hub for all YouTube creators, whether they are just getting starting or already have 1,000,000+ subscribers. There they'll find video tutorials, contest sign ups, the latest news from the Creators social feeds and general information on how to optimize their YouTube Channel.`,
-      `Provide a hub for non-profits who want to work with YouTube where they can find general information and showcase some success stories and campaigns and to help non-profits register for the program.`,
-    ],
+    description: YTStudio,
     stack: ['JavaScript', 'SCSS', 'Jinja2', 'Gulp', 'Python'],
     apis: 'YouTube Data, Blogger, Twitter',
     videoId: 'MqW-GOGS7pI',
@@ -67,9 +67,7 @@ export const SHOWCASES = [
     client: 'Google',
     role: 'Frontend Engineer',
     img: 'my-fiber.webp',
-    description: [
-      `Build a responsive prototype to the designer's pixel-perfect specs for mobile testing using Material design elements.`,
-    ],
+    description: "Build a responsive prototype to the designer's pixel-perfect specs for mobile testing using Material design elements.",
     stack: ['AngularJS', 'Firebase Database', 'Google App Engine', 'HTML', 'SCSS'],
     videoId: 'YSMDyjB-LDc',
   },
@@ -78,9 +76,7 @@ export const SHOWCASES = [
     client: 'Google',
     role: 'Frontend Engineer',
     img: 'google-fiber-global-nav.webp',
-    description: [
-      `Design and prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.`,
-    ],
+    description: "Design and prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.",
     stack: ['AngularJS', 'Google App Engine', 'HTML', 'SCSS'],
     videoId: 'Ft9qsS7l52U',
   },
@@ -89,9 +85,7 @@ export const SHOWCASES = [
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-impact-lab.webp',
-    description: [
-      `Targeting non-profits, YouTube Impact Lab's mission is to harness YouTube's scale, technology and talent to ignite and sustain movements that drive measurable social change.`,
-    ],
+    description: "Targeting non-profits, YouTube Impact Lab's mission is to harness YouTube's scale, technology and talent to ignite and sustain movements that drive measurable social change.",
     stack: ['AngularJS', 'Firebase Database', 'Google App Engine', 'HTML', 'SCSS'],
     videoId: 'Xvb6DIUf6MA',
     siteLink: 'https://socialimpact.youtube.com/',
@@ -101,9 +95,7 @@ export const SHOWCASES = [
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-creators.webp',
-    description: [
-      `The YouTube Creators site is a resource hub for all YouTube creators, whether they are just getting starting or already have 1,000,000+ subscribers. There they'll find video tutorials, contest sign ups, the latest news from the Creators social feeds and general information on how to optimize their YouTube Channel.`,
-    ],
+    description: YTCreators,
     stack: ['Python', 'Jinja', 'JS', 'SCSS', 'HTML'],
     siteLink: 'https://www.youtube.com/creators/',
     videoId: '0XcOLeOeFEc',
@@ -113,10 +105,7 @@ export const SHOWCASES = [
     client: 'YouTube',
     role: 'UX Designer',
     img: 'youtube-creators-design.webp',
-    description: [
-      `I removed the carousel in favor of an image of a popular YouTube Creator. Mulitples studies have shown that carousels are ineffective for displaying content because most ignore anything after the first frame.`,
-      `The copy states exactly what this site is — a resource hub for YouTube creators — with clear calls to action.`,
-    ],
+    description: "I removed the carousel in favor of an image of a popular YouTube Creator. Mulitples studies have shown that carousels are ineffective for displaying content because most ignore anything after the first frame.\n\nThe copy states exactly what this site is — a resource hub for YouTube creators — with clear calls to action.",
     stack: ['Sketch', 'Photoshop'],
   },
   {
@@ -124,10 +113,7 @@ export const SHOWCASES = [
     client: 'Google',
     role: 'Frontend Engineer',
     img: 'acux-doc-center.webp',
-    description: [
-      `Design and prototype an experience that would make it easy for agencies with one to hundreds of clients to find any document in one centralized, filterable location.`,
-      `Google has an international customer base. This means that transactions with them can involve many different currencies, not just US dollars. This project needed to be able to scale and accommodate for such cases by being smart enough to recognize that and have different actions for different currencies. In this example, there are 2 Brazillian documents that have options to open the document in a new window.`,
-    ],
+    description: "Design and prototype an experience that would make it easy for agencies with one to hundreds of clients to find any document in one centralized, filterable location.\n\nGoogle has an international customer base. This means that transactions with them can involve many different currencies, not just US dollars. This project needed to be able to scale and accommodate for such cases by being smart enough to recognize that and have different actions for different currencies. In this example, there are 2 Brazillian documents that have options to open the document in a new window.",
     stack: ['ACUX specs', 'AngularJS', 'Google App Engine', 'SCSS', 'HTML'],
     videoId: 'd-b98ep59ZQ',
   },
@@ -136,10 +122,7 @@ export const SHOWCASES = [
     client: 'YouTube',
     role: 'Frontend Engineer',
     img: 'youtube-creators-for-change.webp',
-    description: [
-      `A global initiative that supports YouTube creators who are tackling social issues and promoting awareness, tolerance and empathy on their YouTube channels.`,
-      `Showcase YouTube creators who have made significant advancements in addressing awareness on their YouTube channels. This site makes it known that YouTube Creators for Change is truely a global initiative by displaying the creators' country of origin and all of the various global chapters.`,
-    ],
+    description: "A global initiative that supports YouTube creators who are tackling social issues and promoting awareness, tolerance and empathy on their YouTube channels.\n\nShowcase YouTube creators who have made significant advancements in addressing awareness on their YouTube channels. This site makes it known that YouTube Creators for Change is truely a global initiative by displaying the creators' country of origin and all of the various global chapters.",
     stack: ['JavaScript', 'SCSS', 'Jinja2', 'Gulp', 'Python'],
     videoId: 'hFdvE1EbOMU',
   },

@@ -9,16 +9,16 @@ function Details({title, list}: {title: string, list: string[]}) {
           {title}
         </span>
       </p>
-      <p className="mm-details__list">
+      <ul className="mm-details__list">
         {list.map((label: string) => {
           return (
-            <span key={label}
+            <li key={label}
                 className="mm-details__label">
               {label}
-            </span>
+            </li>
           )
         })}
-      </p>
+      </ul>
     </div>
   )
 }

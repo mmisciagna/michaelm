@@ -6,15 +6,17 @@ import { GlobalString } from '../../global/constants';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
-function Showcase({showcase, currentId}) {
+function Showcase({showcase, currentId}: {showcase: Showcase, currentId: string}) {
   const slug = slugify(showcase.title);
   const isActive = slug === currentId;
-  let classNames = 'mm-animate mm-projects-layout__showcase';
-  if (isActive) classNames += ' active';
+
+  if (isActive) return null;
+
   const setRefs = useInViewRef();
 
   return (
-    <div className={`${classNames} ${useSetAnimateClassName(setRefs.inView)}`} ref={setRefs.ref}>
+    <div className={`mm-animate mm-projects-layout__showcase ${useSetAnimateClassName(setRefs.inView)}`}
+        ref={setRefs.ref}>
       <div className="mm-projects-layout__img-wrapper">
         <div className="mm-projects-layout__img-aspect-ratio"
             aria-label={showcase.title}
@@ -28,12 +30,20 @@ function Showcase({showcase, currentId}) {
           <h3>{showcase.title}</h3>
           <h4>{showcase.role}</h4>
         </div>
-        {!isActive &&
-          <Link className="mm-button mm-button--reverse"
-              to={`/projects/${slug}`}>
-            View details
-          </Link>
-        }
+        <div>
+          {!isActive &&
+            <Link className="mm-button mm-button--reverse"
+                to={`/projects/${slug}`}>
+              View details
+            </Link>
+          }
+          {showcase.siteLink &&
+            <a href={showcase.siteLink} target="_blank" rel="noopener noreferrer"
+                className="mm-button mm-button--secondary">
+              Launch site
+            </a>
+          }
+        </div>
       </div>
     </div>
   );
@@ -50,7 +60,7 @@ function ProjectsLayout() {
           {SHOWCASES.map((showcase: Showcase) => {
             return (
               <React.Fragment key={showcase.title}>
-                <Showcase showcase={showcase} currentId={id} />
+                <Showcase showcase={showcase} currentId={id!} />
               </React.Fragment>
             )
           })}

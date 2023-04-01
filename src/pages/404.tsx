@@ -6,13 +6,13 @@ function NotFound() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => navigate(-1), 1500);
+    // setTimeout(() => navigate('/'), 1500);
   }, []);
 
   return (
     <section className="mm-section">
       <h1>404 Not Found</h1>
-      <p>Redirecting to previous page...</p>
+      <p>Redirecting to home page...</p>
     </section>
   )
 }

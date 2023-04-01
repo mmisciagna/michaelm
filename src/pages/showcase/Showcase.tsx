@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useParams }  from 'react-router-dom';
-import ReactMarkdown from 'react-markdown'
+import { Link, Navigate, useParams }  from 'react-router-dom';
 import slugify from 'react-slugify';
 import { SHOWCASES } from '../../global/content/showcases';
 import { usePageTitleEffect } from '../../global/hooks';
@@ -11,7 +10,6 @@ import Video from '../../components/video/Video';
 
 function Showcase() {
   const {id} = useParams();
-  const [ytReady, setYTReady] = useState(window.YT !== undefined);
 
   const showcase = SHOWCASES.find((showcase) => {
     return slugify(showcase.title) === id;
@@ -19,6 +17,8 @@ function Showcase() {
 
   // Redirects to 404 if no showcase is found.
   if (!showcase) return <Navigate to="/404" />
+
+  const [ytReady, setYTReady] = useState(window.YT !== undefined);
 
   // Updates page title.
   usePageTitleEffect(showcase.title, [showcase.title]);
@@ -36,8 +36,16 @@ function Showcase() {
   return (
     <div className="mm-showcase">
       <section className="mm-section mm-section--full-bleed"
-          style={resetMargins}>
+          style={{...resetMargins, paddingTop: '24px'}}>
         <div className="mm-section__inner">
+          <ul className="mm-showcase__breadcrumbs">
+            <li className="mm-showcase__breadcrumbs-item">
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li className="mm-showcase__breadcrumbs-item">
+              {showcase.title}
+            </li>
+          </ul>
           <h1 className="mm-showcase__title">
             {showcase.title}
           </h1>
@@ -58,9 +66,8 @@ function Showcase() {
               </a>
             </p>
           }
-          <ReactMarkdown>
-            {showcase.description}
-          </ReactMarkdown>
+          <div className="mm-showcase__description"
+              dangerouslySetInnerHTML={{__html: showcase.description}} />
         </div>
       </section>
     </div>
