@@ -49,17 +49,19 @@ function Showcase() {
           <h1 className="mm-showcase__title">
             {showcase.title}
           </h1>
-          <Details title="Client" list={[showcase.client]} />
+          {showcase.client && <Details title="Client" list={[showcase.client]} />}
           <Details title="Role" list={[showcase.role]} />
           <Details title="Stack" list={showcase.stack} />
         </div>
       </section>
       {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
       <section className="mm-section mm-section--full-bleed"
-          style={resetMargins}>
+          style={{...resetMargins, paddingTop: 'unset', overflow: 'hidden'}}>
         <div className="mm-section__inner">
           {showcase.siteLink &&
-            <p>
+            <p style={{
+              marginTop: 'unset',
+            }}>
               <a href={showcase.siteLink} target="_blank" rel="noopener noreferrer"
                   className="mm-button">
                 Launch site
