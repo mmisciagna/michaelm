@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate, useParams }  from 'react-router-dom';
 import slugify from 'react-slugify';
+import { Link as AutoScroll } from 'react-scroll';
 import { SHOWCASES } from '../../global/content/showcases';
 import { usePageTitleEffect } from '../../global/hooks';
 import { useIframeApi } from '../../components/video/video.hooks';
@@ -28,9 +29,10 @@ function Showcase() {
     setYTReady(true);
   });
 
-  const resetMargins = {
+  const resetSectionSpacing = {
     marginBottom: 'unset',
     marginTop: 'unset',
+    paddingTop: 'unset',
   };
 
   const index = SHOWCASES.indexOf(showcase);
@@ -38,16 +40,9 @@ function Showcase() {
   return (
     <div className="mm-showcase">
       <section className="mm-section mm-section--full-bleed"
-          style={{...resetMargins, paddingTop: '24px'}}>
+          style={{...resetSectionSpacing, paddingTop: '24px'}}>
         <div className="mm-section__inner">
-          <ul className="mm-showcase__breadcrumbs">
-            <li className="mm-showcase__breadcrumbs-item">
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li className="mm-showcase__breadcrumbs-item">
-              {showcase.title}
-            </li>
-          </ul>
+          <BreadCrumbs showcase={showcase} index={index + 1} />
           <Pagination index={index} />
           <h1 className="mm-showcase__title">
             {showcase.title}
@@ -59,7 +54,7 @@ function Showcase() {
       </section>
       {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
       <section className="mm-section mm-section--full-bleed"
-          style={{...resetMargins, paddingTop: 'unset', overflow: 'hidden'}}>
+          style={{...resetSectionSpacing, overflow: 'hidden'}}>
         <div className="mm-section__inner">
           {showcase.siteLink &&
             <p style={{
@@ -80,28 +75,44 @@ function Showcase() {
 }
 
 function Pagination({index}: {index: number}) {
-  let styles = {justifyContent: 'space-between'};
-
-  if (index + 1 === SHOWCASES.length) {
-    styles = {justifyContent: 'flex-start'};
-  }
-
-  if (index === 0) {
-    styles = {justifyContent: 'flex-end'};
-  }
-
   return (
-    <div className="mm-showcase__pagination" style={styles}>
-      {index > 0 &&
-        <Link className="mm-button" to={`/projects/${slugify(SHOWCASES[index - 1].title)}`}>
-          Previous
-        </Link>
-      }
-      {index + 1 !== SHOWCASES.length &&
-        <Link className="mm-button" to={`/projects/${slugify(SHOWCASES[index + 1].title)}`}>
-          Next
-        </Link>
-      }
+    <div className="mm-showcase__pagination">
+      <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
+          to={`/projects/${slugify(SHOWCASES[index - 1]?.title)}`}>
+        Previous
+      </Link>
+      <AutoScroll className="mm-showcase__pagination-grid-icon"
+          to="projects-grid"
+          smooth={true}
+          offset={-96}
+          duration={500}
+          aria-label="Go to projects grid">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+          <path d="M226 896q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 642q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 388q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Z"/>
+        </svg>
+      </AutoScroll>
+      <Link className={`mm-button ${index + 1 === SHOWCASES.length ? 'disabled' : ''}`}
+          to={`/projects/${slugify(SHOWCASES[index + 1]?.title)}`}>
+        Next
+      </Link>
+    </div>
+  )
+}
+
+function BreadCrumbs({showcase, index}: {showcase: Showcase, index: number}) {
+  return (
+    <div className="mm-showcase__breadcrumbs">
+      <ul className="mm-showcase__breadcrumbs-list">
+        <li className="mm-showcase__breadcrumbs-item">
+          <Link to="/projects">Projects</Link>
+        </li>
+        <li className="mm-showcase__breadcrumbs-item">
+          {showcase.title}
+        </li>
+      </ul>
+      <div className="mm-showcase__breadcrumbs-count">
+        {index} / {SHOWCASES.length}
+      </div>
     </div>
   )
 }

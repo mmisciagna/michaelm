@@ -1,7 +1,7 @@
 .mm-footer {
   align-items: center;
   background: var(--color-background);
-  color: var(--color-primary);
+  color: var(--color-accent);
   display: flex;
   flex-direction: column;
   font-size: 14px;
@@ -43,17 +43,17 @@
       transition: color var(--default-speed-ease);
 
       svg {
-        fill: var(--color-primary);
+        fill: var(--color-accent);
         height: var(--base-unit);
         transition: fill var(--default-speed-ease);
         width: var(--base-unit);
       }
 
       &:hover {
-        color: var(--color-accent);
+        color: var(--color-primary);
 
         svg {
-          fill: var(--color-accent);
+          fill: var(--color-primary);
         }
 
         &::after {

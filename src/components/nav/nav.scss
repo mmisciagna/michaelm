@@ -4,14 +4,14 @@
   text-transform: uppercase;
 
   &__item {
-    color: var(--color-primary);
+    color: var(--color-accent);
     display: inline-block;
     margin: 0 calc(var(--base-unit) / 2);
     position: relative;
     transition: color var(--default-speed-ease);
 
     &::after {
-      background: var(--color-accent);
+      background: var(--color-primary);
       content: '';
       height: 2px;
       position: absolute;
@@ -23,7 +23,7 @@
 
     &:hover,
     &.active {
-      color: var(--color-accent);
+      color: var(--color-primary);
 
       &::after {
         width: 25%;

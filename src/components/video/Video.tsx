@@ -50,7 +50,8 @@ function Video({showcase, ready}: VideoProps) {
                   backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
                 }}
                 ref={btnRef}
-                onClick={() => {globalPlayer.playVideo()}}>
+                onClick={() => {globalPlayer.playVideo()}}
+                aria-label={`Play ${showcase.title} video`}>
               <span className="mm-video__play-icon" >
                 <svg viewBox="0 0 13 14" version="1.1">
                   <g transform="translate(-39.000000, 0.000000)">

@@ -19,7 +19,6 @@ function Showcase({showcase, currentId}: {showcase: Showcase, currentId: string}
         ref={setRefs.ref}>
       <div className="mm-projects-layout__img-wrapper">
         <div className="mm-projects-layout__img-aspect-ratio"
-            aria-label={showcase.title}
             style={{
               backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
             }}>
@@ -32,14 +31,16 @@ function Showcase({showcase, currentId}: {showcase: Showcase, currentId: string}
         </div>
         <div>
           {!isActive &&
-            <Link className="mm-button mm-button--reverse"
-                to={`/projects/${slug}`}>
+            <Link className="mm-button"
+                to={`/projects/${slug}`}
+                arial-label={`View ${showcase.title} details`}>
               View details
             </Link>
           }
           {showcase.siteLink &&
             <a href={showcase.siteLink} target="_blank" rel="noopener noreferrer"
-                className="mm-button mm-button--secondary">
+                className="mm-button mm-button--secondary"
+                arial-label={`Launch ${showcase.title} site`}>
               Launch site
             </a>
           }
@@ -55,7 +56,7 @@ function ProjectsLayout() {
   return (
     <>
       <Outlet />
-      <section className="mm-section mm-projects-layout">
+      <section className="mm-section mm-projects-layout" id="projects-grid">
         <div className="mm-grid mm-grid--3-cols">
           {SHOWCASES.map((showcase: Showcase) => {
             return (

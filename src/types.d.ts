@@ -1,12 +1,12 @@
 interface Showcase {
   apis?: string;
   description: string;
-  client: string;
+  client?: string;
   img: string;
-  role: string;
+  role?: string;
   siteLink?: string;
   title: string;
-  stack: string[];
+  stack?: string[];
   videoId?: string;
 }
 

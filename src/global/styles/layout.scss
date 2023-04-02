@@ -54,7 +54,7 @@
 .mm-button {
   background: transparent;
   border: 2px solid var(--color-accent);
-  color: var(--color-background);
+  color: var(--color-accent);
   font-family: var(--font-stack-display);
   font-size: 12px;
   font-weight: 700;
@@ -72,15 +72,18 @@
     color: var(--color-secondary);
   }
 
-  &--reverse {
-    color: var(--color-secondary);
-  }
-
   &--secondary {
     border-color: rgba(255, 255, 255, .1);
+    color: var(--color-background);
 
     &:hover {
       background: rgba(255, 255, 255, .1);
     }
+  }
+
+  &.disabled {
+    border-color: rgba(255, 255, 255, .25);
+    color: rgba(255, 255, 255, .25);
+    pointer-events: none;
   }
 }

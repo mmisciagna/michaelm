@@ -76,6 +76,7 @@
 
       a {
         background: var(--color-background);
+        color: var(--color-accent);
         display: block;
         padding: calc(var(--base-unit) / 2) var(--base-unit);
         transition: var(--default-speed-ease) color;
@@ -86,7 +87,7 @@
         }
 
         &:hover {
-          color: var(--color-accent);
+          color: var(--color-primary);
         }
       }
     }
