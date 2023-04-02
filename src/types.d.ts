@@ -10,4 +10,4 @@ interface Showcase {
   videoId?: string;
 }
 
-declare module '*.md'
+declare module '*.md';

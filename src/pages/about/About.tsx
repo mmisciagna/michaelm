@@ -66,12 +66,8 @@ function Intro() {
       <div className="mm-grid mm-section__inner">
         <div ref={setRefs.ref} className={`mm-animate ${useSetAnimateClassName(setRefs.inView)} mm-grid__col-l mm-about__profile-pic`}>
           <figure>
-            <img src="/static/imgs/profile-pic.webp" alt="Profile picture of Michael" />
-            <figcaption>
-              My son, Theo, at age one. They say we look alike.
-            </figcaption>
+            <img src="/static/imgs/profile-pic.jpg" alt="Profile picture of Michael" loading="lazy" />
           </figure>
-
         </div>
         <div className={`mm-grid__col-r`}>
           {INTRO.map((content: any) => {

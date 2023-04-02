@@ -3,6 +3,16 @@
     margin: 0 var(--negate-main-padding-x);
   }
 
+  &__profile-pic {
+    figure {
+      background: var(--color-primary);
+    }
+
+    img {
+      mix-blend-mode: exclusion;
+    }
+  }
+
   &__intro {
     align-items: center;
     display: flex;
