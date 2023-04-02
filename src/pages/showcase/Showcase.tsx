@@ -33,6 +33,8 @@ function Showcase() {
     marginTop: 'unset',
   };
 
+  const index = SHOWCASES.indexOf(showcase);
+
   return (
     <div className="mm-showcase">
       <section className="mm-section mm-section--full-bleed"
@@ -46,12 +48,13 @@ function Showcase() {
               {showcase.title}
             </li>
           </ul>
+          <Pagination index={index} />
           <h1 className="mm-showcase__title">
             {showcase.title}
           </h1>
           {showcase.client && <Details title="Client" list={[showcase.client]} />}
-          <Details title="Role" list={[showcase.role]} />
-          <Details title="Stack" list={showcase.stack} />
+          {showcase.role && <Details title="Role" list={[showcase.role]} />}
+          {showcase.stack && <Details title="Stack" list={showcase.stack} />}
         </div>
       </section>
       {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
@@ -72,6 +75,33 @@ function Showcase() {
               dangerouslySetInnerHTML={{__html: showcase.description}} />
         </div>
       </section>
+    </div>
+  )
+}
+
+function Pagination({index}: {index: number}) {
+  let styles = {justifyContent: 'space-between'};
+
+  if (index + 1 === SHOWCASES.length) {
+    styles = {justifyContent: 'flex-start'};
+  }
+
+  if (index === 0) {
+    styles = {justifyContent: 'flex-end'};
+  }
+
+  return (
+    <div className="mm-showcase__pagination" style={styles}>
+      {index > 0 &&
+        <Link className="mm-button" to={`/projects/${slugify(SHOWCASES[index - 1].title)}`}>
+          Previous
+        </Link>
+      }
+      {index + 1 !== SHOWCASES.length &&
+        <Link className="mm-button" to={`/projects/${slugify(SHOWCASES[index + 1].title)}`}>
+          Next
+        </Link>
+      }
     </div>
   )
 }

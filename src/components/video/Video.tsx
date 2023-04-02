@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { GlobalString } from '../../global/constants';
 import { useRenderPlayer, globalPlayer } from './video.hooks';
-import Details from '../details/Details';
 
 
 declare global {
@@ -31,7 +30,7 @@ function Video({showcase, ready}: VideoProps) {
     }
   };
 
-  if (globalPlayer) {
+  if (globalPlayer && globalPlayer.cueVideoById) {
     toggleBtn(true);
     globalPlayer.cueVideoById(showcase.videoId);
   }

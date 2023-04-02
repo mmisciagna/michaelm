@@ -3,8 +3,7 @@
     align-items: center;
     display: inline-flex;
     list-style: none;
-    margin-bottom: 48px;
-    margin-top: unset;
+    margin: unset;
     max-width: 100%;
     padding: unset;
   }
@@ -48,8 +47,14 @@
 
   &__title {
     font-weight: 700;
-    margin-bottom: var(--base-unit);
-    margin-top: unset;
+    margin: 1em 0;
+  }
+
+  &__pagination {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
   }
 
   &__description {
