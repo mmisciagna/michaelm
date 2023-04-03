@@ -1,10 +1,10 @@
 ### Goal
 
-Design and prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.
+Prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.
 
 
 ### Challenges
 
-The Google Fiber portal at the time was bacically composed of two different sites. You start on the home page, designed and built by marketing, and then when you navigate into the site it becomes a site built by engineers with an iframed navigation component. Because of this, users easily got lost in the flow. This proposed solution solves that problem as well as keeping the architecture and design consistent across all devices.
+At the time, the Google Fiber portal consisted of two distinct sites: a marketing-designed homepage and an engineer-built site with an iframed navigation component. This caused confusion for users who easily got lost in the navigation flow. Our proposed solution addresses this issue and ensures consistency in design and architecture across all devices.
 
-Fiber needs to be able to scale from 8 cities to X number without having to change the architecture of the site. The navigation proposed here, allows for such scaling by seamlessly adding a scrollable area within the expanded Cities nav item.
+To accommodate Fiber's potential growth from 8 cities to an unknown number, the navigation design needed to be scalable without requiring changes to the site's architecture. The proposed navigation allows for this scalability by including a scrollable area within the expanded "Cities" navigation item.

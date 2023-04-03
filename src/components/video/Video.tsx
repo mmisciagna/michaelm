@@ -30,12 +30,12 @@ function Video({showcase, ready}: VideoProps) {
     }
   };
 
-  if (globalPlayer && globalPlayer.cueVideoById) {
+  if (globalPlayer?.cueVideoById) {
     toggleBtn(true);
-    globalPlayer.cueVideoById(showcase.videoId);
+    globalPlayer.cueVideoById(showcase.videoId, showcase.videoStart || '0');
   }
 
-  useRenderPlayer(playerRef, showcase.videoId!);
+  useRenderPlayer(playerRef, showcase);
 
   return (
     <section className="mm-section mm-section--full-bleed mm-video">

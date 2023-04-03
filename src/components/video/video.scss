@@ -1,11 +1,7 @@
 .mm-video {
   margin-bottom: unset;
   margin-top: unset;
-  padding: 0 0 var(--main-padding-y);
-
-  @include ipad-portrait-up {
-    padding: 0 var(--main-padding-x) var(--main-padding-y);
-  }
+  padding: 0 0 48px;
 
   &__player,
   &__placeholder {

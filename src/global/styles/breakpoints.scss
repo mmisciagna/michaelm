@@ -1,5 +1,6 @@
 $breakpoint-tablet: 600px;
 $breakpoint-ipad-portrait: 768px;
+$breakpoint-ipad-landscape: 1024px;
 $breakpoint-desktop: 1200px;
 
 @mixin tablet-up {
@@ -10,6 +11,12 @@ $breakpoint-desktop: 1200px;
 
 @mixin ipad-portrait-up {
   @media (min-width: #{$breakpoint-ipad-portrait}) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape-up {
+  @media (min-width: #{$breakpoint-ipad-landscape}) {
     @content;
   }
 }

@@ -1,10 +1,9 @@
 ### Goal
 
-Build a responsive prototype to the designer's pixel-perfect specs for mobile testing using Material design elements.
-
+Prototype a new, user-friendly, responsive global navigation system that can be easily adapted for both marketing and engineering builds, utilizing Material design components.
 
 ### Challenges
 
-For testing, the UX Researcher wanted to adjust the content based on the user so using Firebase to let her do that without my support or getting into the code herself was important. Firebase also allowed for the user to update content (i.e. Network name, password, contact info) in real-time while reflecting the updates on every page of the prototype.
+The UX Researcher wanted to tailor the content based on the user during testing, without needing my assistance or requiring her to modify the code. To enable this functionality, we leveraged Firebase. This platform enabled users to update content, such as network name, password, and contact information, in real-time, with changes being immediately reflected across all pages of the prototype.
 
-Angular's Material grid layout doesn't allow the card height to adjust with the content. Using the Masonry JS plugin to allow for dynamic card heights was an easy way to achieve the designer's goal while at the same time adding a nice animation when the cards reorganize themselves on window resize.
+To achieve the designer's objective of allowing card heights to dynamically adjust to their content, we employed the Masonry JS plugin. The Angular Material grid layout did not allow for this feature, but with Masonry, the cards could be smoothly reorganized on window resize, and a pleasant animation effect was achieved.

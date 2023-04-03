@@ -1,7 +1,7 @@
 ### Hero
-I removed the carousel in favor of an image of a popular YouTube Creator. Mulitples [studies](https://shouldiuseacarousel.com/) have shown that carousels are ineffective for displaying content because most ignore anything after the first frame.
+To enhance the effectiveness of the website, I replaced the carousel with an image of a popular YouTube Creator, as multiple [studies](https://shouldiuseacarousel.com/) have indicated that carousels are not efficient for displaying content, with most users ignoring any frames after the first one.
 
-The copy states exactly what this site is — a resource hub for YouTube creators — with clear calls to action.
+Additionally, I ensured that the website's copy clearly conveys its purpose as a comprehensive resource hub for YouTube creators, with easily discernible calls to action
 
 <img src="https://storage.googleapis.com/michaelm.appspot.com/yt-creators-concept/creators-hero-concept.webp"
     alt="YouTube Creators hero concept"
@@ -9,7 +9,7 @@ The copy states exactly what this site is — a resource hub for YouTube creator
 
 ### Social Feeds
 
-Instead of making the user interact with more carousels to view the social feeds, I displayed them in plain sight. The exception is the Twitter feed which is a carousel but in "ticker tape" style (i.e. it will scroll across the page automatically).
+Rather than requiring users to navigate through additional carousels to view the social feeds, I made them readily visible on the page. However, the Twitter feed is still presented as a carousel, albeit in a "ticker tape" format that scrolls across the page automatically.
 
 <img src="https://storage.googleapis.com/michaelm.appspot.com/yt-creators-concept/creators-social-feed-concept.webp"
     alt="YouTube Creators social feeds concept"
@@ -17,7 +17,7 @@ Instead of making the user interact with more carousels to view the social feeds
 
 ### Sitemap
 
-The homepage contains a sitemap in that it displays all available pages on the YouTube Creators site. Nothing is hidden.
+The homepage features a sitemap that displays all available pages on the YouTube Creators site, ensuring that nothing is hidden from the users.
 
 <img src="https://storage.googleapis.com/michaelm.appspot.com/yt-creators-concept/creators-sitemap-concept.webp"
     alt="YouTube Creators sitemap concept"

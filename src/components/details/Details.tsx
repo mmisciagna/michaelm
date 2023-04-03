@@ -4,16 +4,15 @@ import React from 'react';
 function Details({title, list}: {title: string, list: string[]}) {
   return (
     <div className="mm-details">
-      <p className="mm-details__title">
-        <span className="mm-details__label">
+      <div className="mm-details__title">
+        <h2 className="mm-details__label">
           {title}
-        </span>
-      </p>
+        </h2>
+      </div>
       <ul className="mm-details__list">
         {list.map((label: string) => {
           return (
-            <li key={label}
-                className="mm-details__label">
+            <li key={label} className="mm-details__label">
               {label}
             </li>
           )

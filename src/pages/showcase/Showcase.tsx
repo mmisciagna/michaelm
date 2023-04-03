@@ -40,31 +40,31 @@ function Showcase() {
   return (
     <div className="mm-showcase">
       <section className="mm-section mm-section--full-bleed"
-          style={{...resetSectionSpacing, paddingTop: '24px'}}>
+          style={{...resetSectionSpacing, paddingBottom: '48px', paddingTop: '24px'}}>
         <div className="mm-section__inner">
           <BreadCrumbs showcase={showcase} index={index + 1} />
           <Pagination index={index} />
-          <h1 className="mm-showcase__title">
-            {showcase.title}
-          </h1>
-          {showcase.client && <Details title="Client" list={[showcase.client]} />}
-          {showcase.role && <Details title="Role" list={[showcase.role]} />}
-          {showcase.stack && <Details title="Stack" list={showcase.stack} />}
         </div>
       </section>
       {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
       <section className="mm-section mm-section--full-bleed"
           style={{...resetSectionSpacing, overflow: 'hidden'}}>
         <div className="mm-section__inner">
+          <div className="mm-showcase__details">
+            {showcase.client && <Details title="Client" list={[showcase.client]} />}
+            {showcase.role && <Details title="Role" list={[showcase.role]} />}
+            {showcase.stack && <Details title="Stack" list={showcase.stack} />}
+            {showcase.apis && <Details title="APIs" list={showcase.apis} />}
+          </div>
           {showcase.siteLink &&
-            <p style={{
-              marginTop: 'unset',
+            <div style={{
+              margin: '48px 0',
             }}>
               <a href={showcase.siteLink} target="_blank" rel="noopener noreferrer"
                   className="mm-button">
                 Launch site
               </a>
-            </p>
+            </div>
           }
           <div className="mm-showcase__description"
               dangerouslySetInnerHTML={{__html: showcase.description}} />
@@ -82,7 +82,7 @@ function Pagination({index}: {index: number}) {
         Previous
       </Link>
       <AutoScroll className="mm-showcase__pagination-grid-icon"
-          to="projects-grid"
+          to="all-projects"
           smooth={true}
           offset={-96}
           duration={500}
@@ -107,7 +107,7 @@ function BreadCrumbs({showcase, index}: {showcase: Showcase, index: number}) {
           <Link to="/projects">Projects</Link>
         </li>
         <li className="mm-showcase__breadcrumbs-item">
-          {showcase.title}
+          <h1>{showcase.title}</h1>
         </li>
       </ul>
       <div className="mm-showcase__breadcrumbs-count">

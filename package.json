@@ -9,7 +9,6 @@
     "dev": "run-p webpack:start",
     "stage:version": "npm run build && gcloud app deploy . --project michaelm --appyaml=app.yaml --no-promote --quiet --version",
     "stage:promote": "npm run build && gcloud app deploy . --project michaelm --appyaml=app.yaml --promote --quiet --version master",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "webpack:start": "webpack serve"
   },
   "author": "Michael Misciagna",

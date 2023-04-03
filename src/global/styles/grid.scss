@@ -34,7 +34,7 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    @include ipad-portrait-up {
+    @include desktop-up {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }

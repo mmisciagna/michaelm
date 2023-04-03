@@ -1,7 +1,7 @@
 ### Overview
 
-The YouTube Studio Beta provides all new features and freshly designed site to help you manage your YouTube channel.
+The YouTube Studio Beta offered a redesigned site with new features that aided in the management of your YouTube Channel.
 
 ### Goal
 
-Get YouTube usrs to sign up and try the YouTube Studio Beta and provide feedback.
+Encourage YouTube users to sign up and try out the YouTube Studio Beta, while providing feedback.

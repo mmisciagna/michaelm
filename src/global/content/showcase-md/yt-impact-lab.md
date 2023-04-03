@@ -1,14 +1,14 @@
 ### Overview
 
-Targeting non-profits, YouTube Impact Lab's mission is to harness YouTube's scale, technology and talent to ignite and sustain movements that drive measurable social change.
+The YouTube Impact Lab is aimed at non-profit organizations and is dedicated to utilizing YouTube's vast reach, cutting-edge technology, and talented creators to initiate and maintain campaigns that lead to quantifiable social impact.
 
 ### Goal
-Provide a hub for non-profits who want to work with YouTube where they can find general information and showcase some success stories and campaigns and to help non-profits register for the program.
+The YouTube Impact Lab serves as a central platform for non-profit organizations seeking to collaborate with YouTube. It provides general information, showcases success stories and campaigns, and helps non-profits register for the program.
 
 ### Challenges
 
-Because the site is static (i.e. no means of collecting or receiving user data), having them register on the site would not be practical. Instead, we provided a quiz-styled walkthrough that determines whether or not the user is qualified to register for the YouTube Impact Lab program based on their provided answers.
+As the website is static, it is not feasible for users to register on the site. Therefore, we created a quiz-like walkthrough that assesses the user's eligibility for the YouTube Impact Lab program based on their responses.
 
-If the user is qualified, or is lacking just a few steps, then the walkthrough will direct you to the proper places to fullfill those steps and complete the registration process.
+If the user qualifies or only requires a few additional steps to complete the registration process, the walkthrough will direct them to the appropriate resources to fulfill those requirements and complete the registration process.
 
-If the user is not qualified, they may provide their email to be contacted later and resources are provided that explain how to get qualified before they can register.
+If the user does not meet the criteria for qualification, they can provide their email address to be contacted later, and resources are provided to guide them on how to become eligible to register for the program.

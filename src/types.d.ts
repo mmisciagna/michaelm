@@ -1,5 +1,5 @@
 interface Showcase {
-  apis?: string;
+  apis?: string[];
   description: string;
   client?: string;
   img: string;
@@ -8,6 +8,7 @@ interface Showcase {
   title: string;
   stack?: string[];
   videoId?: string;
+  videoStart?: string;
 }
 
 declare module '*.md';

@@ -20,13 +20,13 @@ export function useIframeApi(loaded: boolean) {
   return loadPromise;
 }
 
-export function useRenderPlayer(ref: {current: HTMLElement|null}, id: string) {
+export function useRenderPlayer(ref: {current: HTMLElement|null}, showcase: Showcase) {
   useEffect(() => {
     if (window.YT) {
-      globalPlayer = renderPlayer(ref.current!, id);
+      globalPlayer = renderPlayer(ref.current!, showcase);
     } else {
       window.onYouTubeIframeAPIReady = () => {
-        globalPlayer = renderPlayer(ref.current!, id);
+        globalPlayer = renderPlayer(ref.current!, showcase);
       };
     }
 
@@ -34,15 +34,16 @@ export function useRenderPlayer(ref: {current: HTMLElement|null}, id: string) {
   }, []);
 }
 
-function renderPlayer(node: HTMLElement, id: string) {
+function renderPlayer(node: HTMLElement, showcase: Showcase) {
   return new window.YT.Player(node, {
-    videoId: id,
+    videoId: showcase.videoId,
     playerVars: {
       color: 'white',
       enablejsapi: 1,
       loop: 1,
       modestbranding: 1,
       playsinline: 1,
+      start: showcase.videoStart || '0',
     },
     events: {
       'onStateChange': window.onPlayerStateChange,
