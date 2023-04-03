@@ -25,7 +25,9 @@
   &__ancillary-links {
     align-items: center;
     display: flex;
+    font-size: 12px;
     font-family: var(--font-stack-display);
+    margin-top: 12px;
     text-transform: uppercase;
     justify-content: center;
 
@@ -33,6 +35,11 @@
       justify-content: flex-end;
       margin-left: unset;
       margin-right: calc(-1 * var(--base-unit) / 2);
+      margin-top: unset;
+    }
+
+    @include ipad-portrait-up {
+      font-size: inherit;
     }
 
     a {

@@ -27,6 +27,8 @@ a,
 button,
 select,
 iframe,
+input,
+textarea,
 [role='button'] {
   appearance: none;
   background: none;
@@ -40,6 +42,27 @@ iframe,
   &:focus:not(:focus-visible) {
     outline: none;
   }
+}
+
+input,
+textarea {
+  background: var(--color-background);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  display: block;
+  font: inherit;
+  padding: 8px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font: inherit;
+  margin: 0 0 8px;
+}
+
+textarea {
+  min-height: 150px;
 }
 
 a,

@@ -4,6 +4,12 @@
   }
 
   &__profile-pic {
+    display: none;
+
+    @include ipad-portrait-up {
+      display: block;
+    }
+
     figure {
       background: var(--color-primary);
     }

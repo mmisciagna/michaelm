@@ -6,9 +6,15 @@
   &__item {
     color: var(--color-accent);
     display: inline-block;
-    margin: 0 calc(var(--base-unit) / 2);
+    font-size: 12px;
+    margin: 0 8px;
     position: relative;
     transition: color var(--default-speed-ease);
+
+    @include ipad-portrait-up {
+      font-size: inherit;
+      margin: 0 calc(var(--base-unit) / 2);
+    }
 
     &::after {
       background: var(--color-primary);

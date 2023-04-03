@@ -13,6 +13,14 @@ function Nav() {
           to={'/projects'}>
         <span>Projects</span>
       </NavLink>
+      <NavLink className="mm-nav__item"
+          to={'/snippets'}>
+        <span>Snippets</span>
+      </NavLink>
+      <NavLink className="mm-nav__item"
+          to={'/contact'}>
+        <span>Contact</span>
+      </NavLink>
     </nav>
   )
 }

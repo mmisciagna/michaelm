@@ -6,6 +6,7 @@ import About from './pages/about/About';
 import Projects from './pages/projects/Projects';
 import ProjectsLayout from './layouts/projects/ProjectsLayout';
 import Showcase from './pages/showcase/Showcase';
+import Contact from './pages/contact/Contact';
 import NotFound from './pages/404';
 
 
@@ -26,6 +27,10 @@ function App() {
             <Route index element={<Projects />} />
             <Route path=":id" element={<Showcase />} />
           </Route>
+          {/* Snippets */}
+          <Route path="/snippets" element={<h1>Snippets</h1>} />
+          {/* Contact */}
+          <Route path="/contact" element={<Contact />} />
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
