@@ -13,7 +13,7 @@
   }
 
   &__breadcrumbs-list {
-    align-items: center;
+    align-items: flex-start;
     display: inline-flex;
     list-style: none;
     margin: unset;
@@ -28,7 +28,6 @@
     overflow: hidden;
     padding-left: 12px;
     position: relative;
-    white-space: nowrap;
 
     &:first-child {
       flex-shrink: 0;
@@ -40,12 +39,12 @@
       background: var(--color-secondary);
       content: '';
       display: block;
-      height: 8px;
+      height: 80%;
       left: 0;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 2px;
+      width: 1px;
     }
 
     a {
@@ -57,10 +56,6 @@
       font-weight: inherit;
       line-height: inherit;
       margin: unset;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 100%;
     }
   }
 
@@ -97,6 +92,7 @@
   &__description {
     // Markdown
     p > a {
+      border-bottom: 1px dotted;
       color: var(--color-accent);
 
       &:hover {
