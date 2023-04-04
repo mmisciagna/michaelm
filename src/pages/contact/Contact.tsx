@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { usePageTitleEffect } from '../../global/hooks';
 
 function Contact() {
   const formRef = useRef(null);
@@ -7,7 +8,16 @@ function Contact() {
   const errorRef = useRef(null);
   const submitBtnRef = useRef(null);
 
-  const sendEmail = (e: any) => {
+  usePageTitleEffect('Contact');
+
+  const toggleMessage = (e: any, success = true) => {
+    if (success) e.target.reset();
+    (successRef.current! as HTMLElement).style.display = success ? 'block' : 'none';
+    (errorRef.current! as HTMLElement).style.display = success ? 'none' : 'block';
+    (submitBtnRef.current! as HTMLButtonElement).disabled = false;
+  };
+
+  const sendEmail = async (e: any) => {
     e.preventDefault();
 
     (submitBtnRef.current! as HTMLButtonElement).disabled = true;
@@ -18,15 +28,10 @@ function Contact() {
       formRef.current!,
       'XBbXdxac_sDqjkCXv',
     ).then(() => {
-      e.target.reset();
-      (successRef.current! as HTMLElement).style.display = 'block';
-      (errorRef.current! as HTMLElement).style.display = 'none';
-      (submitBtnRef.current! as HTMLButtonElement).disabled = false;
+      toggleMessage(e);
     }, (error) => {
       console.log(error.text);
-      (errorRef.current! as HTMLElement).style.display = 'block';
-      (successRef.current! as HTMLElement).style.display = 'none';
-      (submitBtnRef.current! as HTMLButtonElement).disabled = false;
+      toggleMessage(e, false);
     });
   };
 
