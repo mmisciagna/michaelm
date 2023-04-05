@@ -10,7 +10,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const AutoPrefixerPlugin = require('autoprefixer');
 const dartSass = require('sass');
-const compress= require('compression');
+const compress = require('compression');
+const SitemapWebpackPlugin = require('sitemap-webpack-plugin').default;
+const prettydata = require('pretty-data');
+
+const prettyPrint = (xml: string): string => {
+  return prettydata.pd.xml(xml);
+};
 
 
 module.exports = {
@@ -131,6 +137,19 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin(),
     new ForkTsCheckerNotifierWebpackPlugin({excludeWarnings: true}),
+    new SitemapWebpackPlugin({
+      base: 'https://michaelm.site',
+      paths: [
+        {path: '/'},
+        {path: '/projects'},
+        {path: '/tidbits'},
+        {path: '/contact'},
+      ],
+      options: {
+        skipgzip: true,
+        formatter: prettyPrint,
+      }
+    }),
   ],
   optimization: {
     minimizer: [

@@ -8,6 +8,11 @@ handlers:
   upload: dist/static/(.*)
   expiration: 30s
 
+- url: /sitemap.xml
+  static_files: dist/sitemap.xml
+  upload: dist/sitemap.xml
+  expiration: 30s
+
 - url: /(.*)?
   static_files: dist/index.html
   upload: dist/index.html
