@@ -1,0 +1,19 @@
+.mm-tidbits {
+  &__content {
+    // Markdown
+    code {
+      background: rgba(0, 0, 0, .25);
+      border-radius: 4px;
+      display: inline-block;
+      font-family: var(--font-stack-mono);
+      padding: 0 8px;
+    }
+
+    pre code {
+      display: block;
+      overflow: hidden;
+      overflow-x: auto;
+      padding: 16px;
+    }
+  }
+}

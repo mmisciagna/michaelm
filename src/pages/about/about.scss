@@ -27,10 +27,12 @@
     margin-bottom: unset;
     margin-top: unset;
     min-height: calc(100vh - (2 * var(--header-height)));
+    min-height: calc(100dvh - (2 * var(--header-height)));
     position: relative;
 
     @include ipad-portrait-up {
       min-height: calc(100vh - (var(--header-height)));
+      min-height: calc(100dvh - (var(--header-height)));
     }
 
     .mm-page-title,

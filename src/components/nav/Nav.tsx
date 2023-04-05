@@ -14,8 +14,8 @@ function Nav() {
         <span>Projects</span>
       </NavLink>
       <NavLink className="mm-nav__item"
-          to={'/snippets'}>
-        <span>Snippets</span>
+          to={'/tidbits'}>
+        <span>Tidbits</span>
       </NavLink>
       <NavLink className="mm-nav__item"
           to={'/contact'}>

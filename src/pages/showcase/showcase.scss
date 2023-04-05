@@ -91,15 +91,6 @@
 
   &__description {
     // Markdown
-    p > a {
-      border-bottom: 1px dotted;
-      color: var(--color-accent);
-
-      &:hover {
-        border-bottom: 1px solid;
-      }
-    }
-
     img {
       margin: var(--base-unit) 0;
     }
