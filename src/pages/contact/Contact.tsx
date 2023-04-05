@@ -45,7 +45,7 @@ function Contact() {
               I am thrilled that you have taken the time to visit and would love to hear from you. Whether you have a question, comment, or just want to say hello, please feel free to get in touch using the contact form provided.
             </p>
             <div style={{display: 'none'}} ref={successRef} className="mm-contact__submit-message mm-contact__submit-message--success">
-              Thank you for your interest! I value all feedback and aim to respond to all messages as promptly as possible.
+              Thank you for your interest! I'll try my best to respond as promptly as possible.
             </div>
             <div style={{display: 'none'}} ref={errorRef} className="mm-contact__submit-message mm-contact__submit-message--error">
               There was an error sending your message! Please try again.

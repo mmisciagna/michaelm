@@ -3,10 +3,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /
+- url: /static/(.*)
+  static_files: dist/static/\1
+  upload: dist/static/(.*)
+  expiration: 30s
+
+- url: /(.*)?
   static_files: dist/index.html
   upload: dist/index.html
-
-- url: /(.*)
-  static_files: dist/\1
-  upload: dist/(.*)
+  expiration: 30s
