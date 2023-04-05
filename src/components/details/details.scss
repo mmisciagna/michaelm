@@ -6,6 +6,10 @@
   margin: 1em auto 0;
   max-width: var(--section-max-width);
 
+  [theme='dark'] & {
+    border-top-color: var(--color-font);
+  }
+
   &:first-child {
     margin-top: unset;
   }
@@ -43,9 +47,18 @@
     text-transform: uppercase;
     white-space: nowrap;
 
+    [theme='dark'] & {
+      border-bottom-color: var(--color-font);
+      border-right-color: var(--color-font);
+    }
+
     .mm-details__title & {
       border-left: 1px solid var(--color-secondary);
       border-right: 0;
+
+      [theme='dark'] & {
+        border-left-color: var(--color-font);
+      }
     }
   }
 }

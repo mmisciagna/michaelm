@@ -20,6 +20,10 @@
     margin: var(--main-padding-y) var(--negate-main-padding-x);
     max-width: unset;
     padding: var(--main-padding-y) var(--main-padding-x);
+
+    [theme='dark'] & {
+      color: var(--color-font);
+    }
   }
 
   &__inner {
@@ -70,11 +74,19 @@
   &:hover {
     background: var(--color-accent);
     color: var(--color-secondary);
+
+    [theme='dark'] & {
+      color: var(--color-font);
+    }
   }
 
   &--secondary {
     border-color: rgba(255, 255, 255, .1);
-    color: var(--color-background);
+    color: var(--color-secondary);
+
+    [theme='dark'] & {
+      color: var(--color-font);
+    }
 
     &:hover {
       background: rgba(255, 255, 255, .1);

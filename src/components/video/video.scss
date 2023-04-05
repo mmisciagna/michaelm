@@ -35,7 +35,7 @@
       pointer-events: none;
     }
 
-    &:hover .mm-video__play-icon {
+    &:hover .mm-video__icon {
       background: rgba(255, 255, 255, .5);
 
       svg {
@@ -44,7 +44,7 @@
     }
   }
 
-  &__play-icon {
+  &__icon {
     align-items: center;
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, .25);

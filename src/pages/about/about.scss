@@ -53,7 +53,12 @@
       border: 0;
       display: none;
       height: 1px;
+      margin-bottom: var(--base-unit);
       margin-top: unset;
+
+      [theme='dark'] & {
+        background: var(--color-font);
+      }
 
       @include tablet-up {
         display: block;
@@ -106,6 +111,10 @@
 
         &:hover {
           color: var(--color-primary);
+
+          [theme='dark'] & {
+            color: var(--color-font);
+          }
         }
       }
     }

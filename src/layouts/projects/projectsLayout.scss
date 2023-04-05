@@ -88,6 +88,10 @@
       var(--default-speed-ease) opacity;
     width: 100%;
 
+    [theme='dark'] & {
+      color: var(--color-font);
+    }
+
     &::after {
       border-bottom: 16px solid var(--color-primary-shade);
       border-left: 16px solid var(--color-primary-shade);
@@ -98,7 +102,7 @@
       position: absolute;
       right: 0;
 
-      .active & {
+      [theme='dark'] & {
         border-bottom: 16px solid var(--color-accent);
         border-left: 16px solid var(--color-accent);
       }

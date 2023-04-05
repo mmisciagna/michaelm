@@ -20,7 +20,7 @@
   &__branding {
     align-items: center;
     background: var(--color-primary);
-    color: var(--color-background);
+    color: #fff;
     display: flex;
     flex: 1;
     flex-basis: var(--header-height);
@@ -50,7 +50,7 @@
     }
 
     &::before {
-      background: var(--color-background);
+      background: #fff;
       content: '';
       height: 1px;
       left: calc(var(--main-padding-x) / 2);

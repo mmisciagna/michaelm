@@ -5,6 +5,10 @@
   position: relative;
   white-space: normal;
 
+  [theme='dark'] & {
+    border-color: var(--color-font);
+  }
+
   @include tablet-up {
     white-space: nowrap;
   }
@@ -28,6 +32,10 @@
     transition: var(--default-speed-ease) opacity;
     white-space: normal;
 
+    [theme='dark'] & {
+      background: var(--color-font);
+    }
+
     &::after {
       border: 6px solid var(--color-primary);
       border-bottom-color: transparent;
@@ -36,6 +44,11 @@
       left: 8px;
       position: absolute;
       top: 100%;
+
+      [theme='dark'] & {
+        border-left-color: var(--color-font);
+        border-top-color: var(--color-font);
+      }
     }
 
     span {
