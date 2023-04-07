@@ -1,5 +1,5 @@
 ---
-title: Stop using `vh`; start using `dvh`!
+title: Stop using `vh` and start using `dvh`!
 tags:
   - CSS
 ---

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { tidbitsMd } from '../../global/content/tidbits';
+import { TIDBITS } from '../../global/content/tidbits';
 import ReactMarkdown from 'react-markdown';
 
 
@@ -48,7 +48,9 @@ function Tidbits() {
           {possibleTags.map((tag: string) => {
             return (
               <li key={tag.toLowerCase()}>
-                <button data-tag={tag.toLowerCase()} onClick={(e) => filterTags(e)}>
+                <button className="mm-button"
+                    data-tag={tag.toLowerCase()}
+                    onClick={(e) => filterTags(e)}>
                   {tag}
                 </button>
               </li>
@@ -61,7 +63,7 @@ function Tidbits() {
       }}>
         <div className="mm-section__inner">
           <div className="mm-tidbits__content">
-            {tidbitsMd.map((tidbit: any) => {
+            {TIDBITS.map((tidbit: any) => {
               const {data, content} = tidbit;
 
               return (

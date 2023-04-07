@@ -69,6 +69,7 @@
   text-transform: uppercase;
   transition:
     var(--default-speed-ease) background,
+    var(--default-speed-ease) border-color,
     var(--default-speed-ease) color;
 
   &:hover {
