@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {tidbitsMd} from '../../global/content/tidbits';
+import React, { useState, useEffect } from 'react';
+import { tidbitsMd } from '../../global/content/tidbits';
 import ReactMarkdown from 'react-markdown';
 
 
@@ -72,10 +72,10 @@ function Tidbits() {
                       return <li key={tag.toLowerCase()}>{tag}</li>
                     })}
                   </ul>
-                  <h2>{data.title}</h2>
-                  <ReactMarkdown>
-                    {content}
-                  </ReactMarkdown>
+                  <h2>
+                    <ReactMarkdown>{data.title}</ReactMarkdown>
+                  </h2>
+                  <ReactMarkdown>{content}</ReactMarkdown>
                 </div>
               )
             })}
