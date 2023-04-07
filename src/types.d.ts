@@ -11,4 +11,5 @@ interface Showcase {
   videoStart?: string;
 }
 
+
 declare module '*.md';
