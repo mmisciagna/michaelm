@@ -3,34 +3,51 @@ import { TIDBITS } from '../../global/content/tidbits';
 import ReactMarkdown from 'react-markdown';
 
 
-global.Buffer = global.Buffer || require('buffer').Buffer;
-
 const date = '4/6/2023';
-const defaultSelectedTags: Set<string> = new Set([]);
-const possibleTags = ['CSS', 'Design', 'JS'];
-let tidbits = [] as HTMLElement[];
-let firstRender = true;
+
+function shouldRenderTidbit(tags: string[], selectedTags: Set<string>) {
+  for (const tag of tags) {
+    if (selectedTags.has(tag.toLowerCase())) {
+      return true
+    };
+  }
+  return false;
+}
+
+function useGetPossibleTags(setState: any) {
+  useEffect(() => {
+    const allPossibleTags: string[] = [];
+
+    for (const tidbit of TIDBITS) {
+      for (const tag of tidbit.data.tags) {
+        allPossibleTags.push(tag);
+      }
+    }
+
+    setState(new Set(allPossibleTags.sort()));
+  }, []);
+}
 
 function Tidbits() {
-  const [selectedTags, setSelectedTags] = useState(() => defaultSelectedTags);
+  const [possibleTags, setPossibleTags] = useState<Set<string>>(new Set());
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
-  useGetTidbits('[data-tags]');
-  useFilterTidbits(selectedTags);
+  useGetPossibleTags(setPossibleTags);
 
-  const filterTags = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleTagClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
     const tagEl = e.currentTarget;
     const tag = tagEl.dataset.tag as string;
     const newTags = new Set([...selectedTags]);
     const hasTag = newTags.has(tag);
-
-    firstRender = false;
 
     tagEl.classList.toggle('active', !tagEl.classList.contains('active'));
 
     if (hasTag) {
       newTags.delete(tag);
     } else {
-      newTags.add(tag);
+      newTags.add(tag.toLowerCase());
     }
 
     setSelectedTags(newTags);
@@ -45,12 +62,12 @@ function Tidbits() {
           If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. I've gathered a variety of frontend dev tidbits that cover everything from HTML and CSS tricks to JavaScript best practices and framework updates. There's no rhyme or reason to these. They're just tidbits I ran across online and found interesting.
         </p>
         <ul className="mm-tidbits__tags mm-tidbits__tags--filter">
-          {possibleTags.map((tag: string) => {
+          {[...possibleTags].map((tag: string) => {
             return (
               <li key={tag.toLowerCase()}>
                 <button className="mm-button"
                     data-tag={tag.toLowerCase()}
-                    onClick={(e) => filterTags(e)}>
+                    onClick={(e) => handleTagClick(e)}>
                   {tag}
                 </button>
               </li>
@@ -65,20 +82,26 @@ function Tidbits() {
           <div className="mm-tidbits__content">
             {TIDBITS.map((tidbit: any) => {
               const {data, content} = tidbit;
+              const tags = data.tags;
+              const doRenderTidbit = selectedTags.size === 0 ||
+                  shouldRenderTidbit(tags, selectedTags);
 
               return (
-                <div className="mm-tidbits__tidbit" data-tags={data.tags.join(',')}
-                    key={data.title.toLowerCase()}>
-                  <ul className="mm-tidbits__tags">
-                    {data.tags.map((tag: string) => {
-                      return <li key={tag.toLowerCase()}>{tag}</li>
-                    })}
-                  </ul>
-                  <h2>
-                    <ReactMarkdown>{data.title}</ReactMarkdown>
-                  </h2>
-                  <ReactMarkdown>{content}</ReactMarkdown>
-                </div>
+                <React.Fragment key={data.title.toLowerCase()}>
+                  {doRenderTidbit &&
+                    <div className="mm-tidbits__tidbit" data-tags={data.tags.join(',')}>
+                      <ul className="mm-tidbits__tags">
+                        {data.tags.map((tag: string) => {
+                          return <li key={tag.toLowerCase()}>{tag}</li>
+                        })}
+                      </ul>
+                      <h2>
+                        <ReactMarkdown>{data.title}</ReactMarkdown>
+                      </h2>
+                      <ReactMarkdown>{content}</ReactMarkdown>
+                    </div>
+                  }
+                </React.Fragment>
               )
             })}
           </div>
@@ -86,27 +109,6 @@ function Tidbits() {
       </section>
     </div>
   )
-}
-
-function useGetTidbits(selector: string) {
-  useEffect(() => {
-    tidbits = [...document.querySelectorAll(selector)] as HTMLElement[];
-  }, []);
-}
-
-function useFilterTidbits(set: Set<string>) {
-  useEffect(() => {
-    if (firstRender) return;
-
-    for (const tidbit of tidbits) {
-      const tidbitTags = tidbit.dataset.tags!.split(',');
-
-      for (const tidbitTag of tidbitTags) {
-        tidbit.classList.toggle('hide',
-            !set.has(tidbitTag.toLocaleLowerCase()) && set.size > 0);
-      }
-    }
-  }, [set]);
 }
 
 export default Tidbits;
