@@ -64,5 +64,24 @@
   &__tidbit {
     border-top: 1px solid var(--color-secondary);
     padding-bottom: var(--main-padding-y);
+
+    &:last-child {
+      border-bottom: 1px solid var(--color-secondary);
+    }
+  }
+
+  &__metadata {
+    font-family: var(--font-stack-display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+  }
+
+  &__pagination {
+    span {
+      white-space: nowrap;
+    }
   }
 }

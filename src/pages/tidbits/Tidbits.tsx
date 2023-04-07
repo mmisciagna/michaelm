@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 const date = '4/6/2023';
 
-function shouldRenderTidbit(tags: string[], selectedTags: Set<string>) {
+function shouldRenderTidbit(tags: string[], selectedTags: Set<string>): boolean {
   for (const tag of tags) {
     if (selectedTags.has(tag.toLowerCase())) {
       return true
@@ -14,7 +14,7 @@ function shouldRenderTidbit(tags: string[], selectedTags: Set<string>) {
   return false;
 }
 
-function useGetPossibleTags(setState: any) {
+function useGetAllPossibleTags(setState: any) {
   useEffect(() => {
     const allPossibleTags: string[] = [];
 
@@ -28,11 +28,15 @@ function useGetPossibleTags(setState: any) {
   }, []);
 }
 
-function Tidbits() {
-  const [possibleTags, setPossibleTags] = useState<Set<string>>(new Set());
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+interface FitlerTagsProps {
+  selectedTags: Set<string>;
+  setSelectedTags: any;
+}
 
-  useGetPossibleTags(setPossibleTags);
+function FilterTags({selectedTags, setSelectedTags}: FitlerTagsProps) {
+  const [possibleTags, setPossibleTags] = useState<Set<string>>(new Set());
+
+  useGetAllPossibleTags(setPossibleTags);
 
   const handleTagClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -54,36 +58,67 @@ function Tidbits() {
   }
 
   return (
+    <ul className="mm-tidbits__tags mm-tidbits__tags--filter">
+      {[...possibleTags].map((tag: string) => {
+        return (
+          <li key={tag.toLowerCase()}>
+            <button className="mm-button"
+                data-tag={tag.toLowerCase()}
+                onClick={(e) => handleTagClick(e)}>
+              {tag}
+            </button>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+
+function TidbitPagination({selectedTags}: {selectedTags: Set<string>}) {
+  console.log('render')
+  const [tidbitCount, setTidbitCount] = useState<number>(() => 0);
+
+  useEffect(() => {
+    const tidbitEls = [...document.querySelectorAll('.mm-tidbits__tidbit')]!;
+    setTidbitCount(tidbitEls.length);
+  }, [selectedTags]);
+
+  return (
+    <p className="mm-tidbits__pagination">
+      Viewing <span>{tidbitCount} / {TIDBITS.length}</span>
+    </p>
+  )
+}
+
+function Tidbits() {
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+
+  return (
     <div className="mm-tidbits">
       <section className="mm-section">
         <h1>Tidbits</h1>
-        <p>Last updated: {date}</p>
+        <div className="mm-tidbits__metadata">
+          <p>Last updated: {date}</p>
+        </div>
         <p>
           If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. I've gathered a variety of frontend dev tidbits that cover everything from HTML and CSS tricks to JavaScript best practices and framework updates. There's no rhyme or reason to these. They're just tidbits I ran across online and found interesting.
         </p>
-        <ul className="mm-tidbits__tags mm-tidbits__tags--filter">
-          {[...possibleTags].map((tag: string) => {
-            return (
-              <li key={tag.toLowerCase()}>
-                <button className="mm-button"
-                    data-tag={tag.toLowerCase()}
-                    onClick={(e) => handleTagClick(e)}>
-                  {tag}
-                </button>
-              </li>
-            )
-          })}
-        </ul>
+        <FilterTags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
       </section>
       <section className="mm-section mm-section--full-bleed" style={{
         marginBottom: 'unset',
       }}>
         <div className="mm-section__inner">
+          <div className="mm-tidbits__metadata">
+            <TidbitPagination selectedTags={selectedTags} />
+          </div>
           <div className="mm-tidbits__content">
             {TIDBITS.map((tidbit: any) => {
               const {data, content} = tidbit;
               const tags = data.tags;
-              const doRenderTidbit = selectedTags.size === 0 ||
+
+              const doRenderTidbit =
+                  selectedTags.size === 0 ||
                   shouldRenderTidbit(tags, selectedTags);
 
               return (
@@ -104,6 +139,9 @@ function Tidbits() {
                 </React.Fragment>
               )
             })}
+          </div>
+          <div className="mm-tidbits__metadata">
+            <TidbitPagination selectedTags={selectedTags} />
           </div>
         </div>
       </section>

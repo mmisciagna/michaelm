@@ -53,8 +53,10 @@
     }
 
     .mm-details__title & {
-      border-left: 1px solid var(--color-secondary);
+      border-bottom: 0;
+      border-left: 0;
       border-right: 0;
+      padding-left: 0;
 
       [theme='dark'] & {
         border-left-color: var(--color-font);
