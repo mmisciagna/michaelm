@@ -75,7 +75,6 @@ function FilterTags({selectedTags, setSelectedTags}: FitlerTagsProps) {
 }
 
 function TidbitPagination({selectedTags}: {selectedTags: Set<string>}) {
-  console.log('render')
   const [tidbitCount, setTidbitCount] = useState<number>(() => 0);
 
   useEffect(() => {
