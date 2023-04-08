@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TIDBITS } from '../../content/tidbits';
 import ReactMarkdown from 'react-markdown';
 import { marked } from 'marked';
-import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
+import { useInViewRef, useSetAnimateClassName, usePageTitleEffect } from '../../global/hooks';
 
 
 const date = '4/6/2023';
@@ -93,6 +93,8 @@ function TidbitPagination({selectedTags}: {selectedTags: Set<string>}) {
 
 function Tidbits() {
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+
+  usePageTitleEffect('Tidbits')
 
   return (
     <div className="mm-tidbits">
