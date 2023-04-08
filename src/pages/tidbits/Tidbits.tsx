@@ -102,7 +102,7 @@ function Tidbits() {
           <p>Last updated: {date}</p>
         </div>
         <p>
-          If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. There's no rhyme or reason to these. They're tidbits I've come up myseld ran across online and found interesting.
+          If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. These are random tidbits that I came up with myself or ran across online and found interesting.
         </p>
         <FilterTags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
       </section>
