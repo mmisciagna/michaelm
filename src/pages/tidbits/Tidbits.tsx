@@ -5,7 +5,7 @@ import { marked } from 'marked';
 import { useInViewRef, useSetAnimateClassName, usePageTitleEffect } from '../../global/hooks';
 
 
-const date = '4/6/2023';
+const date = '4/7/2023';
 
 function shouldRenderTidbit(tags: string[], selectedTags: Set<string>): boolean {
   for (const tag of tags) {

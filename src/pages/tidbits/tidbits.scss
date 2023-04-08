@@ -21,7 +21,7 @@
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    margin: 0 -2px 14px;
+    margin: 0 -1px 12px;
     padding: unset;
 
     li {
@@ -34,23 +34,26 @@
       font-weight: 700;
       letter-spacing: 1px;
       line-height: 1;
-      margin: 0 2px;
+      margin: 0 1px;
       padding: 8px;
       white-space: nowrap;
     }
 
     &--filter {
+      flex-wrap: wrap;
       justify-content: flex-start;
+      margin: 0 -4px 12px;
 
       li {
         background: unset;
         font: unset;
+        margin: 4px;
         padding: unset;
       }
 
       .mm-button {
         border-radius: 50px;
-        margin: 0 2px;
+        margin: unset;
 
         &.active {
           background: var(--color-primary);

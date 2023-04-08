@@ -18,7 +18,6 @@ const prettyPrint = (xml: string): string => {
   return prettydata.pd.xml(xml);
 };
 
-
 module.exports = {
   mode: 'development',
   entry: [
