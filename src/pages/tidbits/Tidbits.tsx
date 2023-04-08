@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { TIDBITS } from '../../global/content/tidbits';
+import { TIDBITS } from '../../content/tidbits';
 import ReactMarkdown from 'react-markdown';
+import { marked } from 'marked';
+import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
 const date = '4/6/2023';
@@ -100,7 +102,7 @@ function Tidbits() {
           <p>Last updated: {date}</p>
         </div>
         <p>
-          If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. I've gathered a variety of frontend dev tidbits that cover everything from HTML and CSS tricks to JavaScript best practices and framework updates. There's no rhyme or reason to these. They're just tidbits I ran across online and found interesting.
+          If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. There's no rhyme or reason to these. They're tidbits I've come up myseld ran across online and found interesting.
         </p>
         <FilterTags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
       </section>
@@ -115,6 +117,8 @@ function Tidbits() {
             {TIDBITS.map((tidbit: any) => {
               const {data, content} = tidbit;
               const tags = data.tags;
+              const setRefs = useInViewRef();
+              const markedConent = marked(content);
 
               const doRenderTidbit =
                   selectedTags.size === 0 ||
@@ -123,7 +127,9 @@ function Tidbits() {
               return (
                 <React.Fragment key={data.title.toLowerCase()}>
                   {doRenderTidbit &&
-                    <div className="mm-tidbits__tidbit" data-tags={data.tags.join(',')}>
+                    <div className={`mm-tidbits__tidbit mm-animate ${useSetAnimateClassName(setRefs.inView)}`}
+                        data-tags={data.tags.join(',')}
+                        ref={setRefs.ref}>
                       <ul className="mm-tidbits__tags">
                         {data.tags.map((tag: string) => {
                           return <li key={tag.toLowerCase()}>{tag}</li>
@@ -132,7 +138,7 @@ function Tidbits() {
                       <h2>
                         <ReactMarkdown>{data.title}</ReactMarkdown>
                       </h2>
-                      <ReactMarkdown>{content}</ReactMarkdown>
+                      <div dangerouslySetInnerHTML={{__html: markedConent}} />
                     </div>
                   }
                 </React.Fragment>

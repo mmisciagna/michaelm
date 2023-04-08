@@ -1,6 +1,6 @@
 import React from 'react';
 import slugify from 'react-slugify';
-import { RESUME } from '../../global/content/resume';
+import { RESUME } from '../../content/resume';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 

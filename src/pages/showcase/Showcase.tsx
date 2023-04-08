@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link, Navigate, useParams }  from 'react-router-dom';
 import slugify from 'react-slugify';
 import { Link as AutoScroll } from 'react-scroll';
-import ReactMarkdown from 'react-markdown';
-import { SHOWCASES } from '../../global/content/showcases';
+import { marked } from 'marked';
+import { SHOWCASES } from '../../content/showcases';
 import { usePageTitleEffect } from '../../global/hooks';
 import { useIframeApi } from '../../components/video/video.hooks';
 import Details from '../../components/details/Details';
@@ -68,9 +68,7 @@ function Showcase() {
             </div>
           }
           <div className="mm-showcase__description">
-              <ReactMarkdown>
-                {showcase.description.content}
-              </ReactMarkdown>
+              <div dangerouslySetInnerHTML={{__html: marked(showcase.description.content)}} />
           </div>
         </div>
       </section>

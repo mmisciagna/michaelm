@@ -4,8 +4,8 @@ import slugify from 'react-slugify';
 import Header from '../../components/header/Header';
 import { GlobalString } from '../../global/constants';
 import { usePageTitleEffect, useInViewRef, useSetAnimateClassName } from '../../global/hooks';
-import { INTRO } from '../../global/content/intro';
-import { RESUME } from '../../global/content/resume';
+import { INTRO } from '../../content/intro';
+import { RESUME } from '../../content/resume';
 import { Resume } from '../../components/resume/resume';
 
 

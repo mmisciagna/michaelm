@@ -23,4 +23,4 @@ button::after {
 }
 ```
 
-Whatch this [Shorts video](https://youtu.be/XU2MxPWbvGM) on YouTube.
+Whatch this <a href="https://youtu.be/XU2MxPWbvGM" target="_blank" rel="noopener noreferrer">Shorts video</a> on YouTube.

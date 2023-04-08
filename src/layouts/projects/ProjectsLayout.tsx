@@ -1,5 +1,5 @@
 import React from 'react';
-import { SHOWCASES } from '../../global/content/showcases';
+import { SHOWCASES } from '../../content/showcases';
 import { Link, Outlet, useParams } from 'react-router-dom';
 import slugify from 'react-slugify';
 import { GlobalString } from '../../global/constants';
