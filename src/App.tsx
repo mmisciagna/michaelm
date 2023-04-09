@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import About from './pages/about/About';
 import Projects from './pages/projects/Projects';
 import ProjectsLayout from './layouts/projects/ProjectsLayout';
+import TidbitsLayout from './layouts/tidbits/TidbitsLayout';
 import Showcase from './pages/showcase/Showcase';
 import Contact from './pages/contact/Contact';
 import Tidbits from './pages/tidbits/Tidbits';
@@ -29,7 +30,10 @@ function App() {
             <Route path=":id" element={<Showcase />} />
           </Route>
           {/* Tidbits */}
-          <Route path="/tidbits" element={<Tidbits />} />
+          <Route path="/tidbits" element={<TidbitsLayout />}>
+            <Route index element={<Tidbits />} />
+            <Route path=":index" element={<Tidbits />} />
+          </Route>
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
           {/* 404 */}
