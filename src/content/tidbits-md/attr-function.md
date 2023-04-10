@@ -1,4 +1,5 @@
 ---
+date: 4/7/2023
 title: Why didn't I know about CSS `attr()` function sooner!?
 tags:
   - CSS

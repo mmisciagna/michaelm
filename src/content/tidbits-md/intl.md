@@ -1,4 +1,5 @@
 ---
+date: 4/6/2023
 title: Get in the habit if using `Intl()`
 tags:
   - JS

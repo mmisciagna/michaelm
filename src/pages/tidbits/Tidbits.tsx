@@ -5,8 +5,6 @@ import { marked } from 'marked';
 import { useInViewRef, useSetAnimateClassName, usePageTitleEffect } from '../../global/hooks';
 
 
-const date = '4/7/2023';
-
 function shouldRenderTidbit(tags: string[], selectedTags: Set<string>): boolean {
   for (const tag of tags) {
     if (selectedTags.has(tag.toLowerCase())) {
@@ -100,9 +98,6 @@ function Tidbits() {
     <div className="mm-tidbits">
       <section className="mm-section">
         <h1>Tidbits</h1>
-        <div className="mm-tidbits__metadata">
-          <p>Last updated: {date}</p>
-        </div>
         <p>
           If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. These are random tidbits that I came up with myself or ran across online and found interesting.
         </p>
@@ -137,6 +132,9 @@ function Tidbits() {
                           return <li key={tag.toLowerCase()}>{tag}</li>
                         })}
                       </ul>
+                      <div className="mm-tidbits__metadata">
+                        <p style={{margin: 'unset'}}>{data.date}</p>
+                      </div>
                       <h2>
                         <ReactMarkdown>{data.title}</ReactMarkdown>
                       </h2>
