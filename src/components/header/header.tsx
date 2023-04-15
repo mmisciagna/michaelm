@@ -10,12 +10,15 @@ function Header() {
   const pathname = location.pathname;
 
   useEffect(() => {
-    if (pathname === '/') return;
-
     let lastScrollPosition = 0;
 
     const handleSlideAway = () => {
       const currentScrollPosition = window.pageYOffset;
+      const headerOffsetTop = headerRef.current!.offsetTop;
+
+      // Checks if the element is at the top of the page.
+      // Do nothing if it's not.
+      if (currentScrollPosition !== headerOffsetTop) return;
 
       headerRef.current!.classList.toggle('mm-header--slide-away',
           currentScrollPosition > lastScrollPosition);
