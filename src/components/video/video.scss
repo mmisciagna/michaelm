@@ -6,6 +6,8 @@
   &__player,
   &__placeholder {
     background: var(--color-primary-shade);
+    border-radius: 10px;
+    overflow: hidden;
     padding-bottom: calc(100% * (9 / 16));
     position: relative;
     width: 100%;
@@ -28,7 +30,7 @@
     background-size: cover;
     opacity: 1;
     position: relative;
-    transition: opacity var(--medium-speed-ease);
+    transition: opacity var(--slow-speed-ease);
 
     &.active {
       opacity: 0;
@@ -58,12 +60,12 @@
     text-transform: uppercase;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: background var(--default-speed-ease);
+    transition: background var(--fast-speed-ease);
     width: 50%;
 
     svg {
       fill: rgba(255, 255, 255, .7);
-      transition: fill var(--default-speed-ease);
+      transition: fill var(--fast-speed-ease);
       width: 48px;
 
       @include ipad-portrait-up {

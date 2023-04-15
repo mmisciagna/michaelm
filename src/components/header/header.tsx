@@ -1,13 +1,38 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { GlobalString } from '../../global/constants';
 import Nav from '../nav/Nav';
 
 
 function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (pathname === '/') return;
+
+    let lastScrollPosition = 0;
+
+    const handleSlideAway = () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      headerRef.current!.classList.toggle('mm-header--slide-away',
+          currentScrollPosition > lastScrollPosition);
+
+      lastScrollPosition = currentScrollPosition;
+    };
+
+    window.addEventListener('scroll', handleSlideAway);
+
+    return () => {
+      window.removeEventListener('scroll', handleSlideAway);
+    };
+  }, []);
+
   return (
     <>
-      <header className="mm-header">
+      <header className="mm-header" ref={headerRef}>
         <div className="mm-header__branding">
           <NavLink to={`/`}
               aria-label='Home'>

@@ -102,7 +102,7 @@
         color: var(--color-accent);
         display: block;
         padding: calc(var(--base-unit) / 2) var(--base-unit);
-        transition: var(--default-speed-ease) color;
+        transition: var(--fast-speed-ease) color;
 
         @include tablet-up {
           background: unset;

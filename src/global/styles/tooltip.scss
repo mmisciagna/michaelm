@@ -29,7 +29,7 @@
     pointer-events: none;
     position: absolute;
     right: 0;
-    transition: var(--default-speed-ease) opacity;
+    transition: var(--fast-speed-ease) opacity;
     white-space: normal;
 
     [theme='dark'] & {

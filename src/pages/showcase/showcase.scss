@@ -81,7 +81,7 @@
   &__pagination-grid-icon {
     fill: var(--color-accent);
     line-height: 1;
-    transition: fill var(--default-speed-ease);
+    transition: fill var(--fast-speed-ease);
     width: 40px;
 
     &:hover {

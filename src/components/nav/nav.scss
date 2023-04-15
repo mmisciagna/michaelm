@@ -9,7 +9,7 @@
     font-size: 12px;
     margin: 0 8px;
     position: relative;
-    transition: color var(--default-speed-ease);
+    transition: color var(--fast-speed-ease);
 
     @include ipad-portrait-up {
       font-size: inherit;
@@ -23,7 +23,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      transition: width var(--default-speed-ease);
+      transition: width var(--fast-speed-ease);
       width: 0;
 
       [theme='dark'] & {

@@ -10,11 +10,16 @@
   letter-spacing: 1px;
   position: sticky;
   top: 0;
+  transition: transform var(--medium-speed-ease) .3s;
   z-index: 100;
 
   @include tablet-up {
     flex-direction: row;
     height: var(--header-height);
+  }
+
+  &--slide-away {
+    transform: translateY(-100%);
   }
 
   &__branding {

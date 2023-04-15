@@ -84,8 +84,8 @@
     position: absolute;
     top: 0;
     transition:
-      var(--default-speed-ease) clip-path,
-      var(--default-speed-ease) opacity;
+      var(--fast-speed-ease) clip-path,
+      var(--fast-speed-ease) opacity;
     width: 100%;
 
     [theme='dark'] & {

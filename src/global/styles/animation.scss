@@ -1,12 +1,13 @@
 :root {
-  --default-speed-ease: .2s ease-in-out;
-  --medium-speed-ease: .5s ease-in-out;
+  --fast-speed-ease: .2s ease-in-out;
+  --medium-speed-ease: .3s ease-in-out;
+  --slow-speed-ease: .5s ease-in-out;
 }
 
 .mm-animate {
   opacity: 0;
   transform: translateY(var(--base-unit));
-  transition: var(--medium-speed-ease) opacity, var(--medium-speed-ease) transform;
+  transition: var(--slow-speed-ease) opacity, var(--slow-speed-ease) transform;
 
   &--in {
     opacity: 1;

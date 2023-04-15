@@ -68,9 +68,9 @@
   text-align: center;
   text-transform: uppercase;
   transition:
-    var(--default-speed-ease) background,
-    var(--default-speed-ease) border-color,
-    var(--default-speed-ease) color;
+    var(--fast-speed-ease) background,
+    var(--fast-speed-ease) border-color,
+    var(--fast-speed-ease) color;
 
   &:hover {
     background: var(--color-accent);
