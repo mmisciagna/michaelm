@@ -1,13 +1,29 @@
 .mm-contact {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 80vh;
+  @include ipad-landscape-up {
+    display: flex;
+    min-height: calc(100dvh - var(--header-height) - var(--footer-height));
+  }
 
   .mm-section {
-    width: 100%;
+    margin-bottom: unset;
+
+    @include ipad-landscape-up {
+      margin-top: unset;
+      max-width: 720px;
+      padding-top: var(--main-padding-y);
+      width: 50%;
+
+      &--full-bleed {
+        flex: 1;
+        margin-left: unset;
+        max-width: unset;
+        width: unset;
+
+        .mm-section__inner {
+          margin: unset;
+        }
+      }
+    }
   }
 
   &__form-wrapper {
@@ -15,7 +31,7 @@
     flex-direction: column;
 
     @include ipad-landscape-up {
-      flex-direction: row-reverse;
+      flex-direction: row;
     }
   }
 
@@ -25,7 +41,7 @@
     }
 
     @include ipad-landscape-up {
-      padding-left: 48px;
+      padding-right: 48px;
 
       p {
         margin-top: 1em;
@@ -49,13 +65,11 @@
   &__form {
     background: var(--color-primary);
     color: var(--color-secondary);
-    padding: var(--main-padding-y) var(--main-padding-x);
-    margin: 0 auto;
     width: 100%;
 
     @include ipad-landscape-up {
+      flex: 1;
       max-width: 600px;
-      min-width: 50%;
     }
 
     input,

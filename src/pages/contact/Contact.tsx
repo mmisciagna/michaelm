@@ -38,19 +38,21 @@ function Contact() {
   return (
     <div className="mm-contact">
       <section className="mm-section">
-        <div className="mm-contact__form-wrapper">
-          <div className="mm-contact__message">
-            <h1>Drop a note</h1>
-            <p>
-              I am thrilled that you have taken the time to visit and would love to hear from you. Whether you have a question, comment, or just want to say hello, please feel free to get in touch using the contact form provided.
-            </p>
-            <div style={{display: 'none'}} ref={successRef} className="mm-contact__submit-message mm-contact__submit-message--success">
-              Thank you for your interest! I'll try my best to respond as promptly as possible.
-            </div>
-            <div style={{display: 'none'}} ref={errorRef} className="mm-contact__submit-message mm-contact__submit-message--error">
-              There was an error sending your message! Please try again.
-            </div>
+        <div className="mm-contact__message">
+          <h1>Drop a note</h1>
+          <p>
+            I am thrilled that you have taken the time to visit and would love to hear from you. Whether you have a question, comment, or just want to say hello, please feel free to get in touch using the contact form provided.
+          </p>
+          <div style={{display: 'none'}} ref={successRef} className="mm-contact__submit-message mm-contact__submit-message--success">
+            Thank you for your interest! I'll try my best to respond as promptly as possible.
           </div>
+          <div style={{display: 'none'}} ref={errorRef} className="mm-contact__submit-message mm-contact__submit-message--error">
+            There was an error sending your message! Please try again.
+          </div>
+        </div>
+      </section>
+      <section className="mm-section mm-section--full-bleed">
+        <div className="mm-section__inner">
           <form className="mm-contact__form" ref={formRef} onSubmit={sendEmail}>
             <div className="mm-contact__form-field">
               <label htmlFor="user_name">Name</label>
