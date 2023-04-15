@@ -5,12 +5,12 @@ export const RESUME = [
       {
         header: 'Google, YouTube, Alphabet',
         ancillaryHeader: 'UX Engineer',
-        dates: 'Aug 2012 - Jan 2023, San Francisco Bay Area',
+        dates: 'Aug 2012 - Mar 2023, San Francisco Bay Area',
         details: [
           {
             subhead: 'Engineering Excellence',
             description: [
-              `Responsible for building and maintaining all of YouTube's marketing websites, totaling 50+ million of monthly users. All were built with accessibility (i.e. a11y) in mind and were responsible for millions of dollars of conversions.`,
+              `Responsible for building and maintaining all of YouTube's off-site websites, totaling 50+ million of monthly users. All were built with accessibility (i.e. a11y) in mind and were responsible for millions of dollars of conversions.`,
             ],
           },
           {
@@ -29,7 +29,7 @@ export const RESUME = [
           {
             subhead: 'Coordinated',
             description: [
-              `Worked with both external agencies and internal marketing managers across different time zones to review designs and optimize project timelines and results`,
+              `Worked with both external agencies and internal project managers across different time zones to review designs and optimize project timelines and results`,
             ],
           },
         ],
