@@ -6,8 +6,10 @@ import AttrFunction from './tidbits-md/attr-function.md';
 import UniqueReactKeys from './tidbits-md/unique-react-keys.md';
 import MemoCosts from './tidbits-md/memo-costs.md';
 import NotFocusVisible from './tidbits-md/not-focus-visible.md';
+import InheritanceVsComposition from './tidbits-md/inheritance-vs-composition.md';
 
 export const TIDBITS = [
+  InheritanceVsComposition,
   NotFocusVisible,
   MemoCosts,
   UniqueReactKeys,

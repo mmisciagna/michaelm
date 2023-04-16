@@ -1,13 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { GlobalString } from '../../global/constants';
 import Nav from '../nav/Nav';
 
 
 function Header() {
   const headerRef = useRef<HTMLElement>(null);
-  const location = useLocation();
-  const pathname = location.pathname;
 
   useEffect(() => {
     let lastScrollPosition = 0;
