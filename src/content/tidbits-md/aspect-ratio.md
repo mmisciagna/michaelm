@@ -26,3 +26,9 @@ For instance, whenever I wanted to embed a video I would write:
 There's now a CSS property called `aspect-ratio` that does all of the mixin stuff for us. So instead of including a mixin I can simply write `aspect-ratio: 16 / 9` and get rid of the mixin altogether.
 
 It's <a href="https://caniuse.com/?search=aspect-ratio" target="_blank" rel="noopener noreferrer">well supported</a> by all major browsers too.
+
+**Demo**
+
+<div style="aspect-ratio: 16 / 9; background: cornflowerblue; display: flex; align-items: center; justify-content: center; font-size: 3em; font-weight: 700; font-family: var(--font-stack-mono);">
+  16:9
+</div>
