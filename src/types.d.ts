@@ -11,4 +11,15 @@ interface Showcase {
   videoStart?: string;
 }
 
+interface Tidbit {
+  content: string,
+  data: {
+    date: string,
+    tags: string[],
+    title: string,
+  },
+  excerpt: string,
+  isEmpty: boolean,
+}
+
 declare module '*.md';

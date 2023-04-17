@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, useParams } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import About from './pages/about/About';
@@ -14,8 +14,11 @@ import NotFound from './pages/404';
 
 function App() {
   const location = useLocation();
+  const pathParts = location.pathname.split('/');
 
-  window.scrollTo(0, 0);
+  if (!pathParts[2] || pathParts[1] !== 'tidbits') {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <>

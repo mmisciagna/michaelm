@@ -59,6 +59,7 @@
   background: transparent;
   border: 2px solid var(--color-accent);
   color: var(--color-accent);
+  display: inline-block;
   font-family: var(--font-stack-display);
   font-size: 12px;
   font-weight: 700;
@@ -82,7 +83,7 @@
   }
 
   &--secondary {
-    border-color: rgba(255, 255, 255, .1);
+    border-color: var(--color-white-10);
     color: var(--color-secondary);
 
     [theme='dark'] & {
@@ -90,14 +91,14 @@
     }
 
     &:hover {
-      background: rgba(255, 255, 255, .1);
+      background: var(--color-white-10);
     }
   }
 
   &.disabled,
   &[disabled] {
-    border-color: rgba(255, 255, 255, .25);
-    color: rgba(255, 255, 255, .25);
+    border-color: var(--color-white-25);
+    color: var(--color-white-25);
     pointer-events: none;
   }
 }

@@ -2,7 +2,6 @@
   // Main pallete
   --color-primary: #2e3743;
   --color-primary-shade: #000;
-  --color-primary-90: rgba(46, 55, 67, .9);
   --color-secondary: #fff9f2;
   --color-font: var(--color-primary);
 
@@ -10,7 +9,14 @@
   --color-accent: #cd7f32;
 
   // Backgrounds
-  --color-background: #fff;
+
+  // Alphas
+  --color-primary-90: rgba(46, 55, 67, .9);
+  --color-white-70: rgba(255, 255, 255, .7);
+  --color-white-50: rgba(255, 255, 255, .5);
+  --color-white-25: rgba(255, 255, 255, .25);
+  --color-white-10: rgba(255, 255, 255, .1);
+  --color-black-25: rgba(0, 0, 0, .25);
 }
 
 [theme='dark'] {

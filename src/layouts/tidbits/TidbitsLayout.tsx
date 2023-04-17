@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { TIDBITS } from '../../content/tidbits';
+import { usePageTitleEffect } from '../../global/hooks';
 
 
-function useGetAllPossibleTags(setState: any) {
+/**
+ * Loops through all tidbits and their tags to set all possible filters and
+ * tag labels.
+ */
+function useGetAllPossibleTags(
+  setState: React.Dispatch<React.SetStateAction<Set<string>>>,
+) {
   useEffect(() => {
     const allPossibleTags: string[] = [];
 
     for (const tidbit of TIDBITS) {
-      for (const tag of tidbit.data.tags) {
+      for (const tag of (tidbit as Tidbit).data.tags) {
         allPossibleTags.push(tag);
       }
     }
@@ -17,12 +24,13 @@ function useGetAllPossibleTags(setState: any) {
   }, []);
 }
 
-interface FitlerTagsProps {
+/**
+ * Renders the filter tags and sets the selected tags when they are clicked.
+ */
+function FilterTags({selectedTags, setSelectedTags}: {
   selectedTags: Set<string>;
-  setSelectedTags: any;
-}
-
-function FilterTags({selectedTags, setSelectedTags}: FitlerTagsProps) {
+  setSelectedTags:  React.Dispatch<React.SetStateAction<Set<string>>>;
+}) {
   const [possibleTags, setPossibleTags] = useState<Set<string>>(new Set());
 
   useGetAllPossibleTags(setPossibleTags);
@@ -63,8 +71,13 @@ function FilterTags({selectedTags, setSelectedTags}: FitlerTagsProps) {
   )
 }
 
+/**
+ * Renders the hero and filter tags of the tidbits page.
+ */
 function TidbitLayout() {
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+
+  usePageTitleEffect('Tidbits');
 
   return (
     <>
