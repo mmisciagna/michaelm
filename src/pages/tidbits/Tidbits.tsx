@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useOutletContext, useParams, useNavigate, NavLink, Link }  from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { marked } from 'marked';
-import { Link as AutoScroll } from 'react-scroll';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
@@ -87,9 +86,10 @@ function useStructuredTidbits({
 /**
  * Creates the pagination with the given tidbits.
  */
-function TidbitPagination({tidbits, index}: {
+function TidbitPagination({tidbits, index, container}: {
   tidbits: Tidbit[][],
   index: number,
+  container: HTMLElement,
 }) {
 
   return (
@@ -101,15 +101,11 @@ function TidbitPagination({tidbits, index}: {
       <p className="mm-tidbits__pagination-pages">
         {tidbits.map((tidbitGroup: Tidbit[], i: number) => {
           return (
-            <AutoScroll to="tidbits"
-                smooth={true}
-                offset={-96}
-                duration={750}>
-              <NavLink key={tidbitGroup[0].data.title}
-                  to={`/tidbits/${i + 1}`}>
-                {i + 1}
-              </NavLink>
-            </AutoScroll>
+            <NavLink key={tidbitGroup[0].data.title}
+                to={`/tidbits/${i + 1}`}
+                onClick={() => container.scrollIntoView({behavior: 'smooth'})}>
+              {i + 1}
+            </NavLink>
           )
         })}
       </p>
@@ -134,6 +130,7 @@ function Tidbits() {
   const [tidbitsCount, setTidbitsCount] = useState(() => tidbits.length);
   const {index} = useParams();
   const tidbitsIndex = parseInt(index || '1') - 1;
+  const tidbitsContainerRef = useRef(null);
 
   useStructuredTidbits({
     tidbits,
@@ -143,7 +140,7 @@ function Tidbits() {
   });
 
   return (
-    <div className="mm-tidbits" id="tidbits">
+    <div className="mm-tidbits" ref={tidbitsContainerRef}>
       <section className="mm-section" style={{
         marginBottom: 'unset',
         marginTop: 'unset',
@@ -158,7 +155,7 @@ function Tidbits() {
       }}>
         <div className="mm-section__inner">
           <div className="mm-tidbits__metadata">
-            <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} />
+            <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
           </div>
           <div className="mm-tidbits__content">
             {sortedTidbits.length && sortedTidbits[tidbitsIndex].map((tidbit: Tidbit) => {
@@ -191,7 +188,7 @@ function Tidbits() {
             })}
           </div>
           <div className="mm-tidbits__metadata">
-            <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} />
+            <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
           </div>
         </div>
       </section>
