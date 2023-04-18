@@ -104,7 +104,7 @@ function TidbitPagination({tidbits, index}: {
             <AutoScroll to="tidbits"
                 smooth={true}
                 offset={-96}
-                duration={500}>
+                duration={750}>
               <NavLink key={tidbitGroup[0].data.title}
                   to={`/tidbits/${i + 1}`}>
                 {i + 1}
@@ -144,14 +144,20 @@ function Tidbits() {
 
   return (
     <div className="mm-tidbits" id="tidbits">
+      <section className="mm-section" style={{
+        marginBottom: 'unset',
+        marginTop: 'unset',
+      }}>
+        <p className="mm-tidbits__count">
+          Viewing {tidbitsCount} / {tidbits.length}
+        </p>
+      </section>
       <section className="mm-section mm-section--full-bleed" style={{
         marginBottom: 'unset',
+        marginTop: 'unset',
       }}>
         <div className="mm-section__inner">
           <div className="mm-tidbits__metadata">
-            {/* <div style={{textAlign: 'center', fontSize: '12px'}}>
-              Viewing {tidbitsCount} / {tidbits.length}
-            </div> */}
             <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} />
           </div>
           <div className="mm-tidbits__content">
@@ -186,9 +192,6 @@ function Tidbits() {
           </div>
           <div className="mm-tidbits__metadata">
             <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} />
-            {/* <div style={{textAlign: 'center', fontSize: '12px'}}>
-              Viewing {tidbitsCount} / {tidbits.length}
-            </div> */}
           </div>
         </div>
       </section>
