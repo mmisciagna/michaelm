@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useOutletContext, useParams, useNavigate, NavLink, Link }  from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { marked } from 'marked';
+import { Link as AutoScroll } from 'react-scroll';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
@@ -100,10 +101,15 @@ function TidbitPagination({tidbits, index}: {
       <p className="mm-tidbits__pagination-pages">
         {tidbits.map((tidbitGroup: Tidbit[], i: number) => {
           return (
-            <NavLink key={tidbitGroup[0].data.title}
-                to={`/tidbits/${i + 1}`}>
-              {i + 1}
-            </NavLink>
+            <AutoScroll to="tidbits"
+                smooth={true}
+                offset={-96}
+                duration={500}>
+              <NavLink key={tidbitGroup[0].data.title}
+                  to={`/tidbits/${i + 1}`}>
+                {i + 1}
+              </NavLink>
+            </AutoScroll>
           )
         })}
       </p>
@@ -129,10 +135,15 @@ function Tidbits() {
   const {index} = useParams();
   const tidbitsIndex = parseInt(index || '1') - 1;
 
-  useStructuredTidbits({tidbits, selectedTags, setSortedTidbits, setTidbitsCount});
+  useStructuredTidbits({
+    tidbits,
+    selectedTags,
+    setSortedTidbits,
+    setTidbitsCount,
+  });
 
   return (
-    <div className="mm-tidbits">
+    <div className="mm-tidbits" id="tidbits">
       <section className="mm-section mm-section--full-bleed" style={{
         marginBottom: 'unset',
       }}>
