@@ -17,11 +17,12 @@ function shouldRenderTidbit(
 ): boolean {
   for (const tag of tags) {
     if (selectedTags.has(tag.toLowerCase())) {
-      return true
+      return true;
     };
   }
   return false;
 }
+
 
 /**
  * Structures the tidbits into a shape that can be used with pagination and
@@ -93,9 +94,11 @@ function TidbitPagination({tidbits, index, container}: {
 }) {
 
   return (
+
     <div className="mm-tidbits__pagination">
       <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
-          to={`/tidbits/${index}`}>
+          to={`/tidbits/${index}`}
+          tabIndex={index === 0 ? -1 : 0}>
         Previous
       </Link>
       <p className="mm-tidbits__pagination-pages">
@@ -110,7 +113,8 @@ function TidbitPagination({tidbits, index, container}: {
         })}
       </p>
       <Link className={`mm-button ${index + 1 === tidbits.length ? 'disabled' : ''}`}
-          to={`/tidbits/${index + 2}`}>
+          to={`/tidbits/${index + 2}`}
+          tabIndex={index + 1 === tidbits.length ? -1 : 0}>
         Next
       </Link>
     </div>

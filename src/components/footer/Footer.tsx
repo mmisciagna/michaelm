@@ -12,7 +12,8 @@ function Footer() {
         <AutoScroll to="top"
             smooth={true}
             offset={-96}
-            duration={500}>
+            duration={500}
+            href="">
           Back to top
         </AutoScroll>
         |

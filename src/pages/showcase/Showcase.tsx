@@ -80,7 +80,8 @@ function Pagination({index}: {index: number}) {
   return (
     <div className="mm-showcase__pagination">
       <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
-          to={`/projects/${slugify(SHOWCASES[index - 1]?.title)}`}>
+          to={`/projects/${slugify(SHOWCASES[index - 1]?.title)}`}
+          tabIndex={index === 0 ? -1 : 0}>
         Previous
       </Link>
       <AutoScroll className="mm-showcase__pagination-grid-icon"
@@ -88,13 +89,15 @@ function Pagination({index}: {index: number}) {
           smooth={true}
           offset={-96}
           duration={500}
-          aria-label="Go to projects grid">
+          aria-label="Go to projects grid"
+          href="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
           <path d="M226 896q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 642q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 388q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Z"/>
         </svg>
       </AutoScroll>
       <Link className={`mm-button ${index + 1 === SHOWCASES.length ? 'disabled' : ''}`}
-          to={`/projects/${slugify(SHOWCASES[index + 1]?.title)}`}>
+          to={`/projects/${slugify(SHOWCASES[index + 1]?.title)}`}
+          tabIndex={index + 1 === SHOWCASES.length ? -1 : 0}>
         Next
       </Link>
     </div>
