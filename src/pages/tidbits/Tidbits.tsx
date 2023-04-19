@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useOutletContext, useParams, useNavigate, NavLink, Link }  from 'react-router-dom';
+import { useOutletContext, useParams, useNavigate, NavLink, Link, Navigate }  from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { marked } from 'marked';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
+
+type StructuredTidbits = Tidbit[][];
 
 const TIDBITS_PER_PAGE = 3;
 
@@ -31,15 +33,14 @@ function shouldRenderTidbit(
 function useStructuredTidbits({
   tidbits,
   selectedTags,
-  setSortedTidbits,
+  setStructuredTidbits,
   setTidbitsCount
 }: {
   tidbits: Tidbit[],
   selectedTags: Set<string>,
-  setSortedTidbits: React.Dispatch<React.SetStateAction<Tidbit[][]>>,
+  setStructuredTidbits: React.Dispatch<React.SetStateAction<StructuredTidbits>>,
   setTidbitsCount: React.Dispatch<React.SetStateAction<number>>,
 }) {
-
   const navigate = useNavigate();
 
   // Redirects to first tidbits page.
@@ -72,14 +73,14 @@ function useStructuredTidbits({
     // nested arrays depends on how many tidbits per page we want.
     // Ex. for 2 tidbits per page:
     //     [ [0, 1], [2, 3], ... ]
-    const STRUCTURED_TIDBITS: Tidbit[][] = [];
+    const STRUCTURED_TIDBITS: StructuredTidbits = [];
 
     while (PARED_TIDBITS.length > 0) {
       STRUCTURED_TIDBITS.push(PARED_TIDBITS.splice(0, TIDBITS_PER_PAGE));
     }
 
     // Set sorted tidbits and counts
-    setSortedTidbits(STRUCTURED_TIDBITS);
+    setStructuredTidbits(STRUCTURED_TIDBITS);
     setTidbitsCount(count);
   }, [selectedTags]);
 }
@@ -88,13 +89,11 @@ function useStructuredTidbits({
  * Creates the pagination with the given tidbits.
  */
 function TidbitPagination({tidbits, index, container}: {
-  tidbits: Tidbit[][],
+  tidbits: StructuredTidbits,
   index: number,
   container: HTMLElement,
 }) {
-
   return (
-
     <div className="mm-tidbits__pagination">
       <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
           to={`/tidbits/${index}`}
@@ -130,7 +129,10 @@ function Tidbits() {
     tidbits: Tidbit[],
   };
 
-  const [sortedTidbits, setSortedTidbits] = useState<Tidbit[][]>([]);
+  const [
+    structuredTidbits,
+    setStructuredTidbits,
+  ] = useState<StructuredTidbits>([]);
   const [tidbitsCount, setTidbitsCount] = useState(() => tidbits.length);
   const {index} = useParams();
   const tidbitsIndex = parseInt(index || '1') - 1;
@@ -139,9 +141,11 @@ function Tidbits() {
   useStructuredTidbits({
     tidbits,
     selectedTags,
-    setSortedTidbits,
+    setStructuredTidbits,
     setTidbitsCount,
   });
+
+  const tidbitToRender: Tidbit[] = structuredTidbits[tidbitsIndex];
 
   return (
     <div className="mm-tidbits" ref={tidbitsContainerRef}>
@@ -150,7 +154,7 @@ function Tidbits() {
         marginTop: 'unset',
       }}>
         <p className="mm-tidbits__count">
-          Viewing {tidbitsCount} / {tidbits.length}
+          Viewing {tidbitsCount} / {tidbits.length}<br />
         </p>
       </section>
       <section className="mm-section mm-section--full-bleed" style={{
@@ -159,10 +163,10 @@ function Tidbits() {
       }}>
         <div className="mm-section__inner">
           <div className="mm-tidbits__metadata">
-            <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
+            <TidbitPagination tidbits={structuredTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
           </div>
           <div className="mm-tidbits__content">
-            {sortedTidbits.length && sortedTidbits[tidbitsIndex].map((tidbit: Tidbit) => {
+            {tidbitToRender ? tidbitToRender.map((tidbit: Tidbit) => {
               const {data, content} = tidbit;
               const markedConent = marked(content);
               // const setRefs = useInViewRef();
@@ -189,10 +193,12 @@ function Tidbits() {
                   </div>
                 </React.Fragment>
               )
-            })}
+            }) :
+            <Navigate to={`/tidbits/${parseInt(index!) < 1 ? '1' : structuredTidbits.length.toString()}`}
+                replace={true} />}
           </div>
           <div className="mm-tidbits__metadata">
-            <TidbitPagination tidbits={sortedTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
+            <TidbitPagination tidbits={structuredTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
           </div>
         </div>
       </section>
