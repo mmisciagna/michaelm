@@ -1,5 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useOutletContext, useParams, useNavigate, NavLink, Link, Navigate }  from 'react-router-dom';
+import {
+  useOutletContext,
+  useParams,
+  useNavigate,
+  NavLink,
+  Link,
+  Navigate,
+}  from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { marked } from 'marked';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
@@ -51,6 +58,7 @@ function useStructuredTidbits({
   useEffect(() => {
     // TODO: Make it so you can deeplink to a specific pageindex on load.
     redirectToFirstTidbitsPage();
+
     let count = 0;
 
     // Adds tidbits matching any selected tags to a new array.
@@ -60,8 +68,7 @@ function useStructuredTidbits({
       const tags = tidbit.data.tags;
 
       const doRenderTidbit =
-          selectedTags.size === 0 ||
-          shouldRenderTidbit(tags, selectedTags);
+          selectedTags.size === 0 || shouldRenderTidbit(tags, selectedTags);
 
       if (doRenderTidbit) {
         PARED_TIDBITS.push(tidbit);
@@ -79,7 +86,7 @@ function useStructuredTidbits({
       STRUCTURED_TIDBITS.push(PARED_TIDBITS.splice(0, TIDBITS_PER_PAGE));
     }
 
-    // Set sorted tidbits and counts
+    // Set structured tidbits and counts
     setStructuredTidbits(STRUCTURED_TIDBITS);
     setTidbitsCount(count);
   }, [selectedTags]);
@@ -133,10 +140,12 @@ function Tidbits() {
     structuredTidbits,
     setStructuredTidbits,
   ] = useState<StructuredTidbits>([]);
-  const [tidbitsCount, setTidbitsCount] = useState(() => tidbits.length);
+
+  const [tidbitsCount, setTidbitsCount] = useState(tidbits.length);
   const {index} = useParams();
   const tidbitsIndex = parseInt(index || '1') - 1;
   const tidbitsContainerRef = useRef(null);
+  const tidbitToRender: Tidbit[] = structuredTidbits[tidbitsIndex];
 
   useStructuredTidbits({
     tidbits,
@@ -145,8 +154,6 @@ function Tidbits() {
     setTidbitsCount,
   });
 
-  const tidbitToRender: Tidbit[] = structuredTidbits[tidbitsIndex];
-
   return (
     <div className="mm-tidbits" ref={tidbitsContainerRef}>
       <section className="mm-section" style={{
@@ -154,7 +161,7 @@ function Tidbits() {
         marginTop: 'unset',
       }}>
         <p className="mm-tidbits__count">
-          Viewing {tidbitsCount} / {tidbits.length}<br />
+          Viewing {tidbitsCount} / {tidbits.length}
         </p>
       </section>
       <section className="mm-section mm-section--full-bleed" style={{
@@ -163,13 +170,16 @@ function Tidbits() {
       }}>
         <div className="mm-section__inner">
           <div className="mm-tidbits__metadata">
-            <TidbitPagination tidbits={structuredTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
+            <TidbitPagination
+                tidbits={structuredTidbits}
+                index={tidbitsIndex}
+                container={tidbitsContainerRef.current!} />
           </div>
           <div className="mm-tidbits__content">
-            {tidbitToRender ? tidbitToRender.map((tidbit: Tidbit) => {
+            {tidbitToRender != null ? tidbitToRender.map((tidbit: Tidbit) => {
+              // const setRefs = useInViewRef();
               const {data, content} = tidbit;
               const markedConent = marked(content);
-              // const setRefs = useInViewRef();
 
               return (
                 <React.Fragment key={data.title.toLowerCase()}>
@@ -184,10 +194,14 @@ function Tidbits() {
                       })}
                     </ul>
                     <div className="mm-tidbits__metadata">
-                      <p style={{margin: 'unset'}}>{data.date}</p>
+                      <p style={{margin: 'unset'}}>
+                        {data.date}
+                      </p>
                     </div>
                     <h2>
-                      <ReactMarkdown>{data.title}</ReactMarkdown>
+                      <ReactMarkdown>
+                        {data.title}
+                      </ReactMarkdown>
                     </h2>
                     <div dangerouslySetInnerHTML={{__html: markedConent}} />
                   </div>
@@ -198,7 +212,10 @@ function Tidbits() {
                 replace={true} />}
           </div>
           <div className="mm-tidbits__metadata">
-            <TidbitPagination tidbits={structuredTidbits} index={tidbitsIndex} container={tidbitsContainerRef.current!}/>
+            <TidbitPagination
+                tidbits={structuredTidbits}
+                index={tidbitsIndex}
+                container={tidbitsContainerRef.current!} />
           </div>
         </div>
       </section>

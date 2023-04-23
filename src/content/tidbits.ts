@@ -8,8 +8,13 @@ import MemoCosts from './tidbits-md/memo-costs.md';
 import NotFocusVisible from './tidbits-md/not-focus-visible.md';
 import InheritanceVsComposition from './tidbits-md/inheritance-vs-composition.md';
 import AspectRatio from './tidbits-md/aspect-ratio.md';
+import ContainerMediaQuery from './tidbits-md/container-media-query.md';
+import ParentSelector from './tidbits-md/parent-selector.md';
+
 
 export const TIDBITS = [
+  ParentSelector,
+  ContainerMediaQuery,
   AspectRatio,
   InheritanceVsComposition,
   NotFocusVisible,

@@ -4,7 +4,7 @@ import slugify from 'react-slugify';
 import { Link as AutoScroll } from 'react-scroll';
 import { marked } from 'marked';
 import { SHOWCASES } from '../../content/showcases';
-import { usePageTitleEffect } from '../../global/hooks';
+import { useSeoData } from '../../global/hooks';
 import { useIframeApi } from '../../components/video/video.hooks';
 import Details from '../../components/details/Details';
 import Video from '../../components/video/Video';
@@ -23,7 +23,11 @@ function Showcase() {
   const [ytReady, setYTReady] = useState(window.YT !== undefined);
 
   // Updates page title.
-  usePageTitleEffect(showcase.title, [showcase.title]);
+  useSeoData(
+    showcase.title,
+    `projects/${slugify(showcase.title)}`,
+    [showcase.title]
+  );
 
   // Loads YT Iframe API, if not present already.
   useIframeApi(ytReady).then(() => {

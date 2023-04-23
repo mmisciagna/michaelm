@@ -1,9 +1,9 @@
 import React from 'react';
-import { usePageTitleEffect } from '../../global/hooks';
+import { useSeoData } from '../../global/hooks';
 
 
 function Projects() {
-  usePageTitleEffect('Projects');
+  useSeoData('Projects', 'projects');
 
   return (
     <div className="mm-projects">

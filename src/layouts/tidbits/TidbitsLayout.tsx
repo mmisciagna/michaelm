@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { TIDBITS } from '../../content/tidbits';
-import { usePageTitleEffect } from '../../global/hooks';
+import { useSeoData } from '../../global/hooks';
 
 
 /**
@@ -77,7 +77,7 @@ function FilterTags({selectedTags, setSelectedTags}: {
 function TidbitLayout() {
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
-  usePageTitleEffect('Tidbits');
+  useSeoData('Tidbits', 'tidbits');
 
   return (
     <>

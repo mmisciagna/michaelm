@@ -9,4 +9,6 @@ Sometimes you want the current view to take up the entire viewport. The simple w
 
 What's the better solution? Use `100dvh` instead, which _does_ take mobile UI element elements into account. Now your view will never be cutoff. It's <a href="https://caniuse.com/?search=dvh" target="_blank" rel="noopener noreferrer">almost universally supported</a>.
 
-This <a href="https://www.youtube.com/watch?v=iOKPupWYGgs" target="_blank" rel="noopener noreferrer">YouTube video</a> explains it pretty well.
+This YouTube video explains it pretty well:
+
+<iframe src="https://www.youtube.com/embed/iOKPupWYGgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

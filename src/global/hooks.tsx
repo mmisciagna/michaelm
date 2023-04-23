@@ -2,14 +2,28 @@ import { useCallback, useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { GlobalString } from './constants';
 
-export const usePageTitleEffect = (pageTitle: string, props: any[] = []) => {
+export const useSeoData = (
+  pageTitle: string,
+  path: string = '',
+  props: any[] = [],
+) => {
   return useEffect(() => {
     document.title = `${pageTitle} - ${GlobalString.PRONUNCIATION}`;
+
+    const existingCanonicalLink = document.querySelector('[rel="canonical"]');
+    existingCanonicalLink?.remove();
+
+    const canonicalLink = document.createElement('link');
+    canonicalLink.setAttribute('rel', 'canonical');
+    canonicalLink.setAttribute('href', `https://michaelm.com/${path}`);
+
+    const head = document.querySelector('head')!;
+    head.appendChild(canonicalLink);
   }, props);
 };
 
-export const useInViewRef = () => {
-  const ref = useRef();
+export const useInViewRef = (r?: any) => {
+  const ref = r || useRef();
 
   const {ref: inViewRef, inView} = useInView({
     triggerOnce: true,

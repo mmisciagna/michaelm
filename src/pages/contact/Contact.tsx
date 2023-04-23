@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { usePageTitleEffect } from '../../global/hooks';
+import { useSeoData } from '../../global/hooks';
 
 function Contact() {
   const formRef = useRef(null);
@@ -8,7 +8,7 @@ function Contact() {
   const errorRef = useRef(null);
   const submitBtnRef = useRef(null);
 
-  usePageTitleEffect('Contact');
+  useSeoData('Contact', 'contact');
 
   const toggleMessage = (e: any, success = true) => {
     if (success) e.target.reset();

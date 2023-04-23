@@ -3,7 +3,7 @@ import { Link as AutoScroll } from 'react-scroll';
 import slugify from 'react-slugify';
 import Header from '../../components/header/Header';
 import { GlobalString } from '../../global/constants';
-import { usePageTitleEffect, useInViewRef, useSetAnimateClassName } from '../../global/hooks';
+import { useSeoData, useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 import { INTRO } from '../../content/intro';
 import { RESUME } from '../../content/resume';
 import { Resume } from '../../components/resume/resume';
@@ -97,7 +97,7 @@ function Intro() {
 }
 
 function About() {
-  usePageTitleEffect('About');
+  useSeoData('About');
 
   return (
     <div className="mm-about">
