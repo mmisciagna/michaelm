@@ -51,17 +51,17 @@ function Showcase() {
           <BreadCrumbs showcase={showcase} index={index + 1} />
           <Pagination index={index} />
         </div>
+        <div className="mm-showcase__details">
+          {data.client && <Details title="Client" list={[data.client]} />}
+          {data.role && <Details title="Role" list={[data.role]} />}
+          {data.stack && <Details title="Stack" list={data.stack} />}
+          {data.apis && <Details title="APIs" list={data.apis} />}
+        </div>
       </section>
       {data.videoId && <Video showcase={showcase} ready={ytReady} />}
       <section className="mm-section mm-section--full-bleed"
           style={{...resetSectionSpacing, overflow: 'hidden'}}>
         <div className="mm-section__inner">
-          <div className="mm-showcase__details">
-            {data.client && <Details title="Client" list={[data.client]} />}
-            {data.role && <Details title="Role" list={[data.role]} />}
-            {data.stack && <Details title="Stack" list={data.stack} />}
-            {data.apis && <Details title="APIs" list={data.apis} />}
-          </div>
           {data.siteLink &&
             <div style={{
               margin: '48px 0',

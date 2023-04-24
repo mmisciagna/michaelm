@@ -1,6 +1,6 @@
 ---
 title: 'U.S. of YouTube'
-apis: ['Detect User Granular Location (State)']
+apis: ['Detect Location']
 client: 'YouTube'
 role: 'Frontend Engineer'
 img: 'youtube-us-of-youtube.webp'
