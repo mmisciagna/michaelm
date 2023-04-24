@@ -18,7 +18,8 @@ function JumpLinks() {
           <AutoScroll to={'tldr'}
               smooth={true}
               offset={-48}
-              duration={500}>
+              duration={500}
+              href="">
             TL;DR
           </AutoScroll>
         </li>
@@ -28,7 +29,8 @@ function JumpLinks() {
               <AutoScroll to={slugify(section.title)}
                   smooth={true}
                   offset={-48}
-                  duration={500}>
+                  duration={500}
+                  href="">
                 {section.title}
               </AutoScroll>
             </li>

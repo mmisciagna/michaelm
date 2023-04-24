@@ -111,10 +111,6 @@
 
         &:hover {
           color: var(--color-primary);
-
-          [theme='dark'] & {
-            color: var(--color-font);
-          }
         }
       }
     }
