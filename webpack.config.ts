@@ -20,6 +20,7 @@ const prettyPrint = (xml: string): string => {
 
 module.exports = {
   mode: 'development',
+  cache: false,
   entry: [
     path.resolve(__dirname, 'src', 'index.tsx'),
     path.resolve(__dirname, 'src', 'index.scss'),

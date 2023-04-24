@@ -15,15 +15,11 @@
   max-width: var(--section-max-width);
 
   &--full-bleed {
-    background: var(--color-primary);
-    color: var(--color-secondary);
+    background: var(--color-secondary-reversed);
+    color: var(--color-font-reversed);
     margin: var(--main-padding-y) var(--negate-main-padding-x);
     max-width: unset;
     padding: var(--main-padding-y) var(--main-padding-x);
-
-    [theme='dark'] & {
-      color: var(--color-font);
-    }
   }
 
   &__inner {
@@ -47,7 +43,7 @@
 }
 
 .mm-highlight {
-  background: var(--color-background);
+  background: var(--color-highlight);
   border-radius: 4px;
   display: inline-block;
   margin: 1px 0;
@@ -76,22 +72,15 @@
   &:hover {
     background: var(--color-accent);
     color: var(--color-secondary);
-
-    [theme='dark'] & {
-      color: var(--color-font);
-    }
   }
 
   &--secondary {
     border-color: var(--color-white-10);
-    color: var(--color-secondary);
-
-    [theme='dark'] & {
-      color: var(--color-font);
-    }
+    color: var(--color-primary-reversed);
 
     &:hover {
       background: var(--color-white-10);
+      color: var(--color-primary-reversed);
     }
   }
 

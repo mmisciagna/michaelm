@@ -11,7 +11,7 @@
     }
 
     figure {
-      background: var(--color-primary);
+      background: var(--color-slate-blue);
     }
 
     img {
@@ -28,6 +28,7 @@
     margin-top: unset;
     min-height: calc(100vh - (2 * var(--header-height)));
     min-height: calc(100dvh - (2 * var(--header-height)));
+    padding: 48px 0;
     position: relative;
 
     @include ipad-portrait-up {
@@ -55,10 +56,6 @@
       height: 1px;
       margin-bottom: var(--base-unit);
       margin-top: unset;
-
-      [theme='dark'] & {
-        background: var(--color-font);
-      }
 
       @include tablet-up {
         display: block;
@@ -98,7 +95,7 @@
       }
 
       a {
-        background: var(--color-background);
+        background: var(--color-highlight);
         color: var(--color-accent);
         display: block;
         padding: calc(var(--base-unit) / 2) var(--base-unit);

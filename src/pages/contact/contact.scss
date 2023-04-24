@@ -50,21 +50,19 @@
   }
 
   &__submit-message {
-    background: rgba(0, 128, 0, .1);
+    background: var(--color-green-10);
     border: 1px solid;
-    color: rgb(0, 128, 0);
+    color: var(--color-green);
     margin: 1em 0;
     padding: var(--base-unit);
 
     &--error {
-      background: rgba(164, 68, 68, .1);
-      color: rgb(164, 68, 68);
+      background: var(--color-red-10);
+      color: var(--color-red);
     }
   }
 
   &__form {
-    background: var(--color-primary);
-    color: var(--color-secondary);
     width: 100%;
 
     @include ipad-landscape-up {
@@ -75,14 +73,7 @@
     input,
     textarea {
       background: var(--color-white-10);
-    }
-
-    label {
-      color: var(--color-secondary);
-
-      [theme='dark'] & {
-        color: var(--color-font);
-      }
+      border: 0;
     }
   }
 

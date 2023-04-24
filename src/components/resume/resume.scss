@@ -16,10 +16,6 @@
       left: 0;
       top: -8px;
       width: var(--base-unit);
-
-      [theme='dark'] & {
-        background: var(--color-font);
-      }
     }
 
     span {

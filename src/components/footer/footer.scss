@@ -59,16 +59,8 @@
       &:hover {
         color: var(--color-primary);
 
-        [theme='dark'] & {
-          color: var(--color-font);
-        }
-
         svg {
           fill: var(--color-primary);
-
-          [theme='dark'] & {
-            fill: var(--color-font);
-          }
         }
 
         &::after {

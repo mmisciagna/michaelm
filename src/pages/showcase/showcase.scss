@@ -45,10 +45,6 @@
       top: 50%;
       transform: translateY(-50%);
       width: 1px;
-
-      [theme='dark'] & {
-        background: var(--color-font);
-      }
     }
 
     a {
@@ -85,11 +81,7 @@
     width: 40px;
 
     &:hover {
-      fill: var(--color-background);
-
-      [theme='dark'] & {
-        fill: var(--color-font);
-      }
+      fill: var(--color-off-white);
     }
   }
 

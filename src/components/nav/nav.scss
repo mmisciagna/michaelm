@@ -25,19 +25,11 @@
       top: 0;
       transition: width var(--fast-speed-ease);
       width: 0;
-
-      [theme='dark'] & {
-        background: var(--color-font);
-      }
     }
 
     &:hover,
     &.active {
       color: var(--color-primary);
-
-      [theme='dark'] & {
-        color: var(--color-font);
-      }
 
       &::after {
         width: 25%;

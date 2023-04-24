@@ -23,14 +23,18 @@
   }
 
   &__branding {
+    [theme='dark'] & {
+      --color-primary: var(--color-dark-slate-blue);
+    }
+
     align-items: center;
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     display: flex;
     flex: 1;
     flex-basis: var(--header-height);
     height: var(--header-height);
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
     padding: 0 var(--main-padding-x);
     position: relative;
@@ -50,7 +54,6 @@
 
     @include tablet-up {
       border-bottom: 1px solid var(--color-secondary);
-      justify-content: flex-start;
       height: 100%;
     }
 
@@ -70,13 +73,12 @@
     align-items: center;
     background: var(--color-secondary);
     height: var(--header-height);
-    justify-content: center;
+    padding: 0 4px;
     position: relative;
     width: 100%;
 
     @include tablet-up {
       align-items: flex-end;
-      border-left: 1px solid var(--color-background);
       height: 100%;
       padding: unset;
       width: unset;
@@ -97,6 +99,90 @@
 
       @include desktop-up {
         margin: 0 var(--base-unit);
+      }
+    }
+  }
+}
+
+.mm-theme-toggle {
+  background: var(--color-primary);
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  input[type='checkbox'] {
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    padding: unset;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+  }
+
+  &__panels {
+    align-items: center;
+    display: flex;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__panel {
+    align-items: center;
+    background-color: var(--color-primary);
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    overflow: hidden;
+    transition: width var(--fast-speed-ease);
+
+    svg {
+      fill: var(--color-accent);
+      height: 24px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity var(--fast-speed-ease);
+      width: 24px;
+    }
+
+    &--light {
+      border-right: 1px solid var(--color-accent);
+      width: 48px;
+
+      svg {
+        opacity: 1;
+      }
+
+      .mm-theme-toggle--checked & {
+        border: 0;
+        width: 0;
+
+        svg {
+          opacity: 0;
+        }
+      }
+    }
+
+    &--dark {
+      width: 0;
+
+      svg {
+        opacity: 0;
+      }
+
+      .mm-theme-toggle--checked & {
+        border-left: 1px solid var(--color-accent);
+        width: 48px;
+
+        svg {
+          opacity: 1;
+        }
       }
     }
   }

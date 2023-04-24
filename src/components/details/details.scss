@@ -1,6 +1,12 @@
 .mm-details {
+  --border-color: var(--color-dark-slate-blue);
+
+  [theme='dark'] & {
+    --border-color: var(--color-slate-blue);
+  }
+
   align-items: flex-start;
-  border-top: 1px solid var(--color-secondary);
+  border-top: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   margin: -1px auto 0;
@@ -31,8 +37,8 @@
   }
 
   &__label {
-    border-bottom: 1px solid var(--color-secondary);
-    border-right: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     display: inline-block;
     font-size: 12px;
     font-weight: 700;

@@ -5,15 +5,16 @@
   position: relative;
   white-space: normal;
 
-  [theme='dark'] & {
-    border-color: var(--color-font);
-  }
-
   @include tablet-up {
     white-space: nowrap;
   }
 
   &__bubble {
+    [theme='dark'] & {
+      --color-primary: var(--color-dark-slate-blue);
+      --color-secondary: var(--color-off-white);
+    }
+
     background: var(--color-primary);
     border-radius: 8px;
     bottom: calc(100% + 16px);
@@ -32,10 +33,6 @@
     transition: var(--fast-speed-ease) opacity;
     white-space: normal;
 
-    [theme='dark'] & {
-      background: var(--color-font);
-    }
-
     &::after {
       border: 6px solid var(--color-primary);
       border-bottom-color: transparent;
@@ -44,11 +41,6 @@
       left: 8px;
       position: absolute;
       top: 100%;
-
-      [theme='dark'] & {
-        border-left-color: var(--color-font);
-        border-top-color: var(--color-font);
-      }
     }
 
     span {
