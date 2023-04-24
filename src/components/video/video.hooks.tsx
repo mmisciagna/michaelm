@@ -36,14 +36,14 @@ export function useRenderPlayer(ref: {current: HTMLElement|null}, showcase: Show
 
 function renderPlayer(node: HTMLElement, showcase: Showcase) {
   return new window.YT.Player(node, {
-    videoId: showcase.videoId,
+    videoId: showcase.data.videoId,
     playerVars: {
       color: 'white',
       enablejsapi: 1,
       loop: 1,
       modestbranding: 1,
       playsinline: 1,
-      start: showcase.videoStart || '0',
+      start: showcase.data.videoStart || '0',
     },
     events: {
       'onStateChange': window.onPlayerStateChange,

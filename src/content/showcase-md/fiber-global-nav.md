@@ -1,3 +1,13 @@
+---
+title: 'Fiber Global Nav (prototype)'
+client: 'Google Fiber'
+role: 'Frontend Engineer'
+img: 'google-fiber-global-nav.webp'
+description: FiberGlobalNav
+stack: ['AngularJS', 'SCSS', 'Firebase Database', 'Google Cloud']
+videoId: 'Ft9qsS7l52U'
+---
+
 ### Goal
 
 Prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.

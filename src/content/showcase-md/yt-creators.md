@@ -1,3 +1,15 @@
+---
+apis: ['YouTube Data, YouTube Player Iframe', 'Blog', 'Twitter']
+title: 'YouTube Creators'
+client: 'YouTube'
+role: 'Frontend Engineer'
+img: 'youtube-creators.webp'
+description: YTCreators
+stack: ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
+siteLink: 'https://www.youtube.com/creators/'
+videoId: '0XcOLeOeFEc'
+---
+
 ### Overview
 
 The YouTube Creators website serves as a valuable information center for creators of all levels on YouTube, regardless of whether they're beginners or have already amassed over 1,000,000 subscribers. It offers a variety of resources, such as instructional videos, contest registration, up-to-date announcements from the Creators' social media channels, and comprehensive guidance on enhancing their YouTube channels.

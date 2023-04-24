@@ -1,3 +1,14 @@
+---
+title: YouTube Trends Top Ten Lists 2022
+apis: ['YouTube IFrame Player']
+client: 'YouTube'
+role: 'Frontend Engineer'
+img: 'youtube-trends-2022.webp'
+stack: ['Lit', 'TypeScript', 'SCSS', 'Express/Node', 'Webpack', 'Google Cloud']
+videoId: '3N8kXXzU9-Y'
+siteLink: 'http://youtube.com/trends/2022'
+---
+
 ## Overview
 
 A YouTube website providing insights on 2022's most popular videos.

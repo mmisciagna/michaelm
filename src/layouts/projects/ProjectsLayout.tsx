@@ -6,8 +6,11 @@ import { GlobalString } from '../../global/constants';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
 
-function ShowcaseGridItem({showcase, currentId}: {showcase: Showcase, currentId: string|undefined}) {
-  const slug = slugify(showcase.title);
+function ShowcaseGridItem({showcase, currentId}: {
+  showcase: Showcase,
+  currentId: string|undefined,
+}) {
+  const slug = slugify(showcase.data.title);
   const isActive = slug === currentId;
 
   if (isActive) return null;
@@ -20,27 +23,27 @@ function ShowcaseGridItem({showcase, currentId}: {showcase: Showcase, currentId:
       <div className="mm-projects-layout__img-wrapper">
         <div className="mm-projects-layout__img-aspect-ratio"
             style={{
-              backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
+              backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
             }}>
         </div>
       </div>
       <div className="mm-projects-layout__info-panel">
         <div>
-          <h3>{showcase.title}</h3>
-          <h4>{showcase.role}</h4>
+          <h3>{showcase.data.title}</h3>
+          <h4>{showcase.data.role}</h4>
         </div>
         <div>
           {!isActive &&
             <Link className="mm-button"
                 to={`/projects/${slug}`}
-                arial-label={`View ${showcase.title} details`}>
+                arial-label={`View ${showcase.data.title} details`}>
               View details
             </Link>
           }
-          {showcase.siteLink &&
-            <a href={showcase.siteLink} target="_blank" rel="noopener noreferrer"
+          {showcase.data.siteLink &&
+            <a href={showcase.data.siteLink} target="_blank" rel="noopener noreferrer"
                 className="mm-button mm-button--secondary"
-                arial-label={`Launch ${showcase.title} site`}>
+                arial-label={`Launch ${showcase.data.title} site`}>
               Launch site
             </a>
           }
@@ -56,7 +59,7 @@ function Grid({id}: {id: string|undefined}) {
       <div className="mm-grid mm-grid--3-cols">
         {SHOWCASES.map((showcase: Showcase) => {
           return (
-            <React.Fragment key={showcase.title}>
+            <React.Fragment key={showcase.data.title}>
               <ShowcaseGridItem showcase={showcase} currentId={id!} />
             </React.Fragment>
           )
@@ -66,8 +69,11 @@ function Grid({id}: {id: string|undefined}) {
   )
 }
 
-function ShowcaseListItem({showcase, currentId}: {showcase: Showcase, currentId: string|undefined}) {
-  const slug = slugify(showcase.title);
+function ShowcaseListItem({showcase, currentId}: {
+  showcase: Showcase,
+  currentId: string|undefined,
+}) {
+  const slug = slugify(showcase.data.title);
   const isActive = slug === currentId;
 
   if (isActive) return null;
@@ -79,17 +85,17 @@ function ShowcaseListItem({showcase, currentId}: {showcase: Showcase, currentId:
         ref={setRefs.ref}>
       <Link className="mm-projects-layout__list-link"
           to={`/projects/${slug}`}
-          arial-label={`View ${showcase.title} details`}>
+          arial-label={`View ${showcase.data.title} details`}>
         <span className="mm-projects-layout__img-wrapper">
           <span className="mm-projects-layout__img-aspect-ratio"
               style={{
-                backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
+                backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
               }}>
           </span>
         </span>
         <span className="mm-projects-layout__list-details">
           <span className="mm-projects-layout__list-label">
-            {showcase.title}
+            {showcase.data.title}
           </span>
         </span>
         <span className="mm-projects-layout__list-arrow">
@@ -108,7 +114,7 @@ function List({id}: {id: string|undefined}) {
       <ul className="mm-projects-layout__list">
         {SHOWCASES.map((showcase: Showcase) => {
           return (
-            <React.Fragment key={showcase.title}>
+            <React.Fragment key={showcase.data.title}>
               <ShowcaseListItem showcase={showcase} currentId={id!} />
             </React.Fragment>
           )

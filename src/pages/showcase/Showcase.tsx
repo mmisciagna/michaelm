@@ -14,19 +14,20 @@ function Showcase() {
   const {id} = useParams();
 
   const showcase = SHOWCASES.find((showcase) => {
-    return slugify(showcase.title) === id;
+    return slugify(showcase.data.title) === id;
   });
 
   // Redirects to 404 if no showcase is found.
   if (!showcase) return <Navigate to="/404" />
 
   const [ytReady, setYTReady] = useState(window.YT !== undefined);
+  const {data, content} = showcase;
 
   // Updates page title.
   useSeoData(
-    showcase.title,
-    `projects/${slugify(showcase.title)}`,
-    [showcase.title]
+    data.title,
+    `projects/${slugify(data.title)}`,
+    [data.title]
   );
 
   // Loads YT Iframe API, if not present already.
@@ -51,28 +52,28 @@ function Showcase() {
           <Pagination index={index} />
         </div>
       </section>
-      {showcase.videoId && <Video showcase={showcase} ready={ytReady} />}
+      {data.videoId && <Video showcase={showcase} ready={ytReady} />}
       <section className="mm-section mm-section--full-bleed"
           style={{...resetSectionSpacing, overflow: 'hidden'}}>
         <div className="mm-section__inner">
           <div className="mm-showcase__details">
-            {showcase.client && <Details title="Client" list={[showcase.client]} />}
-            {showcase.role && <Details title="Role" list={[showcase.role]} />}
-            {showcase.stack && <Details title="Stack" list={showcase.stack} />}
-            {showcase.apis && <Details title="APIs" list={showcase.apis} />}
+            {data.client && <Details title="Client" list={[data.client]} />}
+            {data.role && <Details title="Role" list={[data.role]} />}
+            {data.stack && <Details title="Stack" list={data.stack} />}
+            {data.apis && <Details title="APIs" list={data.apis} />}
           </div>
-          {showcase.siteLink &&
+          {data.siteLink &&
             <div style={{
               margin: '48px 0',
             }}>
-              <a href={showcase.siteLink} target="_blank" rel="noopener noreferrer"
+              <a href={data.siteLink} target="_blank" rel="noopener noreferrer"
                   className="mm-button">
                 Launch site
               </a>
             </div>
           }
           <div className="mm-showcase__description">
-              <div dangerouslySetInnerHTML={{__html: marked(showcase.description.content)}} />
+              <div dangerouslySetInnerHTML={{__html: marked(content)}} />
           </div>
         </div>
       </section>
@@ -84,7 +85,7 @@ function Pagination({index}: {index: number}) {
   return (
     <div className="mm-showcase__pagination">
       <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
-          to={`/projects/${slugify(SHOWCASES[index - 1]?.title)}`}
+          to={`/projects/${slugify(SHOWCASES[index - 1]?.data.title)}`}
           tabIndex={index === 0 ? -1 : 0}>
         Previous
       </Link>
@@ -100,7 +101,7 @@ function Pagination({index}: {index: number}) {
         </svg>
       </AutoScroll>
       <Link className={`mm-button ${index + 1 === SHOWCASES.length ? 'disabled' : ''}`}
-          to={`/projects/${slugify(SHOWCASES[index + 1]?.title)}`}
+          to={`/projects/${slugify(SHOWCASES[index + 1]?.data.title)}`}
           tabIndex={index + 1 === SHOWCASES.length ? -1 : 0}>
         Next
       </Link>
@@ -116,7 +117,7 @@ function BreadCrumbs({showcase, index}: {showcase: Showcase, index: number}) {
           <Link to="/projects">Projects</Link>
         </li>
         <li className="mm-showcase__breadcrumbs-item">
-          <h1>{showcase.title}</h1>
+          <h1>{showcase.data.title}</h1>
         </li>
       </ul>
       <div className="mm-showcase__breadcrumbs-count">

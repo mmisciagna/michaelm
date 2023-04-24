@@ -1,3 +1,13 @@
+---
+title: 'My Fiber (prototype)'
+client: 'Google Fiber'
+role: 'Frontend Engineer'
+img: 'my-fiber.webp'
+description: MyFiber
+stack: ['AngularJS', 'SCSS', 'Firebase Database', 'Google Cloud']
+videoId: 'YSMDyjB-LDc'
+---
+
 ### Goal
 
 Prototype a new, user-friendly, responsive global navigation system that can be easily adapted for both marketing and engineering builds, utilizing Material design components.

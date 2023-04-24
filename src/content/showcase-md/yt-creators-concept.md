@@ -1,3 +1,12 @@
+---
+title: 'YouTube Creators (design concept)'
+role: 'UX Designer'
+img: 'youtube-creators-design.webp'
+description: YTCreatorsConcept
+stack: ['Sketch', 'Photoshop']
+---
+
+
 ### Hero
 To enhance the effectiveness of the website, I replaced the carousel with an image of a popular YouTube Creator, as multiple <a href="https://shouldiuseacarousel.com/" target="_blank" rel="noopener noreferrer">studies</a>  have indicated that carousels are not efficient for displaying content, with most users ignoring any frames after the first one.
 

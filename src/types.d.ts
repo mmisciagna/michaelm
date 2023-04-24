@@ -1,14 +1,19 @@
 interface Showcase {
-  apis?: string[];
-  description: string;
-  client?: string;
-  img: string;
-  role?: string;
-  siteLink?: string;
-  title: string;
-  stack?: string[];
-  videoId?: string;
-  videoStart?: string;
+  content: string,
+  data: {
+    apis?: string[];
+    description: string;
+    client?: string;
+    img: string;
+    role?: string;
+    siteLink?: string;
+    title: string;
+    stack?: string[];
+    videoId?: string;
+    videoStart?: string;
+  },
+  excerpt: string,
+  isEmpty: boolean,
 }
 
 interface Tidbit {

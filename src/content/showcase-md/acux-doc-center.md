@@ -1,3 +1,13 @@
+---
+title: 'Google ACUX Doc Center (prototype)'
+client: 'Google'
+role: 'Frontend Engineer'
+img: 'acux-doc-center.webp'
+description: ACUXDocCenter
+stack: ['ACUX specs', 'AngularJS', 'SCSS', 'Firebase Database', 'Google Cloud']
+videoId: 'd-b98ep59ZQ'
+---
+
 ### Goal
 Design and prototype an experience that would make it easy for agencies with one to hundreds of clients to find any document in one centralized, filterable location.
 

@@ -26,7 +26,8 @@ function Video({showcase, ready}: VideoProps) {
 
   if (globalPlayer?.cueVideoById) {
     toggleBtn(true);
-    globalPlayer.cueVideoById(showcase.videoId, showcase.videoStart || '0');
+    globalPlayer.cueVideoById(
+        showcase.data.videoId, showcase.data.videoStart || '0');
   }
 
   useRenderPlayer(playerRef, showcase);
@@ -41,14 +42,14 @@ function Video({showcase, ready}: VideoProps) {
             <div ref={playerRef}></div>
             <button className="mm-video__play-btn"
                 style={{
-                  backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.img})`,
+                  backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
                 }}
                 ref={btnRef}
                 onClick={() => {
                   toggleBtn();
                   globalPlayer.playVideo();
                 }}
-                aria-label={`Play ${showcase.title} video`}>
+                aria-label={`Play ${showcase.data.title} video`}>
               <span className="mm-video__icon">
                 <svg className="mm-video__play-icon" viewBox="0 0 13 14" version="1.1">
                   <g transform="translate(-39.000000, 0.000000)">

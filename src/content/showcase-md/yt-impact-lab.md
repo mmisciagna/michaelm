@@ -1,3 +1,15 @@
+---
+title: 'YouTube Impact Lab'
+client: 'YouTube'
+role: 'Frontend Engineer'
+img: 'youtube-impact-lab.webp'
+description: YTImpactLab
+stack: ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
+videoId: 'Xvb6DIUf6MA'
+videoStart: '162'
+siteLink: 'https://socialimpact.youtube.com/'
+---
+
 ### Overview
 
 The YouTube Impact Lab is aimed at non-profit organizations and is dedicated to utilizing YouTube's vast reach, cutting-edge technology, and talented creators to initiate and maintain campaigns that lead to quantifiable social impact.

@@ -1,3 +1,15 @@
+---
+title: 'YouTube Ads'
+apis: ['YouTube Data', 'YouTube IFrame Player', 'Blog']
+client: 'YouTube'
+role: 'Frontend Engineer'
+img: 'youtube-ads.webp'
+description: YTAds
+stack: ['TypeScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
+videoId: '9aZZBjkKleA'
+siteLink: 'https://www.youtube.com/ads/video-creation-tips/'
+---
+
 ## Overview
 
 The website aims to provide information to prospective YouTube Advertisers, offering guidance on the initial steps, creating ads, and identifying relevant channels and target audiences.
