@@ -36,7 +36,6 @@
     height: var(--header-height);
     justify-content: flex-start;
     overflow: hidden;
-    padding: 0 var(--main-padding-x);
     position: relative;
     font-style: italic;
     width: 100%;
@@ -55,6 +54,7 @@
     @include tablet-up {
       border-bottom: 1px solid var(--color-secondary);
       height: 100%;
+      padding: 0 var(--main-padding-x);
     }
 
     &::before {
@@ -110,6 +110,10 @@
   right: 0;
   top: 0;
 
+  &:hover svg {
+    fill: var(--color-off-white);
+  }
+
   input[type='checkbox'] {
     border: 0;
     border-radius: 0;
@@ -147,12 +151,12 @@
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      transition: opacity var(--fast-speed-ease);
+      transition: opacity var(--fast-speed-ease), fill var(--fast-speed-ease);
       width: 24px;
     }
 
     &--light {
-      border-right: 1px solid var(--color-accent);
+      border-right: 3px solid var(--color-accent);
       width: 48px;
 
       svg {
