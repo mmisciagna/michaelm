@@ -110,7 +110,11 @@
   right: 0;
   top: 0;
 
-  &:hover svg {
+  &:hover .mm-theme-toggle__panel--light svg {
+    fill: var(--color-black);
+  }
+
+  &:hover .mm-theme-toggle__panel--dark svg {
     fill: var(--color-off-white);
   }
 
@@ -137,7 +141,6 @@
 
   &__panel {
     align-items: center;
-    background-color: var(--color-primary);
     display: flex;
     height: 48px;
     justify-content: center;
@@ -145,7 +148,6 @@
     transition: width var(--fast-speed-ease);
 
     svg {
-      fill: var(--color-accent);
       height: 24px;
       left: 50%;
       position: absolute;
@@ -156,10 +158,11 @@
     }
 
     &--light {
-      border-right: 3px solid var(--color-accent);
+      background-color: var(--color-accent);
       width: 48px;
 
       svg {
+        fill: var(--color-off-white);
         opacity: 1;
       }
 
@@ -174,14 +177,15 @@
     }
 
     &--dark {
+      background-color: var(--color-black);
       width: 0;
 
       svg {
+        fill: var(--color-accent);
         opacity: 0;
       }
 
       .mm-theme-toggle--checked & {
-        border-left: 1px solid var(--color-accent);
         width: 48px;
 
         svg {
