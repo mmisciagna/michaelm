@@ -61,7 +61,23 @@
         font-size: 14px;
         letter-spacing: 0;
         margin: unset;
+        overflow: hidden;
+        padding-right: 48px;
+        position: relative;
         text-transform: unset;
+
+        span {
+          align-items: center;
+          background: var(--color-accent);
+          color: var(--color-secondary);
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: var(--base-unit);
+        }
 
         &.active {
           background: var(--color-primary);

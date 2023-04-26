@@ -9,18 +9,22 @@ import { useSeoData } from '../../global/hooks';
  * tag labels.
  */
 function useGetAllPossibleTags(
-  setState: React.Dispatch<React.SetStateAction<Set<string>>>,
+  setState: React.Dispatch<React.SetStateAction<Record<string, number>>>,
 ) {
   useEffect(() => {
-    const allPossibleTags: string[] = [];
+    const tagsMap = {};
 
     for (const tidbit of TIDBITS) {
       for (const tag of (tidbit as Tidbit).data.tags) {
-        allPossibleTags.push(tag);
+        if (tagsMap[tag]) {
+          tagsMap[tag] = tagsMap[tag] + 1;
+        } else {
+          tagsMap[tag] = 1;
+        }
       }
     }
 
-    setState(new Set(allPossibleTags.sort()));
+    setState(tagsMap);
   }, []);
 }
 
@@ -31,7 +35,7 @@ function FilterTags({selectedTags, setSelectedTags}: {
   selectedTags: Set<string>;
   setSelectedTags:  React.Dispatch<React.SetStateAction<Set<string>>>;
 }) {
-  const [possibleTags, setPossibleTags] = useState<Set<string>>(new Set());
+  const [possibleTags, setPossibleTags] = useState<Record<string, number>>({});
 
   useGetAllPossibleTags(setPossibleTags);
 
@@ -56,13 +60,13 @@ function FilterTags({selectedTags, setSelectedTags}: {
 
   return (
     <ul className="mm-tidbits__tags mm-tidbits__tags--filter">
-      {[...possibleTags].map((tag: string) => {
+      {Object.keys(possibleTags).map((tag: string) => {
         return (
           <li key={tag.toLowerCase()}>
             <button className="mm-button"
                 data-tag={tag.toLowerCase()}
                 onClick={(e) => handleTagClick(e)}>
-              {tag}
+              {tag} <span>{possibleTags[tag]}</span>
             </button>
           </li>
         )
