@@ -96,7 +96,7 @@ function Tidbits() {
             {tidbitToRender != null ? tidbitToRender.map((tidbit: Tidbit) => {
               // const setRefs = useInViewRef();
               const {data, content} = tidbit;
-              const markedConent = marked(content);
+              const markedContent = marked(content);
 
               return (
                 <React.Fragment key={data.title.toLowerCase()}>
@@ -120,7 +120,7 @@ function Tidbits() {
                         {data.title}
                       </ReactMarkdown>
                     </h2>
-                    <div dangerouslySetInnerHTML={{__html: markedConent}} />
+                    <div dangerouslySetInnerHTML={{__html: markedContent}} />
                   </div>
                 </React.Fragment>
               )

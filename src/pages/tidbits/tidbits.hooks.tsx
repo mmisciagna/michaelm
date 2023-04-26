@@ -85,15 +85,15 @@ export function useStructuredTidbits({
  */
 export function useCodeHighlighter(container: HTMLElement|null) {
   useEffect(() => {
-    if (container == null ) return;
+    if (container == null) return;
 
-    setTimeout(() => {
-      const codeBlocks =
-          [... container.querySelectorAll('pre code')] as HTMLElement[];
+    const codeBlocks =
+        [... container.querySelectorAll('pre code')] as HTMLElement[];
 
-      for (const block of codeBlocks) {
+    for (const block of codeBlocks) {
+      if (!block.classList.contains('hljs')) {
         hljs.highlightElement(block);
-      };
-    });
+      }
+    };
   });
 };
