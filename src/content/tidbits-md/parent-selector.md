@@ -9,7 +9,7 @@ How many times have you wished you could style the parent of an element in CSS? 
 
 **HTML**
 
-```
+```html
 <!-- Plain button -->
 <button>Add</button>
 
@@ -22,7 +22,7 @@ How many times have you wished you could style the parent of an element in CSS? 
 
 **CSS**
 
-```
+```css
 button:has(svg) {
   /* Styles */
 }

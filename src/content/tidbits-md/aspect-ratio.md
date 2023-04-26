@@ -7,7 +7,7 @@ tags:
 
 I use to keep a SCSS mixin handy for giving an element a specific aspect ratio. It looked like this:
 
-```
+```css
 @mixin aspect-ratio($width: 1, $height: 1) {
   padding-bottom: calc(($width / $height) * 100%);
   width: 100%;
@@ -17,7 +17,7 @@ I use to keep a SCSS mixin handy for giving an element a specific aspect ratio. 
 
 For instance, whenever I wanted to embed a video I would write:
 
-```
+```css
 .video-wrapper {
   @include aspect-ratio(16, 9);
 }

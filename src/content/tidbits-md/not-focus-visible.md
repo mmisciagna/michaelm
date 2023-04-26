@@ -16,7 +16,7 @@ You can remove focus outlines when users are not using the keyboard to navigate 
 
 **SCSS**
 
-```
+```css
 // Not an exhaustive list of focusable elements.
 a,
 button,

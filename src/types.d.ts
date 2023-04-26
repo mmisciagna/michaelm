@@ -27,4 +27,6 @@ interface Tidbit {
   isEmpty: boolean,
 }
 
+type StructuredTidbits = Tidbit[][];
+
 declare module '*.md';

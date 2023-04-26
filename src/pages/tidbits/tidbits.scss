@@ -45,14 +45,16 @@
     }
 
     &--filter {
+      --spacing: 6px;
+
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin: 0 -4px 12px;
+      margin: 0 calc(-1 * var(--spacing)) 12px;
 
       li {
         background: unset;
         font: unset;
-        margin: 4px;
+        margin: var(--spacing);
         padding: unset;
       }
 

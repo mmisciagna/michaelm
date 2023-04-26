@@ -9,7 +9,7 @@ You can use a value from any HTML attribute within pseudo `::before` or `::after
 
 **HTML**
 
-```
+```html
 <button data-count="3">
   Click
 </button>
@@ -17,7 +17,7 @@ You can use a value from any HTML attribute within pseudo `::before` or `::after
 
 **CSS**
 
-```
+```css
 button::after {
   content: attr(data-count);
   ... styles
