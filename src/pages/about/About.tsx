@@ -20,22 +20,9 @@ function JumpLinks() {
               offset={-48}
               duration={500}
               href="">
-            TL;DR
+            Read on
           </AutoScroll>
         </li>
-        {RESUME.map((section: any) => {
-          return (
-            <li key={slugify(section.title)}>
-              <AutoScroll to={slugify(section.title)}
-                  smooth={true}
-                  offset={-48}
-                  duration={500}
-                  href="">
-                {section.title}
-              </AutoScroll>
-            </li>
-          );
-        })}
       </ul>
     </div>
   )
