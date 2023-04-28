@@ -60,7 +60,7 @@ function FilterTags({selectedTags, setSelectedTags}: {
 
   return (
     <ul className="mm-tidbits__tags mm-tidbits__tags--filter">
-      {Object.keys(possibleTags).map((tag: string) => {
+      {Object.keys(possibleTags).sort().map((tag: string) => {
         return (
           <li key={tag.toLowerCase()}>
             <button className="mm-button"
