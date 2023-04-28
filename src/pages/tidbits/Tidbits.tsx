@@ -19,7 +19,8 @@ function TidbitPagination({tidbits, index, container}: {
     <div className="mm-tidbits__pagination">
       <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
           to={`/tidbits/${index}`}
-          tabIndex={index === 0 ? -1 : 0}>
+          tabIndex={index === 0 ? -1 : 0}
+          onClick={() => container.scrollIntoView({behavior: 'smooth'})}>
         Previous
       </Link>
       <p className="mm-tidbits__pagination-pages">
@@ -35,7 +36,8 @@ function TidbitPagination({tidbits, index, container}: {
       </p>
       <Link className={`mm-button ${index + 1 === tidbits.length ? 'disabled' : ''}`}
           to={`/tidbits/${index + 2}`}
-          tabIndex={index + 1 === tidbits.length ? -1 : 0}>
+          tabIndex={index + 1 === tidbits.length ? -1 : 0}
+          onClick={() => container.scrollIntoView({behavior: 'smooth'})}>
         Next
       </Link>
     </div>
