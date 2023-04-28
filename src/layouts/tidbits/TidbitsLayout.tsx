@@ -35,6 +35,7 @@ function FilterTags({selectedTags, setSelectedTags}: {
   selectedTags: Set<string>;
   setSelectedTags:  React.Dispatch<React.SetStateAction<Set<string>>>;
 }) {
+  console.log('render')
   const [possibleTags, setPossibleTags] = useState<Record<string, number>>({});
 
   useGetAllPossibleTags(setPossibleTags);
@@ -58,6 +59,17 @@ function FilterTags({selectedTags, setSelectedTags}: {
     setSelectedTags(newTags);
   }
 
+  const reset = () => {
+    const activeFilters = [...document.querySelectorAll(
+        '.mm-tidbits__tags--filter .mm-button.active')];
+
+    for (const btn of activeFilters) {
+      btn.classList.remove('active');
+    }
+
+    setSelectedTags(new Set());
+  }
+
   return (
     <ul className="mm-tidbits__tags mm-tidbits__tags--filter">
       {Object.keys(possibleTags).sort().map((tag: string) => {
@@ -71,6 +83,15 @@ function FilterTags({selectedTags, setSelectedTags}: {
           </li>
         )
       })}
+      <li>
+        <button className="mm-button mm-button--secondary"
+            style={{
+              paddingRight: 'var(--base-unit)',
+            }}
+            onClick={() => reset()}>
+          Reset
+        </button>
+      </li>
     </ul>
   )
 }
