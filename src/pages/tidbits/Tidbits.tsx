@@ -18,15 +18,16 @@ function TidbitPagination({tidbits, index, container}: {
   return (
     <div className="mm-tidbits__pagination">
       <Link className={`mm-button ${index === 0 ? 'disabled' : ''}`}
-          to={`/tidbits/${index}`}
-          tabIndex={index === 0 ? -1 : 0}>
+          to={`/${index}`}
+          tabIndex={index === 0 ? -1 : 0}
+          onClick={() => container.scrollIntoView({behavior: 'smooth'})}>
         Previous
       </Link>
       <p className="mm-tidbits__pagination-pages">
         {tidbits.map((tidbitGroup: Tidbit[], i: number) => {
           return (
             <NavLink key={tidbitGroup[0].data.title}
-                to={`/tidbits/${i + 1}`}
+                to={`/${i + 1}`}
                 onClick={() => container.scrollIntoView({behavior: 'smooth'})}>
               {i + 1}
             </NavLink>
@@ -34,8 +35,9 @@ function TidbitPagination({tidbits, index, container}: {
         })}
       </p>
       <Link className={`mm-button ${index + 1 === tidbits.length ? 'disabled' : ''}`}
-          to={`/tidbits/${index + 2}`}
-          tabIndex={index + 1 === tidbits.length ? -1 : 0}>
+          to={`/${index + 2}`}
+          tabIndex={index + 1 === tidbits.length ? -1 : 0}
+          onClick={() => container.scrollIntoView({behavior: 'smooth'})}>
         Next
       </Link>
     </div>
@@ -105,16 +107,6 @@ function Tidbits() {
                       ref={setRefs.ref}> */}
                   <div className={`mm-tidbits__tidbit`}
                       data-tags={data.tags.join(',')}>
-                    <ul className="mm-tidbits__tags">
-                      {data.tags.map((tag: string) => {
-                        return <li key={tag.toLowerCase()}>{tag}</li>
-                      })}
-                    </ul>
-                    <div className="mm-tidbits__metadata">
-                      <p style={{margin: 'unset'}}>
-                        {data.date}
-                      </p>
-                    </div>
                     <h2>
                       <ReactMarkdown>
                         {data.title}
@@ -125,7 +117,7 @@ function Tidbits() {
                 </React.Fragment>
               )
             }) :
-            <Navigate to={`/tidbits/${parseInt(index!) < 1 ? '1' : structuredTidbits.length.toString()}`}
+            <Navigate to={`/${parseInt(index!) < 1 ? '1' : structuredTidbits.length.toString()}`}
                 replace={true} />}
           </div>
           <div className="mm-tidbits__metadata">

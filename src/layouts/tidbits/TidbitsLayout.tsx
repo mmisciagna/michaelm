@@ -66,7 +66,7 @@ function FilterTags({selectedTags, setSelectedTags}: {
             <button className="mm-button"
                 data-tag={tag.toLowerCase()}
                 onClick={(e) => handleTagClick(e)}>
-              {tag} <span>{possibleTags[tag]}</span>
+              {tag}
             </button>
           </li>
         )
@@ -81,15 +81,13 @@ function FilterTags({selectedTags, setSelectedTags}: {
 function TidbitLayout() {
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
-  useSeoData('Tidbits', 'tidbits');
-
   return (
     <>
       <div className="mm-tidbits-layout">
         <section className="mm-section">
-          <h1>Tidbits</h1>
+          <h1>How YouTube Works</h1>
           <p>
-            If you're a developer, designer, or just someone interested in web development, you'll find a wealth of useful information and tips here. These are random tidbits that I came up with myself or ran across online and found interesting.
+          I served as one of three full-time UX Engineers on a small yet dynamic team at Google. We were responsible for managing and maintaining all off-app websites for YouTube. Our team consisted of experienced senior level frontend engineers, and we would delegate project management, consulting, and engineering tasks to one member per project.
           </p>
           <FilterTags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
         </section>

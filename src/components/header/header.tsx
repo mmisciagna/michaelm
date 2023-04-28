@@ -65,10 +65,12 @@ function Header() {
 
   return (
     <header className="mm-header" ref={headerRef}>
-      <div className="mm-header__branding">
-        <NavLink to={`/`}
+      <div className="mm-header__branding" style={{
+        fontStyle: 'unset',
+      }}>
+        <NavLink to={`/1`}
             aria-label='Home'>
-          <span>{GlobalString.PRONUNCIATION}</span>
+          <span>M.M.</span>
         </NavLink>
         <ThemeToggle />
       </div>

@@ -40,7 +40,7 @@ export function useStructuredTidbits({
 
   // Redirects to first tidbits page.
   const redirectToFirstTidbitsPage = () => {
-    navigate(`/tidbits/1`, {replace: true});
+    navigate(`/1`, {replace: true});
   }
 
   useEffect(() => {
