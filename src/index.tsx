@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalSelector } from './global/constants';
@@ -9,16 +9,17 @@ const doc = document.documentElement;
 const rootEL = document.querySelector(GlobalSelector.ROOT) as HTMLElement;
 const root = createRoot(rootEL);
 
-// Set theme on HTML element based on the user's preference.
-let theme = 'light';
+// Checks if user's preference is dark mode.
+const isDarkTheme = window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-if (
-  window.matchMedia &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches
-) {
-  theme = 'dark';
-}
+const theme = isDarkTheme ? 'dark': 'light';
+
+// Sets theme based on user's preference.
 doc.setAttribute('theme', theme);
+
+// Saves user's theme preference to context.
+export const ThemeContext = createContext(theme);
 
 root.render(
   <React.StrictMode>
