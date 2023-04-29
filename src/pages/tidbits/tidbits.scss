@@ -68,6 +68,16 @@
         position: relative;
         text-transform: unset;
 
+        [theme='light'] &--secondary {
+          border-color: var(--color-black-25);
+          color: var(--color-primary-reversed);
+
+          &:hover {
+            background: var(--color-black-25);
+            color: var(--color-primary-reversed);
+          }
+        }
+
         span {
           align-items: center;
           background: var(--color-accent);
