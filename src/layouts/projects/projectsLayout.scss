@@ -31,6 +31,15 @@
     .mm-button {
       display: block;
       margin-top: 12px;
+
+      &--secondary {
+        border-color: var(--color-white-10);
+        color: var(--color-off-white);
+
+        &:hover {
+          background: var(--color-white-10);
+        }
+      }
     }
 
     &:hover,

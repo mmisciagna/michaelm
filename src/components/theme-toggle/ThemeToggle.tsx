@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { ThemeContext } from '../../index';
+import React, { useEffect, useState } from 'react';
 
 
 function ThemeToggle() {
-  const theme = useContext(ThemeContext);
-  const defaultChecked = theme === 'dark';
-  const [checked, setChecked] = useState(defaultChecked);
+  const docEl = document.documentElement;
+  const theme = docEl.getAttribute('theme');
+  const [checked, setChecked] = useState(theme === 'dark');
   const classNames = checked ?
       'mm-theme-toggle mm-theme-toggle--checked' : 'mm-theme-toggle';
 
@@ -14,7 +13,7 @@ function ThemeToggle() {
   }
 
   useEffect(() => {
-    document.documentElement.setAttribute('theme', checked ? 'dark' : 'light');
+    docEl.setAttribute('theme', checked ? 'dark' : 'light');
   }, [checked]);
 
   return (

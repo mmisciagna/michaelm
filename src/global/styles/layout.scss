@@ -86,19 +86,24 @@
   }
 
   &--secondary {
-    border-color: var(--color-white-10);
-    color: var(--color-off-white);
+    --border-color: var(--color-black-25);
+
+    [theme='dark'] & {
+      --border-color: var(--color-white-10);
+    }
+
+    border-color: var(--border-color);
+    color: var(--color-primary);
 
     svg {
-      fill: var(--color-off-white);
+      fill: var(--color-primary);
     }
 
     &:hover {
-      background: var(--color-white-10);
-      color: var(--color-off-white);
+      background: var(--border-color);
 
       svg {
-        fill: var(--color-off-white);
+        fill: var(--color-primary);
       }
     }
   }

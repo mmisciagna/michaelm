@@ -75,23 +75,9 @@
         white-space: nowrap;
 
         &:has(svg) {
-          padding-right: var(--base-unit);
-        }
-
-        [theme='light'] &--secondary {
-          border-color: var(--color-black-25);
-
-          svg {
-            fill: var(--color-slate-blue);
-          }
-
-          &:hover {
-            background: var(--color-black-25);
-
-            svg {
-              fill: var(--color-slate-blue);
-            }
-          }
+          border: 0;
+          padding: unset;
+          width: 40px;
         }
 
         span {

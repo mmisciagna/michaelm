@@ -35,7 +35,6 @@ function FilterTags({selectedTags, setSelectedTags}: {
   selectedTags: Set<string>;
   setSelectedTags:  React.Dispatch<React.SetStateAction<Set<string>>>;
 }) {
-  console.log('render')
   const [possibleTags, setPossibleTags] = useState<Record<string, number>>({});
 
   useGetAllPossibleTags(setPossibleTags);
