@@ -59,22 +59,38 @@
       }
 
       .mm-button {
+        align-items: center;
         border-radius: 50px;
+        display: flex;
         font-size: 14px;
+        height: 40px;
+        justify-content: center;
         letter-spacing: 0;
+        line-height: 1;
         margin: unset;
         overflow: hidden;
         padding-right: 48px;
         position: relative;
         text-transform: unset;
+        white-space: nowrap;
+
+        &:has(svg) {
+          padding-right: var(--base-unit);
+        }
 
         [theme='light'] &--secondary {
           border-color: var(--color-black-25);
-          color: var(--color-primary-reversed);
+
+          svg {
+            fill: var(--color-slate-blue);
+          }
 
           &:hover {
             background: var(--color-black-25);
-            color: var(--color-primary-reversed);
+
+            svg {
+              fill: var(--color-slate-blue);
+            }
           }
         }
 

@@ -69,18 +69,37 @@
     var(--fast-speed-ease) border-color,
     var(--fast-speed-ease) color;
 
+  svg {
+    fill: var(--color-accent);
+    height: 24px;
+    transition: fill var(--fast-speed-ease);
+    width: 24px;
+  }
+
   &:hover {
     background: var(--color-accent);
     color: var(--color-secondary);
+
+    svg {
+      fill: var(--color-secondary);
+    }
   }
 
   &--secondary {
     border-color: var(--color-white-10);
-    color: var(--color-primary-reversed);
+    color: var(--color-off-white);
+
+    svg {
+      fill: var(--color-off-white);
+    }
 
     &:hover {
       background: var(--color-white-10);
-      color: var(--color-primary-reversed);
+      color: var(--color-off-white);
+
+      svg {
+        fill: var(--color-off-white);
+      }
     }
   }
 
