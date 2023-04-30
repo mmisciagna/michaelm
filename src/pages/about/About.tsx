@@ -53,7 +53,7 @@ function Hero() {
         </span>
       </h1>
       <h2 className="mm-page-subtext">
-        <span className="mm-highlight">Frontend engineer</span> and <span className="mm-highlight">designer</span> extraordinaire
+        <span className="mm-highlight">Sr. Frontend Engineer</span> and <span className="mm-highlight">Designer</span>
       </h2>
       <JumpLinks />
     </section>
