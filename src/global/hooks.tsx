@@ -15,7 +15,7 @@ export const useSeoData = (
 
     const canonicalLink = document.createElement('link');
     canonicalLink.setAttribute('rel', 'canonical');
-    canonicalLink.setAttribute('href', `https://michaelm.com/${path}`);
+    canonicalLink.setAttribute('href', `https://michaelm.site/${path}`);
 
     const head = document.querySelector('head')!;
     head.appendChild(canonicalLink);
