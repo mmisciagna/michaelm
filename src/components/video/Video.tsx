@@ -35,7 +35,7 @@ function Video({showcase, ready}: VideoProps) {
   return (
     <section className="mm-section mm-section--full-bleed mm-video">
       <div className="mm-section__inner" style={{
-        maxWidth: '1440px',
+        maxWidth: 'var(--section-lg-max-width)',
       }}>
         {ready ?
           <div className="mm-video__player">

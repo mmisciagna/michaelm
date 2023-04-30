@@ -9,7 +9,8 @@
   --main-padding-x: 24px;
   --main-padding-y: 72px;
   --negate-main-padding-x: calc(-1 * var(--main-padding-x));
-  --section-max-width: 1200px;
+  --section-max-width: 900px;
+  --section-lg-max-width: 1200px;
 
   @include ipad-portrait-up {
     --default-font-size: 20px;

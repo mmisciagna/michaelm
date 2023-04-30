@@ -26,6 +26,7 @@
     justify-content: center;
     margin-bottom: unset;
     margin-top: unset;
+    max-width: var(--section-lg-max-width);
     min-height: calc(100vh - (2 * var(--header-height)));
     min-height: calc(100dvh - (2 * var(--header-height)));
     padding: 48px 0;
