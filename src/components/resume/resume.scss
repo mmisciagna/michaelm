@@ -1,4 +1,6 @@
 .mm-resume {
+  max-width: var(--section-lg-max-width);
+
   h2,
   &__entry {
     margin-bottom: calc(var(--base-unit) * 2);

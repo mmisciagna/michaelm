@@ -45,6 +45,10 @@
 
   &__tldr {
     margin-top: unset;
+
+    .mm-section__inner {
+      max-width: var(--section-lg-max-width);
+    }
   }
 
   &__jump-links {
