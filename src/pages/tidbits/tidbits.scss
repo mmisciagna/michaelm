@@ -1,4 +1,8 @@
 .mm-tidbits {
+  .mm-section__inner {
+    max-width: 900px;
+  }
+
   &__content {
     // Markdown
     code {
