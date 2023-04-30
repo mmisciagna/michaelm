@@ -10,9 +10,11 @@ import InheritanceVsComposition from './tidbits-md/inheritance-vs-composition.md
 import AspectRatio from './tidbits-md/aspect-ratio.md';
 import ContainerMediaQuery from './tidbits-md/container-media-query.md';
 import ParentSelector from './tidbits-md/parent-selector.md';
+import NextJsVsReact from './tidbits-md/nextjs-vs-react.md';
 
 
 export const TIDBITS = [
+  NextJsVsReact,
   ParentSelector,
   ContainerMediaQuery,
   AspectRatio,
