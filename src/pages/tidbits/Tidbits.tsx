@@ -98,28 +98,29 @@ function Tidbits() {
             {tidbitToRender != null ? tidbitToRender.map((tidbit: Tidbit) => {
               // const setRefs = useInViewRef();
               const {data, content} = tidbit;
+              const {date, title, tags} = data;
               const markedContent = marked(content);
 
               return (
-                <React.Fragment key={data.title.toLowerCase()}>
+                <React.Fragment key={title.toLowerCase()}>
                   {/* <div className={`mm-tidbits__tidbit mm-animate ${useSetAnimateClassName(setRefs.inView)}`}
-                      data-tags={data.tags.join(',')}
+                      data-tags={tags.join(',')}
                       ref={setRefs.ref}> */}
                   <div className={`mm-tidbits__tidbit`}
-                      data-tags={data.tags.join(',')}>
+                      data-tags={tags.join(',')}>
                     <ul className="mm-tidbits__tags">
-                      {data.tags.map((tag: string) => {
+                      {tags.map((tag: string) => {
                         return <li key={tag.toLowerCase()}>{tag}</li>
                       })}
                     </ul>
                     <div className="mm-tidbits__metadata">
                       <p style={{margin: 'unset'}}>
-                        {data.date}
+                        {date}
                       </p>
                     </div>
                     <h2>
                       <ReactMarkdown>
-                        {data.title}
+                        {title}
                       </ReactMarkdown>
                     </h2>
                     <div dangerouslySetInnerHTML={{__html: markedContent}} />

@@ -11,9 +11,11 @@ import AspectRatio from './tidbits-md/aspect-ratio.md';
 import ContainerMediaQuery from './tidbits-md/container-media-query.md';
 import ParentSelector from './tidbits-md/parent-selector.md';
 import NextJsVsReact from './tidbits-md/nextjs-vs-react.md';
+import BeginnersRedux from './tidbits-md/beginners-redux.md';
 
 
 export const TIDBITS = [
+  BeginnersRedux,
   NextJsVsReact,
   ParentSelector,
   ContainerMediaQuery,
