@@ -75,9 +75,11 @@
         white-space: nowrap;
 
         &:has(svg) {
-          border: 0;
-          padding: unset;
-          width: 40px;
+          padding-right: var(--base-unit);
+
+          svg {
+            margin-left: 4px;
+          }
         }
 
         span {
