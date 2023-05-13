@@ -1,0 +1,41 @@
+.header {
+  align-items: center;
+  border-bottom: 1px solid var(--color-brown-10);
+  border-top: 1px solid var(--color-brown-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  margin: 0 var(--negate-main-padding-x);
+  padding: 1em 0 0;
+  position: sticky;
+  top: -1px;
+
+  &__branding {
+    font-size: 1.25em;
+  }
+
+  &__nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__nav-item {
+    background: var(--color-brown-10);
+    border-left: 1px dotted;
+    border-right: 1px dotted;
+    color: var(--color-tan);
+    flex: 1;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px;
+    text-transform: uppercase;
+
+    &:first-child,
+    &:last-child {
+      border: 0;
+    }
+  }
+}

@@ -7,7 +7,7 @@
   margin: 0 var(--negate-main-padding-x);
   overflow: hidden;
 
-  .video {
+  &__video {
     aspect-ratio: 16 / 9;
     translate: -20% -20%;
     height: 70%;
@@ -23,7 +23,7 @@
     }
   }
 
-  .content {
+  &__content {
     background: var(--bg-color);
     bottom: 0;
     clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 100%);
@@ -32,12 +32,12 @@
     height: 70%;
     justify-content: flex-end;
     right: 0;
-    padding: 15% var(--main-padding-x) var(--main-padding-x);
+    padding: 15% var(--main-padding-x) var(--main-padding-y);
     position: absolute;
     width: 100dvw;
     z-index: 1;
 
-    &__inner {
+    &__content-inner {
       max-width: var(--max-width-hero-content-inner);
     }
 
@@ -56,7 +56,7 @@
     }
   }
 
-  .smooth-scroll-arrow {
+  &__smooth-scroll-arrow {
     align-items: center;
     display: flex;
 
