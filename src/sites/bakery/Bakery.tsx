@@ -18,7 +18,7 @@ function Bakery() {
       </video>
       <div className="content">
         <h1 className="display h1">Bread Today,<br />Gone Tomorrow</h1>
-        <p className="body">Lorem ipsum <a href="https://google.com">dolor sit amet</a> consectetur adipisicing elit. Quidem, maiores! Suscipit voluptatibus possimus, incidunt minus deserunt qui quisquam nostrum est perferendis vel nam blanditiis quos recusandae harum quasi beatae deleniti?</p>
+        <p>Lorem ipsum <a href="https://google.com">dolor sit amet</a> consectetur adipisicing elit. Quidem, maiores!</p>
       </div>
     </section>
   );
