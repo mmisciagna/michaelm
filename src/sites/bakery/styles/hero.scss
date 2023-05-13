@@ -1,4 +1,7 @@
 .hero {
+  --max-width-hero-content: 900px;
+  --max-width-hero-content-inner: 500px;
+
   background-color: var(--color-black);
   height: 100dvh;
   margin: 0 var(--negate-main-padding-x);
@@ -27,17 +30,22 @@
     display: flex;
     flex-direction: column;
     height: 70%;
-    justify-content: center;
+    justify-content: flex-end;
     right: 0;
     padding: 15% var(--main-padding-x) var(--main-padding-x);
     position: absolute;
     width: 100dvw;
     z-index: 1;
 
+    &__inner {
+      max-width: var(--max-width-hero-content-inner);
+    }
+
     @include landscape {
       clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
       height: 100%;
-      max-width: var(--max-width-content);
+      justify-content: center;
+      max-width: var(--max-width-hero-content);
       padding-left: 15%;
       padding-top: var(--main-padding-x);
       width: 70%;
@@ -45,6 +53,25 @@
 
     h1 {
       margin: unset;
+    }
+  }
+
+  .smooth-scroll-arrow {
+    align-items: center;
+    display: flex;
+
+    button {
+      animation: bounce 3s ease-in-out infinite;
+      animation-delay: 5s;
+      background: var(--color-brown-10);
+      border-radius: 2px;
+      display: inline-block;
+      line-height: 0;
+    }
+
+    svg {
+      fill: var(--body-color);
+      width: 48px;
     }
   }
 }

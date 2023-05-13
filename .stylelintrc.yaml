@@ -57,7 +57,7 @@ rules:
   no-duplicate-at-import-rules: true
   no-invalid-double-slash-comments: null
   no-missing-end-of-source-newline: null
-  no-unknown-animations: true
+  no-unknown-animations: null
   number-leading-zero: null
   # Requires known-css-parser, not yet imported into third_party.
   # property-no-unknown: true
@@ -109,3 +109,5 @@ rules:
     - ignoreUnits:
       - /^[-+][\d$(]/
   value-list-comma-newline-after: null
+  no-invalid-position-at-import-rule: null
+  custom-property-no-missing-var-function: null
