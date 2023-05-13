@@ -31,3 +31,4 @@ interface Tidbit {
 type StructuredTidbits = Tidbit[][];
 
 declare module '*.md';
+declare module '*.scss';

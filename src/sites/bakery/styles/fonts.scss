@@ -1,0 +1,25 @@
+.body {
+  font: 400 18px/1.6em arial, sans-serif;
+}
+
+.display {
+  color: hsl(35deg 50% 5%);
+  font-family: georgia, serif;
+
+  &.h1 {
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  &.h2 {
+    font-size: 1.5em;
+  }
+
+  &.h3 {
+    font-size: 1.25em;
+  }
+
+  &.h4 {
+    font-size: 1em;
+  }
+}

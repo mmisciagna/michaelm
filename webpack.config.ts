@@ -106,7 +106,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {from: 'src/static/imgs', to: 'static/imgs'},
+        {from: 'src/static', to: 'static'},
       ],
     }),
     new MiniCssExtractPlugin({
