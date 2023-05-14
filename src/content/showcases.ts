@@ -9,6 +9,9 @@ import YTImpactLab from './showcase-md/yt-impact-lab.md';
 import YTCreators from './showcase-md/yt-creators.md';
 import YTCreatorsConcept from './showcase-md/yt-creators-concept.md';
 import ACUXDocCenter from './showcase-md/acux-doc-center.md';
+import WildfireDesigns from './showcase-md/wildfire-designs.md';
+import TravelClickDesigns from './showcase-md/travelclick-designs.md';
+import GoogleDesigns from './showcase-md/google-designs.md';
 
 
 export const SHOWCASES = [
@@ -17,10 +20,13 @@ export const SHOWCASES = [
   USofYT,
   YTCreatorEconomy,
   YTCreators,
-  YTCreatorsConcept,
   YTStudio,
   YTImpactLab,
   MyFiber,
   FiberGlobalNav,
   ACUXDocCenter,
+  WildfireDesigns,
+  YTCreatorsConcept,
+  TravelClickDesigns,
+  GoogleDesigns,
 ];

@@ -64,7 +64,7 @@ function Grid({
 }) {
   return (
     <section className="mm-section mm-projects-layout mm-projects-layout--grid">
-      <h2 className="mm-eyebrow" style={{ marginBottom: 'var(--main-padding-y)' }}>
+      <h2 className="mm-eyebrow" style={{ marginBottom: '48px' }}>
         {headline}
       </h2>
       <div className="mm-grid mm-grid--3-cols">
