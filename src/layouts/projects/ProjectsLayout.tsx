@@ -53,16 +53,30 @@ function ShowcaseGridItem({showcase, currentId}: {
   );
 }
 
-function Grid({id}: {id: string|undefined}) {
+function Grid({
+  id,
+  headline,
+  type,
+}: {
+  id: string|undefined,
+  headline: string,
+  type?: string,
+}) {
   return (
     <section className="mm-section mm-projects-layout mm-projects-layout--grid">
+      <h2 className="mm-eyebrow" style={{ marginBottom: 'var(--main-padding-y)' }}>
+        {headline}
+      </h2>
       <div className="mm-grid mm-grid--3-cols">
         {SHOWCASES.map((showcase: Showcase) => {
-          return (
-            <React.Fragment key={showcase.data.title}>
-              <ShowcaseGridItem showcase={showcase} currentId={id!} />
-            </React.Fragment>
-          )
+          if (type?.toLocaleLowerCase === showcase.data.type?.toLocaleLowerCase) {
+            return (
+              <React.Fragment key={showcase.data.title}>
+                <ShowcaseGridItem showcase={showcase} currentId={id!} />
+              </React.Fragment>
+            )
+          }
+          return null;
         })}
       </div>
     </section>
@@ -108,16 +122,30 @@ function ShowcaseListItem({showcase, currentId}: {
   );
 }
 
-function List({id}: {id: string|undefined}) {
+function List({
+  id,
+  headline,
+  type,
+}: {
+  id: string|undefined,
+  headline: string,
+  type?: string,
+}) {
   return (
     <section className="mm-section mm-projects-layout mm-projects-layout--list">
+      <h2 className="mm-eyebrow" style={{ marginBottom: '16px' }}>
+        {headline}
+      </h2>
       <ul className="mm-projects-layout__list">
         {SHOWCASES.map((showcase: Showcase) => {
-          return (
-            <React.Fragment key={showcase.data.title}>
-              <ShowcaseListItem showcase={showcase} currentId={id!} />
-            </React.Fragment>
-          )
+          if (type?.toLocaleLowerCase === showcase.data.type?.toLocaleLowerCase) {
+            return (
+              <React.Fragment key={showcase.data.title}>
+                <ShowcaseListItem showcase={showcase} currentId={id!} />
+              </React.Fragment>
+            )
+          }
+          return null;
         })}
       </ul>
     </section>
@@ -131,8 +159,10 @@ function ProjectsLayout() {
     <>
       <Outlet />
       <div id="all-projects"></div>
-      <List id={id} />
-      <Grid id={id} />
+      <List id={id} headline="Engineering Work" />
+      <List id={id} headline="Design Work" type="design" />
+      <Grid id={id} headline="Engineering Work" />
+      <Grid id={id} headline="Design Work" type="design" />
     </>
   )
 }

@@ -8,6 +8,7 @@ interface Showcase {
     role?: string;
     siteLink?: string;
     title: string;
+    type?: string;
     stack?: string[];
     videoId?: string;
     videoStart?: string;

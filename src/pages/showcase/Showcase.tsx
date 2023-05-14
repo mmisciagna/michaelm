@@ -111,7 +111,7 @@ function Pagination({index}: {index: number}) {
 
 function BreadCrumbs({showcase, index}: {showcase: Showcase, index: number}) {
   return (
-    <div className="mm-showcase__breadcrumbs">
+    <div className="mm-eyebrow mm-showcase__breadcrumbs">
       <ul className="mm-showcase__breadcrumbs-list">
         <li className="mm-showcase__breadcrumbs-item">
           <Link to="/projects">Projects</Link>

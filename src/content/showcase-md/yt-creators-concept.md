@@ -4,6 +4,7 @@ role: 'UX Designer'
 img: 'youtube-creators-design.webp'
 description: YTCreatorsConcept
 stack: ['Sketch', 'Photoshop']
+type: Design
 ---
 
 

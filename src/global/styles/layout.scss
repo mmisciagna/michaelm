@@ -10,6 +10,15 @@
   padding: 0 var(--main-padding-x);
 }
 
+.mm-eyebrow {
+  font-family: var(--font-stack-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+
 .mm-section {
   margin: var(--main-padding-y) auto;
   max-width: var(--section-max-width);
