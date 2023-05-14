@@ -5,21 +5,25 @@ body:has(.bakery-main) {
   --color-brown-10: hsl(35deg 50% 20% / 10%);
   --color-tan: hsl(35deg 50% 50%);
   --color-white: hsl(35deg 50% 100%);
+  --color-white-90: hsl(35deg 50% 100% / 90%);
   --bg-color: var(--color-white);
   --body-color: var(--color-brown);
   --display-color: var(--color-dark-brown);
   --subtle-color: var(--color-tan);
   --font-family: 'Poppins', arial, sans-serif;
   --font-size: 16px;
-  --max-width-content: 1200px;
+  --max-width-content: 1440px;
+  --header-height: 88px;
 
   @include ipad-portrait-up {
     --font-size: 18px;
+    --header-height: 75px;
   }
 
   background: var(--bg-color);
   color: var(--body-color);
   font: 400 #{var(--font-size)}/1.6em #{var(--font-family)};
+  scroll-padding: var(--header-height);
 
   h1,
   h2,
@@ -64,4 +68,5 @@ body:has(.bakery-main) {
   @import './layout';
   @import './hero';
   @import './header';
+  @import './about';
 }

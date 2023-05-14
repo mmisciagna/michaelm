@@ -1,4 +1,31 @@
 .section {
   margin: 80px auto;
   max-width: var(--max-width-content);
+
+  @include ipad-landscape-up {
+    border: 1px solid var(--color-brown-10);
+    padding: var(--main-padding-x);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--main-padding-x);
+  grid-template-columns: 1fr;
+
+  @include ipad-landscape-up {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fpo {
+  aspect-ratio: 1 / 1;
+  background: var(--color-black);
+  color: var(--color-white);
 }

@@ -1,16 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { smoothScrolling } from '../Bakery';
 
 function Hero() {
+  const contentRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const animatedEls = [...document.querySelectorAll('[data-animate]')];
 
-    animatedEls.forEach((el: Element, i: number) => {
-      const delay = (i + 2) * 200;
+    new Promise((resolve: any) => {
+      animatedEls.forEach((el: Element, i: number) => {
+        const delay = (i + 2) * 200;
 
-      setTimeout(() => {
-        el.classList.add('animate-in')
-      }, delay);
+        setTimeout(() => {
+          el.classList.add('animate-in');
+          if (i + 1 === animatedEls.length) resolve();
+        }, delay);
+      });
     });
   }, []);
 
@@ -31,7 +36,7 @@ function Hero() {
       >
         <source src="/static/videos/bakery-hero.mp4" type="video/mp4"></source>
       </video>
-      <div className="hero__content">
+      <div className="hero__content" ref={contentRef}>
         <div className="hero__content-inner">
           <h1 className="display h1">
             <div data-animate style={{ whiteSpace: 'nowrap' }}>Bread Today,</div>

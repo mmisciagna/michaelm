@@ -67,10 +67,15 @@
       border-radius: 2px;
       display: inline-block;
       line-height: 0;
+
+      &:hover svg {
+        fill: var(--body-color);
+      }
     }
 
     svg {
-      fill: var(--body-color);
+      fill: var(--color-tan);
+      transition: fill var(--fast-speed-ease);
       width: 48px;
     }
   }

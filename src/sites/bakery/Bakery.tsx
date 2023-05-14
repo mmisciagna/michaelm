@@ -17,6 +17,7 @@ function Bakery() {
     <Hero />
     <Header />
     <About />
+    <About />
   </>;
 }
 

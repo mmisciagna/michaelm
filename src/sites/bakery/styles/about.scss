@@ -1,0 +1,13 @@
+.about {
+  @include ipad-landscape-up {
+    .grid__cell {
+      &:first-child {
+        order: 1;
+      }
+
+      &:last-child {
+        order: 0;
+      }
+    }
+  }
+}

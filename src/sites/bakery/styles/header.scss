@@ -1,18 +1,41 @@
 .header {
-  align-items: center;
+  backdrop-filter: blur(5px);
+  background: var(--color-white-90);
   border-bottom: 1px solid var(--color-brown-10);
   border-top: 1px solid var(--color-brown-10);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1em;
   margin: 0 var(--negate-main-padding-x);
   padding: 1em 0 0;
   position: sticky;
   top: -1px;
 
+  @include ipad-portrait-up {
+    padding: 0 var(--main-padding-x);
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+
+    @include ipad-portrait-up {
+      flex-direction: row;
+      height: var(--header-height);
+      justify-content: space-between;
+    }
+  }
+
   &__branding {
     font-size: 1.25em;
+
+    @include ipad-portrait-up {
+      span {
+        display: block;
+      }
+    }
   }
 
   &__nav {
@@ -20,22 +43,36 @@
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @include ipad-portrait-up {
+      height: 100%;
+      max-width: 400px;
+    }
   }
 
   &__nav-item {
     background: var(--color-brown-10);
-    border-left: 1px dotted;
-    border-right: 1px dotted;
+    border-left: 1px dotted var(--color-tan);
+    border-right: 1px dotted var(--color-tan);
     color: var(--color-tan);
     flex: 1;
     font-size: 14px;
     letter-spacing: 2px;
     padding: 8px;
     text-transform: uppercase;
+    transition: color var(--fast-speed-ease);
+
+    @include ipad-portrait-up {
+      height: 100%;
+    }
 
     &:first-child,
     &:last-child {
       border: 0;
+    }
+
+    &:hover {
+      color: var(--body-color);
     }
   }
 }
