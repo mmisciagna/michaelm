@@ -1,13 +1,7 @@
 import React from 'react';
-import { smoothScrolling } from '../Bakery';
+import { Link as AutoScroll } from 'react-scroll';
 
 function Header() {
-  const scrollToSection = (e: React.MouseEvent) => {
-    const section = (e.target as HTMLElement).dataset.section;
-    const el = document.querySelector(`.${section}`);
-    if (el) smoothScrolling(el);
-  };
-
   return (
     <header className="header">
       <div className="header__inner">
@@ -15,27 +9,33 @@ function Header() {
           <span>Bread Today,</span> <span>Gone Tomorrow</span>
         </div>
         <nav className="header__nav">
-          <button
-            className="header__nav-item"
-            data-section="about"
-            onClick={(e) => scrollToSection(e)}
-          >
-              About
-          </button>
-          <button
-            className="header__nav-item"
-            data-section="shop"
-            onClick={(e) => scrollToSection(e)}
-          >
+          <AutoScroll
+              className="header__nav-item flex-center"
+              to={'about'}
+              smooth={true}
+              offset={-110}
+              duration={500}
+              href="">
+            About
+          </AutoScroll>
+          <AutoScroll
+              className="header__nav-item flex-center"
+              to={'shop'}
+              smooth={true}
+              offset={-110}
+              duration={500}
+              href="">
             Shop
-          </button>
-          <button
-            className="header__nav-item"
-            data-section="location"
-            onClick={(e) => scrollToSection(e)}
-          >
+          </AutoScroll>
+          <AutoScroll
+              className="header__nav-item flex-center"
+              to={'location'}
+              smooth={true}
+              offset={-110}
+              duration={500}
+              href="">
             Location
-          </button>
+          </AutoScroll>
         </nav>
       </div>
     </header>

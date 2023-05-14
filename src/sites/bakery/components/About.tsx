@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 function About() {
   return (
-    <section className="section about">
+    <section className="section about" id="about">
       <h2 className="eyebrow">
         Our Story
       </h2>

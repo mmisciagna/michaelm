@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { smoothScrolling } from '../Bakery';
+import { Link as AutoScroll } from 'react-scroll';
 
 function Hero() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -18,11 +18,6 @@ function Hero() {
       });
     });
   }, []);
-
-  const smoothScrollToFirstSection = () => {
-    const firstSection = document.querySelector('.section') as Element;
-    smoothScrolling(firstSection);
-  }
 
   return (
     <section className="hero">
@@ -49,11 +44,16 @@ function Hero() {
             Delight Your Senses with Freshly Baked Goods and Delicious Pizza at Our One-Stop Shop!
           </p>
           <div className="hero__smooth-scroll-arrow" data-animate>
-            <button onClick={() => smoothScrollToFirstSection()}>
+            <AutoScroll
+                to={'about'}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                href="">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
                 <path d="M480 712 240 472l43-43 197 197 197-197 43 43-240 240Z"/>
               </svg>
-            </button>
+            </AutoScroll>
           </div>
         </div>
       </div>
