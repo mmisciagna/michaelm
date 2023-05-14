@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSeoData } from '../../global/hooks';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Header from './components/Header';
+import Shop from './components/Shop';
+import Location from './components/Location';
 
 function Bakery() {
   useSeoData('Bread Today, Gone Tomorrow', 'bakery');
@@ -11,7 +13,8 @@ function Bakery() {
     <Hero />
     <Header />
     <About />
-    <About />
+    <Shop />
+    <Location />
   </>;
 }
 

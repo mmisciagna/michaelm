@@ -4,7 +4,20 @@
 
   @include ipad-landscape-up {
     border: 1px solid var(--color-brown-10);
-    padding: var(--main-padding-x);
+    padding: var(--main-padding-y) var(--main-padding-x);
+  }
+
+  &--fullbleed {
+    background: var(--display-color);
+    border: 0;
+    margin: 80px var(--negate-main-padding-x);
+    max-width: unset;
+    padding: var(--main-padding-y) var(--main-padding-x);
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
   }
 }
 
