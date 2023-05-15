@@ -10,7 +10,7 @@ import TidbitsLayout from './layouts/tidbits/TidbitsLayout';
 import Showcase from './pages/showcase/Showcase';
 import Contact from './pages/contact/Contact';
 import Tidbits from './pages/tidbits/Tidbits';
-import Bakery from './sites/bakery/Bakery';
+import Bakery from './for-fun/bakery/Bakery';
 import NotFound from './pages/404';
 
 

@@ -14,10 +14,6 @@
     padding: 0 var(--main-padding-x);
   }
 
-  &--slide-away {
-    transform: translateY(-100%);
-  }
-
   &__inner {
     align-items: center;
     display: flex;
