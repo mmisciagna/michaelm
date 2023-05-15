@@ -69,12 +69,12 @@
       line-height: 0;
 
       &:hover svg {
-        fill: var(--body-color);
+        fill: var(--subtle-color);
       }
     }
 
     svg {
-      fill: var(--subtle-color);
+      fill: var(--body-color);
       transition: fill var(--fast-speed-ease);
       width: 48px;
     }

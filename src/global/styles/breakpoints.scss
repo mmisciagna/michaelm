@@ -9,6 +9,12 @@ $breakpoint-desktop: 1200px;
   }
 }
 
+@mixin mobile-only {
+  @media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
+    @content;
+  }
+}
+
 @mixin tablet-up {
   @media (min-width: #{$breakpoint-tablet}) {
     @content;

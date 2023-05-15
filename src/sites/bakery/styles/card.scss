@@ -1,0 +1,39 @@
+.card {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__details {
+    flex: 1;
+  }
+
+  .fpo {
+    background: #fff;
+    line-height: 0;
+  }
+
+  &__type {
+    background: var(--color-white);
+    border-radius: 0 0 2px 2px;
+    color: var(--display-color);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0 16px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: var(--subtle-color);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+}

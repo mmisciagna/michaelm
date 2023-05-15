@@ -2,9 +2,11 @@
   margin: 80px auto;
   max-width: var(--max-width-content);
 
-  @include ipad-landscape-up {
-    border: 1px solid var(--color-brown-10);
-    padding: var(--main-padding-y) var(--main-padding-x);
+  &--outline {
+    @include ipad-landscape-up {
+      border: 1px solid var(--color-brown-10);
+      padding: var(--main-padding-y) var(--main-padding-x);
+    }
   }
 
   &--fullbleed {
@@ -29,6 +31,18 @@
   @include ipad-landscape-up {
     grid-template-columns: 1fr 1fr;
   }
+
+  &--4cols {
+    grid-template-columns: 1fr 1fr;
+
+    @include mobile-only {
+      grid-template-columns: 1fr;
+    }
+
+    @include ipad-landscape-up {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 }
 
 .flex-center {
@@ -41,4 +55,20 @@
   aspect-ratio: 1 / 1;
   background: var(--color-black);
   color: var(--color-white);
+}
+
+.button {
+  background: var(--subtle-color);
+  border-radius: 2px;
+  color: var(--display-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px;
+  text-transform: uppercase;
+  transition: color var(--fast-speed-ease);
+
+  &:hover {
+    color: var(--color-white);
+  }
 }
