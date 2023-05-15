@@ -3,34 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { GlobalString } from '../../global/constants';
 import Nav from '../nav/Nav';
 import ThemeToggle from '../theme-toggle/ThemeToggle';
+import { useSlideAwayHeader } from '../../global/hooks';
 
 
 function Header() {
   const headerRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    let lastScrollPosition = 0;
-
-    const handleSlideAway = () => {
-      const currentScrollPosition = window.pageYOffset;
-      const headerOffsetTop = headerRef.current!.offsetTop;
-
-      // Checks if the element is at the top of the page.
-      // Do nothing if it's not.
-      if (currentScrollPosition !== headerOffsetTop) return;
-
-      headerRef.current!.classList.toggle('mm-header--slide-away',
-          currentScrollPosition > lastScrollPosition);
-
-      lastScrollPosition = currentScrollPosition;
-    };
-
-    window.addEventListener('scroll', handleSlideAway);
-
-    return () => {
-      window.removeEventListener('scroll', handleSlideAway);
-    };
-  }, []);
+  useSlideAwayHeader(headerRef, 'mm-header--slide-away');
 
   return (
     <header className="mm-header" ref={headerRef}>

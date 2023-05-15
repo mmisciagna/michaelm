@@ -6,10 +6,16 @@
   margin: 0 var(--negate-main-padding-x);
   padding: 1em 0 0;
   position: sticky;
-  top: -1px;
+  top: 0;
+  transition: transform var(--medium-speed-ease) .3s;
+  z-index: 100;
 
   @include ipad-portrait-up {
     padding: 0 var(--main-padding-x);
+  }
+
+  &--slide-away {
+    transform: translateY(-100%);
   }
 
   &__inner {

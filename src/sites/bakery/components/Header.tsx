@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link as AutoScroll } from 'react-scroll';
+import { useSlideAwayHeader } from '../../../global/hooks';
 
 function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+
+  useSlideAwayHeader(headerRef, 'header--slide-away');
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header__inner">
         <div className="display header__branding">
           <span>Bread Today,</span> <span>Gone Tomorrow</span>

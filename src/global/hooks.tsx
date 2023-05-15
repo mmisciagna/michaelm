@@ -1,4 +1,4 @@
-import { useCallback, useRef, useEffect } from 'react';
+import React, { useCallback, useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { GlobalString } from './constants';
 
@@ -50,4 +50,33 @@ export const useInViewRef = (r?: any) => {
 export const useSetAnimateClassName = (inView: boolean): string => {
   if (inView) return 'mm-animate--in';
   return '';
+};
+
+export const useSlideAwayHeader = (
+  headerRef: React.RefObject<HTMLElement>,
+  slideAwayClass: string,
+) => {
+  useEffect(() => {
+    let lastScrollPosition = 0;
+
+    const handleSlideAway = () => {
+      const currentScrollPosition = window.pageYOffset;
+      const headerOffsetTop = headerRef.current!.offsetTop;
+
+      // Checks if the element is at the top of the page.
+      // Do nothing if it's not.
+      if (currentScrollPosition !== headerOffsetTop) return;
+
+      headerRef.current!.classList.toggle(slideAwayClass,
+          currentScrollPosition > lastScrollPosition);
+
+      lastScrollPosition = currentScrollPosition;
+    };
+
+    window.addEventListener('scroll', handleSlideAway);
+
+    return () => {
+      window.removeEventListener('scroll', handleSlideAway);
+    };
+  }, []);
 };
