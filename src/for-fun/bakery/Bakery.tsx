@@ -15,6 +15,11 @@ function Bakery() {
     <About />
     <Shop />
     <Location />
+    <footer className="footer" style={{
+      minHeight: '500px',
+      margin: '0 var(--negate-main-padding-x)',
+      background: 'var(--color-brown-10)',
+    }} />
   </>;
 }
 

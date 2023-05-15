@@ -1,0 +1,66 @@
+.location {
+  @include ipad-landscape-up {
+    &__accordion {
+      display: flex;
+      min-height: 300px;
+      transition: min-height var(--slow-speed-ease);
+
+      &:hover {
+        min-height: 500px;
+
+        .location__overlay {
+          backdrop-filter: blur(10px);
+        }
+      }
+    }
+
+    &__accordion-panel {
+      background: no-repeat center var(--color-white);
+      background-blend-mode: luminosity;
+      background-size: cover;
+      cursor: nesw-resize;
+      flex: 1;
+      opacity: .5;
+      position: relative;
+      transition: flex var(--slow-speed-ease), opacity var(--slow-speed-ease);
+
+      &:hover {
+        background-blend-mode: unset;
+        flex: 3;
+        opacity: 1;
+
+        .location__overlay {
+          backdrop-filter: unset;
+        }
+
+        .location__content {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    &__overlay {
+      backdrop-filter: unset;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: backdrop-filter var(--slow-speed-ease);
+      width: 100%;
+    }
+
+    &__content {
+      backdrop-filter: blur(5px);
+      background-color: hsl(0deg 0% 0% / 80%);
+      color: var(--color-white);
+      opacity: 0;
+      padding: 1em;
+      pointer-events: none;
+      position: relative;
+      transition: opacity var(--slow-speed-ease);
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}

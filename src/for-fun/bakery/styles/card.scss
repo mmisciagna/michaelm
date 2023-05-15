@@ -1,16 +1,10 @@
 .card {
-  color: var(--color-white);
   display: flex;
   flex-direction: column;
   height: 100%;
 
   &__details {
     flex: 1;
-  }
-
-  .fpo {
-    background: #fff;
-    line-height: 0;
   }
 
   &__type {
