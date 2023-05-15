@@ -12,6 +12,7 @@ import ACUXDocCenter from './showcase-md/acux-doc-center.md';
 import WildfireDesigns from './showcase-md/wildfire-designs.md';
 import TravelClickDesigns from './showcase-md/travelclick-designs.md';
 import GoogleDesigns from './showcase-md/google-designs.md';
+import Bakery from './showcase-md/bakery.md';
 
 
 export const SHOWCASES = [
@@ -29,4 +30,5 @@ export const SHOWCASES = [
   YTCreatorsConcept,
   TravelClickDesigns,
   GoogleDesigns,
+  Bakery,
 ];

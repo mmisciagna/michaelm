@@ -11,9 +11,6 @@ function ShowcaseGridItem({showcase, currentId}: {
   currentId: string|undefined,
 }) {
   const slug = slugify(showcase.data.title);
-  const isActive = slug === currentId;
-
-  if (isActive) return null;
 
   const setRefs = useInViewRef();
 
@@ -33,13 +30,11 @@ function ShowcaseGridItem({showcase, currentId}: {
           <h4>{showcase.data.role}</h4>
         </div>
         <div>
-          {!isActive &&
-            <Link className="mm-button"
-                to={`/projects/${slug}`}
-                arial-label={`View ${showcase.data.title} details`}>
-              View details
-            </Link>
-          }
+          <Link className="mm-button"
+              to={`/projects/${slug}`}
+              arial-label={`View ${showcase.data.title} details`}>
+            View details
+          </Link>
           {showcase.data.siteLink &&
             <a href={showcase.data.siteLink} target="_blank" rel="noopener noreferrer"
                 className="mm-button mm-button--secondary"
@@ -69,7 +64,7 @@ function Grid({
       </h2>
       <div className="mm-grid mm-grid--3-cols">
         {SHOWCASES.map((showcase: Showcase) => {
-          if (type?.toLocaleLowerCase === showcase.data.type?.toLocaleLowerCase) {
+          if (type?.toLowerCase() === showcase.data.type?.toLowerCase()) {
             return (
               <React.Fragment key={showcase.data.title}>
                 <ShowcaseGridItem showcase={showcase} currentId={id!} />
@@ -88,9 +83,6 @@ function ShowcaseListItem({showcase, currentId}: {
   currentId: string|undefined,
 }) {
   const slug = slugify(showcase.data.title);
-  const isActive = slug === currentId;
-
-  if (isActive) return null;
 
   const setRefs = useInViewRef();
 
@@ -138,7 +130,7 @@ function List({
       </h2>
       <ul className="mm-projects-layout__list">
         {SHOWCASES.map((showcase: Showcase) => {
-          if (type?.toLocaleLowerCase === showcase.data.type?.toLocaleLowerCase) {
+          if (type?.toLowerCase() === showcase.data.type?.toLowerCase()) {
             return (
               <React.Fragment key={showcase.data.title}>
                 <ShowcaseListItem showcase={showcase} currentId={id!} />
@@ -161,8 +153,10 @@ function ProjectsLayout() {
       <div id="all-projects"></div>
       <List id={id} headline="Engineering Work" />
       <List id={id} headline="Design Work" type="design" />
+      <List id={id} headline="For Fun" type="for fun" />
       <Grid id={id} headline="Engineering Work" />
       <Grid id={id} headline="Design Work" type="design" />
+      <Grid id={id} headline="For Fun" type="for fun" />
     </>
   )
 }

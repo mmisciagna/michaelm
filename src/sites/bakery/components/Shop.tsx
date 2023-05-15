@@ -35,7 +35,7 @@ function Shop() {
           </div>
           <div>
             <Card details={{
-              type: 'Bread',
+              type: 'Small Bites',
               title: 'Taralli',
               price: '$14.00',
               description: `Taralli are small, crispy, and savory Italian biscuits with a unique and irresistible texture. They are made from simple ingredients such as flour, water, olive oil, white wine, and salt. The result is a crispy and crunchy texture with a subtle savory flavor that makes them a perfect snack or accompaniment to a variety of dishes.`

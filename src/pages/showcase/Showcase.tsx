@@ -42,6 +42,8 @@ function Showcase() {
   };
 
   const index = SHOWCASES.indexOf(showcase);
+  const roleList = (data.role && typeof data.role === 'string') ?
+      [data.role] : data.role;
 
   return (
     <div className="mm-showcase">
@@ -53,7 +55,7 @@ function Showcase() {
         </div>
         <div className="mm-showcase__details">
           {data.client && <Details title="Client" list={[data.client]} />}
-          {data.role && <Details title="Role" list={[data.role]} />}
+          {data.role && <Details title="Role" list={roleList} />}
           {data.stack && <Details title="Stack" list={data.stack} />}
           {data.apis && <Details title="APIs" list={data.apis} />}
         </div>
