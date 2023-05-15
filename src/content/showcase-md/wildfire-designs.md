@@ -17,28 +17,6 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Men's Luxury
-
-![Wildfire design - Men's Luxury](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/mensLuxury.webp)
-
-</div>
-
-<div>
-
-#### Artistry
-
-![Wildfire design - Artistry](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/artistry.webp)
-
-</div>
-
-</div>
-
-<!-- Row -->
-
-<div class="mm-grid mm-grid--50-50">
-
-<div>
-
 #### The Walking Dead
 
 ![Wildfire design - The Walking Dead](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/walkingDead.webp)
@@ -61,17 +39,17 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Pizza Hut
+#### Men's Luxury
 
-![Wildfire design - Pizza Hut](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/pizzaHut.webp)
+![Wildfire design - Men's Luxury](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/mensLuxury.webp)
 
 </div>
 
 <div>
 
-#### Help for Parents. Hope for Kids.
+#### Artistry
 
-![Wildfire design - Help for Parents. Hope for Kids.](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/helpAndHope.webp)
+![Wildfire design - Artistry](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/artistry.webp)
 
 </div>
 
@@ -94,6 +72,28 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 #### The Ultimate Action Star
 
 ![Wildfire design - The Ultimate Action Star](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/ultimateActionStar.webp)
+
+</div>
+
+</div>
+
+<!-- Row -->
+
+<div class="mm-grid mm-grid--50-50">
+
+<div>
+
+#### Pizza Hut
+
+![Wildfire design - Pizza Hut](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/pizzaHut.webp)
+
+</div>
+
+<div>
+
+#### Help for Parents. Hope for Kids.
+
+![Wildfire design - Help for Parents. Hope for Kids.](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/helpAndHope.webp)
 
 </div>
 
