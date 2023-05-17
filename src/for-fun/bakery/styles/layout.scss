@@ -51,6 +51,12 @@
   justify-content: center;
 }
 
+.flex-bottom {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
 .fpo {
   aspect-ratio: 1 / 1;
   background: var(--color-black);
@@ -70,5 +76,30 @@
 
   &:hover {
     color: var(--color-white);
+  }
+
+  &--icon {
+    align-items: center;
+    background: unset;
+    border-radius: 0;
+    display: flex;
+    padding: unset;
+
+    a {
+      background: var(--color-brown-10);
+      border-radius: 2px;
+      display: inline-block;
+      line-height: 0;
+
+      &:hover svg {
+        fill: var(--subtle-color);
+      }
+    }
+
+    svg {
+      fill: var(--body-color);
+      transition: fill var(--fast-speed-ease);
+      width: 48px;
+    }
   }
 }

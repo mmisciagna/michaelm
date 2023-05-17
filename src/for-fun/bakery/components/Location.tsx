@@ -3,31 +3,43 @@ import React from 'react';
 interface LocationShape {
   city: string;
   img: string;
+  address: string;
 }
 
 const locations: LocationShape[] = [
   {
-    city: 'New York',
-    img: '/static/imgs/showcase/wildfire-interactive.webp',
+    city: 'San Francisco, CA',
+    img: '/static/imgs/bakery/sf-city.webp',
+    address: `345 Powell St 90012`,
   },
   {
-    city: 'San Francisco',
-    img: '/static/imgs/showcase/youtube-trends-2022.webp',
+    city: 'New York, NY',
+    img: '/static/imgs/bakery/ny-city.webp',
+    address: `123 Mulberry St 10023`,
   },
   {
-    city: 'Nashville',
-    img: '/static/imgs/showcase/youtube-creators.webp',
+    city: 'Nashville, TN',
+    img: '/static/imgs/bakery/nash-city.webp',
+    address: `678 N. Vols 37623`,
   },
 ]
 
 function LocationPanel({details}: {details: LocationShape}) {
   return (
-    <div className="flex-center location__accordion-panel" style={{
+    <div className="flex-bottom location__accordion-panel" style={{
       backgroundImage: `url(${details.img})`,
     }}>
       <div className="location__overlay"></div>
       <div className="location__content">
-        <div>{details.city}</div>
+        <div className="location__city">
+          {details.city}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+            <path d="M120 936V636h60v198l558-558H540v-60h300v300h-60V318L222 876h198v60H120Z"/>
+          </svg>
+        </div>
+        <div className="location__address">
+          {details.address}
+        </div>
       </div>
     </div>
   );

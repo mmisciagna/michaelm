@@ -43,7 +43,7 @@ function Hero() {
           <p data-animate>
             Delight Your Senses with Freshly Baked Goods and Delicious Pizza at Our One-Stop Shop!
           </p>
-          <div className="hero__smooth-scroll-arrow" data-animate>
+          <div className="button button--icon" data-animate>
             <AutoScroll
                 to={'about'}
                 smooth={true}
