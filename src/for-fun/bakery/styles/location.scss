@@ -39,7 +39,7 @@
       transition: flex var(--slow-speed-ease), opacity var(--slow-speed-ease);
 
       &::after {
-        background: hsl(0% 0% 100% / 50%);
+        background: hsl(0deg 0% 100% / 50%);
         content: '';
         height: 100%;
         position: absolute;

@@ -7,6 +7,7 @@ function Header() {
       <div className="header__inner">
         <div className="display header__branding">
           <span>Bread Today,</span> <span>Gone Tomorrow</span>
+          <hr className="italian-hr" />
         </div>
         <nav className="header__nav">
           <AutoScroll

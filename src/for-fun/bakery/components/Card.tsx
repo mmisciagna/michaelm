@@ -9,9 +9,9 @@ export interface CardShape {
 }
 
 const typeColorMap: Record<string, string[]> = {
-  'pizza': ['hsl(120 35% 25%)', '#fff'],
+  'pizza': ['hsl(120deg 35% 25%)', '#fff'],
   'bread': ['#fff'],
-  'small-bites': ['hsl(0 45% 40%)', '#fff'],
+  'small-bites': ['hsl(0deg 45% 40%)', '#fff'],
 }
 
 function Card({details}: {details: CardShape}) {

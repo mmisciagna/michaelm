@@ -121,7 +121,7 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    color: var(--display-color);
+    color: var(--body-color);
     z-index: 1;
 
     @include mobile-only {
@@ -136,6 +136,25 @@
   }
 
   .swiper-pagination-bullet-active {
-    background: var(--display-color);
+    background: var(--body-color);
   }
+}
+
+.italian-hr {
+  background:
+    linear-gradient(
+      90deg,
+      hsl(120deg 35% 25%) 0%,
+      hsl(120deg 35% 25%) 33%,
+      #fff 33%,
+      #fff 67%,
+      hsl(0deg 45% 40%) 67%,
+      hsl(0deg 45% 40%) 100%
+    );
+  border: 1px solid var(--color-brown-10);
+  display: block;
+  height: 4px;
+  margin: 1em 0;
+  max-width: 50%;
+  transform: skew(-45deg);
 }

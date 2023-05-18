@@ -37,6 +37,7 @@ function Hero() {
             <div data-animate style={{ whiteSpace: 'nowrap' }}>Bread Today,</div>
             <div data-animate style={{ whiteSpace: 'nowrap' }}>Gone Tomorrow</div>
           </h1>
+          <hr data-animate className="italian-hr" />
           <p className="subhead" data-animate>
             Pizzeria & Bakery
           </p>

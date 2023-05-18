@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { v4 as uuidv4 } from 'uuid';
 import Card, {CardShape} from './Card';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -76,7 +77,7 @@ function Shop() {
             1200: {slidesPerView: 4},
           }}
         >
-          {cards.map((card: CardShape) => <SwiperSlide><Card details={card} /></SwiperSlide>)}
+          {cards.map((card: CardShape) => <SwiperSlide key={uuidv4()}><Card details={card} /></SwiperSlide>)}
         </Swiper>
       </div>
     </section>
