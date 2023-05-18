@@ -103,3 +103,39 @@
     }
   }
 }
+
+.swiper {
+  cursor: grab;
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow: visible;
+
+  .swiper-pagination,
+  .swiper-button-prev,
+  .swiper-button-next {
+    bottom: unset;
+    text-align: left;
+    top: calc(-1 * (var(--main-padding-y) / 2));
+    translate: 0 -50%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--display-color);
+    z-index: 1;
+
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: unset;
+    right: 0;
+    translate: -200% -50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--display-color);
+  }
+}

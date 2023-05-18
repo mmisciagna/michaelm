@@ -82,5 +82,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "swiper": "^9.3.2"
+  }
 }

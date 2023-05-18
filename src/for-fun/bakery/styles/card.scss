@@ -7,9 +7,9 @@
     flex: 1;
   }
 
-  &__type {
+  &__type span {
     background: var(--color-white);
-    border-radius: 0 0 2px 2px;
+    border-radius: 0 0 4px 4px;
     color: var(--display-color);
     display: inline-block;
     font-size: 14px;
