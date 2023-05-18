@@ -26,9 +26,8 @@ const locations: LocationShape[] = [
 
 function LocationPanel({details}: {details: LocationShape}) {
   return (
-    <div className="flex-bottom location__accordion-panel" style={{
-      backgroundImage: `url(${details.img})`,
-    }}>
+    <div className="location__accordion-panel">
+      <div className="location__image" style={{backgroundImage: `url(${details.img})`}}></div>
       <div className="location__overlay"></div>
       <div className="location__content">
         <div className="location__city">
@@ -41,6 +40,13 @@ function LocationPanel({details}: {details: LocationShape}) {
           {details.address}
         </div>
       </div>
+      <button className="location__map-btn button button--icon">
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+            <path d="M527 936 413 643 120 529v-43l720-270-270 720h-43Z"/>
+          </svg>
+        </a>
+      </button>
     </div>
   );
 }

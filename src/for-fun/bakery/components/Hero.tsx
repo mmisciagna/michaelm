@@ -20,7 +20,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero" id="top">
       <video
         className="hero__video"
         preload="metadata"
@@ -38,14 +38,50 @@ function Hero() {
             <div data-animate style={{ whiteSpace: 'nowrap' }}>Gone Tomorrow</div>
           </h1>
           <hr data-animate className="italian-hr" />
-          <p className="subhead" data-animate>
+          <p className="subhead" data-animate style={{ color: 'var(--body-color)' }}>
             Pizzeria & Bakery
           </p>
           <p data-animate>
             Delight Your Senses with Freshly Baked Goods and Delicious Pizza at Our One-Stop Shop!
           </p>
+          <nav data-animate style={{
+            display: 'flex',
+            gap: '1em',
+            marginBottom: '1em',
+          }}>
+            <AutoScroll
+                style={{  color: 'var(--subtle-color)' }}
+                to={'about'}
+                smooth={true}
+                offset={-110}
+                duration={500}
+                href="">
+              About
+            </AutoScroll>
+            <AutoScroll
+                style={{  color: 'var(--subtle-color)' }}
+                to={'shop'}
+                smooth={true}
+                offset={-110}
+                duration={500}
+                href="">
+              Shop
+            </AutoScroll>
+            <AutoScroll
+                style={{  color: 'var(--subtle-color)' }}
+                to={'location'}
+                smooth={true}
+                offset={-110}
+                duration={500}
+                href="">
+              Location
+            </AutoScroll>
+          </nav>
           <div className="button button--icon" data-animate>
             <AutoScroll
+                style={{
+                  color: 'var(--display-color)'
+                }}
                 to={'about'}
                 smooth={true}
                 offset={-100}

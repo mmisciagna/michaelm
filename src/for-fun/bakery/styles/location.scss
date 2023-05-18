@@ -1,17 +1,29 @@
 .location {
-  &__accordion-panel {
-    aspect-ratio: 1 / 1;
+  &__accordion {
+    display: block;
   }
 
-  &__city {
-    svg {
-      display: none;
-    }
+  &__accordion-panel {
+    border: 1px solid var(--color-brown-10);
+    display: flex;
+    margin: 1em 0;
+    padding: 1em;
+  }
+
+  &__map-btn {
+    margin-left: auto;
+  }
+
+  &__image,
+  &__overlay,
+  &__city svg {
+    display: none;
   }
 
   @include ipad-landscape-up {
     &__accordion {
       display: flex;
+      flex-direction: row;
       gap: 1px;
       min-height: 300px;
       max-height: 300px;
@@ -31,10 +43,10 @@
     }
 
     &__accordion-panel {
-      background: no-repeat center var(--color-white);
-      background-blend-mode: luminosity;
-      background-size: cover;
+      align-items: flex-end;
       flex: 1;
+      margin: unset;
+      padding: unset;
       position: relative;
       transition: flex var(--slow-speed-ease), opacity var(--slow-speed-ease);
 
@@ -42,17 +54,22 @@
         background: hsl(0deg 0% 100% / 50%);
         content: '';
         height: 100%;
+        left: 0;
         position: absolute;
+        top: 0;
         transition: opacity var(--slow-speed-ease);
         width: 100%;
       }
 
       &:hover {
-        background-blend-mode: unset;
         flex: 3;
 
         &::after {
           opacity: 0;
+        }
+
+        .location__image {
+          background-blend-mode: unset;
         }
 
         .location__overlay {
@@ -61,8 +78,25 @@
       }
     }
 
+    &__map-btn {
+      display: none;
+    }
+
+    &__image {
+      display: block;
+      background: no-repeat center var(--color-white);
+      background-blend-mode: luminosity;
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
     &__overlay {
       backdrop-filter: unset;
+      display: block;
       height: 100%;
       left: 0;
       position: absolute;

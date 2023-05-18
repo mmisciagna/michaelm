@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
 import { v4 as uuidv4 } from 'uuid';
 import Card, {CardShape} from './Card';
 import 'swiper/scss';
@@ -16,7 +16,7 @@ const cards: CardShape[] = [
   },
   {
     type: 'Pizza',
-    title: 'Salsiccia Pizza',
+    title: 'Pizza Salsiccia',
     price: '$22.00',
     description: `Salsiccia Pizza is a delicious pizza that is sure to satisfy any pizza lover's cravings. This pizza features a thin, crispy crust that is topped with tangy tomato sauce, fresh mozzarella cheese, and savory Italian sausage.`,
   },
@@ -40,7 +40,7 @@ const cards: CardShape[] = [
   },
   {
     type: 'Pizza',
-    title: 'Salsiccia Pizza',
+    title: 'Pizza Salsiccia',
     price: '$22.00',
     description: `Salsiccia Pizza is a delicious pizza that is sure to satisfy any pizza lover's cravings. This pizza features a thin, crispy crust that is topped with tangy tomato sauce, fresh mozzarella cheese, and savory Italian sausage.`,
   },

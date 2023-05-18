@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as AutoScroll } from 'react-scroll';
 import { useSeoData } from '../../global/hooks';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -16,10 +17,19 @@ function Bakery() {
     <Shop />
     <Location />
     <footer className="footer" style={{
-      minHeight: '500px',
       margin: '0 var(--negate-main-padding-x)',
       background: 'var(--color-brown-10)',
-    }} />
+      padding: 'var(--main-padding-y) var(--main-padding-x)',
+      textAlign: 'center',
+    }}>
+      <AutoScroll
+          to={'top'}
+          smooth={true}
+          duration={500}
+          href="">
+        Back to top
+      </AutoScroll>
+    </footer>
   </>;
 }
 
