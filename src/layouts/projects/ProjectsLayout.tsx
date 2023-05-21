@@ -2,6 +2,7 @@ import React from 'react';
 import { SHOWCASES } from '../../content/showcases';
 import { Link, Outlet, useParams } from 'react-router-dom';
 import slugify from 'react-slugify';
+import { Link as AutoScroll } from 'react-scroll';
 import { GlobalString } from '../../global/constants';
 import { useInViewRef, useSetAnimateClassName } from '../../global/hooks';
 
@@ -147,16 +148,40 @@ function List({
 function ProjectsLayout() {
   const {id} = useParams();
 
+  const projectsTypes = [
+    'Engineering',
+    'Design',
+    'Just For Fun',
+  ];
+
   return (
     <>
       <Outlet />
-      <div id="all-projects"></div>
-      <List id={id} headline="Engineering Work" />
-      <List id={id} headline="Design Work" type="design" />
-      <List id={id} headline="For Fun" type="for fun" />
-      <Grid id={id} headline="Engineering Work" />
-      <Grid id={id} headline="Design Work" type="design" />
-      <Grid id={id} headline="For Fun" type="for fun" />
+      <section className="mm-section mm-projects-layout__nav" id="all-projects">
+        <nav>
+          {projectsTypes.map((type: string) => {
+            return (
+              <AutoScroll key={type}
+                  className="mm-eyebrow"
+                  to={slugify(type)}
+                  smooth={true}
+                  offset={-96}
+                  duration={500}
+                  href="">
+                {type}
+              </AutoScroll>
+            );
+          })}
+        </nav>
+      </section>
+      {projectsTypes.map((type: string) => {
+        return (
+          <div id={slugify(type)}  key={type}>
+            <List id={id} headline={type} type={type} />
+            <Grid id={id} headline={type} type={type} />
+          </div>
+        );
+      })}
     </>
   )
 }

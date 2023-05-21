@@ -8,6 +8,7 @@ description: YTCreators
 stack: ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
 siteLink: 'https://www.youtube.com/creators/'
 videoId: '0XcOLeOeFEc'
+type: Engineering
 ---
 
 ### Overview

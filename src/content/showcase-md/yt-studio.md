@@ -7,6 +7,7 @@ description: YTStudio
 stack: ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
 apis: ['YouTube Data, Blogger, Twitter']
 videoId: 'MqW-GOGS7pI'
+type: Engineering
 ---
 
 ### Overview

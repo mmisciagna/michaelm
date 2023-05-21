@@ -8,6 +8,7 @@ description: YTAds
 stack: ['TypeScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
 videoId: '9aZZBjkKleA'
 siteLink: 'https://www.youtube.com/ads/video-creation-tips/'
+type: Engineering
 ---
 
 ## Overview

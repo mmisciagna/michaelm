@@ -6,6 +6,7 @@ img: 'acux-doc-center.webp'
 description: ACUXDocCenter
 stack: ['ACUX specs', 'AngularJS', 'SCSS', 'Firebase Database', 'Google Cloud']
 videoId: 'd-b98ep59ZQ'
+type: Engineering
 ---
 
 ### Goal

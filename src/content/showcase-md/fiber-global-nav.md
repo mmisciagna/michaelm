@@ -6,6 +6,7 @@ img: 'google-fiber-global-nav.webp'
 description: FiberGlobalNav
 stack: ['AngularJS', 'SCSS', 'Firebase Database', 'Google Cloud']
 videoId: 'Ft9qsS7l52U'
+type: Engineering
 ---
 
 ### Goal

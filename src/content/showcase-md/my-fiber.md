@@ -6,6 +6,7 @@ img: 'my-fiber.webp'
 description: MyFiber
 stack: ['AngularJS', 'SCSS', 'Firebase Database', 'Google Cloud']
 videoId: 'YSMDyjB-LDc'
+type: Engineering
 ---
 
 ### Goal

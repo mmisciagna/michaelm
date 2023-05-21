@@ -178,4 +178,27 @@
       transform: rotate(180deg);
     }
   }
+
+  &__nav {
+    max-width: var(--section-lg-max-width);
+
+    nav {
+      align-items: center;
+      border-bottom: 1px solid var(--color-secondary-reversed);
+      display: flex;
+      gap: var(--base-unit);
+      margin: var(--main-padding-y) 0;
+      padding-bottom: 8px;
+    }
+
+    a {
+      color: var(--color-accent);
+      display: inline-block;
+      transition: color var(--fast-speed-ease);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
 }

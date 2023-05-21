@@ -4,7 +4,7 @@ role: ['Designer', Frontend Engineer]
 img: 'bakery.webp'
 stack: ['React', 'TypeScript', 'SCSS', 'Node', 'Webpack', 'Google Cloud']
 siteLink: /bakery
-type: For Fun
+type: Just For Fun
 videoId: Fv6tng-LVw4
 ---
 

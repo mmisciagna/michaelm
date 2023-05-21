@@ -7,6 +7,7 @@ img: 'youtube-trends-2022.webp'
 stack: ['Lit', 'TypeScript', 'SCSS', 'Express/Node', 'Webpack', 'Google Cloud']
 videoId: '3N8kXXzU9-Y'
 siteLink: 'http://youtube.com/trends/2022'
+type: Engineering
 ---
 
 ## Overview

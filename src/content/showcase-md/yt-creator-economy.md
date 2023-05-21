@@ -7,6 +7,7 @@ description: YTCreatorEconomy
 stack: ['TypeScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
 videoId: 'gveZUoCxNGM'
 siteLink: 'https://www.youtube.com/howyoutubeworks/progress-impact/impact/creator-economy/'
+type: Engineering
 ---
 
 ## Overview

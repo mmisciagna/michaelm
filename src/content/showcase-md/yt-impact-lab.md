@@ -8,6 +8,7 @@ stack: ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud'
 videoId: 'Xvb6DIUf6MA'
 videoStart: '162'
 siteLink: 'https://socialimpact.youtube.com/'
+type: Engineering
 ---
 
 ### Overview

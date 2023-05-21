@@ -8,6 +8,7 @@ description: USofYT
 stack: ['TypeScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
 videoId: '7o4KEQ7vJEc'
 siteLink: 'https://www.youtube.com/intl/en_us/howyoutubeworks/progress-impact/impact/us-of-youtube/'
+type: Engineering
 ---
 
 ## Overview
