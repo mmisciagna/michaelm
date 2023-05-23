@@ -53,3 +53,7 @@ type: Design
 ![African American History Museum brochure 2](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-2.webp)
 
 ![African American History Museum brochure 3](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-3.webp)
+
+### Pepco
+
+![Pepco brochure](https://storage.googleapis.com/michaelm.appspot.com/college-designs/pepco-brochure.webp)

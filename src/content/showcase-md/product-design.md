@@ -28,12 +28,4 @@ type: Design
 
 <!-- Row -->
 
-<div class="mm-grid mm-grid--50-50">
-
-<div>
-
 ![Cascante wine bottles with tote bag](https://storage.googleapis.com/michaelm.appspot.com/college-designs/cascante-tote.webp)
-
-</div>
-
-</div>
