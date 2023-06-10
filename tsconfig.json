@@ -1,49 +1,28 @@
 {
-  "ts-node": {
-    "files": true
-  },
-  "files": ["types.d.ts"],
-  "moduleResolution": "node",
   "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "declaration": false,
-    "downlevelIteration": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "jsx": "react",
-    "lib": [
-      "es2021",
-      "dom"
-    ],
-    "module": "es6",
-    "moduleResolution": "node",
-    "noEmitOnError": false,
-    "noErrorTruncation": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noResolve": false,
-    "noStrictGenericChecks": true,
-    "outDir": "dist",
-    "preserveConstEnums": true,
-    "rootDir": "src",
-    "skipLibCheck": true,
-    "sourceMap": false,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "stripInternal": true,
     "target": "es5",
-    "useUnknownInCatchVariables": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "compileOnSave": false,
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
