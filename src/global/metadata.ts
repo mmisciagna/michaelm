@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
+import { GlobalString } from '@/global/constants';
 
-const metaTitle = '[ mē-shah-nyah ]';
+const metaTitle = GlobalString.PRONUNCIATION;
 const metaUrl = 'https://michaelm.site';
 const metaDescription =
   'As a highly skilled Senior Frontend Engineer, I bring over 12 years of experience and a proven track record of bridging the gap between engineering and design teams.';
