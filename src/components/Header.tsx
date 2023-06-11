@@ -1,32 +1,43 @@
+'use client';
+
 import Link from 'next/link';
 import { GlobalString } from '@/global/constants';
 import Nav from '@/components/Nav';
+import { useEffect, useRef } from 'react';
 // import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Header() {
-  // let lastScrollPosition = 0;
+  const headerRef = useRef<HTMLElement>(null);
 
-  // const handleSlideAway = () => {
-  //   const currentScrollPosition = window.pageYOffset;
-  //   const headerOffsetTop = headerRef.current!.offsetTop;
+  useEffect(() => {
+    let lastScrollPosition = 0;
 
-  //   // Checks if the element is at the top of the page.
-  //   // Do nothing if it's not.
-  //   if (currentScrollPosition !== headerOffsetTop) return;
+    const handleSlideAway = () => {
+      const currentScrollPosition = window.pageYOffset;
+      const headerOffsetTop = headerRef.current!.offsetTop;
 
-  //   headerRef.current!.classList.toggle(
-  //     'mm-header--slide-away',
-  //     currentScrollPosition > lastScrollPosition
-  //   );
-  //   console.log(lastScrollPosition);
+      // Checks if the element is at the top of the page.
+      // Do nothing if it's not.
+      if (currentScrollPosition !== headerOffsetTop) return;
 
-  //   lastScrollPosition = currentScrollPosition;
-  // };
+      headerRef.current!.classList.toggle(
+        'translate-y-[-100%]',
+        currentScrollPosition > lastScrollPosition
+      );
 
-  // window.addEventListener('scroll', handleSlideAway);
+      lastScrollPosition = currentScrollPosition;
+    };
+
+    window.addEventListener('scroll', handleSlideAway);
+
+    return () => window.removeEventListener('scroll', handleSlideAway);
+  }, []);
 
   return (
-    <header className="sticky left-0 top-0 z-50 flex flex-col items-center justify-between duration-300 ease-in-out [transition-property:transform] xs:h-48 xs:flex-row">
+    <header
+      className="sticky left-0 top-0 z-50 flex flex-col items-center justify-between duration-300 ease-in-out [transition-property:transform] xs:h-48 xs:flex-row"
+      ref={headerRef}
+    >
       <div className="relative flex h-48 w-full flex-1 basis-[48px] items-center justify-start overflow-hidden bg-slate-blue italic text-white before:absolute before:left-24 before:top-1/2 before:translate-y-[-50%] before:bg-white before:content-[''] before:[height:1px] before:[width:calc(100%-24px)] xs:h-full xs:border-b xs:border-off-white xs:px-24 sm:px-48 sm:before:[width:calc(100%-48px)] lg:px-80 lg:before:[width:calc(100%-80px)]">
         <Link
           href={`/`}
