@@ -66,6 +66,6 @@ module.exports = {
         80: '80px',
       },
     },
-    plugins: [require('prettier-plugin-tailwindcss')],
   },
+  plugins: [require('prettier-plugin-tailwindcss')],
 };

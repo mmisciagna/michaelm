@@ -16,7 +16,7 @@ export default function RootLayout({
     >
       <body className="m-0 flex min-h-full w-full flex-col bg-off-white">
         <Header />
-        <main className="flex-1 px-24 sm:px-48 lg:px-80">{children}</main>
+        <main className="main-spacing-x flex-1">{children}</main>
       </body>
     </html>
   );
