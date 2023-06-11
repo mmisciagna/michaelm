@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { head } from '@/global/metadata';
+import { head } from '@/globals/metadata';
 
 export const metadata: Metadata = {
   title: `Projects - ${head.title}`,

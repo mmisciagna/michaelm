@@ -31,7 +31,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
     'flex': true,
     'items-center xs:items-end': isInHeader,
     'bg-off-white': isInHeader,
-    'h-48 sm:h-full': isInHeader,
+    'h-[var(--header-height)] sm:h-full': isInHeader,
     'px-4 sm:p-0': isInHeader,
     'relative': isInHeader,
     'w-full xs:w-auto': isInHeader,

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { GlobalString } from '@/global/constants';
+import { GlobalString } from '@/globals/constants';
 
 const metaTitle = GlobalString.PRONUNCIATION;
 const metaUrl = 'https://michaelm.site';

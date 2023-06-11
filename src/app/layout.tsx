@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
-import { head } from '@/global/metadata';
-import '@/global/globals.scss';
+import { head } from '@/globals/metadata';
+import '@/globals/globals.scss';
 
 export const metadata = head;
 

@@ -8,7 +8,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+// Variables
+:root {
+  --header-height: 48px;
+}
+
 // Reusable Tailwind classes
 .main-spacing-x {
   @apply px-24 sm:px-48 lg:px-80;
+}
+
+.negate-main-spacing-x {
+  @apply mx-[-24px] sm:mx-[-48px] lg:mx-[-80px];
 }
