@@ -1,18 +1,55 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      'slate-blue': 'hsl(215 19% 22%)',
+      'slate-blue-md': 'hsl(215 18% 20%)',
+      'slate-blue-dk': 'hsl(215 28% 9%)',
+      'slate-blue-90': 'hsl(215 19% 22% / 0.9)',
+      'bronze': 'hsl(30 61% 50%)',
+      'off-white': 'hsl(30 100% 97%)',
+      'white': 'hsl(0 0% 100%)',
+      'white-70': 'hsl(0 0% 100% / .7)',
+      'white-50': 'hsl(0 0% 100% / .5)',
+      'white-25': 'hsl(0 0% 100% / .25)',
+      'white-10': 'hsl(0 0% 100% / .1)',
+      'black': 'hsl(0 0% 0%)',
+      'black-25': 'hsl(0 0% 0% / .25)',
+      'green': 'hsl(120 100% 25%)',
+      'green-10': 'hsl(120 100% 25% / .1)',
+      'green-lgt': 'hsl(120 41% 72%)',
+      'red': 'hsl(0 41% 45%)',
+      'red-10': 'hsl(0 41% 45% / .1)',
+      'red-lgt': 'hsl(0 47% 74%)',
+    },
+    fontFamily: {
+      body: ['Source Sans Pro', 'sans-serif'],
+      display: ['Raleway', 'sans-serif'],
+      mono: ['Source Code Pro', 'monospace'],
+    },
+    screens: {
+      600: '600px',
+      768: '768px',
+      1024: '1024px',
+      1200: '1200px',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      spacing: {
+        4: '4px',
+        8: '8px',
+        12: '12px',
+        16: '16px',
+        20: '20px',
+        24: '24px',
+        48: '48px',
+        64: '64px',
+        80: '80px',
       },
     },
   },
   plugins: [],
-}
+};
