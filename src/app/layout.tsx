@@ -12,9 +12,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full text-lg leading-relaxed text-slate-blue antialiased [font-variant-ligatures:normal] sm:text-xl"
+      className="h-full text-lg leading-relaxed antialiased [font-variant-ligatures:normal] sm:text-xl"
     >
-      <body className="m-0 flex min-h-full w-full flex-col bg-off-white">
+      <body className="m-0 flex min-h-full w-full flex-col bg-off-white text-slate-blue dark:bg-slate-blue dark:text-off-white">
         <Header />
         <main className="main-spacing-x flex-1">{children}</main>
       </body>
