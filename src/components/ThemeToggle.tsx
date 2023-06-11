@@ -4,17 +4,23 @@ import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-// Checks if user's preference is dark mode.
-const isDarkTheme =
-  window.matchMedia &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-const docEl = document.documentElement;
+let isDarkTheme = false;
 
 export default function ThemeToggle() {
   const [checked, setChecked] = useState(isDarkTheme);
 
+  // Checks if user's preference is dark mode.
   useEffect(() => {
+    isDarkTheme =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    setChecked(isDarkTheme);
+  }, []);
+
+  // Toggle theme on <html>.
+  useEffect(() => {
+    const docEl = document.documentElement;
     docEl.setAttribute('theme', checked ? 'dark' : 'light');
   }, [checked]);
 
