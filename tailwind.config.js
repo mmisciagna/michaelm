@@ -31,11 +31,22 @@ module.exports = {
       display: ['Raleway', 'sans-serif'],
       mono: ['Source Code Pro', 'monospace'],
     },
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '18px',
+      xl: '20px',
+      h1: '3rem',
+      h2: '2rem',
+      h3: '1.5rem',
+      h4: '1rem',
+    },
     screens: {
-      600: '600px',
-      768: '768px',
-      1024: '1024px',
-      1200: '1200px',
+      xs: '600px',
+      sm: '768px',
+      md: '1024px',
+      lg: '1200px',
     },
     extend: {
       spacing: {
@@ -50,6 +61,6 @@ module.exports = {
         80: '80px',
       },
     },
+    plugins: [require('prettier-plugin-tailwindcss')],
   },
-  plugins: [],
 };
