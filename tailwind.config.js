@@ -6,19 +6,24 @@ module.exports = {
   ],
   theme: {
     colors: {
+      // Primaries
       'slate-blue': 'hsl(215 19% 22%)',
       'slate-blue-md': 'hsl(215 18% 20%)',
       'slate-blue-dk': 'hsl(215 28% 9%)',
       'slate-blue-90': 'hsl(215 19% 22% / 0.9)',
+      // Accents
       'bronze': 'hsl(30 61% 50%)',
       'off-white': 'hsl(30 100% 97%)',
+      // Whites
       'white': 'hsl(0 0% 100%)',
       'white-70': 'hsl(0 0% 100% / .7)',
       'white-50': 'hsl(0 0% 100% / .5)',
       'white-25': 'hsl(0 0% 100% / .25)',
       'white-10': 'hsl(0 0% 100% / .1)',
+      // Blacks
       'black': 'hsl(0 0% 0%)',
       'black-25': 'hsl(0 0% 0% / .25)',
+      // Successes/Errors
       'green': 'hsl(120 100% 25%)',
       'green-10': 'hsl(120 100% 25% / .1)',
       'green-lgt': 'hsl(120 41% 72%)',

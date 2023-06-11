@@ -1,12 +1,13 @@
 {
   "name": "michaelm",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p 8080",
+    "lint": "next lint",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@types/node": "20.3.0",
@@ -26,5 +27,8 @@
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "sass": "^1.63.3"
+  },
+  "engines": {
+    "node": "16.x.x"
   }
 }

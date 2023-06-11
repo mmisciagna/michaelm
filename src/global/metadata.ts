@@ -24,9 +24,7 @@ export const head: Metadata = {
     images: [{ url: metaImg }],
   },
   twitter: {
-    // @ts-ignore
     card: 'summary_large_image',
-    url: metaUrl,
     title: metaTitle,
     description: metaDescription,
     images: [{ url: metaImg }],

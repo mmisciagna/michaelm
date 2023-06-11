@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+import { head } from '@/global/metadata';
+
+export const metadata: Metadata = {
+  title: `About - ${head.title}`,
+};
+
 export default function About() {
   return (
     <>
