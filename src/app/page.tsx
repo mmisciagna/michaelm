@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <h1 className="my-16 font-display text-h1">Headline 1</h1>
+      <h1 className="my-16 font-display text-h1">Headline 1 testing</h1>
       <h2 className="my-16 font-display text-h2">Headline 2</h2>
       <h3 className="my-16 font-display text-h3">Headline 3</h3>
       <h4 className="my-16 font-display text-h4">Headline 4</h4>
