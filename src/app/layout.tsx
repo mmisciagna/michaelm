@@ -4,7 +4,7 @@ import '@/globals/globals.scss';
 
 export const metadata = head;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;

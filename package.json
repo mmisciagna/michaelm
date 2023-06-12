@@ -8,7 +8,7 @@
     "start": "next start -p 8080",
     "lint": "next lint",
     "deploy": "firebase deploy",
-    "stage": "firebase hosting:channel:deploy"
+    "stage:version": "npm run build && gcloud app deploy . --project michaelm --appyaml=app.yaml --no-promote --quiet --version"
   },
   "dependencies": {
     "@types/node": "20.3.0",

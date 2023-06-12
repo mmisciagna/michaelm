@@ -18,6 +18,48 @@ export default function About() {
         cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
         consectetur odio.
       </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
       <p className="my-16 text-md">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
         dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
@@ -25,6 +67,42 @@ export default function About() {
         consectetur odio.
       </p>
       <p className="my-16 text-sm">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16 text-sm">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16 text-sm">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16 text-sm">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16 text-xs">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16 text-xs">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
+        dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
+        cumque fuga consectetur? Accusamus molestiae ipsa quo iure est
+        consectetur odio.
+      </p>
+      <p className="my-16 text-xs">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quae
         dolores, molestiae assumenda officia in, culpa voluptate eligendi totam,
         cumque fuga consectetur? Accusamus molestiae ipsa quo iure est

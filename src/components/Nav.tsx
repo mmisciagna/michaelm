@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
@@ -54,7 +52,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
           <Link
             key={item.label}
             className={twMerge(
-              `relative mx-8 inline-block font-display text-xs font-bold uppercase leading-loose tracking-wider text-bronze transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:bg-slate-blue after:duration-200 after:ease-in-out after:content-[''] after:[height:2px] after:[transition-property:width] hover:text-slate-blue hover:after:[width:25%] dark:text-bronze sm:text-sm ${cn}`
+              `relative mx-8 inline-block font-display text-xs font-bold uppercase leading-loose tracking-wider text-bronze transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:bg-slate-blue after:duration-200 after:ease-in-out after:content-[''] after:[height:2px] after:[transition-property:width] hover:text-slate-blue hover:after:[width:25%] dark:text-bronze dark:hover:text-white sm:text-sm ${cn}`
             )}
             href={item.href}
           >

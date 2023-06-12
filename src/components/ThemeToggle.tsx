@@ -1,55 +1,49 @@
-'use client';
-
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-let isDarkTheme = false;
-
 export default function ThemeToggle() {
-  const [checked, setChecked] = useState(isDarkTheme);
+  const [checked, setChecked] = useState(false);
 
   // Checks if user's preference is dark mode.
   useEffect(() => {
-    isDarkTheme =
+    const isDarkTheme =
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     setChecked(isDarkTheme);
   }, []);
 
-  // Toggle theme on <html>.
+  // Toggles theme on <html>.
   useEffect(() => {
     const docEl = document.documentElement;
     docEl.setAttribute('theme', checked ? 'dark' : 'light');
   }, [checked]);
 
-  const rootClasses = classNames({
-    'absolute right-0 top-0 group': true,
-  });
-
-  const lightPanelClasses = classNames({
-    'border-0 w-0': checked,
-  });
-
-  const lightIconClasses = classNames({
-    'opacity-0': checked,
-  });
-
-  const darkPanelClasses = classNames({
-    'w-48': checked,
-  });
-
-  const darkIconClasses = classNames({
-    'opacity-100': checked,
-  });
+  const cns = {
+    root: classNames({
+      'absolute right-0 top-0 group': true,
+    }),
+    lightPanel: classNames({
+      'border-0 w-0': checked,
+    }),
+    lightIcon: classNames({
+      'opacity-0': checked,
+    }),
+    darkPanel: classNames({
+      'w-48': checked,
+    }),
+    darkIcon: classNames({
+      'opacity-100': checked,
+    }),
+  };
 
   const handleCheck = (e: any) => {
     setChecked(e.target.checked);
   };
 
   return (
-    <div className={rootClasses}>
+    <div className={cns.root}>
       <input
         className="absolute right-0 top-0 block h-[var(--header-height)] w-[var(--header-height)] cursor-pointer appearance-none rounded-none border-0 p-0"
         type="checkbox"
@@ -59,12 +53,12 @@ export default function ThemeToggle() {
       <div className="pointer-events-none relative z-10 flex items-center">
         <div
           className={twMerge(
-            `flex h-[var(--header-height)] w-48 items-center justify-center overflow-hidden border-0 bg-bronze duration-200 ease-in-out [transition-property:width] ${lightPanelClasses}`
+            `flex h-[var(--header-height)] w-48 items-center justify-center overflow-hidden border-0 bg-bronze duration-200 ease-in-out [transition-property:width] ${cns.lightPanel}`
           )}
         >
           <svg
             className={twMerge(
-              `absolute left-1/2 top-1/2 h-24 w-24 translate-x-[-50%] translate-y-[-50%] fill-off-white opacity-100 transition duration-200 ease-in-out group-hover:fill-black ${lightIconClasses}`
+              `absolute left-1/2 top-1/2 h-24 w-24 translate-x-[-50%] translate-y-[-50%] fill-off-white opacity-100 transition duration-200 ease-in-out group-hover:fill-black ${cns.lightIcon}`
             )}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 96 960 960"
@@ -74,12 +68,12 @@ export default function ThemeToggle() {
         </div>
         <div
           className={twMerge(
-            `flex h-[var(--header-height)] w-0 items-center justify-center overflow-hidden bg-off-white duration-200 ease-in-out [transition-property:width] ${darkPanelClasses}`
+            `flex h-[var(--header-height)] w-0 items-center justify-center overflow-hidden bg-off-white duration-200 ease-in-out [transition-property:width] ${cns.darkPanel}`
           )}
         >
           <svg
             className={twMerge(
-              `absolute left-1/2 top-1/2 h-24 w-24 translate-x-[-50%] translate-y-[-50%] fill-bronze opacity-0 transition duration-200 ease-in-out group-hover:fill-black ${darkIconClasses}`
+              `absolute left-1/2 top-1/2 h-24 w-24 translate-x-[-50%] translate-y-[-50%] fill-bronze opacity-0 transition duration-200 ease-in-out group-hover:fill-black ${cns.darkIcon}`
             )}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 96 960 960"
