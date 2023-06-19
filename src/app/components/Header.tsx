@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { GlobalString } from '@/globals/constants';
-import Nav from '@/components/Nav';
-import ThemeToggle from '@/components/ThemeToggle';
+import Nav from '@/app/components/Nav';
+import ThemeToggle from '@/app/components/ThemeToggle';
 
 export default function Header({ classes }: { classes?: string }) {
   const headerRef = useRef<HTMLElement>(null);
@@ -13,8 +13,8 @@ export default function Header({ classes }: { classes?: string }) {
     let lastScrollPosition = 0;
 
     const handleSlideAway = () => {
-      const currentScrollPosition = window.pageYOffset;
-      const headerOffsetTop = headerRef.current!.offsetTop;
+      const currentScrollPosition = window.scrollY;
+      const headerOffsetTop = headerRef.current?.offsetTop;
 
       // Checks if the element is at the top of the page.
       // Do nothing if it's not.

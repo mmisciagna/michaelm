@@ -2,8 +2,8 @@
 
 import slugify from 'react-slugify';
 import { GlobalString } from '@/globals/constants';
-import Tooltip from '@/components/Tooltip';
-import { RESUME } from '../content/resume';
+import Tooltip from '@/app/components/Tooltip';
+import { RESUME } from '../../content/resume';
 
 export default function Hero() {
   return (
@@ -39,7 +39,9 @@ export default function Hero() {
           </li>
           {RESUME.map((section: any) => {
             return (
-              <li className="m-0 min-w-[50%] max-w-[50%] p-[2px] xs:ml-24 xs:min-w-[unset] xs:max-w-[unset] xs:p-0">
+              <li
+                key={section.title}
+                className="m-0 min-w-[50%] max-w-[50%] p-[2px] xs:ml-24 xs:min-w-[unset] xs:max-w-[unset] xs:p-0">
                 <a
                   className="block bg-white px-24 py-12 text-bronze transition-colors duration-200 ease-in-out hover:text-slate-blue dark:bg-slate-blue-md hover:dark:text-off-white xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
                   href={`#${slugify(section.title)}`}>

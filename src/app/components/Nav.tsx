@@ -23,7 +23,7 @@ const items = [
 ];
 
 export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
-  const pathName = usePathname();
+  const pathname = usePathname();
 
   let cn = classNames({
     'flex': true,
@@ -38,7 +38,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
   return (
     <nav className={cn}>
       {items.map((item) => {
-        const isActive = pathName === item.href;
+        const isActive = pathname === item.href;
 
         cn = classNames({
           'text-slate-blue dark:text-white': isActive,
