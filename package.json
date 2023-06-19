@@ -14,6 +14,7 @@
     "@types/node": "20.3.0",
     "@types/react": "18.2.11",
     "@types/react-dom": "18.2.4",
+    "@types/react-scroll": "^1.8.7",
     "autoprefixer": "10.4.14",
     "classnames": "^2.3.2",
     "eslint": "8.42.0",
@@ -23,6 +24,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.4",
+    "react-scroll": "^1.8.9",
+    "react-slugify": "^3.0.2",
     "tailwind-merge": "^1.13.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"

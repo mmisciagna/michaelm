@@ -13,11 +13,19 @@
   --header-height: 48px;
 }
 
-// Custtom reusable Tailwind classes
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom classes
 .main-spacing-x {
   @apply px-24 sm:px-48 lg:px-80;
 }
 
 .negate-main-spacing-x {
   @apply mx-[-24px] sm:mx-[-48px] lg:mx-[-80px];
+}
+
+.highlight {
+  @apply inline-block bg-white px-8 dark:bg-slate-blue-md xs:whitespace-nowrap;
 }
