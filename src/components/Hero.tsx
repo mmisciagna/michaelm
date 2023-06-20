@@ -2,8 +2,8 @@
 
 import slugify from 'react-slugify';
 import { GlobalString } from '@/globals/constants';
-import Tooltip from '@/app/components/Tooltip';
-import { RESUME } from '../../content/resume';
+import Tooltip from '@/components/Tooltip';
+import { RESUME } from '../content/resume';
 
 export default function Hero() {
   return (

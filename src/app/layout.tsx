@@ -1,6 +1,6 @@
 import { head } from '@/globals/metadata';
 import '@/globals/globals.scss';
-import Root from './layouts/root';
+import Root from '@/components/_Root';
 
 export const metadata = head;
 

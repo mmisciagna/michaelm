@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { head } from '@/globals/metadata';
-import Header from '@/app/components/Header';
-import Hero from '@/app/components/Hero';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
 
 export const metadata: Metadata = {
   title: `About - ${head.title}`,

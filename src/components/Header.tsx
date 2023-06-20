@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { GlobalString } from '@/globals/constants';
-import Nav from '@/app/components/Nav';
-import ThemeToggle from '@/app/components/ThemeToggle';
+import Nav from '@/components/Nav';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Header({ classes }: { classes?: string }) {
   const headerRef = useRef<HTMLElement>(null);
