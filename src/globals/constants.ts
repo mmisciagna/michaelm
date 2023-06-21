@@ -7,6 +7,10 @@ export enum GlobalString {
   SHOWCASE_IMG_SRC_BASE = '/static/imgs/showcase',
 }
 
+export enum GlobalSelector {
+  ANIMATE_ON_OBSERVE = '[data-animate-on-observe]',
+}
+
 export enum StorageKey {
   THEME = 'michaelm_theme',
 }

@@ -80,6 +80,9 @@ module.exports = {
         6: '6px',
         8: '8px',
       },
+      transitionProperty: {
+        'animate-on-observe': 'opacity, transform',
+      },
     },
   },
   darkMode: ['class', '[theme="dark"]'],
