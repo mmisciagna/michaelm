@@ -3,6 +3,33 @@ export const RESUME = [
     title: 'Experience',
     entries: [
       {
+        header: 'Anzen',
+        ancillaryHeader: 'Staff Frontend Engineer',
+        dates: 'Jul 2023 - Present, San Francisco Bay Area',
+        details: [
+          {
+            description: [
+              `Executive risk insurance & the tools to avoid using it. Anzen protects your business and monitors key operations data to keep you compliant.`,
+            ],
+          },
+        ],
+      },
+      {
+        header: 'Aperian Global',
+        ancillaryHeader: 'Frontend Engineer (Contract)',
+        dates: 'Apr 2023 - Jul 2023, Remote',
+        details: [
+          {
+            description: [
+              `Collaborate across a full stack to develop a DEI application that fosters inclusive environments
+              and transforms mindsets within diverse organizations. Key tasks involve enhancing
+              functionality and ensuring the smooth operation of a Node.js API, React frontend, and Drupal
+              content management system.`,
+            ],
+          },
+        ],
+      },
+      {
         header: 'Google, YouTube, Alphabet',
         ancillaryHeader: 'UX Engineer',
         dates: 'Aug 2012 - Mar 2023, San Francisco Bay Area',

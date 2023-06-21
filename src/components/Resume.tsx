@@ -20,7 +20,7 @@ export default function Resume() {
               className="col-span-12 text-left sm:col-span-3 sm:text-right"
               id={slugify(section.title)}
               data-animate-on-observe>
-              <h2 className="mb-48 font-display text-h2 font-medium tracking-[1px]">
+              <h2 className="mb-48 overflow-hidden text-ellipsis font-display text-h2 font-medium tracking-[1px]">
                 {section.title}
               </h2>
             </div>
@@ -33,7 +33,7 @@ export default function Resume() {
                       key={i}>
                       {entry.header && (
                         <h3
-                          className="relative mb-4 font-display text-h3 font-bold leading-[1.4em] tracking-[1px] after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white"
+                          className="relative font-display text-h3 font-bold leading-[1.4em] tracking-[1px] after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white"
                           data-animate-on-observe>
                           {entry.header}
                           {entry.ancillaryHeader && (
@@ -48,7 +48,7 @@ export default function Resume() {
                       )}
                       {entry.dates && (
                         <p
-                          className="mb-[1em] font-body font-medium"
+                          className="my-[1em] font-body font-medium text-bronze"
                           data-animate-on-observe>
                           {entry.dates}
                         </p>
