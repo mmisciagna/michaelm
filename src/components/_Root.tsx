@@ -9,20 +9,19 @@ import {
   setTheme,
 } from '@/globals/utils';
 import Header from '@/components/Header';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Root({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  const [defaultTheme] = useState(
-    getLocalStorage(StorageKey.THEME) || getUserPreferredTheme() || 'light'
-  );
+  const defaultTheme =
+    getLocalStorage(StorageKey.THEME) || getUserPreferredTheme() || 'light';
+
+  if (getLocalStorage(StorageKey.THEME) === null) {
+    setLocalStorage(StorageKey.THEME, defaultTheme);
+  }
 
   useEffect(() => {
-    if (getLocalStorage(StorageKey.THEME) === null) {
-      setLocalStorage(StorageKey.THEME, defaultTheme);
-    }
-
     setTheme(defaultTheme);
   }, []);
 
