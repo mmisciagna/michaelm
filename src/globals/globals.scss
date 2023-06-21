@@ -13,10 +13,6 @@
   --header-height: 48px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 // Custom classes
 .main-spacing-x {
   @apply px-24 sm:px-48 lg:px-80;
