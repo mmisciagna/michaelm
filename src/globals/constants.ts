@@ -6,3 +6,7 @@ export enum GlobalString {
   PRONUNCIATION = '[ mē-shah-nyah ]',
   SHOWCASE_IMG_SRC_BASE = '/static/imgs/showcase',
 }
+
+export enum StorageKey {
+  THEME = 'michaelm_theme',
+}

@@ -1,10 +1,30 @@
 'use client';
 
-import Header from '@/components/Header';
 import { usePathname } from 'next/navigation';
+import { StorageKey } from '@/globals/constants';
+import {
+  getLocalStorage,
+  getUserPreferredTheme,
+  setLocalStorage,
+  setTheme,
+} from '@/globals/utils';
+import Header from '@/components/Header';
+import { useEffect, useState } from 'react';
 
 export default function Root({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+
+  const [defaultTheme] = useState(
+    getLocalStorage(StorageKey.THEME) || getUserPreferredTheme() || 'light'
+  );
+
+  useEffect(() => {
+    if (getLocalStorage(StorageKey.THEME) === null) {
+      setLocalStorage(StorageKey.THEME, defaultTheme);
+    }
+
+    setTheme(defaultTheme);
+  }, []);
 
   return (
     <html
