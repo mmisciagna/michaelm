@@ -22,14 +22,14 @@ export default function Hero() {
           }
         />
       </h1>
-      <h2 className="my-[.5em] w-full font-display text-h2 italic">
+      <h2 className="my-[.5em] w-full font-display text-h2">
         <span className="highlight">Sr. Frontend Engineer</span> and{' '}
         <span className="highlight">Designer</span>
       </h2>
 
       <div className="w-full">
         <hr className="mb-24 hidden h-1 border-0 bg-slate-blue dark:bg-off-white xs:block" />
-        <ul className="m-0 flex list-none flex-wrap items-end p-0 font-display font-medium uppercase tracking-[1px] xs:m-[unset] xs:items-center xs:justify-end">
+        <ul className="m-0 flex list-none flex-wrap items-end p-0 font-display uppercase tracking-[1px] xs:m-[unset] xs:items-center xs:justify-end">
           <li className="m-0 min-w-[50%] max-w-[50%] p-[2px] xs:ml-24 xs:min-w-[unset] xs:max-w-[unset] xs:p-0">
             <a
               className="block bg-white p-0 px-24 py-12 text-bronze transition-colors duration-200 ease-in-out hover:text-slate-blue dark:bg-slate-blue-md hover:dark:text-off-white xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"

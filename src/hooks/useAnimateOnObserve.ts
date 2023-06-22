@@ -19,7 +19,7 @@ export function useAnimateOnObserve(root: React.RefObject<HTMLElement>) {
     }
 
     const observer = new IntersectionObserver(onIntersection, {
-      threshold: [0.3],
+      threshold: 0.3,
     });
 
     for (const el of animatedEls) {

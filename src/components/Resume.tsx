@@ -4,6 +4,8 @@ import React, { useRef } from 'react';
 import slugify from 'react-slugify';
 import { RESUME } from '@/content/resume';
 import { useAnimateOnObserve } from '@/hooks/useAnimateOnObserve';
+import { Icons } from '@/components/Icons';
+import { Colors } from '@/globals/constants';
 
 export default function Resume() {
   const rootRef = useRef(null);
@@ -20,7 +22,7 @@ export default function Resume() {
               className="col-span-12 text-left sm:col-span-3 sm:text-right"
               id={slugify(section.title)}
               data-animate-on-observe>
-              <h2 className="mb-48 overflow-hidden text-ellipsis font-display text-h2 font-medium tracking-[1px]">
+              <h2 className="mb-48 overflow-hidden text-ellipsis font-display text-h2 tracking-[1px]">
                 {section.title}
               </h2>
             </div>
@@ -35,20 +37,36 @@ export default function Resume() {
                         <h3
                           className="relative font-display text-h3 font-bold leading-[1.4em] tracking-[1px] after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white"
                           data-animate-on-observe>
-                          {entry.header}
+                          {entry.link ? (
+                            <a
+                              className="inline-flex gap-4 transition-colors duration-300 ease-in-out hover:text-bronze"
+                              href={entry.link}
+                              target="blank">
+                              {entry.header}
+                              <Icons
+                                type="new-window"
+                                color={Colors.bronze}
+                                className="mt-4 h-16 w-16 md:h-24 md:w-24"
+                              />
+                            </a>
+                          ) : (
+                            <>{entry.header}</>
+                          )}
                           {entry.ancillaryHeader && (
-                            <span
-                              className="font-medium"
-                              data-animate-on-observe>
+                            <>
                               <br />
-                              {entry.ancillaryHeader}
-                            </span>
+                              <span
+                                className="font-normal"
+                                data-animate-on-observe>
+                                {entry.ancillaryHeader}
+                              </span>
+                            </>
                           )}
                         </h3>
                       )}
                       {entry.dates && (
                         <p
-                          className="my-[1em] font-body font-medium text-bronze"
+                          className="my-[1em] font-body font-bold"
                           data-animate-on-observe>
                           {entry.dates}
                         </p>

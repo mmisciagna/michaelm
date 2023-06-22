@@ -4,6 +4,7 @@ export const RESUME = [
     entries: [
       {
         header: 'Anzen',
+        link: 'https://www.anzen.com/',
         ancillaryHeader: 'Staff Frontend Engineer',
         dates: 'Jul 2023 - Present, San Francisco Bay Area',
         details: [
@@ -16,6 +17,7 @@ export const RESUME = [
       },
       {
         header: 'Aperian Global',
+        link: 'https://www.aperianglobal.com/',
         ancillaryHeader: 'Frontend Engineer (Contract)',
         dates: 'Apr 2023 - Jul 2023, Remote',
         details: [
@@ -30,7 +32,8 @@ export const RESUME = [
         ],
       },
       {
-        header: 'Google, YouTube, Alphabet',
+        header: 'Google',
+        link: 'https://about.google/',
         ancillaryHeader: 'UX Engineer',
         dates: 'Aug 2012 - Mar 2023, San Francisco Bay Area',
         details: [
@@ -63,7 +66,8 @@ export const RESUME = [
       },
       {
         header: 'Wildfire Interactive',
-        ancillaryHeader: 'Frontend Engineer and Designer',
+        link: 'https://en.wikipedia.org/wiki/Wildfire_Interactive',
+        ancillaryHeader: 'UX Designer & Frontend Engineer',
         dates: 'Mar 2011 - Aug 2012, San Francisco Bay Area',
         details: [
           {
@@ -75,7 +79,7 @@ export const RESUME = [
       },
       {
         header: 'TravelCLICK',
-        ancillaryHeader: 'Interaction Designer',
+        ancillaryHeader: 'Web Designer',
         dates: 'Mar 2010 - Mar 2011, Baltimore, MD',
         details: [
           {

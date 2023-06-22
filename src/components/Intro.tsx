@@ -36,7 +36,7 @@ export default function Intro() {
             return (
               <React.Fragment key={i}>
                 <h2
-                  className="mb-[0.5em] font-display text-h2 font-medium tracking-[1px]"
+                  className="mb-[0.5em] font-display text-h2 tracking-[1px]"
                   data-animate-on-observe>
                   {content.header}
                 </h2>
