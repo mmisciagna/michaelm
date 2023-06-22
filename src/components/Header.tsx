@@ -41,7 +41,7 @@ export default function Header({ classes }: { classes?: string }) {
         <Link
           href={`/`}
           aria-label="Home"
-          className="z-10 bg-slate-blue font-display text-sm font-bold italic tracking-wider dark:bg-slate-blue-dk xs:ml-[-12px]">
+          className="z-10 bg-slate-blue font-display text-sm font-bold italic tracking-1 dark:bg-slate-blue-dk xs:ml-[-12px]">
           <span className="bg-blue-slate relative z-10 px-24 xs:px-12">
             {GlobalString.PRONUNCIATION}
           </span>

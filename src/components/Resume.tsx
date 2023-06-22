@@ -22,7 +22,7 @@ export default function Resume() {
               className="col-span-12 text-left sm:col-span-3 sm:text-right"
               id={slugify(section.title)}
               data-animate-on-observe>
-              <h2 className="mb-48 overflow-hidden text-ellipsis font-display text-h2 tracking-[1px]">
+              <h2 className="mb-48 overflow-hidden text-ellipsis font-display text-h2 tracking-1">
                 {section.title}
               </h2>
             </div>
@@ -35,7 +35,7 @@ export default function Resume() {
                       key={i}>
                       {entry.header && (
                         <h3
-                          className="relative font-display text-h3 font-bold leading-[1.4em] tracking-[1px] after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white"
+                          className="relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white"
                           data-animate-on-observe>
                           {entry.link ? (
                             <a
@@ -46,7 +46,7 @@ export default function Resume() {
                               <Icons
                                 type="new-window"
                                 color={Colors.bronze}
-                                className="mt-4 h-16 w-16 md:h-24 md:w-24"
+                                className="mt-4 h-20 w-16 md:h-24 md:w-24"
                               />
                             </a>
                           ) : (
@@ -94,7 +94,7 @@ export default function Resume() {
                               <div>
                                 {details.subhead && (
                                   <h4
-                                    className="mb-[0.5em] mt-[2em] font-display text-h4 font-bold uppercase leading-[1.4em] tracking-[1px]"
+                                    className="mb-[0.5em] mt-[2em] font-display text-h4 font-bold uppercase leading-[1.4em] tracking-1"
                                     data-animate-on-observe>
                                     {details.subhead}
                                   </h4>

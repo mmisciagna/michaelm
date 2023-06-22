@@ -62,6 +62,9 @@ module.exports = {
         'animate-on-observe': 'opacity, transform',
         'fill': 'fill',
       },
+      letterSpacing: {
+        1: '1px',
+      },
     },
   },
   darkMode: ['class', '[theme="dark"]'],
