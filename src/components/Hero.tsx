@@ -22,9 +22,10 @@ export default function Hero() {
           }
         />
       </h1>
-      <h2 className="my-[.5em] w-full font-display text-h2">
-        <span className="highlight">Sr. Frontend Engineer</span> and{' '}
-        <span className="highlight">Designer</span>
+      <h2 className="mt-[.25em] w-full font-display text-h2">
+        <span className="highlight">
+          Sr. Frontend Engineer <em>&</em> Designer
+        </span>
       </h2>
 
       <div className="w-full">
