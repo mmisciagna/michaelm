@@ -23,7 +23,7 @@
 }
 
 .highlight {
-  @apply inline-block bg-white px-8 dark:bg-slate-blue-md xs:whitespace-nowrap;
+  @apply inline-block bg-white px-12 py-8 dark:bg-slate-blue-md xs:whitespace-nowrap;
 }
 
 [data-animate-on-observe] {

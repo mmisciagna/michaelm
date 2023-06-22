@@ -44,7 +44,7 @@ export default function Resume() {
                               target="blank">
                               {entry.header}
                               <Icons
-                                type="new-window"
+                                name="new-window"
                                 color={Colors.bronze}
                                 className="mt-4 h-20 w-16 md:h-24 md:w-24"
                               />

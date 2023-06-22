@@ -148,7 +148,7 @@ export const RESUME = [
       {
         header: 'Savannah College of Art and Design (SCAD)',
         ancillaryHeader: 'BFA in Graphic Design',
-        dates: 'Sept 2005 - May 2009,  Savannah, GA',
+        dates: '2005 - 2009,  Savannah, GA',
         details: [
           {
             type: 'list',
@@ -157,6 +157,7 @@ export const RESUME = [
               `Outstanding Achievement Award`,
               `President of the American Institute of Graphic Artists (AIGA), SCAD chapter`,
               `Study abroad in Lacoste, France (Spring 2007 & Spring 2008)`,
+              `SCAD Ambassador`,
             ],
           },
         ],

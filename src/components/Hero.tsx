@@ -7,7 +7,7 @@ import { RESUME } from '../content/resume';
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto flex min-h-[calc(calc(100dvh-(2*var(--header-height))))] w-full max-w-1200 flex-col items-center justify-center py-48 xs:min-h-[calc(100dvh-(var(--header-height)))]">
+    <section className="relative mx-auto flex min-h-[calc(calc(100dvh-(2*var(--header-height))))] w-full max-w-1200 flex-col items-center justify-center py-48 leading-snug xs:min-h-[calc(100dvh-(var(--header-height)))]">
       <h1 className="w-full font-display text-h1">
         Hello, I am{' '}
         <Tooltip
@@ -22,7 +22,7 @@ export default function Hero() {
           }
         />
       </h1>
-      <h2 className="mt-[.25em] w-full font-display text-h2">
+      <h2 className="mt-[.5em] w-full font-display text-h2">
         <span className="highlight">
           Sr. Frontend Engineer <em>&</em> Designer
         </span>

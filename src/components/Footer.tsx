@@ -29,7 +29,7 @@ export default function Footer() {
           target="_blank"
           aria-label="LinkedIn">
           <Icons
-            type="linkedIn"
+            name="linkedIn"
             className="h-20 w-20 transition-colors duration-300 ease-in-out group-hover:fill-white sm:h-24 sm:w-24"
             color={Colors.bronze}
           />
