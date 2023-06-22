@@ -8,7 +8,6 @@ import {
 } from '@/globals/utils';
 
 const TOGGLE_THEME_ACTION = 'TOGGLE_THEME';
-const DEFAULT_IS_DARK_THEME = getLocalStorage(StorageKey.THEME) === 'dark';
 
 interface State {
   isDarkTheme: boolean;
@@ -31,11 +30,11 @@ const reducer = (state: State, action: Action) => {
   return state;
 };
 
-const initialState = {
-  isDarkTheme: DEFAULT_IS_DARK_THEME,
-};
-
 export default function ThemeToggle() {
+  const initialState = {
+    isDarkTheme: getLocalStorage(StorageKey.THEME) === 'dark',
+  };
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
