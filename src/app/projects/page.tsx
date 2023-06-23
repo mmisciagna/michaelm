@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: `Projects - ${head.title}`,
 };
 
-export default function Projects() {
+export default function ProjectsOverview() {
   return (
     <>
       <h1>Projects</h1>

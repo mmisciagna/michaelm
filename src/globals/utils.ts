@@ -1,3 +1,6 @@
+import slugify from 'react-slugify';
+import { Showcases } from '@/content/showcases';
+
 export function getUserPreferredTheme(): string | null {
   if (typeof window === 'undefined') return null;
 
@@ -24,4 +27,10 @@ export function setLocalStorage(key: string, val: string): void | null {
 
 export function setTheme(theme: string): void {
   document.documentElement.setAttribute('theme', theme);
+}
+
+export function getCurrentShowcase(slug: string): Showcase | undefined {
+  return Showcases.find((showcase) => {
+    return slugify(showcase.data.title) === slug;
+  });
 }

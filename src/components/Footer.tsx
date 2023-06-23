@@ -12,7 +12,7 @@ export default function Footer() {
           href="#top"
           className="transition-colors duration-300 ease-in-out hover:text-white">
           Back to top
-        </a>{' '}
+        </a>
         •
         <a
           className="transition-colors duration-300 ease-in-out hover:text-white"

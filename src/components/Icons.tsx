@@ -43,11 +43,20 @@ export function Icons({
     ),
     'moon': (
       <svg
-        className={classNames}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 96 960 960"
+        className={classNames}
         fill={color}>
         <path d="M480 936q-150 0-255-105T120 576q0-135 79.5-229T408 226q41-8 56 14t-1 60q-9 23-14 47t-5 49q0 90 63 153t153 63q25 0 48.5-4.5T754 595q43-16 64 1.5t11 59.5q-27 121-121 200.5T480 936Z" />
+      </svg>
+    ),
+    'arrow-right': (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 96 960 960"
+        className={classNames}
+        fill={color}>
+        <path d="m561 814-43-42 168-168H160v-60h526L517 375l43-42 241 241-240 240Z" />
       </svg>
     ),
   };
