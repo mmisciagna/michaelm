@@ -30,7 +30,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
     <html
       lang="en"
       className="h-full scroll-py-[calc(var(--header-height)*2)] scroll-smooth text-md leading-relaxed antialiased [font-variant-ligatures:normal] sm:text-lg md:text-xl">
-      <body className="m-0 flex min-h-full w-full flex-col bg-off-white text-slate-blue dark:bg-slate-blue dark:text-off-white">
+      <body className="m-0 flex min-h-full w-full flex-col bg-off-white text-slate-blue transition-colors duration-300 ease-in-out dark:bg-slate-blue dark:text-off-white">
         {pathname !== '/' && <Header />}
         <main
           className="main-spacing-x flex-1"
