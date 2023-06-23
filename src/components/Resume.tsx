@@ -66,7 +66,7 @@ export default function Resume() {
                       )}
                       {entry.dates && (
                         <p
-                          className="my-[1em] font-body font-bold"
+                          className="my-[1em] font-bold"
                           data-animate-on-observe>
                           {entry.dates}
                         </p>
@@ -104,7 +104,7 @@ export default function Resume() {
                                     return (
                                       <p
                                         key={i}
-                                        className="my-[1em] font-body"
+                                        className="my-[1em]"
                                         data-animate-on-observe>
                                         {p}
                                       </p>

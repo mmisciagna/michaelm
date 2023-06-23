@@ -31,7 +31,7 @@
 }
 
 .button {
-  @apply eyebrow border-2 border-solid border-bronze bg-transparent px-24 py-8 text-center leading-tight text-bronze transition-colors;
+  @apply border-2 border-solid border-bronze bg-transparent px-24 py-8 text-center font-display text-xs font-bold uppercase leading-loose tracking-1 text-bronze transition-colors;
 
   svg {
     @apply h-24 w-24 fill-bronze transition-colors;
@@ -61,12 +61,10 @@
     }
   }
 
-  // &.disabled,
-  // &[disabled] {
-  //   border-color: var(--color-white-25);
-  //   color: var(--color-white-25);
-  //   pointer-events: none;
-  // }
+  &.disabled,
+  &[disabled] {
+    @apply pointer-events-none border-white-25 text-white-25;
+  }
 }
 
 [data-animate-on-observe] {

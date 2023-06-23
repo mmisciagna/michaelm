@@ -44,7 +44,7 @@ export default function Intro() {
                   return (
                     <p
                       key={i}
-                      className="my-[1em] font-body"
+                      className="my-[1em]"
                       data-animate-on-observe>
                       {p}
                     </p>
