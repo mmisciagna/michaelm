@@ -30,6 +30,45 @@
   @apply font-display text-xs font-bold uppercase leading-6 tracking-1;
 }
 
+.button {
+  @apply eyebrow border-2 border-solid border-bronze bg-transparent px-24 py-8 text-center leading-tight text-bronze transition-colors;
+
+  svg {
+    @apply h-24 w-24 fill-bronze transition-colors;
+  }
+
+  &:hover {
+    @apply bg-bronze text-off-white dark:text-slate-blue;
+
+    svg {
+      @apply fill-off-white dark:fill-slate-blue;
+    }
+  }
+
+  &--secondary {
+    @apply border-black-25 text-slate-blue dark:border-white-10 dark:text-off-white;
+
+    svg {
+      @apply fill-slate-blue dark:text-off-white;
+    }
+
+    &:hover {
+      @apply border-black-25 text-slate-blue dark:border-white-10 dark:text-off-white;
+
+      svg {
+        @apply fill-slate-blue dark:text-off-white;
+      }
+    }
+  }
+
+  // &.disabled,
+  // &[disabled] {
+  //   border-color: var(--color-white-25);
+  //   color: var(--color-white-25);
+  //   pointer-events: none;
+  // }
+}
+
 [data-animate-on-observe] {
   @apply translate-y-80 opacity-0 transition-animate-on-observe duration-1000 ease-in-out;
 }

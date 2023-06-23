@@ -34,7 +34,8 @@
   "devDependencies": {
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "sass": "^1.63.3"
+    "sass": "^1.63.3",
+    "tailwind-clip-path": "^1.0.0"
   },
   "engines": {
     "node": "16.x.x"

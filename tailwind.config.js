@@ -58,16 +58,23 @@ module.exports = {
         4: '4px',
         6: '6px',
         8: '8px',
+        16: '16px',
       },
       transitionProperty: {
         'animate-on-observe': 'opacity, transform',
-        'fill': 'fill',
       },
       letterSpacing: {
         1: '1px',
       },
+      clipPath: {
+        'project-panel': 'polygon(0 0, 0 100%, 0 100%, 0 0)',
+        'project-panel-reveal': 'polygon(0 0, 0 100%, 100% 100%, 100% 0)',
+      },
     },
   },
   darkMode: ['class', '[theme="dark"]'],
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [
+    require('prettier-plugin-tailwindcss'),
+    require('tailwind-clip-path'),
+  ],
 };

@@ -1,10 +1,13 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef } from 'react';
 import slugify from 'react-slugify';
+import classNames from 'classnames';
 import { GlobalString } from '@/globals/constants';
 import { Showcases } from '@/content/showcases';
 import { Icons } from '@/components/Icons';
-import classNames from 'classnames';
+import { useAnimateOnObserve } from '@/hooks/useAnimateOnObserve';
 
 const projectsTypes = ['Engineering', 'Design', 'Just For Fun'];
 
@@ -64,11 +67,19 @@ function TypeNav({ isGrid = false }) {
 }
 
 function List({ headline, type }: { headline: string; type?: string }) {
+  const rootRef = useRef(null);
+  useAnimateOnObserve(rootRef);
+
   return (
     <section
       className="my-80 max-w-1200 xs:hidden"
-      id={slugify(type)}>
-      <h2 className="eyebrow mb-16">{headline}</h2>
+      id={slugify(type)}
+      ref={rootRef}>
+      <h2
+        className="eyebrow mb-16"
+        data-animate-on-observe>
+        {headline}
+      </h2>
       <ul className="negate-main-spacing-x">
         {Showcases.map((showcase: Showcase) => {
           const slug = slugify(showcase.data.title);
@@ -77,7 +88,8 @@ function List({ headline, type }: { headline: string; type?: string }) {
             return (
               <li
                 className="group/item"
-                key={showcase.data.title}>
+                key={showcase.data.title}
+                data-animate-on-observe>
                 <Link
                   className="main-spacing-x flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-10 dark:border-off-white dark:group-even/item:bg-black-10"
                   href={`/projects/${slug}`}
@@ -112,16 +124,21 @@ function List({ headline, type }: { headline: string; type?: string }) {
 }
 
 function Grid({ headline, type }: { headline: string; type?: string }) {
+  const rootRef = useRef(null);
+  useAnimateOnObserve(rootRef);
+
   return (
     <section
-      className="my-80 hidden max-w-1200 xs:block"
-      id={`${slugify(type)}-grid`}>
+      className="mx-auto my-80 hidden max-w-1200 xs:block"
+      id={`${slugify(type)}-grid`}
+      ref={rootRef}>
       <h2
-        className="mm-eyebrow"
-        style={{ marginBottom: '48px' }}>
+        className="eyebrow mb-48"
+        data-animate-on-observe>
         {headline}
       </h2>
-      <div className="mm-grid mm-grid--3-cols">
+
+      <div className="xs:grid xs:grid-cols-1 xs:gap-[2px] sm:grid-cols-2 lg:grid-cols-3">
         {Showcases.map((showcase: Showcase) => {
           const slug = slugify(showcase.data.title);
 
@@ -129,32 +146,38 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
             return (
               <div
                 key={showcase.data.title}
-                className={`mm-animate mm-projects-layout__grid-item`}>
-                <div className="mm-projects-layout__img-wrapper">
+                className="group/item relative my-24 flex flex-col items-center xs:m-0"
+                data-animate-on-observe>
+                <div className="block w-full overflow-hidden rounded-[4px] bg-slate-blue">
                   <div
-                    className="mm-projects-layout__img-aspect-ratio"
+                    className="block aspect-square w-full bg-cover  bg-no-repeat mix-blend-exclusion"
                     style={{
                       backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
                     }}></div>
                 </div>
-                <div className="mm-projects-layout__info-panel">
+                <div className="absolute inset-0 flex flex-col justify-between rounded-[4px] bg-slate-blue-90 px-24 py-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:border-16 after:border-solid after:border-b-slate-blue-dk after:border-l-slate-blue-dk after:border-r-off-white after:border-t-off-white group-hover/item:opacity-100 group-hover/item:clip-path-project-panel-reveal dark:after:border-b-off-white dark:after:border-l-off-white dark:after:border-r-slate-blue dark:after:border-t-slate-blue">
                   <div>
-                    <h3>{showcase.data.title}</h3>
-                    <h4>{showcase.data.role}</h4>
+                    <h3 className="font-display text-h3 font-bold leading-snug tracking-1">
+                      {showcase.data.title}
+                    </h3>
+                    <h4 className="mt-16 font-display text-h4 font-medium leading-snug tracking-1">
+                      {showcase.data.role}
+                    </h4>
                   </div>
                   <div>
                     <Link
-                      className="mm-button"
+                      className="button mt-12 block"
                       href={`/projects/${slug}`}
                       arial-label={`View ${showcase.data.title} details`}>
                       View details
+                      <span></span>
                     </Link>
                     {showcase.data.siteLink && (
                       <a
                         href={showcase.data.siteLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mm-button mm-button--secondary"
+                        className="button button--secondary mt-12 block !border-white-10 !text-white hover:!bg-white-10"
                         arial-label={`Launch ${showcase.data.title} site`}>
                         Launch site
                       </a>
