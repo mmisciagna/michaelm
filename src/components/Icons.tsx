@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-
 interface IconShape {
   name: string;
   color?: string;

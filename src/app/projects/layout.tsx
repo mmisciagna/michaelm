@@ -87,14 +87,14 @@ function List({ headline, type }: { headline: string; type?: string }) {
           if (type?.toLowerCase() === showcase.data.type?.toLowerCase()) {
             return (
               <li
-                className="group/item overflow-hidden rounded-[4px]"
+                className="group/item overflow-hidden rounded"
                 key={showcase.data.title}
                 data-animate-on-observe>
                 <Link
-                  className="main-spacing-x flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-10 dark:border-off-white dark:group-even/item:bg-black-10"
+                  className="main-spacing-x group-even/item:bg-bronze-10 flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 dark:border-off-white dark:group-even/item:bg-black-10"
                   href={`/projects/${slug}`}
                   arial-label={`View ${showcase.data.title} details`}>
-                  <span className="block w-[35%] overflow-hidden rounded-[4px] bg-slate-blue">
+                  <span className="block w-[35%] overflow-hidden rounded bg-slate-blue">
                     <span
                       className="block aspect-square w-full overflow-hidden bg-cover bg-no-repeat mix-blend-exclusion"
                       style={{
@@ -102,11 +102,11 @@ function List({ headline, type }: { headline: string; type?: string }) {
                       }}></span>
                   </span>
                   <span className="flex flex-1 items-center justify-end text-right leading-tight">
-                    <span className="block font-bold">
+                    <span className="block font-display font-bold">
                       {showcase.data.title}
                     </span>
                   </span>
-                  <span className="block rounded-[4px] bg-bronze leading-none">
+                  <span className="block rounded bg-bronze leading-none">
                     <Icons
                       name="arrow-right"
                       className="w-32 fill-off-white dark:fill-slate-blue"
@@ -146,22 +146,23 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
             return (
               <div
                 key={showcase.data.title}
-                className="group/item relative my-24 flex flex-col items-center xs:m-0"
+                className="group/grid-item relative my-24 flex flex-col items-center xs:m-0"
                 data-animate-on-observe
                 tabIndex={0}>
-                <div className="block w-full overflow-hidden rounded-[4px] bg-slate-blue">
+                <div className="block w-full overflow-hidden rounded bg-slate-blue">
                   <div
                     className="block aspect-square w-full bg-cover  bg-no-repeat mix-blend-exclusion"
                     style={{
                       backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
                     }}></div>
                 </div>
-                <div className="absolute inset-0 flex flex-col justify-between rounded-[4px] bg-slate-blue-90 px-24 pb-24 pt-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:border-16 after:border-solid after:border-b-slate-blue-dk after:border-l-slate-blue-dk after:border-r-off-white after:border-t-off-white group-hover/item:opacity-100 group-hover/item:clip-path-project-panel-reveal group-focus/item:opacity-100 group-focus/item:clip-path-project-panel-reveal dark:bg-slate-blue-dk-90 dark:after:border-b-off-white dark:after:border-l-off-white dark:after:border-r-slate-blue dark:after:border-t-slate-blue">
+                {/* Panel overlay */}
+                <div className="absolute inset-0 flex flex-col justify-between rounded bg-slate-blue-90 px-24 pb-24 pt-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:rounded-bl after:border-16 after:border-solid after:border-b-bronze after:border-l-bronze after:border-r-off-white after:border-t-off-white group-hover/grid-item:opacity-100 group-hover/grid-item:clip-path-project-panel-reveal group-focus/grid-item:opacity-100 group-focus/grid-item:clip-path-project-panel-reveal dark:bg-slate-blue-dk-90 dark:after:border-r-slate-blue dark:after:border-t-slate-blue">
                   <div>
-                    <h3 className="font-display text-h3 font-bold leading-snug tracking-1">
+                    <h3 className="font-display text-h3 leading-snug tracking-1">
                       {showcase.data.title}
                     </h3>
-                    <h4 className="mt-16 font-display text-h4 font-medium leading-snug tracking-1">
+                    <h4 className="mt-16 font-display text-h4 leading-snug tracking-1">
                       {showcase.data.role}
                     </h4>
                   </div>

@@ -10,12 +10,12 @@ export function useAnimateOnObserve(root: React.RefObject<HTMLElement>) {
     );
 
     function onIntersection(entries: IntersectionObserverEntry[]) {
-      entries.forEach((entry) => {
+      for (const entry of entries) {
         if (entry.intersectionRatio * 100 >= 0.3) {
           const el = entry.target as HTMLElement;
           el.dataset.animateOnObserve = 'observed';
         }
-      });
+      }
     }
 
     const observer = new IntersectionObserver(onIntersection, {

@@ -24,8 +24,8 @@ export const Colors = {
   'slate-blue-dk': 'hsl(215 28% 9%)',
   'slate-blue-dk-90': 'hsl(215 28% 9% / .9)',
   // Accent
-  'bronze': 'hsl(24, 25%, 66%)',
-  'bronze-10': 'hsl(24, 25%, 66%) / .1)',
+  'bronze': 'hsl(24 25% 66%)',
+  'bronze-10': 'hsl(24 25% 66% / .1)',
   'off-white': 'hsl(30 100% 97%)',
   // White
   'white': 'hsl(0 0% 100%)',

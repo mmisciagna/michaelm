@@ -72,7 +72,8 @@ export default function Project({ params }: Params) {
           ready={ytReady}
         />
       )} */}
-      <section className="negate-main-spacing-x my-80 overflow-hidden bg-slate-blue px-24 text-off-white dark:bg-slate-blue-dk">
+      {/* Markdown content */}
+      <section className="negate-main-spacing-x overflow-hidden bg-slate-blue px-24 py-80 text-off-white dark:bg-slate-blue-dk">
         <div className="mx-auto w-full max-w-900">
           {data.siteLink && (
             <div className="my-48">
@@ -157,18 +158,16 @@ function Pagination({ index }: { index: number }) {
 
 function Details({ title, list }: { title: string; list: string[] }) {
   return (
-    <div className="mx-auto -mt-1 flex max-w-900 items-start justify-between border-t border-solid border-slate-blue-dk first:mt-0 dark:border-slate-blue">
+    <div className="group/details-row mx-auto -mt-1 flex max-w-900 items-start justify-between border-t border-solid border-bronze-10 first:mt-0">
       <div className="flex">
-        <h2 className="eyebrow border-b-0 border-r-0 p-8 pl-0 leading-snug">
-          {title}
-        </h2>
+        <h2 className="eyebrow border-r-0 p-8 pl-0 leading-snug">{title}</h2>
       </div>
       <ul className="m-0 flex list-none flex-col items-end justify-start xs:flex-row xs:items-start">
         {list.map((label: string) => {
           return (
             <li
               key={label}
-              className="eyebrow m-0 inline-block border-b border-r border-solid border-slate-blue-dk p-8 leading-snug first:mt-0 dark:border-slate-blue">
+              className="eyebrow m-0 inline-block border-b border-r border-solid border-bronze-10 p-8 leading-snug first:mt-0 group-last/details-row:border-b xs:border-b-0">
               {label}
             </li>
           );
