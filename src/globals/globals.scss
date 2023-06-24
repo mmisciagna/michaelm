@@ -67,6 +67,31 @@
   }
 }
 
+// Markdown
+.markdown {
+  h2,
+  h3,
+  h4 {
+    @apply mb-[0.5em] font-display text-h2 leading-snug tracking-1;
+  }
+
+  h3 {
+    @apply text-h3 font-bold;
+  }
+
+  h4 {
+    @apply text-h4 font-bold;
+  }
+
+  p {
+    @apply my-[1em];
+  }
+
+  img {
+    @apply my-24;
+  }
+}
+
 [data-animate-on-observe] {
   @apply translate-y-80 opacity-0 transition-animate-on-observe duration-1000 ease-in-out;
 }

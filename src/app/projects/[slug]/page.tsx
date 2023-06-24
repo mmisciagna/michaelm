@@ -26,17 +26,20 @@ export default function Project({ params }: Params) {
 
   const index = Showcases.indexOf(showcase);
 
+  const roleList =
+    data.role && typeof data.role === 'string' ? [data.role] : data.role;
+
   return (
     <>
       <section className="negate-main-spacing-x bg-slate-blue px-24 pb-48 pt-24 text-off-white dark:bg-slate-blue-dk">
         <div className="mx-auto w-full max-w-900">
           <BreadCrumbs
-            showcase={showcase}
+            title={title}
             index={index + 1}
           />
           <Pagination index={index} />
         </div>
-        {/* <div className="mm-showcase__details">
+        <div className="mt-48">
           {data.client && (
             <Details
               title="Client"
@@ -46,7 +49,7 @@ export default function Project({ params }: Params) {
           {data.role && (
             <Details
               title="Role"
-              list={roleList}
+              list={roleList as string[]}
             />
           )}
           {data.stack && (
@@ -61,7 +64,7 @@ export default function Project({ params }: Params) {
               list={data.apis}
             />
           )}
-        </div> */}
+        </div>
       </section>
       {/* {data.videoId && (
         <Video
@@ -82,7 +85,7 @@ export default function Project({ params }: Params) {
               </a>
             </div>
           )}
-          <div className="mm-showcase__description">
+          <div className="markdown my-24">
             <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
           </div>
         </div>
@@ -91,13 +94,7 @@ export default function Project({ params }: Params) {
   );
 }
 
-function BreadCrumbs({
-  showcase,
-  index,
-}: {
-  showcase: Showcase;
-  index: number;
-}) {
+function BreadCrumbs({ title, index }: { title: string; index: number }) {
   return (
     <div className="eyebrow mb-48 flex items-center justify-between gap-24">
       <ul className="m-0 inline-flex list-none items-center gap-12 p-0">
@@ -109,7 +106,7 @@ function BreadCrumbs({
           </Link>
         </li>
         <li className="relative mb-0 mt-0 overflow-hidden pl-12 after:absolute after:left-0 after:top-1/2 after:block after:h-[80%] after:w-1 after:-translate-y-1/2 after:bg-off-white first:ml-0 first:flex-shrink-0 first:pl-0">
-          <h1 className="leading-snug">{showcase.data.title}</h1>
+          <h1 className="leading-snug">{title}</h1>
         </li>
       </ul>
       <div className="leading-snug">
@@ -154,6 +151,29 @@ function Pagination({ index }: { index: number }) {
         tabIndex={index + 1 === Showcases.length ? -1 : 0}>
         Next
       </Link>
+    </div>
+  );
+}
+
+function Details({ title, list }: { title: string; list: string[] }) {
+  return (
+    <div className="mx-auto -mt-1 flex max-w-900 items-start justify-between border-t border-solid border-slate-blue-dk first:mt-0 dark:border-slate-blue">
+      <div className="flex">
+        <h2 className="eyebrow border-b-0 border-r-0 p-8 pl-0 leading-snug">
+          {title}
+        </h2>
+      </div>
+      <ul className="m-0 flex list-none flex-col items-end justify-start xs:flex-row xs:items-start">
+        {list.map((label: string) => {
+          return (
+            <li
+              key={label}
+              className="eyebrow m-0 inline-block border-b border-r border-solid border-slate-blue-dk p-8 leading-snug first:mt-0 dark:border-slate-blue">
+              {label}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
