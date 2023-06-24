@@ -19,12 +19,13 @@ export const Colors = {
   // Primary
   'slate-blue': 'hsl(215 19% 22%)',
   'slate-blue-md': 'hsl(215 18% 20%)',
-  'slate-blue-dk': 'hsl(215 28% 9%)',
   'slate-blue-90': 'hsl(215 19% 22% / .9)',
   'slate-blue-10': 'hsl(215 19% 22% / .1)',
+  'slate-blue-dk': 'hsl(215 28% 9%)',
+  'slate-blue-dk-90': 'hsl(215 28% 9% / .9)',
   // Accent
-  'bronze': 'hsl(30 61% 50%)',
-  'bronze-10': 'hsl(30 61% 50% / .1)',
+  'bronze': 'hsl(24, 25%, 66%)',
+  'bronze-10': 'hsl(24, 25%, 66%) / .1)',
   'off-white': 'hsl(30 100% 97%)',
   // White
   'white': 'hsl(0 0% 100%)',

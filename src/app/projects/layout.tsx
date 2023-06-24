@@ -72,7 +72,7 @@ function List({ headline, type }: { headline: string; type?: string }) {
 
   return (
     <section
-      className="my-80 max-w-1200 xs:hidden"
+      className="relative left-1/2 my-80 max-w-600 -translate-x-1/2 sm:hidden"
       id={slugify(type)}
       ref={rootRef}>
       <h2
@@ -87,7 +87,7 @@ function List({ headline, type }: { headline: string; type?: string }) {
           if (type?.toLowerCase() === showcase.data.type?.toLowerCase()) {
             return (
               <li
-                className="group/item"
+                className="group/item overflow-hidden rounded-[4px]"
                 key={showcase.data.title}
                 data-animate-on-observe>
                 <Link
@@ -101,7 +101,7 @@ function List({ headline, type }: { headline: string; type?: string }) {
                         backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
                       }}></span>
                   </span>
-                  <span className="flex flex-1 items-center justify-between leading-tight">
+                  <span className="flex flex-1 items-center justify-end text-right leading-tight">
                     <span className="block font-bold">
                       {showcase.data.title}
                     </span>
@@ -129,7 +129,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
 
   return (
     <section
-      className="mx-auto my-80 hidden max-w-1200 xs:block"
+      className="mx-auto my-80 hidden max-w-900 sm:block lg:max-w-1200"
       id={`${slugify(type)}-grid`}
       ref={rootRef}>
       <h2
@@ -147,7 +147,8 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
               <div
                 key={showcase.data.title}
                 className="group/item relative my-24 flex flex-col items-center xs:m-0"
-                data-animate-on-observe>
+                data-animate-on-observe
+                tabIndex={0}>
                 <div className="block w-full overflow-hidden rounded-[4px] bg-slate-blue">
                   <div
                     className="block aspect-square w-full bg-cover  bg-no-repeat mix-blend-exclusion"
@@ -155,7 +156,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                       backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
                     }}></div>
                 </div>
-                <div className="absolute inset-0 flex flex-col justify-between rounded-[4px] bg-slate-blue-90 px-24 py-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:border-16 after:border-solid after:border-b-slate-blue-dk after:border-l-slate-blue-dk after:border-r-off-white after:border-t-off-white group-hover/item:opacity-100 group-hover/item:clip-path-project-panel-reveal dark:after:border-b-off-white dark:after:border-l-off-white dark:after:border-r-slate-blue dark:after:border-t-slate-blue">
+                <div className="absolute inset-0 flex flex-col justify-between rounded-[4px] bg-slate-blue-90 px-24 pb-24 pt-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:border-16 after:border-solid after:border-b-slate-blue-dk after:border-l-slate-blue-dk after:border-r-off-white after:border-t-off-white group-hover/item:opacity-100 group-hover/item:clip-path-project-panel-reveal group-focus/item:opacity-100 group-focus/item:clip-path-project-panel-reveal dark:bg-slate-blue-dk-90 dark:after:border-b-off-white dark:after:border-l-off-white dark:after:border-r-slate-blue dark:after:border-t-slate-blue">
                   <div>
                     <h3 className="font-display text-h3 font-bold leading-snug tracking-1">
                       {showcase.data.title}

@@ -7,22 +7,6 @@ export const metadata: Metadata = {
 
 export default function ProjectsOverview() {
   return (
-    //   margin: var(--main-padding-y) auto;
-    // max-width: var(--section-max-width);
-
-    // &--full-bleed {
-    //   background: var(--color-secondary-reversed);
-    //   color: var(--color-font-reversed);
-    //   margin: var(--main-padding-y) var(--negate-main-padding-x);
-    //   max-width: unset;
-    //   padding: var(--main-padding-y) var(--main-padding-x);
-    // }
-
-    // &__inner {
-    //   margin: 0 auto;
-    //   max-width: var(--section-max-width);
-    //   width: 100%;
-    // }
     <>
       <section className="mx-auto my-80 max-w-900">
         <h1 className="font-display text-h1 leading-snug">
