@@ -1,5 +1,5 @@
 interface Showcase {
-  content: string,
+  content: string;
   data: {
     apis?: string[];
     description: string;
@@ -12,23 +12,27 @@ interface Showcase {
     stack?: string[];
     videoId?: string;
     videoStart?: string;
-  },
-  excerpt: string,
-  isEmpty: boolean,
+  };
+  excerpt: string;
+  isEmpty: boolean;
 }
 
 interface Tidbit {
-  content: string,
+  content: string;
   data: {
-    date: string,
-    tags: string[],
-    title: string,
-  },
-  excerpt: string,
-  isEmpty: boolean,
+    date: string;
+    tags: string[];
+    title: string;
+  };
+  excerpt: string;
+  isEmpty: boolean;
 }
 
 type StructuredTidbits = Tidbit[][];
+
+interface Window {
+  onYouTubeIframeAPIReady: () => void;
+}
 
 declare module '*.md';
 declare module '*.scss';

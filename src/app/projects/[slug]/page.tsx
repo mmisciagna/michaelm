@@ -9,6 +9,7 @@ import slugify from 'react-slugify';
 import classNames from 'classnames';
 import { Icons } from '@/components/Icons';
 import { Colors } from '@/globals/constants';
+import Video from '@/components/Video';
 
 interface Params {
   params: { slug: string };
@@ -66,17 +67,17 @@ export default function Project({ params }: Params) {
           )}
         </div>
       </section>
-      {/* {data.videoId && (
-        <Video
-          showcase={showcase}
-          ready={ytReady}
-        />
-      )} */}
+      {/* Video */}
+      <section className="negate-main-spacing-x bg-slate-blue text-off-white dark:bg-slate-blue-dk">
+        <div className="mx-auto w-full max-w-1200">
+          {data.videoId && <Video showcase={showcase} />}
+        </div>
+      </section>
       {/* Markdown content */}
       <section className="negate-main-spacing-x overflow-hidden bg-slate-blue px-24 py-80 text-off-white dark:bg-slate-blue-dk">
         <div className="mx-auto w-full max-w-900">
           {data.siteLink && (
-            <div className="my-48">
+            <div className="mb-48">
               <a
                 href={data.siteLink}
                 target="_blank"
