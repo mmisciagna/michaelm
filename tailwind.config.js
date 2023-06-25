@@ -27,10 +27,11 @@ module.exports = {
         h4: '1rem',
       },
       screens: {
-        xs: '600px',
-        sm: '768px',
-        md: '1024px',
-        lg: '1200px',
+        'xs': '600px',
+        'sm': '768px',
+        'md': '1024px',
+        'lg': '1200px',
+        'lg-plus': '1248px',
       },
       spacing: {
         1: '1px',

@@ -6,7 +6,7 @@ import {
   setLocalStorage,
   setTheme,
 } from '@/globals/utils';
-import { Icons } from './Icons';
+import { Icons } from '@/components/Icons';
 
 const TOGGLE_THEME_ACTION = 'TOGGLE_THEME';
 

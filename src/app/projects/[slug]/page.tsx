@@ -32,7 +32,7 @@ export default function Project({ params }: Params) {
 
   return (
     <>
-      <section className="negate-main-spacing-x bg-slate-blue px-24 pb-48 pt-24 text-off-white dark:bg-slate-blue-dk">
+      <section className="negate-main-spacing-x bg-slate-blue px-24 pb-80 pt-24 text-off-white dark:bg-slate-blue-dk">
         <div className="mx-auto w-full max-w-900">
           <BreadCrumbs
             title={title}
@@ -40,7 +40,17 @@ export default function Project({ params }: Params) {
           />
           <Pagination index={index} />
         </div>
-        <div className="mt-48">
+      </section>
+      {/* Video */}
+      {data.videoId && (
+        <section className="negate-main-spacing-x bg-slate-blue pb-80 text-off-white dark:bg-slate-blue-dk">
+          <div className="mx-auto w-full max-w-1200">
+            <Video showcase={showcase} />
+          </div>
+        </section>
+      )}
+      <section className="negate-main-spacing-x bg-slate-blue pb-80 text-off-white dark:bg-slate-blue-dk">
+        <div className="main-spacing-x mx-auto w-full max-w-1200">
           {data.client && (
             <Details
               title="Client"
@@ -67,14 +77,8 @@ export default function Project({ params }: Params) {
           )}
         </div>
       </section>
-      {/* Video */}
-      <section className="negate-main-spacing-x bg-slate-blue text-off-white dark:bg-slate-blue-dk">
-        <div className="mx-auto w-full max-w-1200">
-          {data.videoId && <Video showcase={showcase} />}
-        </div>
-      </section>
       {/* Markdown content */}
-      <section className="negate-main-spacing-x overflow-hidden bg-slate-blue px-24 py-80 text-off-white dark:bg-slate-blue-dk">
+      <section className="negate-main-spacing-x overflow-hidden bg-slate-blue px-24 pb-80 text-off-white dark:bg-slate-blue-dk">
         <div className="mx-auto w-full max-w-900">
           {data.siteLink && (
             <div className="mb-48">
@@ -87,8 +91,12 @@ export default function Project({ params }: Params) {
               </a>
             </div>
           )}
-          <div className="markdown my-24">
-            <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
+          <div className="markdown">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: marked(content, { mangle: false, headerIds: false }),
+              }}
+            />
           </div>
         </div>
       </section>
@@ -99,7 +107,7 @@ export default function Project({ params }: Params) {
 function BreadCrumbs({ title, index }: { title: string; index: number }) {
   return (
     <div className="eyebrow mb-48 flex items-center justify-between gap-24">
-      <ul className="m-0 inline-flex list-none items-center gap-12 p-0">
+      <ul className="m-0 inline-flex max-w-[75%] list-none items-center gap-12 p-0">
         <li className="mm-showcase__breadcrumbs-item">
           <Link
             className="leading-snug text-bronze transition-colors duration-200 ease-in-out hover:text-off-white"

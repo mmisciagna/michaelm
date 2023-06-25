@@ -31,7 +31,7 @@
 }
 
 .button {
-  @apply border-2 border-solid border-bronze bg-transparent px-24 py-8 text-center font-display text-xs font-bold uppercase leading-loose tracking-1 text-bronze transition-colors;
+  @apply inline-block border-2 border-solid border-bronze bg-transparent px-24 py-8 text-center font-display text-xs font-bold uppercase leading-loose tracking-1 text-bronze transition-colors;
 
   svg {
     @apply h-24 w-24 fill-bronze transition-colors;
@@ -88,7 +88,11 @@
   }
 
   img {
-    @apply my-24;
+    @apply mb-48 w-full;
+  }
+
+  .columns {
+    @apply sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24;
   }
 }
 

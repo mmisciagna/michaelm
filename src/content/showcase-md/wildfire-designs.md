@@ -13,7 +13,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <!-- Row -->
 
-<div class="sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24">
+<div class="columns">
 
 <div>
 
@@ -35,7 +35,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <!-- Row -->
 
-<div class="sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24">
+<div class="columns">
 
 <div>
 
@@ -57,7 +57,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <!-- Row -->
 
-<div class="sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24">
+<div class="columns">
 
 <div>
 
@@ -79,7 +79,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <!-- Row -->
 
-<div class="sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24">
+<div class="columns">
 
 <div>
 

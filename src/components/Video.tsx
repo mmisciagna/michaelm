@@ -1,8 +1,8 @@
 'use client';
 
-import { Colors, GlobalString } from '@/globals/constants';
 import { useEffect, useRef } from 'react';
-import { Icons } from './Icons';
+import { Colors, GlobalString } from '@/globals/constants';
+import { Icons } from '@/components/Icons';
 
 const IFRAME_API_SCRIPT_ID = 'iframe-api-script';
 
@@ -13,12 +13,18 @@ export default function Video({ showcase }: { showcase: Showcase }) {
 
   useEffect(() => {
     window.onYouTubeIframeAPIReady = () => {
+      // @ts-ignore
       player = new window.YT.Player(playerRef.current!, {
         height: '100%',
         width: '100%',
         videoId: showcase.data.videoId,
         playerVars: {
+          color: 'white',
+          enablejsapi: 1,
+          loop: 1,
+          modestbranding: 1,
           playsinline: 1,
+          start: showcase.data.videoStart || 0,
         },
       });
     };
@@ -32,7 +38,7 @@ export default function Video({ showcase }: { showcase: Showcase }) {
   }, []);
 
   return (
-    <div className="relative overflow-hidden rounded-xl">
+    <div className="relative overflow-hidden lg-plus:rounded-xl">
       <div
         className="aspect-video w-full bg-bronze-10"
         ref={playerRef}></div>

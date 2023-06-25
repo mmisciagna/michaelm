@@ -91,7 +91,7 @@ function List({ headline, type }: { headline: string; type?: string }) {
                 key={showcase.data.title}
                 data-animate-on-observe>
                 <Link
-                  className="main-spacing-x group-even/item:bg-bronze-10 flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 dark:border-off-white dark:group-even/item:bg-black-10"
+                  className="main-spacing-x flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-10 dark:border-off-white dark:group-even/item:bg-black-10"
                   href={`/projects/${slug}`}
                   arial-label={`View ${showcase.data.title} details`}>
                   <span className="block w-[35%] overflow-hidden rounded bg-slate-blue">
@@ -168,7 +168,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                   </div>
                   <div>
                     <Link
-                      className="button mt-12 block"
+                      className="button mt-12 !block"
                       href={`/projects/${slug}`}
                       arial-label={`View ${showcase.data.title} details`}>
                       View details
@@ -179,7 +179,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                         href={showcase.data.siteLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="button button--secondary mt-12 block !border-white-10 !text-white hover:!bg-white-10"
+                        className="button button--secondary mt-12 !block !border-white-10 !text-white hover:!bg-white-10"
                         arial-label={`Launch ${showcase.data.title} site`}>
                         Launch site
                       </a>
