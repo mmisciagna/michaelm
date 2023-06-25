@@ -10,7 +10,7 @@ type: Design
 
 <!-- Row -->
 
-<div class="mm-grid mm-grid--50-50">
+<div class="sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24">
 
 <div>
 
@@ -30,7 +30,7 @@ type: Design
 
 <!-- Row -->
 
-<div class="mm-grid mm-grid--50-50">
+<div class="sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24">
 
 <div>
 

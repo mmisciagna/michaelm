@@ -13,7 +13,7 @@ export default function Video({ showcase }: { showcase: Showcase }) {
 
   useEffect(() => {
     window.onYouTubeIframeAPIReady = () => {
-      player = new YT.Player(playerRef.current!, {
+      player = new window.YT.Player(playerRef.current!, {
         height: '100%',
         width: '100%',
         videoId: showcase.data.videoId,
