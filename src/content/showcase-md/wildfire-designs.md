@@ -7,7 +7,7 @@ stack: ['Photoshop', 'Illustrator']
 type: Design
 ---
 
-### Wildfire Interactive
+## Wildfire Interactive
 
 These are a collection of designs I created during my stint at _Wildfire Interactive_, (2011–2012). There we crafted marketing websites and brand campaigns for a diverse clientele including Fortune 500 companies. It was a fast-paced work environment and took creative problem-solving skills that resulted in a $350M Google acquisition in 2012.
 
@@ -17,7 +17,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### The Walking Dead
+### The Walking Dead
 
 ![Wildfire design - The Walking Dead](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/walkingDead.webp)
 
@@ -25,7 +25,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Skyfall
+### Skyfall
 
 ![Wildfire design - Skyfall](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/skyfall.webp)
 
@@ -39,7 +39,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Men's Luxury
+### Men's Luxury
 
 ![Wildfire design - Men's Luxury](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/mensLuxury.webp)
 
@@ -47,7 +47,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Artistry
+### Artistry
 
 ![Wildfire design - Artistry](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/artistry.webp)
 
@@ -61,7 +61,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### The Voice
+### The Voice
 
 ![Wildfire design - The Voice](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/theVoice.webp)
 
@@ -69,7 +69,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### The Ultimate Action Star
+### The Ultimate Action Star
 
 ![Wildfire design - The Ultimate Action Star](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/ultimateActionStar.webp)
 
@@ -83,7 +83,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Pizza Hut
+### Pizza Hut
 
 ![Wildfire design - Pizza Hut](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/pizzaHut.webp)
 
@@ -91,7 +91,7 @@ These are a collection of designs I created during my stint at _Wildfire Interac
 
 <div>
 
-#### Help for Parents. Hope for Kids.
+### Help for Parents. Hope for Kids.
 
 ![Wildfire design - Help for Parents. Hope for Kids.](https://storage.googleapis.com/michaelm.appspot.com/wildfire-designs/helpAndHope.webp)
 

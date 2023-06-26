@@ -5,17 +5,18 @@ client: 'YouTube'
 role: 'Frontend Engineer'
 img: 'youtube-creators.webp'
 description: YTCreators
-stack: ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
+stack:
+  ['JavaScript', 'SCSS', 'Python', 'Flask/Jinja', 'Webpack', 'Google Cloud']
 siteLink: 'https://www.youtube.com/creators/'
 videoId: '0XcOLeOeFEc'
 type: Engineering
 ---
 
-### Overview
+## Overview
 
 The YouTube Creators website serves as a valuable information center for creators of all levels on YouTube, regardless of whether they're beginners or have already amassed over 1,000,000 subscribers. It offers a variety of resources, such as instructional videos, contest registration, up-to-date announcements from the Creators' social media channels, and comprehensive guidance on enhancing their YouTube channels.
 
-### Challenges
+## Challenges
 
 In the past, user retention on the YouTube Creators site was subpar, and a survey of creators revealed that the site's navigation was not easily accessible or clearly labeled. To address this issue, we revamped the navigation, making it more descriptive and visible. The tabs are now prominently displayed and affixed to the top of the viewport, making it easier for users to find what they're looking for.
 

@@ -9,12 +9,11 @@ videoId: 'Ft9qsS7l52U'
 type: Engineering
 ---
 
-### Goal
+## Goal
 
 Prototype a simpler, more intuitive, responsive, global navigation that can accomodate for marketing and engineering builds using Material components.
 
-
-### Challenges
+## Challenges
 
 At the time, the Google Fiber portal consisted of two distinct sites: a marketing-designed homepage and an engineer-built site with an iframed navigation component. This caused confusion for users who easily got lost in the navigation flow. Our proposed solution addresses this issue and ensures consistency in design and architecture across all devices.
 

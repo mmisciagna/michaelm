@@ -6,7 +6,7 @@ stack: ['Illustrator', 'Photoshop']
 type: Design
 ---
 
-### Revolution Disk Golf
+## Revolution Disk Golf
 
 <!-- Row -->
 
@@ -26,7 +26,7 @@ type: Design
 
 </div>
 
-### Social Awareness
+## Social Awareness
 
 <!-- Row -->
 
@@ -46,7 +46,7 @@ type: Design
 
 </div>
 
-### AIGA Portfolio Review
+## AIGA Portfolio Review
 
 <!-- Row -->
 

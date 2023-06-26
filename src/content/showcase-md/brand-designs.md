@@ -6,7 +6,7 @@ stack: ['Illustrator']
 type: Design
 ---
 
-### African American History Museum
+## African American History Museum
 
 <!-- Row -->
 
@@ -26,7 +26,7 @@ type: Design
 
 </div>
 
-### Revolution Disk Golf
+## Revolution Disk Golf
 
 <!-- Row -->
 

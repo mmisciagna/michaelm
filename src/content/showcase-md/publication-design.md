@@ -6,7 +6,7 @@ stack: ['Illustrator', 'Photoshop']
 type: Design
 ---
 
-### Penguin Books
+## Penguin Books
 
 <!-- Row -->
 
@@ -46,7 +46,7 @@ type: Design
 
 ![A Taste of the Unknown](https://storage.googleapis.com/michaelm.appspot.com/college-designs/book-covers-a-taste.webp)
 
-### African American History Museum
+## African American History Museum
 
 ![African American History Museum brochure 1](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-1.webp)
 
@@ -54,6 +54,6 @@ type: Design
 
 ![African American History Museum brochure 3](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-3.webp)
 
-### Pepco
+## Pepco
 
 ![Pepco brochure](https://storage.googleapis.com/michaelm.appspot.com/college-designs/pepco-brochure.webp)
