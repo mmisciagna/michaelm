@@ -38,7 +38,13 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
   return (
     <nav className={cn}>
       {items.map((item) => {
-        const isActive = pathname === item.href;
+        let isActive = false;
+
+        if (pathname === '/') {
+          isActive = item.href === '/';
+        } else {
+          isActive = pathname.startsWith(item.href) && item.href !== '/';
+        }
 
         cn = classNames({
           // active text color
@@ -60,7 +66,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
           <Link
             key={item.label}
             className={twMerge(
-              `relative inline-block font-display text-xs font-bold uppercase leading-loose tracking-1 text-bronze transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:duration-200 after:ease-in-out after:[height:2px] after:[transition-property:width] hover:after:[width:25%] dark:text-bronze dark:hover:text-white sm:text-sm ${cn}`
+              `eyebrow relative inline-block text-bronze transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:duration-200 after:ease-in-out after:[height:2px] after:[transition-property:width] hover:after:[width:25%] dark:text-bronze dark:hover:text-white ${cn}`
             )}
             href={item.href}>
             <span>{item.label}</span>

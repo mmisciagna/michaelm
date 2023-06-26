@@ -138,7 +138,7 @@ function Pagination({ index }: { index: number }) {
   });
 
   return (
-    <div className="-m-12 flex items-center justify-between">
+    <div className="-mx-12 flex items-center justify-between">
       <Link
         className={prevBtnClasses}
         href={`/projects/${slugify(Showcases[index - 1]?.data.title)}`}

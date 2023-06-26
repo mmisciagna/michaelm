@@ -51,11 +51,11 @@ export default function Video({ showcase }: { showcase: Showcase }) {
         onClick={(e: React.MouseEvent) => {
           playVideo(e.target as HTMLButtonElement);
         }}>
-        <span className="pointer-events-none absolute left-1/2 top-1/2 flex w-1/2 max-w-[320px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white-25 px-48 py-24 uppercase backdrop-blur-sm transition-all duration-200 ease-in-out group-hover/btn:bg-white-50">
+        <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[50%] bg-white-25 uppercase backdrop-blur-sm transition-all duration-200 ease-in-out group-hover/btn:bg-white-50 sm:h-80 sm:w-80">
           <Icons
             name="play"
             color={Colors['white-70']}
-            className="pointer-events-none w-48 transition-colors duration-200 ease-in-out group-hover/btn:fill-white sm:w-64"
+            className="pointer-events-none w-24 translate-x-[3px] transition-colors duration-200 ease-in-out group-hover/btn:fill-white sm:w-32"
           />
         </span>
       </button>
