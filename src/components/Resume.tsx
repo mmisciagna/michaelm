@@ -6,6 +6,7 @@ import { RESUME } from '@/content/resume';
 import { useAnimateOnObserve } from '@/hooks/useAnimateOnObserve';
 import { Icons } from '@/components/Icons';
 import { Colors } from '@/globals/constants';
+import classNames from 'classnames';
 
 export default function Resume() {
   const rootRef = useRef(null);
@@ -16,6 +17,15 @@ export default function Resume() {
       className="mx-auto my-80 block max-w-1200 sm:grid sm:grid-cols-12 sm:gap-48"
       ref={rootRef}>
       {RESUME.map((section: any, i: number) => {
+        const timelineBorderClasses = classNames({
+          'border-l border-solid border-bronze pl-24': section.timeline,
+        });
+
+        const timelineEntryClasses = classNames({
+          'before:absolute before:-left-24 before:top-[20%] before:h-[9px] before:w-[9px] before:-translate-x-1/2  before:rounded-[50%] before:bg-off-white dark:before:bg-slate-blue before:border-2 before:border-solid before:border-bronze':
+            section.timeline,
+        });
+
         return (
           <React.Fragment key={i}>
             <div
@@ -26,7 +36,8 @@ export default function Resume() {
                 {section.title}
               </h2>
             </div>
-            <div className="col-span-12 sm:col-span-9 sm:col-start-4">
+            <div
+              className={`col-span-12 sm:col-span-9 sm:col-start-4 ${timelineBorderClasses}`}>
               {section.entries &&
                 section.entries.map((entry: any, i: number) => {
                   return (
@@ -35,7 +46,7 @@ export default function Resume() {
                       key={i}>
                       {entry.header && (
                         <h3
-                          className="relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white"
+                          className={`relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white ${timelineEntryClasses}`}
                           data-animate-on-observe>
                           {entry.link ? (
                             <a

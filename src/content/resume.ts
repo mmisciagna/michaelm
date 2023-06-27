@@ -1,16 +1,18 @@
 export const RESUME = [
   {
+    timeline: true,
     title: 'Experience',
     entries: [
       {
         header: 'Anzen',
         link: 'https://www.anzen.com/',
-        ancillaryHeader: 'Sr. Engineer',
+        ancillaryHeader: 'Sr. Frontend Engineer',
         dates: 'Jul 2023 - Present, San Francisco Bay Area',
         details: [
           {
+            subhead: 'Leadership',
             description: [
-              `Executive risk insurance & the tools to avoid using it. Anzen protects your business and monitors key operations data to keep you compliant.`,
+              `I lead the frontend execution of the Anzen software and marketing suite. Anzen provides executive risk insurance & the tools to avoid using it. We protect your business and monitor key operations data to keep you compliant.`,
             ],
           },
         ],
