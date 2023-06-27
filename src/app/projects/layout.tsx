@@ -9,7 +9,7 @@ import { Showcases } from '@/content/showcases';
 import { Icons } from '@/components/Icons';
 import { useAnimateOnObserve } from '@/hooks/useAnimateOnObserve';
 
-const projectsTypes = ['Engineering', 'Design', 'Just For Fun'];
+const projectsTypes = ['Just For Fun', 'Engineering', 'Design'];
 
 export default function ProjectsLayout({
   children,

@@ -85,10 +85,22 @@
 
   p {
     @apply my-[1em];
+
+    a {
+      @apply inline border-b border-dotted border-bronze text-bronze transition-all duration-200 ease-in-out hover:border-b-transparent;
+    }
   }
 
   img {
     @apply mb-48 w-full;
+  }
+
+  iframe {
+    @apply my-[1em];
+  }
+
+  ul {
+    @apply my-[1em] list-outside list-disc pl-[1.5em];
   }
 
   .columns {

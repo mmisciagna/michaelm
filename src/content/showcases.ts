@@ -17,8 +17,12 @@ import PosterDesigns from '@/content/showcase-md/poster-designs.md';
 import ProductDesigns from '@/content/showcase-md/product-design.md';
 import PubDesigns from '@/content/showcase-md/publication-design.md';
 import BrandDesigns from '@/content/showcase-md/brand-designs.md';
+import AutoCarousel from '@/content/showcase-md/auto-carousel.md';
 
 export const Showcases = [
+  AutoCarousel,
+  Bakery,
+
   YTTrendsMd,
   YTAds,
   USofYT,
@@ -38,6 +42,4 @@ export const Showcases = [
   ProductDesigns,
   PubDesigns,
   BrandDesigns,
-
-  Bakery,
 ];
