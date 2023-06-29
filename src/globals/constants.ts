@@ -16,7 +16,7 @@ export enum StorageKey {
 }
 
 export const Colors = {
-  // Primary
+  'slate': constructColorRange(215, 19),
   'slate-blue': 'hsl(215 19% 22%)',
   'slate-blue-md': 'hsl(215 18% 20%)',
   'slate-blue-90': 'hsl(215 19% 22% / .9)',
@@ -46,3 +46,21 @@ export const Colors = {
   'red-10': 'hsl(0 41% 45% / .1)',
   'red-lgt': 'hsl(0 47% 74%)',
 };
+
+function constructColorRange(
+  hue: number,
+  saturation: number
+): Record<number, string> {
+  let lightness = 90;
+  let key = 100;
+
+  const colorRange: Record<number, string> = {};
+
+  while (key <= 900) {
+    colorRange[key] = `hsl(${hue} ${saturation}% ${lightness}%)`;
+    lightness -= 10;
+    key += 100;
+  }
+
+  return colorRange;
+}
