@@ -29,11 +29,11 @@ export default function Hero() {
       </h2>
 
       <div className="w-full">
-        <hr className="mb-24 hidden h-1 border-0 bg-slate-blue dark:bg-off-white xs:block" />
+        <hr className="mb-24 hidden h-1 border-0 bg-slate-800 dark:bg-off-white xs:block" />
         <ul className="m-0 mt-[2px] grid list-none grid-cols-2 items-end gap-[2px] p-0 font-display uppercase tracking-1 xs:m-0 xs:flex xs:items-center xs:justify-end">
           <li className="m-0 xs:ml-24">
             <a
-              className="block bg-white p-0 px-24 py-12 text-bronze transition-colors duration-200 ease-in-out hover:text-slate-blue dark:bg-slate-blue-md hover:dark:text-off-white xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
+              className="text-bronze-300 block bg-white p-0 px-24 py-12 transition-colors duration-200 ease-in-out hover:text-slate-800 dark:bg-slate-900/10 hover:dark:text-off-white xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
               href="#tldr">
               TL;DR
             </a>
@@ -44,7 +44,7 @@ export default function Hero() {
                 key={section.title}
                 className="m-0 xs:ml-24">
                 <a
-                  className="block bg-white px-24 py-12 text-bronze transition-colors duration-200 ease-in-out hover:text-slate-blue dark:bg-slate-blue-md hover:dark:text-off-white xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
+                  className="text-bronze-300 block bg-white px-24 py-12 transition-colors duration-200 ease-in-out hover:text-slate-800 dark:bg-slate-900/10 hover:dark:text-off-white xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
                   href={`#${slugify(section.title)}`}>
                   {section.title}
                 </a>

@@ -13,7 +13,7 @@ export default function ProjectsOverview() {
           Showcasing my projects
         </h1>
       </section>
-      <section className="main-spacing-x negate-main-spacing-x my-80 bg-slate-blue py-80 text-off-white dark:bg-slate-blue-dk">
+      <section className="main-spacing-x negate-main-spacing-x my-80 bg-slate-800 py-80 text-off-white dark:bg-slate-900">
         <div className="mx-auto w-full max-w-900">
           <p className="m-0">
             As a frontend engineer and designer with a passion for creating

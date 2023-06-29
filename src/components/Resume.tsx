@@ -18,11 +18,11 @@ export default function Resume() {
       ref={rootRef}>
       {RESUME.map((section: any, i: number) => {
         const timelineBorderClasses = classNames({
-          'border-l border-solid border-bronze pl-24': section.timeline,
+          'border-l border-solid border-bronze-300 pl-24': section.timeline,
         });
 
         const timelineEntryClasses = classNames({
-          'before:absolute before:-left-24 before:top-[20%] before:h-[9px] before:w-[9px] before:-translate-x-1/2  before:rounded-[50%] before:bg-off-white dark:before:bg-slate-blue before:border-2 before:border-solid before:border-bronze':
+          'before:absolute before:-left-24 before:top-[20%] before:h-[9px] before:w-[9px] before:-translate-x-1/2  before:rounded-[50%] before:bg-off-white dark:before:bg-slate-800 before:border-2 before:border-solid before:border-bronze-300':
             section.timeline,
         });
 
@@ -46,17 +46,17 @@ export default function Resume() {
                       key={i}>
                       {entry.header && (
                         <h3
-                          className={`relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-blue after:dark:bg-off-white ${timelineEntryClasses}`}
+                          className={`relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-800 after:dark:bg-off-white ${timelineEntryClasses}`}
                           data-animate-on-observe>
                           {entry.link ? (
                             <a
-                              className="inline-flex gap-4 transition-colors duration-300 ease-in-out hover:text-bronze"
+                              className="inline-flex gap-4 transition-colors duration-300 ease-in-out hover:text-bronze-300"
                               href={entry.link}
                               target="blank">
                               {entry.header}
                               <Icons
                                 name="new-window"
-                                color={Colors.bronze}
+                                color={Colors.bronze['300']}
                                 className="mt-4 h-20 w-16 md:h-24 md:w-24"
                               />
                             </a>

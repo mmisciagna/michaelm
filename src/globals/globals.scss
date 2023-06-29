@@ -24,7 +24,7 @@
 }
 
 .highlight {
-  @apply inline-block bg-white px-12 py-8 dark:bg-slate-blue-md xs:whitespace-nowrap;
+  @apply inline-block bg-white px-12 py-8 dark:bg-slate-900/10 xs:whitespace-nowrap;
 }
 
 .eyebrow {
@@ -32,39 +32,39 @@
 }
 
 .button {
-  @apply inline-block border-2 border-solid border-bronze bg-transparent px-24 py-8 text-center font-display text-xs font-bold uppercase leading-loose tracking-1 text-bronze transition-colors;
+  @apply inline-block border-2 border-solid border-bronze-300 bg-transparent px-24 py-8 text-center font-display text-xs font-bold uppercase leading-loose tracking-1 text-bronze-300 transition-colors;
 
   svg {
-    @apply h-24 w-24 fill-bronze transition-colors;
+    @apply h-24 w-24 fill-bronze-300 transition-colors;
   }
 
   &:hover {
-    @apply bg-bronze text-off-white dark:text-slate-blue;
+    @apply bg-bronze-300 text-off-white dark:text-slate-800;
 
     svg {
-      @apply fill-off-white dark:fill-slate-blue;
+      @apply fill-off-white dark:fill-slate-800;
     }
   }
 
   &--secondary {
-    @apply border-black-25 text-slate-blue dark:border-white-10 dark:text-off-white;
+    @apply border-bronze-300/25 text-slate-800 dark:border-bronze-300/10 dark:text-off-white;
 
     svg {
-      @apply fill-slate-blue dark:text-off-white;
+      @apply fill-slate-800 dark:text-off-white;
     }
 
     &:hover {
-      @apply border-black-25 text-slate-blue dark:border-white-10 dark:text-off-white;
+      @apply border-bronze-300/25 text-slate-800 dark:border-bronze-300/10 dark:text-off-white;
 
       svg {
-        @apply fill-slate-blue dark:text-off-white;
+        @apply fill-slate-800 dark:text-off-white;
       }
     }
   }
 
   &.disabled,
   &[disabled] {
-    @apply pointer-events-none border-white-25 text-white-25;
+    @apply pointer-events-none border-white/25 text-white/25;
   }
 }
 
@@ -88,7 +88,7 @@
     @apply my-[1em];
 
     a {
-      @apply inline border-b border-dotted border-bronze text-bronze transition-all duration-200 ease-in-out hover:border-b-transparent;
+      @apply inline border-b border-dotted border-bronze-300 text-bronze-300 transition-all duration-200 ease-in-out hover:border-b-transparent;
     }
   }
 

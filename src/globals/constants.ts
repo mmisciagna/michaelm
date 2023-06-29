@@ -16,37 +16,27 @@ export enum StorageKey {
 }
 
 export const Colors = {
-  'slate': constructColorRange(215, 19),
-  'slate-blue': 'hsl(215 19% 22%)',
-  'slate-blue-md': 'hsl(215 18% 20%)',
-  'slate-blue-90': 'hsl(215 19% 22% / .9)',
-  'slate-blue-10': 'hsl(215 19% 22% / .1)',
-  'slate-blue-dk': 'hsl(215 28% 9%)',
-  'slate-blue-dk-90': 'hsl(215 28% 9% / .9)',
-  // Accent
-  'bronze': 'hsl(24 25% 66%)',
-  'bronze-10': 'hsl(24 25% 66% / .1)',
-  'off-white': 'hsl(30 100% 97%)',
-  // White
-  'white': 'hsl(0 0% 100%)',
-  'white-70': 'hsl(0 0% 100% / .7)',
-  'white-50': 'hsl(0 0% 100% / .5)',
-  'white-25': 'hsl(0 0% 100% / .25)',
-  'white-10': 'hsl(0 0% 100% / .1)',
-  // Black
-  'black': 'hsl(0 0% 0%)',
-  'black-25': 'hsl(0 0% 0% / .25)',
-  'black-10': 'hsl(0 0% 0% / .1)',
-  'black-05': 'hsl(0 0% 0% / .05)',
-  // Succss/Error
-  'green': 'hsl(120 100% 25%)',
-  'green-10': 'hsl(120 100% 25% / .1)',
-  'green-lgt': 'hsl(120 41% 72%)',
-  'red': 'hsl(0 41% 45%)',
-  'red-10': 'hsl(0 41% 45% / .1)',
-  'red-lgt': 'hsl(0 47% 74%)',
+  'bronze': constructColorRange(24, 25), // 300
+  'off-white': 'hsl(24 100% 97%)',
+  'slate': constructColorRange(215, 19), // 800
 };
 
+/**
+ *  Returns a range of hsl colors with the given hue and saturation and
+ *  lightnesses from 90% – 10%.
+ *
+ *  Example: {
+ *    100: 'hsl(215 19% 90%)',
+ *    200: 'hsl(215 19% 80%)',
+ *    300: 'hsl(215 19% 70%)',
+ *    400: 'hsl(215 19% 60%)',
+ *    500: 'hsl(215 19% 50%)',
+ *    600: 'hsl(215 19% 40%)',
+ *    700: 'hsl(215 19% 30%)',
+ *    800: 'hsl(215 19% 20%)',
+ *    900: 'hsl(215 19% 10%)',
+ *  }
+ */
 function constructColorRange(
   hue: number,
   saturation: number

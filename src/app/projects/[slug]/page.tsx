@@ -32,7 +32,7 @@ export default function Project({ params }: Params) {
 
   return (
     <>
-      <section className="negate-main-spacing-x bg-slate-blue px-24 pb-80 pt-24 text-off-white dark:bg-slate-blue-dk">
+      <section className="negate-main-spacing-x bg-slate-800 px-24 pb-80 pt-24 text-off-white dark:bg-slate-900">
         <div className="mx-auto w-full max-w-900">
           <BreadCrumbs
             title={title}
@@ -43,13 +43,13 @@ export default function Project({ params }: Params) {
       </section>
       {/* Video */}
       {data.videoId && (
-        <section className="negate-main-spacing-x bg-slate-blue pb-80 text-off-white dark:bg-slate-blue-dk">
+        <section className="negate-main-spacing-x bg-slate-800 pb-80 text-off-white dark:bg-slate-900">
           <div className="mx-auto w-full max-w-1200">
             <Video showcase={showcase} />
           </div>
         </section>
       )}
-      <section className="negate-main-spacing-x bg-slate-blue pb-80 text-off-white dark:bg-slate-blue-dk">
+      <section className="negate-main-spacing-x bg-slate-800 pb-80 text-off-white dark:bg-slate-900">
         <div className="main-spacing-x mx-auto w-full max-w-1200">
           {data.client && (
             <Details
@@ -78,7 +78,7 @@ export default function Project({ params }: Params) {
         </div>
       </section>
       {/* Markdown content */}
-      <section className="negate-main-spacing-x overflow-hidden bg-slate-blue px-24 pb-80 text-off-white dark:bg-slate-blue-dk">
+      <section className="negate-main-spacing-x overflow-hidden bg-slate-800 px-24 pb-80 text-off-white dark:bg-slate-900">
         <div className="mx-auto w-full max-w-900">
           {data.siteLink && (
             <div className="mb-48">
@@ -110,7 +110,7 @@ function BreadCrumbs({ title, index }: { title: string; index: number }) {
       <ul className="m-0 inline-flex max-w-[75%] list-none items-center gap-12 p-0">
         <li className="mm-showcase__breadcrumbs-item">
           <Link
-            className="leading-snug text-bronze transition-colors duration-200 ease-in-out hover:text-off-white"
+            className="leading-snug text-bronze-300 transition-colors duration-200 ease-in-out hover:text-off-white"
             href="/projects">
             Projects
           </Link>
@@ -151,7 +151,7 @@ function Pagination({ index }: { index: number }) {
         href="#all-projects">
         <Icons
           name="grid-dots"
-          color={Colors.bronze}
+          color={Colors.bronze['300']}
           className="w-40 transition-colors duration-200 ease-in-out group-hover/all-icon:fill-off-white"
         />
       </a>
@@ -167,7 +167,7 @@ function Pagination({ index }: { index: number }) {
 
 function Details({ title, list }: { title: string; list: string[] }) {
   return (
-    <div className="group/details-row mx-auto -mt-1 flex max-w-900 items-start justify-between border-t border-solid border-bronze-10 first:mt-0">
+    <div className="group/details-row mx-auto -mt-1 flex max-w-900 items-start justify-between border-t border-solid border-bronze-300/10 first:mt-0">
       <div className="flex">
         <h2 className="eyebrow border-r-0 p-8 pl-0 leading-snug">{title}</h2>
       </div>
@@ -176,7 +176,7 @@ function Details({ title, list }: { title: string; list: string[] }) {
           return (
             <li
               key={label}
-              className="eyebrow m-0 inline-block border-b border-r border-solid border-bronze-10 p-8 leading-snug first:mt-0 group-last/details-row:border-b xs:border-b-0">
+              className="eyebrow m-0 inline-block border-b border-r border-solid border-bronze-300/10 p-8 leading-snug first:mt-0 group-last/details-row:border-b xs:border-b-0">
               {label}
             </li>
           );

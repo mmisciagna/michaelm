@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { Colors } from '@/globals/constants';
 
 export default function ContactForm() {
   const formRef = useRef(null);
@@ -51,6 +52,7 @@ export default function ContactForm() {
     //   min-height: calc(100dvh - var(--header-height) - var(--footer-height));
     // }
     <div className="mm-contact">
+      {JSON.stringify(Colors.slate)}
       <section className="mm-section">
         <div className="mm-contact__message">
           <h1>Drop a note</h1>

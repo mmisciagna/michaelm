@@ -51,13 +51,13 @@ function TypeNav({ isGrid = false }) {
 
   return (
     <nav
-      className={`items-center gap-24 border-b border-solid border-slate-blue dark:border-slate-blue-dk ${displayClasses}`}>
+      className={`items-center gap-24 border-b border-solid border-slate-800 dark:border-slate-900 ${displayClasses}`}>
       {projectsTypes.map((type: string) => {
         return (
           <a
             key={type}
             href={isGrid ? `#${slugify(type)}-grid` : `#${slugify(type)}`}
-            className="eyebrow text-bronze transition-colors duration-200 ease-in-out hover:text-slate-blue dark:hover:text-off-white">
+            className="eyebrow text-bronze-300 transition-colors duration-200 ease-in-out hover:text-slate-800 dark:hover:text-off-white">
             {type}
           </a>
         );
@@ -91,10 +91,10 @@ function List({ headline, type }: { headline: string; type?: string }) {
                 key={showcase.data.title}
                 data-animate-on-observe>
                 <Link
-                  className="main-spacing-x flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-10 dark:border-off-white dark:group-even/item:bg-black-10"
+                  className="main-spacing-x flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-300/10 dark:border-off-white dark:group-even/item:bg-black/10"
                   href={`/projects/${slug}`}
                   arial-label={`View ${showcase.data.title} details`}>
-                  <span className="block w-[35%] overflow-hidden rounded bg-slate-blue">
+                  <span className="block w-[35%] overflow-hidden rounded bg-slate-800">
                     <span
                       className="block aspect-square w-full overflow-hidden bg-cover bg-no-repeat mix-blend-exclusion"
                       style={{
@@ -106,10 +106,10 @@ function List({ headline, type }: { headline: string; type?: string }) {
                       {showcase.data.title}
                     </span>
                   </span>
-                  <span className="block rounded bg-bronze leading-none">
+                  <span className="block rounded bg-bronze-300 leading-none">
                     <Icons
                       name="arrow-right"
-                      className="w-32 fill-off-white dark:fill-slate-blue"
+                      className="w-32 fill-off-white dark:fill-slate-800"
                     />
                   </span>
                 </Link>
@@ -149,7 +149,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                 className="group/grid-item relative my-24 flex flex-col items-center xs:m-0"
                 data-animate-on-observe
                 tabIndex={0}>
-                <div className="block w-full overflow-hidden rounded bg-slate-blue">
+                <div className="block w-full overflow-hidden rounded bg-slate-800">
                   <div
                     className="block aspect-square w-full bg-cover  bg-no-repeat mix-blend-exclusion"
                     style={{
@@ -157,7 +157,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                     }}></div>
                 </div>
                 {/* Panel overlay */}
-                <div className="absolute inset-0 flex flex-col justify-between rounded bg-slate-blue-90 px-24 pb-24 pt-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:rounded-bl after:border-16 after:border-solid after:border-b-bronze after:border-l-bronze after:border-r-off-white after:border-t-off-white group-hover/grid-item:opacity-100 group-hover/grid-item:clip-path-project-panel-reveal group-focus/grid-item:opacity-100 group-focus/grid-item:clip-path-project-panel-reveal dark:bg-slate-blue-dk-90 dark:after:border-r-slate-blue dark:after:border-t-slate-blue">
+                <div className="absolute inset-0 flex flex-col justify-between rounded bg-slate-800/90 px-24 pb-24 pt-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:rounded-bl after:border-16 after:border-solid after:border-b-bronze-300 after:border-l-bronze-300 after:border-r-off-white after:border-t-off-white group-hover/grid-item:opacity-100 group-hover/grid-item:clip-path-project-panel-reveal group-focus/grid-item:opacity-100 group-focus/grid-item:clip-path-project-panel-reveal dark:bg-slate-900/90 dark:after:border-r-slate-800 dark:after:border-t-slate-800">
                   <div>
                     <h3 className="font-display text-h3 leading-snug tracking-1">
                       {showcase.data.title}
@@ -179,7 +179,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                         href={showcase.data.siteLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="button button--secondary mt-12 !block !border-white-10 !text-white hover:!bg-white-10"
+                        className="button button--secondary mt-12 !block !border-white/10 !text-white hover:!bg-white/10"
                         arial-label={`Launch ${showcase.data.title} site`}>
                         Launch site
                       </a>

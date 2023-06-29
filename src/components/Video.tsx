@@ -40,10 +40,10 @@ export default function Video({ showcase }: { showcase: Showcase }) {
   return (
     <div className="relative overflow-hidden lg-plus:rounded-xl">
       <div
-        className="aspect-video w-full bg-bronze-10"
+        className="aspect-video w-full bg-bronze-300/10"
         ref={playerRef}></div>
       <button
-        className="group/btn absolute inset-0 bg-slate-blue bg-cover bg-center bg-no-repeat bg-blend-exclusion"
+        className="group/btn absolute inset-0 bg-slate-800 bg-cover bg-center bg-no-repeat bg-blend-exclusion"
         aria-label={`Play ${showcase.data.title} video`}
         style={{
           backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
@@ -51,11 +51,10 @@ export default function Video({ showcase }: { showcase: Showcase }) {
         onClick={(e: React.MouseEvent) => {
           playVideo(e.target as HTMLButtonElement);
         }}>
-        <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[50%] bg-white-25 uppercase backdrop-blur-sm transition-all duration-200 ease-in-out group-hover/btn:bg-white-50 sm:h-80 sm:w-80">
+        <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[50%] bg-white/25 uppercase backdrop-blur-sm transition-all duration-200 ease-in-out group-hover/btn:bg-white/50 sm:h-80 sm:w-80">
           <Icons
             name="play"
-            color={Colors['white-70']}
-            className="pointer-events-none w-24 translate-x-[3px] transition-colors duration-200 ease-in-out group-hover/btn:fill-white sm:w-32"
+            className="pointer-events-none w-24 translate-x-[3px] fill-white/70 transition-colors duration-200 ease-in-out group-hover/btn:fill-white sm:w-32"
           />
         </span>
       </button>
