@@ -47,17 +47,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
         }
 
         cn = classNames({
-          // active text color
-          'text-slate-800 dark:text-white': isActive,
-          'text-white': isActive && !isInHeader,
-          // ::after
-          'after:[width:25%]': isActive,
-          'after:bg-slate-800 dark:after:bg-white': isInHeader,
-          'after:bg-white': !isInHeader,
-          // :hover
-          'hover:text-slate-800': isInHeader,
-          'hover:text-white ': !isInHeader,
-          // :first-child and :last-child
+          'text-slate-800 dark:text-white after:[width:25%]': isActive,
           'first:ml-24 sm:first:ml-48 lg:first:ml-80': isInHeader,
           'last:mr-24 sm:last:mr-48 lg:last:mr-80': isInHeader,
         });
@@ -66,7 +56,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
           <Link
             key={item.label}
             className={twMerge(
-              `eyebrow text-bronze-300 dark:text-bronze-300 relative inline-block transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:duration-200 after:ease-in-out after:[height:2px] after:[transition-property:width] hover:after:[width:25%] dark:hover:text-white ${cn}`
+              `eyebrow relative inline-block text-bronze-300 transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:bg-slate-800 after:duration-200 after:ease-in-out after:[height:2px] after:[transition-property:width] hover:text-slate-800 hover:after:[width:25%] dark:text-bronze-300 dark:after:bg-white dark:hover:text-white ${cn}`
             )}
             href={item.href}>
             <span>{item.label}</span>

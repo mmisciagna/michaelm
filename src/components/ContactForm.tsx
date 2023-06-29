@@ -47,13 +47,8 @@ export default function ContactForm() {
   };
 
   return (
-    // @include ipad-landscape-up {
-    //   display: flex;
-    //   min-height: calc(100dvh - var(--header-height) - var(--footer-height));
-    // }
-    <div className="mm-contact">
-      {JSON.stringify(Colors.slate)}
-      <section className="mm-section">
+    <div className="flex min-h-[calc(100dvh-var(--header-height)-var(--footer-height))] flex-col md:flex-row md:gap-48">
+      <section className="mx-auto max-w-900 py-80 md:mx-0 md:mt-0 md:w-1/2 md:max-w-[720px]">
         <div className="mm-contact__message">
           <h1>Drop a note</h1>
           <p>
@@ -77,8 +72,8 @@ export default function ContactForm() {
           </div>
         </div>
       </section>
-      <section className="mm-section mm-section--full-bleed">
-        <div className="mm-section__inner">
+      <section className="negate-main-spacing-x main-spacing-x flex-1 bg-slate-800 py-80 text-off-white dark:bg-slate-900 md:ml-0 md:mt-0">
+        <div className="w-full max-w-900">
           <form
             className="mm-contact__form"
             ref={formRef}
