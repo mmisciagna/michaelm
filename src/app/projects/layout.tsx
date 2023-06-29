@@ -51,7 +51,7 @@ function TypeNav({ isGrid = false }) {
 
   return (
     <nav
-      className={`items-center gap-24 border-b border-solid border-slate-800 dark:border-slate-900 ${displayClasses}`}>
+      className={`items-center gap-24 border-b border-solid border-bronze-300/25 ${displayClasses}`}>
       {projectsTypes.map((type: string) => {
         return (
           <a
@@ -179,7 +179,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                         href={showcase.data.siteLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="button button--secondary mt-12 !block !border-white/10 !text-white hover:!bg-white/10"
+                        className="button button--secondary mt-12 !block"
                         arial-label={`Launch ${showcase.data.title} site`}>
                         Launch site
                       </a>

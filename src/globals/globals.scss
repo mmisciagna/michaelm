@@ -47,18 +47,14 @@
   }
 
   &--secondary {
-    @apply border-bronze-300/25 text-slate-800 dark:border-bronze-300/10 dark:text-off-white;
+    @apply border-bronze-300/25 text-bronze-300;
 
     svg {
-      @apply fill-slate-800 dark:text-off-white;
+      @apply border-bronze-300/25;
     }
 
     &:hover {
-      @apply border-bronze-300/25 text-slate-800 dark:border-bronze-300/10 dark:text-off-white;
-
-      svg {
-        @apply fill-slate-800 dark:text-off-white;
-      }
+      @apply border-bronze-300/25;
     }
   }
 
