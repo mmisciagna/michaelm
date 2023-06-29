@@ -4,8 +4,8 @@ import { Icons } from '@/components/Icons';
 
 export default function Footer() {
   return (
-    <footer className="main-spacing-x bg-off-white text-bronze-300 dark:bg-slate-800 xs:h-[var(--footer-height)]">
-      <div className="flex w-full flex-col items-center justify-between gap-12 border-t border-solid border-bronze-300/25 py-24 xs:flex-row">
+    <footer className="main-spacing-x border-t border-solid border-bronze-300/25 bg-off-white text-bronze-300 dark:bg-slate-800 xs:h-[var(--footer-height)]">
+      <div className="flex w-full flex-col items-center justify-between gap-12 py-24 xs:flex-row">
         <Nav isInHeader={false} />
 
         <div className="eyebrow flex items-center justify-center gap-8 sm:justify-end lg:gap-16">
