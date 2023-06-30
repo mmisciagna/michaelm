@@ -52,11 +52,11 @@ export default function ThemeToggle() {
         <div className="flex h-[var(--header-height)] w-48 items-center justify-center overflow-hidden border-0 bg-bronze-300 duration-200 ease-in-out [transition-property:width] dark:w-0 dark:border-0">
           <Icons
             name="sun"
-            color={Colors['off-white']}
+            color={Colors['beige']}
             className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 opacity-100 transition duration-200 ease-in-out group-hover:fill-slate-900 dark:opacity-0"
           />
         </div>
-        <div className="flex h-[var(--header-height)] w-0 items-center justify-center overflow-hidden bg-off-white duration-200 ease-in-out [transition-property:width] dark:w-48">
+        <div className="bg-beige flex h-[var(--header-height)] w-0 items-center justify-center overflow-hidden duration-200 ease-in-out [transition-property:width] dark:w-48">
           <Icons
             name="moon"
             color={Colors.bronze['300']}

@@ -39,10 +39,10 @@
   }
 
   &:hover {
-    @apply bg-bronze-300 text-off-white dark:text-slate-800;
+    @apply text-beige bg-bronze-300 dark:text-slate-800;
 
     svg {
-      @apply fill-off-white dark:fill-slate-800;
+      @apply fill-beige dark:fill-slate-800;
     }
   }
 

@@ -16,7 +16,7 @@ export default function Intro() {
   return (
     <section
       ref={rootRef}
-      className="negate-main-spacing-x main-spacing-x mb-80 bg-slate-800 py-80 text-off-white dark:bg-slate-900"
+      className="negate-main-spacing-x main-spacing-x text-beige mb-80 bg-slate-800 py-80 dark:bg-slate-900"
       id="tldr">
       <div className="mx-auto block w-full max-w-1200 sm:grid sm:grid-cols-12 sm:gap-48">
         <div className="col-span-12 hidden text-right sm:col-span-3 sm:block">

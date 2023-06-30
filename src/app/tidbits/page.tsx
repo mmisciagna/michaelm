@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 import { head } from '@/globals/metadata';
 
 export const metadata: Metadata = {
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Tidbits() {
-  return <h1>Tidbits</h1>;
+  redirect('/tidbits/1');
 }

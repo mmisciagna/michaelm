@@ -14,7 +14,7 @@ const items = [
   },
   {
     label: 'Tidbits',
-    href: '/tidbits/',
+    href: '/tidbits/1',
   },
   {
     label: 'Contact',
@@ -28,7 +28,7 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
   let cn = classNames({
     'flex gap-16 lg:gap-24': true,
     'items-center xs:items-end': isInHeader,
-    'bg-off-white dark:bg-slate-800': isInHeader,
+    'bg-beige dark:bg-slate-800': isInHeader,
     'h-[var(--header-height)] sm:h-full': isInHeader,
     'px-4 sm:p-0': isInHeader,
     'relative': isInHeader,

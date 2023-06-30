@@ -9,7 +9,7 @@ import slugify from 'react-slugify';
 import classNames from 'classnames';
 import { Icons } from '@/components/Icons';
 import { Colors } from '@/globals/constants';
-import Video from '@/components/Video';
+import Video from '@/app/projects/[slug]/components/Video';
 
 interface Params {
   params: { slug: string };
@@ -32,7 +32,7 @@ export default function Project({ params }: Params) {
 
   return (
     <>
-      <section className="negate-main-spacing-x bg-slate-800 px-24 pb-80 pt-24 text-off-white dark:bg-slate-900">
+      <section className="negate-main-spacing-x bg-slate-800 px-24 pb-80 pt-24 text-beige dark:bg-slate-900">
         <div className="mx-auto w-full max-w-900">
           <BreadCrumbs
             title={title}
@@ -43,13 +43,13 @@ export default function Project({ params }: Params) {
       </section>
       {/* Video */}
       {data.videoId && (
-        <section className="negate-main-spacing-x bg-slate-800 pb-80 text-off-white dark:bg-slate-900">
+        <section className="negate-main-spacing-x bg-slate-800 pb-80 text-beige dark:bg-slate-900">
           <div className="mx-auto w-full max-w-1200">
             <Video showcase={showcase} />
           </div>
         </section>
       )}
-      <section className="negate-main-spacing-x bg-slate-800 pb-80 text-off-white dark:bg-slate-900">
+      <section className="negate-main-spacing-x bg-slate-800 pb-80 text-beige dark:bg-slate-900">
         <div className="main-spacing-x mx-auto w-full max-w-1200">
           {data.client && (
             <Details
@@ -78,7 +78,7 @@ export default function Project({ params }: Params) {
         </div>
       </section>
       {/* Markdown content */}
-      <section className="negate-main-spacing-x overflow-hidden bg-slate-800 px-24 pb-80 text-off-white dark:bg-slate-900">
+      <section className="negate-main-spacing-x overflow-hidden bg-slate-800 px-24 pb-80 text-beige dark:bg-slate-900">
         <div className="mx-auto w-full max-w-900">
           {data.siteLink && (
             <div className="mb-48">
@@ -110,12 +110,12 @@ function BreadCrumbs({ title, index }: { title: string; index: number }) {
       <ul className="m-0 inline-flex max-w-[75%] list-none items-center gap-12 p-0">
         <li className="mm-showcase__breadcrumbs-item">
           <Link
-            className="leading-snug text-bronze-300 transition-colors duration-200 ease-in-out hover:text-off-white"
+            className="leading-snug text-bronze-300 transition-colors duration-200 ease-in-out hover:text-beige"
             href="/projects">
             Projects
           </Link>
         </li>
-        <li className="relative mb-0 mt-0 overflow-hidden pl-12 after:absolute after:left-0 after:top-1/2 after:block after:h-[80%] after:w-1 after:-translate-y-1/2 after:bg-off-white first:ml-0 first:flex-shrink-0 first:pl-0">
+        <li className="relative mb-0 mt-0 overflow-hidden pl-12 after:absolute after:left-0 after:top-1/2 after:block after:h-[80%] after:w-1 after:-translate-y-1/2 after:bg-beige first:ml-0 first:flex-shrink-0 first:pl-0">
           <h1 className="leading-snug">{title}</h1>
         </li>
       </ul>
@@ -152,7 +152,7 @@ function Pagination({ index }: { index: number }) {
         <Icons
           name="grid-dots"
           color={Colors.bronze['300']}
-          className="w-40 transition-colors duration-200 ease-in-out group-hover/all-icon:fill-off-white"
+          className="w-40 transition-colors duration-200 ease-in-out group-hover/all-icon:fill-beige"
         />
       </a>
       <Link

@@ -22,7 +22,7 @@ export default function Resume() {
         });
 
         const timelineEntryClasses = classNames({
-          'before:absolute before:-left-24 before:top-[20%] before:h-[9px] before:w-[9px] before:-translate-x-1/2  before:rounded-[50%] before:bg-off-white dark:before:bg-slate-800 before:border-2 before:border-solid before:border-bronze-300':
+          'before:absolute before:-left-24 before:top-[20%] before:h-[9px] before:w-[9px] before:-translate-x-1/2  before:rounded-[50%] before:bg-beige dark:before:bg-slate-800 before:border-2 before:border-solid before:border-bronze-300':
             section.timeline,
         });
 
@@ -46,7 +46,7 @@ export default function Resume() {
                       key={i}>
                       {entry.header && (
                         <h3
-                          className={`relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-800 after:dark:bg-off-white ${timelineEntryClasses}`}
+                          className={`after:dark:bg-beige relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-800 ${timelineEntryClasses}`}
                           data-animate-on-observe>
                           {entry.link ? (
                             <a

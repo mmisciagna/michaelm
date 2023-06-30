@@ -57,7 +57,7 @@ function TypeNav({ isGrid = false }) {
           <a
             key={type}
             href={isGrid ? `#${slugify(type)}-grid` : `#${slugify(type)}`}
-            className="eyebrow text-bronze-300 transition-colors duration-200 ease-in-out hover:text-slate-800 dark:hover:text-off-white">
+            className="eyebrow dark:hover:text-beige text-bronze-300 transition-colors duration-200 ease-in-out hover:text-slate-800">
             {type}
           </a>
         );
@@ -91,7 +91,7 @@ function List({ headline, type }: { headline: string; type?: string }) {
                 key={showcase.data.title}
                 data-animate-on-observe>
                 <Link
-                  className="main-spacing-x flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-300/10 dark:border-off-white dark:group-even/item:bg-black/10"
+                  className="main-spacing-x dark:border-beige flex w-full items-center justify-between gap-16 py-16 transition-colors duration-200 group-even/item:bg-bronze-300/10 dark:group-even/item:bg-black/10"
                   href={`/projects/${slug}`}
                   arial-label={`View ${showcase.data.title} details`}>
                   <span className="block w-[35%] overflow-hidden rounded bg-slate-800">
@@ -109,7 +109,7 @@ function List({ headline, type }: { headline: string; type?: string }) {
                   <span className="block rounded bg-bronze-300 leading-none">
                     <Icons
                       name="arrow-right"
-                      className="w-32 fill-off-white dark:fill-slate-800"
+                      className="fill-beige w-32 dark:fill-slate-800"
                     />
                   </span>
                 </Link>
@@ -157,7 +157,7 @@ function Grid({ headline, type }: { headline: string; type?: string }) {
                     }}></div>
                 </div>
                 {/* Panel overlay */}
-                <div className="absolute inset-0 flex flex-col justify-between rounded bg-slate-800/90 px-24 pb-24 pt-48 text-off-white opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:rounded-bl after:border-16 after:border-solid after:border-b-bronze-300 after:border-l-bronze-300 after:border-r-off-white after:border-t-off-white group-hover/grid-item:opacity-100 group-hover/grid-item:clip-path-project-panel-reveal group-focus/grid-item:opacity-100 group-focus/grid-item:clip-path-project-panel-reveal dark:bg-slate-900/90 dark:after:border-r-slate-800 dark:after:border-t-slate-800">
+                <div className="text-beige after:border-r-beige after:border-t-beige absolute inset-0 flex flex-col justify-between rounded bg-slate-800/90 px-24 pb-24 pt-48 opacity-0 backdrop-blur-sm transition-all clip-path-project-panel after:absolute after:right-0 after:top-0 after:rounded-bl after:border-16 after:border-solid after:border-b-bronze-300 after:border-l-bronze-300 group-hover/grid-item:opacity-100 group-hover/grid-item:clip-path-project-panel-reveal group-focus/grid-item:opacity-100 group-focus/grid-item:clip-path-project-panel-reveal dark:bg-slate-900/90 dark:after:border-r-slate-800 dark:after:border-t-slate-800">
                   <div>
                     <h3 className="font-display text-h3 leading-snug tracking-1">
                       {showcase.data.title}

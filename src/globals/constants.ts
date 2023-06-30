@@ -16,9 +16,9 @@ export enum StorageKey {
 }
 
 export const Colors = {
-  'bronze': constructColorRange(24, 25), // 300
-  'off-white': 'hsl(24 100% 97%)',
-  'slate': constructColorRange(215, 19), // 800
+  beige: 'hsl(24 100% 97%)',
+  bronze: constructColorRange(24, 25), // 300
+  slate: constructColorRange(215, 19), // 800
 };
 
 /**

@@ -69,7 +69,7 @@ export default function ContactForm() {
           There was an error sending your message! Please try again.
         </div>
       </section>
-      <section className="negate-main-spacing-x main-spacing-x flex-1 bg-slate-800 py-80 text-off-white dark:bg-slate-900 md:ml-0 md:mt-0">
+      <section className="negate-main-spacing-x main-spacing-x text-beige flex-1 bg-slate-800 py-80 dark:bg-slate-900 md:ml-0 md:mt-0">
         <div className="w-full max-w-900">
           <form
             className="w-full md:max-w-600 md:flex-1"

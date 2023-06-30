@@ -37,7 +37,7 @@ export default function Header({ classes }: { classes?: string }) {
     <header
       className={`sticky left-0 top-0 z-50 flex flex-col items-center justify-between duration-300 ease-in-out [transition-property:transform] xs:h-[var(--header-height)] xs:flex-row ${classes}`}
       ref={headerRef}>
-      <div className="relative flex w-full flex-1 basis-[var(--header-height)] items-center justify-start overflow-hidden bg-slate-800 italic text-white before:absolute before:left-24 before:top-1/2 before:-translate-y-1/2 before:bg-white before:[height:1px] before:[width:calc(100%-24px)] dark:bg-slate-900 xs:h-full xs:border-b xs:border-off-white xs:px-24 xs:dark:border-slate-800 sm:px-48 sm:before:[width:calc(100%-48px)] lg:px-80 lg:before:[width:calc(100%-80px)]">
+      <div className="xs:border-beige relative flex w-full flex-1 basis-[var(--header-height)] items-center justify-start overflow-hidden bg-slate-800 italic text-white before:absolute before:left-24 before:top-1/2 before:-translate-y-1/2 before:bg-white before:[height:1px] before:[width:calc(100%-24px)] dark:bg-slate-900 xs:h-full xs:border-b xs:px-24 xs:dark:border-slate-800 sm:px-48 sm:before:[width:calc(100%-48px)] lg:px-80 lg:before:[width:calc(100%-80px)]">
         <Link
           href={`/`}
           aria-label="Home"
