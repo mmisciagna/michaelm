@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: `Projects - ${head.title}`,
 };
 
-export default function ProjectsOverview() {
+export default function ProjectsOverviewPage() {
   return (
     <>
       <section className="mx-auto my-80 max-w-900">

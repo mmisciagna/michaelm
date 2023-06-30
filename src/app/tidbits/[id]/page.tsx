@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 import { head } from '@/globals/metadata';
+import TidbitGroup from './components/TidbitGroup';
 
 interface Params {
   params: { id: number };
 }
 
-export default function Tidbits({ params }: Params) {
-  return <h1>Tidbits {params.id}</h1>;
+export default function TidbitsPage({ params }: Params) {
+  return <TidbitGroup id={params.id} />;
 }
 
 export async function generateMetadata(): Promise<Metadata> {

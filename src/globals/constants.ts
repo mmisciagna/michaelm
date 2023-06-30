@@ -16,6 +16,10 @@ export enum StorageKey {
   TIDBIT_TAGS = 'michaelm_tidbit_tags',
 }
 
+export enum CustomEvents {
+  TIDBIT_FILTERING = 'filter:tidbits',
+}
+
 export const Colors = {
   beige: 'hsl(24 100% 97%)',
   bronze: constructColorRange(24, 25), // 300

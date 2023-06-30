@@ -1,18 +1,36 @@
+'use client';
+
 import { useEffect, useState } from 'react';
-import { StorageKey } from '@/globals/constants';
+import { StorageKey, CustomEvents } from '@/globals/constants';
 import { useGetAllPossibleTags } from '../hooks/useGetAllPossibleTags';
 
 const ACTIVE_FILTER_ATTR = 'data-active-filter';
 
-export default function Filters() {
-  const [possibleTags, setPossibleTags] = useState<Record<string, number>>({});
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set([]));
+let filterEvent: CustomEvent;
 
-  useEffect(() => {
-    sessionStorage.removeItem(StorageKey.TIDBIT_TAGS);
-  }, []);
+export default function Filters() {
+  const storedTags = window.sessionStorage.getItem(StorageKey.TIDBIT_TAGS);
+  const [possibleTags, setPossibleTags] = useState<Record<string, number>>({});
+
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(
+    new Set(storedTags?.split(',')) || new Set()
+  );
 
   useGetAllPossibleTags(setPossibleTags);
+
+  useEffect(() => {
+    if (selectedTags.size === 0) {
+      window.sessionStorage.removeItem(StorageKey.TIDBIT_TAGS);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.dispatchEvent(filterEvent);
+  }, [selectedTags]);
+
+  filterEvent = new CustomEvent(CustomEvents.TIDBIT_FILTERING, {
+    detail: { selectedTags },
+  });
 
   return (
     <ul className="mb-12 flex flex-wrap items-center gap-12">
@@ -27,6 +45,7 @@ export default function Filters() {
               <button
                 className="button relative !flex h-40 items-center justify-center overflow-hidden whitespace-nowrap rounded-full !pr-48 normal-case leading-none tracking-normal"
                 data-tag={tag.toLowerCase()}
+                data-active-filter={selectedTags.has(tag.toLowerCase())}
                 onClick={(e) =>
                   handleTagClick(e, selectedTags, setSelectedTags)
                 }
@@ -69,11 +88,10 @@ function handleTagClick(
   const newTags = new Set([...selectedTags]);
   const hasTag = newTags.has(tag);
 
-  if (tagEl.hasAttribute(ACTIVE_FILTER_ATTR)) {
-    tagEl.removeAttribute(ACTIVE_FILTER_ATTR);
-  } else {
-    tagEl.setAttribute(ACTIVE_FILTER_ATTR, 'true');
-  }
+  tagEl.setAttribute(
+    ACTIVE_FILTER_ATTR,
+    `${!tagEl.hasAttribute(ACTIVE_FILTER_ATTR)}`
+  );
 
   if (hasTag) {
     newTags.delete(tag);
@@ -81,8 +99,12 @@ function handleTagClick(
     newTags.add(tag.toLowerCase());
   }
 
-  sessionStorage.setItem(StorageKey.TIDBIT_TAGS, [...newTags].join(','));
+  window.sessionStorage.setItem(StorageKey.TIDBIT_TAGS, [...newTags].join(','));
   setSelectedTags(newTags);
+
+  if (newTags.size === 0) {
+    window.sessionStorage.removeItem(StorageKey.TIDBIT_TAGS);
+  }
 }
 
 function reset(
@@ -96,6 +118,6 @@ function reset(
     btn.removeAttribute(ACTIVE_FILTER_ATTR);
   }
 
-  sessionStorage.removeItem(StorageKey.TIDBIT_TAGS);
+  window.sessionStorage.removeItem(StorageKey.TIDBIT_TAGS);
   setSelectedTags(new Set());
 }

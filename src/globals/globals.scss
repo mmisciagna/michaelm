@@ -113,7 +113,7 @@
   @apply translate-y-0 opacity-100;
 }
 
-[data-active-filter],
-[data-active-filter]:hover {
+[data-active-filter='true'],
+[data-active-filter='true']:hover {
   @apply border-slate-800 bg-slate-800 text-beige dark:border-beige dark:bg-beige dark:text-slate-800;
 }

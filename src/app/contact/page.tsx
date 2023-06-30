@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: `Contact - ${head.title}`,
 };
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <>
       <ContactForm />

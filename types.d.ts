@@ -28,7 +28,7 @@ interface Tidbit {
   isEmpty: boolean;
 }
 
-type StructuredTidbits = Tidbit[][];
+type TidbitGroup = Tidbit[][];
 
 interface Window {
   onYouTubeIframeAPIReady: () => void;

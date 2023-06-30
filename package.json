@@ -27,6 +27,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.4",
+    "react-markdown": "^8.0.7",
     "react-scroll": "^1.8.9",
     "react-slugify": "^3.0.2",
     "tailwind-merge": "^1.13.1",

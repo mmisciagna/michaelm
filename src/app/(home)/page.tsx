@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: `About - ${head.title}`,
 };
 
-export default function About() {
+export default function HomePage() {
   return (
     <>
       <Hero />
