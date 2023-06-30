@@ -34,7 +34,8 @@ export default function Hero() {
           <li className="m-0 xs:ml-24">
             <a
               className="block bg-white p-0 px-24 py-12 text-bronze-300 transition-colors duration-200 ease-in-out hover:text-slate-800 dark:bg-slate-900/10 hover:dark:text-beige xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
-              href="#tldr">
+              href="#tldr"
+            >
               TL;DR
             </a>
           </li>
@@ -42,10 +43,12 @@ export default function Hero() {
             return (
               <li
                 key={section.title}
-                className="m-0 xs:ml-24">
+                className="m-0 xs:ml-24"
+              >
                 <a
                   className="block bg-white px-24 py-12 text-bronze-300 transition-colors duration-200 ease-in-out hover:text-slate-800 dark:bg-slate-900/10 hover:dark:text-beige xs:bg-transparent xs:px-0 xs:py-0 xs:dark:bg-transparent"
-                  href={`#${slugify(section.title)}`}>
+                  href={`#${slugify(section.title)}`}
+                >
                   {section.title}
                 </a>
               </li>

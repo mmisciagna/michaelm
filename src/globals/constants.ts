@@ -13,6 +13,7 @@ export enum GlobalSelector {
 
 export enum StorageKey {
   THEME = 'michaelm_theme',
+  TIDBIT_TAGS = 'michaelm_tidbit_tags',
 }
 
 export const Colors = {

@@ -59,26 +59,30 @@ export default function ContactForm() {
         </p>
         <div
           ref={successRef}
-          className="my-[1em] hidden border border-solid border-green-700 bg-green-700/10 p-24 text-green-700">
+          className="my-[1em] hidden border border-solid border-green-700 bg-green-700/10 p-24 text-green-700"
+        >
           Thank you for your interest! I'll try my best to respond as promptly
           as possible.
         </div>
         <div
           ref={errorRef}
-          className="my-[1em] hidden border border-solid border-red-700 bg-red-700/10 p-24 text-red-700">
+          className="my-[1em] hidden border border-solid border-red-700 bg-red-700/10 p-24 text-red-700"
+        >
           There was an error sending your message! Please try again.
         </div>
       </section>
-      <section className="negate-main-spacing-x main-spacing-x text-beige flex-1 bg-slate-800 py-80 dark:bg-slate-900 md:ml-0 md:mt-0">
+      <section className="negate-main-spacing-x main-spacing-x flex-1 bg-slate-800 py-80 text-beige dark:bg-slate-900 md:ml-0 md:mt-0">
         <div className="w-full max-w-900">
           <form
             className="w-full md:max-w-600 md:flex-1"
             ref={formRef}
-            onSubmit={sendEmail}>
+            onSubmit={sendEmail}
+          >
             <div className="mb-24">
               <label
                 className="mb-8 block"
-                htmlFor="user_name">
+                htmlFor="user_name"
+              >
                 Name
               </label>
               <input
@@ -92,7 +96,8 @@ export default function ContactForm() {
             <div className="mb-2">
               <label
                 className="mb-8 block"
-                htmlFor="user_email">
+                htmlFor="user_email"
+              >
                 Email
               </label>
               <input
@@ -106,7 +111,8 @@ export default function ContactForm() {
             <div className="mb-2">
               <label
                 className="mb-8 block"
-                htmlFor="message">
+                htmlFor="message"
+              >
                 Message
               </label>
               <textarea
@@ -120,7 +126,8 @@ export default function ContactForm() {
               <button
                 ref={submitBtnRef}
                 type="submit"
-                className="button">
+                className="button"
+              >
                 Send
               </button>
             </div>

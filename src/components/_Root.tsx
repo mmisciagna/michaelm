@@ -29,12 +29,14 @@ export default function Root({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className="h-full scroll-py-[calc(var(--header-height)*2)] scroll-smooth font-body text-md leading-relaxed antialiased [font-variant-ligatures:normal] sm:text-lg md:text-xl">
-      <body className="bg-beige dark:text-beige m-0 flex min-h-full w-full flex-col text-slate-800 transition-colors duration-300 ease-in-out dark:bg-slate-800">
+      className="h-full scroll-py-[calc(var(--header-height)*2)] scroll-smooth font-body text-md leading-relaxed antialiased [font-variant-ligatures:normal] sm:text-lg md:text-xl"
+    >
+      <body className="m-0 flex min-h-full w-full flex-col bg-beige text-slate-800 transition-colors duration-300 ease-in-out dark:bg-slate-800 dark:text-beige">
         {pathname !== '/' && <Header />}
         <main
           className="main-spacing-x flex-1"
-          id="top">
+          id="top"
+        >
           {children}
         </main>
         <Footer />

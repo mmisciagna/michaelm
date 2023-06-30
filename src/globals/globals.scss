@@ -39,7 +39,7 @@
   }
 
   &:hover {
-    @apply text-beige bg-bronze-300 dark:text-slate-800;
+    @apply bg-bronze-300 text-beige dark:text-slate-800;
 
     svg {
       @apply fill-beige dark:fill-slate-800;
@@ -111,4 +111,9 @@
 
 [data-animate-on-observe='observed'] {
   @apply translate-y-0 opacity-100;
+}
+
+[data-active-filter],
+[data-active-filter]:hover {
+  @apply border-slate-800 bg-slate-800 text-beige dark:border-beige dark:bg-beige dark:text-slate-800;
 }

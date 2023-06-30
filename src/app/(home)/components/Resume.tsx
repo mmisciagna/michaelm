@@ -15,7 +15,8 @@ export default function Resume() {
   return (
     <section
       className="mx-auto my-80 block max-w-1200 sm:grid sm:grid-cols-12 sm:gap-48"
-      ref={rootRef}>
+      ref={rootRef}
+    >
       {RESUME.map((section: any, i: number) => {
         const timelineBorderClasses = classNames({
           'border-l border-solid border-bronze-300 pl-24': section.timeline,
@@ -31,28 +32,33 @@ export default function Resume() {
             <div
               className="col-span-12 text-left sm:col-span-3 sm:text-right"
               id={slugify(section.title)}
-              data-animate-on-observe>
+              data-animate-on-observe
+            >
               <h2 className="mb-48 overflow-hidden text-ellipsis font-display text-h2 tracking-1">
                 {section.title}
               </h2>
             </div>
             <div
-              className={`col-span-12 sm:col-span-9 sm:col-start-4 ${timelineBorderClasses}`}>
+              className={`col-span-12 sm:col-span-9 sm:col-start-4 ${timelineBorderClasses}`}
+            >
               {section.entries &&
                 section.entries.map((entry: any, i: number) => {
                   return (
                     <div
                       className="mb-48"
-                      key={i}>
+                      key={i}
+                    >
                       {entry.header && (
                         <h3
-                          className={`after:dark:bg-beige relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-800 ${timelineEntryClasses}`}
-                          data-animate-on-observe>
+                          className={`relative font-display text-h3 font-bold leading-[1.4em] tracking-1 after:absolute after:-top-8 after:left-0 after:h-[2px] after:w-24 after:bg-slate-800 after:dark:bg-beige ${timelineEntryClasses}`}
+                          data-animate-on-observe
+                        >
                           {entry.link ? (
                             <a
                               className="inline-flex gap-4 transition-colors duration-300 ease-in-out hover:text-bronze-300"
                               href={entry.link}
-                              target="blank">
+                              target="blank"
+                            >
                               {entry.header}
                               <Icons
                                 name="new-window"
@@ -68,7 +74,8 @@ export default function Resume() {
                               <br />
                               <span
                                 className="font-normal"
-                                data-animate-on-observe>
+                                data-animate-on-observe
+                              >
                                 {entry.ancillaryHeader}
                               </span>
                             </>
@@ -78,7 +85,8 @@ export default function Resume() {
                       {entry.dates && (
                         <p
                           className="my-[1em] font-bold"
-                          data-animate-on-observe>
+                          data-animate-on-observe
+                        >
                           {entry.dates}
                         </p>
                       )}
@@ -94,7 +102,8 @@ export default function Resume() {
                                       <li
                                         key={i}
                                         className="my-[0.5em]"
-                                        data-animate-on-observe>
+                                        data-animate-on-observe
+                                      >
                                         {li}
                                       </li>
                                     );
@@ -106,7 +115,8 @@ export default function Resume() {
                                 {details.subhead && (
                                   <h4
                                     className="mb-[0.5em] mt-[2em] font-display text-h4 font-bold uppercase leading-[1.4em] tracking-1"
-                                    data-animate-on-observe>
+                                    data-animate-on-observe
+                                  >
                                     {details.subhead}
                                   </h4>
                                 )}
@@ -116,7 +126,8 @@ export default function Resume() {
                                       <p
                                         key={i}
                                         className="my-[1em]"
-                                        data-animate-on-observe>
+                                        data-animate-on-observe
+                                      >
                                         {p}
                                       </p>
                                     );

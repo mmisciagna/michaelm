@@ -58,7 +58,8 @@ export default function Nav({ isInHeader = false }: { isInHeader: boolean }) {
             className={twMerge(
               `eyebrow relative inline-block text-bronze-300 transition duration-200 ease-in-out after:absolute after:left-0 after:top-0 after:w-0 after:bg-slate-800 after:duration-200 after:ease-in-out after:[height:2px] after:[transition-property:width] hover:text-slate-800 hover:after:[width:25%] dark:text-bronze-300 dark:after:bg-white dark:hover:text-white ${cn}`
             )}
-            href={item.href}>
+            href={item.href}
+          >
             <span>{item.label}</span>
           </Link>
         );

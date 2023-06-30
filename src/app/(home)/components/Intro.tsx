@@ -16,13 +16,15 @@ export default function Intro() {
   return (
     <section
       ref={rootRef}
-      className="negate-main-spacing-x main-spacing-x text-beige mb-80 bg-slate-800 py-80 dark:bg-slate-900"
-      id="tldr">
+      className="negate-main-spacing-x main-spacing-x mb-80 bg-slate-800 py-80 text-beige dark:bg-slate-900"
+      id="tldr"
+    >
       <div className="mx-auto block w-full max-w-1200 sm:grid sm:grid-cols-12 sm:gap-48">
         <div className="col-span-12 hidden text-right sm:col-span-3 sm:block">
           <figure
             className="bg-slate-800"
-            data-animate-on-observe>
+            data-animate-on-observe
+          >
             <img
               className="w-full align-middle mix-blend-exclusion"
               src="/static/imgs/profile-pic.jpg"
@@ -37,7 +39,8 @@ export default function Intro() {
               <React.Fragment key={i}>
                 <h2
                   className="mb-[0.5em] font-display text-h2 tracking-1"
-                  data-animate-on-observe>
+                  data-animate-on-observe
+                >
                   {content.header}
                 </h2>
                 {content.paragraphs.map((p: string, i: number) => {
@@ -45,7 +48,8 @@ export default function Intro() {
                     <p
                       key={i}
                       className="my-[1em]"
-                      data-animate-on-observe>
+                      data-animate-on-observe
+                    >
                       {p}
                     </p>
                   );
