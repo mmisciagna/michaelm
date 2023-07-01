@@ -4,12 +4,12 @@ import hljs from 'highlight.js';
 /**
  * Colors <code> blocks within the given element using Highlight.js.
  */
-export function useCodeHighlighter(container: HTMLElement | null) {
+export function useCodeHighlighter(root: React.RefObject<HTMLElement>) {
   useEffect(() => {
-    if (container == null) return;
+    if (root.current == null) return;
 
     const codeBlocks = [
-      ...container.querySelectorAll('pre code'),
+      ...root.current.querySelectorAll('pre code'),
     ] as HTMLElement[];
 
     for (const block of codeBlocks) {

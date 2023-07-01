@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { GlobalSelector } from '@/globals/constants';
 
-export function useAnimateOnObserve(root: React.RefObject<HTMLElement>) {
+export function useAnimateOnObserve(
+  root: React.RefObject<HTMLElement>,
+  dependencies: any[] = []
+) {
   useEffect(() => {
     if (!root.current) return;
 
@@ -31,5 +34,5 @@ export function useAnimateOnObserve(root: React.RefObject<HTMLElement>) {
         observer.unobserve(el);
       }
     };
-  }, []);
+  }, dependencies);
 }

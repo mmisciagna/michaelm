@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { marked } from 'marked';
 import { redirect } from 'next/navigation';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { Tidbits } from '@/content/tidbits';
-import { CustomEvents } from '@/globals/constants';
 import { useTidbitGroups } from '../hooks/useTidbitGroups';
 import { useStoredTags } from '../../hooks/useStoredTags';
 import { useCodeHighlighter } from '../hooks/useCodeHighlighter';
@@ -27,7 +26,7 @@ export default function TidbitGroup({ id }: { id: number }) {
   useStoredTags(setSelectedTags);
   useCustomFilterEvent(setSelectedTags);
   useTidbitGroups(Tidbits, selectedTags, setTidbitGroups, setTidbitsCount);
-  useCodeHighlighter(tidbitsContainerRef.current);
+  useCodeHighlighter(tidbitsContainerRef);
 
   const tidbitGroupIndex = id - 1;
   const tidbitsToRender: Tidbit[] = tidbitGroups[tidbitGroupIndex];

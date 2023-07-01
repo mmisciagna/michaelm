@@ -25,7 +25,7 @@ export default function Filters() {
   }, [selectedTags]);
 
   return (
-    <ul className="mb-12 flex flex-wrap items-center gap-12">
+    <ul className="my-48 flex flex-wrap items-center gap-12">
       {Object.keys(possibleTags)
         .sort()
         .map((tag: string) => {
