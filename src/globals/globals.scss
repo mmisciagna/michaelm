@@ -93,7 +93,7 @@
   }
 
   iframe {
-    @apply my-[1em];
+    @apply my-[1em] aspect-video w-full;
   }
 
   ul {

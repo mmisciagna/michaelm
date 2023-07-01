@@ -2,28 +2,27 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { marked } from 'marked';
+import { redirect } from 'next/navigation';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { Tidbits } from '@/content/tidbits';
-import { CustomEvents, StorageKey } from '@/globals/constants';
+import { CustomEvents } from '@/globals/constants';
 import { useTidbitGroups } from '../hooks/useTidbitGroups';
+import { useStoredTags } from '../../hooks/useStoredTags';
+
 import Pagination from './Pagination';
-import { redirect } from 'next/navigation';
 
 export default function TidbitGroup({ id }: { id: number }) {
   if (isNaN(id) || id < 1) {
     redirect('/tidbits/1');
   }
 
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(
-    new Set(
-      window.sessionStorage.getItem(StorageKey.TIDBIT_TAGS)?.split(',')
-    ) || new Set()
-  );
-
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
   const [tidbitGroups, setTidbitGroups] = useState<TidbitGroup>([]);
   const [tidbitsCount, setTidbitsCount] = useState(Tidbits.length);
 
   const tidbitsContainerRef = useRef(null);
+
+  useStoredTags(setSelectedTags);
 
   useEffect(() => {
     // TODO: Figure out how to get this to work with `any`.
@@ -106,10 +105,13 @@ export default function TidbitGroup({ id }: { id: number }) {
                     <div className="mm-tidbits__metadata">
                       <p style={{ margin: 'unset' }}>{date}</p>
                     </div>
-                    <h2>
+                    <h2 className="markdown">
                       <ReactMarkdown>{title}</ReactMarkdown>
                     </h2>
-                    <div dangerouslySetInnerHTML={{ __html: markedContent }} />
+                    <div
+                      className="markdown"
+                      dangerouslySetInnerHTML={{ __html: markedContent }}
+                    />
                   </div>
                 </React.Fragment>
               );

@@ -3,34 +3,26 @@
 import { useEffect, useState } from 'react';
 import { StorageKey, CustomEvents } from '@/globals/constants';
 import { useGetAllPossibleTags } from '../hooks/useGetAllPossibleTags';
+import { useStoredTags } from '../hooks/useStoredTags';
 
 const ACTIVE_FILTER_ATTR = 'data-active-filter';
 
 let filterEvent: CustomEvent;
 
 export default function Filters() {
-  const storedTags = window.sessionStorage.getItem(StorageKey.TIDBIT_TAGS);
   const [possibleTags, setPossibleTags] = useState<Record<string, number>>({});
-
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(
-    new Set(storedTags?.split(',')) || new Set()
-  );
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
 
   useGetAllPossibleTags(setPossibleTags);
+  useStoredTags(setSelectedTags);
 
   useEffect(() => {
-    if (selectedTags.size === 0) {
-      window.sessionStorage.removeItem(StorageKey.TIDBIT_TAGS);
-    }
-  }, []);
+    filterEvent = new CustomEvent(CustomEvents.TIDBIT_FILTERING, {
+      detail: { selectedTags },
+    });
 
-  useEffect(() => {
     window.dispatchEvent(filterEvent);
   }, [selectedTags]);
-
-  filterEvent = new CustomEvent(CustomEvents.TIDBIT_FILTERING, {
-    detail: { selectedTags },
-  });
 
   return (
     <ul className="mb-12 flex flex-wrap items-center gap-12">
