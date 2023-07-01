@@ -12,8 +12,10 @@ import ContainerMediaQuery from '@/content/tidbits-md/container-media-query.md';
 import ParentSelector from '@/content/tidbits-md/parent-selector.md';
 import NextJsVsReact from '@/content/tidbits-md/nextjs-vs-react.md';
 import BeginnersRedux from '@/content/tidbits-md/beginners-redux.md';
+import ScrollAnimations from '@/content/tidbits-md/scroll-animations.md';
 
 export const Tidbits = [
+  ScrollAnimations,
   BeginnersRedux,
   NextJsVsReact,
   ParentSelector,
