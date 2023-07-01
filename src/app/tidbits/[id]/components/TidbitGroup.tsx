@@ -8,8 +8,10 @@ import { Tidbits } from '@/content/tidbits';
 import { CustomEvents } from '@/globals/constants';
 import { useTidbitGroups } from '../hooks/useTidbitGroups';
 import { useStoredTags } from '../../hooks/useStoredTags';
-
+import { useCodeHighlighter } from '../hooks/useCodeHighlighter';
 import Pagination from './Pagination';
+import 'highlight.js/styles/base16/dracula.css';
+import { useCustomFilterEvent } from '../hooks/useCustomFilterEvent';
 
 export default function TidbitGroup({ id }: { id: number }) {
   if (isNaN(id) || id < 1) {
@@ -23,29 +25,9 @@ export default function TidbitGroup({ id }: { id: number }) {
   const tidbitsContainerRef = useRef(null);
 
   useStoredTags(setSelectedTags);
-
-  useEffect(() => {
-    // TODO: Figure out how to get this to work with `any`.
-    const handleFiltering = (e: any) => {
-      setSelectedTags(e.detail.selectedTags);
-    };
-
-    window.addEventListener(CustomEvents.TIDBIT_FILTERING, handleFiltering);
-
-    return () => {
-      window.removeEventListener(
-        CustomEvents.TIDBIT_FILTERING,
-        handleFiltering
-      );
-    };
-  }, []);
-
-  useTidbitGroups({
-    tidbits: Tidbits,
-    selectedTags,
-    setTidbitGroups,
-    setTidbitsCount,
-  });
+  useCustomFilterEvent(setSelectedTags);
+  useTidbitGroups(Tidbits, selectedTags, setTidbitGroups, setTidbitsCount);
+  useCodeHighlighter(tidbitsContainerRef.current);
 
   const tidbitGroupIndex = id - 1;
   const tidbitsToRender: Tidbit[] = tidbitGroups[tidbitGroupIndex];
@@ -56,33 +38,19 @@ export default function TidbitGroup({ id }: { id: number }) {
 
   return (
     <div ref={tidbitsContainerRef}>
-      <section
-        className="mm-section"
-        style={{
-          marginBottom: 'unset',
-          marginTop: 'unset',
-        }}
-      >
-        <p className="mm-tidbits__count">
+      <section className="mx-auto max-w-900">
+        <p className="eyebrow text-center">
           Viewing {tidbitsCount} / {Tidbits.length}
         </p>
       </section>
-      <section
-        className="mm-section mm-section--full-bleed"
-        style={{
-          marginBottom: 'unset',
-          marginTop: 'unset',
-        }}
-      >
-        <div className="mm-section__inner">
-          <div className="mm-tidbits__metadata">
-            <Pagination
-              tidbits={tidbitGroups}
-              index={tidbitGroupIndex}
-              container={tidbitsContainerRef.current!}
-            />
-          </div>
-          <div className="mm-tidbits__content">
+      <section className="negate-main-spacing-x main-spacing-x bg-slate-800 py-80 text-beige dark:bg-slate-900">
+        <div className="mx-auto w-full max-w-900">
+          <Pagination
+            tidbits={tidbitGroups}
+            index={tidbitGroupIndex}
+            container={tidbitsContainerRef.current!}
+          />
+          <div>
             {tidbitsToRender?.map((tidbit: Tidbit) => {
               const { data, content } = tidbit;
               const { date, title, tags } = data;
@@ -94,36 +62,42 @@ export default function TidbitGroup({ id }: { id: number }) {
               return (
                 <React.Fragment key={title.toLowerCase()}>
                   <div
-                    className={`mm-tidbits__tidbit`}
+                    className="border-t border-solid border-bronze-300/25 pb-80 last:border-b last:border-solid last:border-bronze-300/25"
                     data-tags={tags.join(',')}
                   >
-                    <ul className="mm-tidbits__tags">
+                    <ul className="mb-12 flex items-center justify-end gap-[2px]">
                       {tags.map((tag: string) => {
-                        return <li key={tag.toLowerCase()}>{tag}</li>;
+                        return (
+                          <li
+                            key={tag.toLowerCase()}
+                            className="inline-block whitespace-nowrap rounded-bl-[4px] rounded-br-[4px] bg-bronze-300/25 p-8 font-mono text-sm font-bold leading-none"
+                          >
+                            {tag}
+                          </li>
+                        );
                       })}
                     </ul>
-                    <div className="mm-tidbits__metadata">
-                      <p style={{ margin: 'unset' }}>{date}</p>
+                    <div className="markdown">
+                      <div className="font-display text-md uppercase tracking-wide">
+                        <p>{date}</p>
+                      </div>
+                      <h2>
+                        <ReactMarkdown>{title}</ReactMarkdown>
+                      </h2>
+                      <div
+                        dangerouslySetInnerHTML={{ __html: markedContent }}
+                      />
                     </div>
-                    <h2 className="markdown">
-                      <ReactMarkdown>{title}</ReactMarkdown>
-                    </h2>
-                    <div
-                      className="markdown"
-                      dangerouslySetInnerHTML={{ __html: markedContent }}
-                    />
                   </div>
                 </React.Fragment>
               );
             })}
           </div>
-          <div className="mm-tidbits__metadata">
-            <Pagination
-              tidbits={tidbitGroups}
-              index={tidbitGroupIndex}
-              container={tidbitsContainerRef.current!}
-            />
-          </div>
+          <Pagination
+            tidbits={tidbitGroups}
+            index={tidbitGroupIndex}
+            container={tidbitsContainerRef.current!}
+          />
         </div>
       </section>
     </div>

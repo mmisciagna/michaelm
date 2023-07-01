@@ -66,6 +66,10 @@
 
 // Markdown
 .markdown {
+  .columns {
+    @apply sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24;
+  }
+
   h2,
   h3,
   h4 {
@@ -100,8 +104,12 @@
     @apply my-[1em] list-outside list-disc pl-[1.5em];
   }
 
-  .columns {
-    @apply sm:my-48 sm:grid sm:grid-cols-2 sm:gap-24;
+  code {
+    @apply rounded bg-black/25 px-8 font-mono dark:bg-white/10;
+  }
+
+  pre code {
+    @apply block overflow-x-auto overflow-y-hidden text-md;
   }
 }
 

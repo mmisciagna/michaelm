@@ -18,17 +18,12 @@ function shouldRenderTidbit(
   return false;
 }
 
-export function useTidbitGroups({
-  tidbits,
-  selectedTags,
-  setTidbitGroups,
-  setTidbitsCount,
-}: {
-  tidbits: Tidbit[];
-  selectedTags: Set<string>;
-  setTidbitGroups: React.Dispatch<React.SetStateAction<TidbitGroup>>;
-  setTidbitsCount: React.Dispatch<React.SetStateAction<number>>;
-}) {
+export function useTidbitGroups(
+  tidbits: Tidbit[],
+  selectedTags: Set<string>,
+  setTidbitGroups: React.Dispatch<React.SetStateAction<TidbitGroup>>,
+  setTidbitsCount: React.Dispatch<React.SetStateAction<number>>
+) {
   useEffect(() => {
     let count = 0;
 
