@@ -19,7 +19,6 @@ export default function Pagination({
         //@ts-ignore
         disabled={index === 0}
         tabIndex={index === 0 ? -1 : 0}
-        onClick={() => container.scrollIntoView({ behavior: 'smooth' })}
       >
         Previous
       </Link>
@@ -40,7 +39,6 @@ export default function Pagination({
                 `flex h-40 w-40 items-center justify-center border-b border-dotted border-bronze-300 text-bronze-300 transition-colors duration-200 ease-in-out hover:border-solid ${activeClasses}`
               )}
               href={`/tidbits/${i + 1}`}
-              onClick={() => container.scrollIntoView({ behavior: 'smooth' })}
             >
               {i + 1}
             </Link>
@@ -53,7 +51,6 @@ export default function Pagination({
         //@ts-ignore
         disabled={index + 1 === tidbits.length}
         tabIndex={index + 1 === tidbits.length ? -1 : 0}
-        onClick={() => container.scrollIntoView({ behavior: 'smooth' })}
       >
         Next
       </Link>

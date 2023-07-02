@@ -50,6 +50,11 @@ export default function TidbitGroup({ id }: { id: number }) {
             container={tidbitsContainerRef.current!}
           />
           <div>
+            {!tidbitsToRender && (
+              <div className="flex h-[300px] items-center justify-center">
+                Loading...
+              </div>
+            )}
             {tidbitsToRender?.map((tidbit: Tidbit) => {
               const { data, content } = tidbit;
               const { date, title, tags } = data;
