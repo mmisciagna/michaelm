@@ -34,5 +34,5 @@ export function useAnimateOnObserve(
         observer.unobserve(el);
       }
     };
-  }, dependencies);
+  }, [root, ...dependencies]);
 }

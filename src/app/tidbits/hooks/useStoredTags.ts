@@ -12,5 +12,5 @@ export function useStoredTags(
     } else {
       setSelectedTags(new Set(storedTags.split(',')));
     }
-  }, []);
+  }, [setSelectedTags]);
 }

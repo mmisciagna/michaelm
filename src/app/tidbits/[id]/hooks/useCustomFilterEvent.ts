@@ -18,5 +18,5 @@ export function useCustomFilterEvent(
         handleFiltering
       );
     };
-  }, []);
+  }, [setSelectedTags]);
 }

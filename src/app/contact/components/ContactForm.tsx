@@ -61,8 +61,8 @@ export default function ContactForm() {
           ref={successRef}
           className="my-[1em] hidden border border-solid border-green-700 bg-green-700/10 p-24 text-green-700"
         >
-          Thank you for your interest! I'll try my best to respond as promptly
-          as possible.
+          Thank you for your interest! I&apos;ll try my best to respond as
+          promptly as possible.
         </div>
         <div
           ref={errorRef}

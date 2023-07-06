@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useRef } from 'react';
 import { INTRO } from '@/content/intro';
 import { useAnimateOnObserve } from '@/hooks/useAnimateOnObserve';
@@ -25,9 +26,11 @@ export default function Intro() {
             className="bg-slate-800"
             data-animate-on-observe
           >
-            <img
+            <Image
               className="w-full align-middle mix-blend-exclusion"
               src="/static/imgs/profile-pic.jpg"
+              height={100}
+              width={100}
               alt="Profile picture of Michael"
               loading="lazy"
             />

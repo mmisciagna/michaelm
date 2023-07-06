@@ -35,7 +35,7 @@ export default function Video({ showcase }: { showcase: Showcase }) {
     }
 
     loadIframeApi();
-  }, []);
+  });
 
   return (
     <div className="relative overflow-hidden lg-plus:rounded-xl">

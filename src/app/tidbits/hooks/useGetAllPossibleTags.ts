@@ -22,5 +22,5 @@ export function useGetAllPossibleTags(
     }
 
     setState(tagsMap);
-  }, []);
+  }, [setState]);
 }

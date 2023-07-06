@@ -55,5 +55,5 @@ export function useTidbitGroups(
     // Set structured tidbits and counts
     setTidbitGroups(STRUCTURED_TIDBITS);
     setTidbitsCount(count);
-  }, [selectedTags]);
+  }, [tidbits, selectedTags, setTidbitGroups, setTidbitsCount]);
 }

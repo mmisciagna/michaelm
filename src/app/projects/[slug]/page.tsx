@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { marked } from 'marked';
 import { head } from '@/globals/metadata';
 import { getCurrentShowcase } from '@/globals/utils';
@@ -17,7 +17,7 @@ export default function ProjectPage({ params }: Params) {
   const showcase = getCurrentShowcase(params.slug);
 
   if (showcase == null) {
-    redirect('/404');
+    notFound();
   }
 
   const { data, content } = showcase;

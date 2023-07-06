@@ -18,7 +18,7 @@ export default function ProjectsOverviewPage() {
           <p className="m-0">
             As a frontend engineer and designer with a passion for creating
             exceptional user experiences, I am constantly seeking new challenges
-            and opportunities to refine my skills. On this page, you'll find a
+            and opportunities to refine my skills. On this page, you will find a
             selection of projects that showcase my expertise in a variety of
             programming languages, frameworks, and tools. Each project
             represents a unique challenge that required creative thinking and
