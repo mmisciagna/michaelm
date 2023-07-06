@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function NotFound() {
   const countdownRef = useRef<HTMLElement>(null);
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(2);
 
   const router = useRouter();
 
@@ -23,7 +23,7 @@ export default function NotFound() {
   }, [countdownRef]);
 
   useEffect(() => {
-    if (countdown === 1) {
+    if (countdown === 0) {
       router.replace('/');
     }
   }, [countdown]);
