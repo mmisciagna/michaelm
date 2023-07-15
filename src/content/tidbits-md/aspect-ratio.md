@@ -10,8 +10,8 @@ I use to keep a SCSS mixin handy for giving an element a specific aspect ratio. 
 ```css
 @mixin aspect-ratio($width: 1, $height: 1) {
   padding-bottom: calc(($width / $height) * 100%);
-  width: 100%;asfdfadsfsa
-  ...
+  width: 100%;
+  ...;
 }
 ```
 
