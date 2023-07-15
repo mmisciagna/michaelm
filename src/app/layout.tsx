@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { head } from '@/globals/metadata';
 import '@/globals/globals.scss';
 import Root from '@/components/_Root';
@@ -9,5 +10,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <Root>{children}</Root>;
+  return (
+    <Root>
+      {children}
+      <Analytics />
+    </Root>
+  );
 }
