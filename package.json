@@ -42,6 +42,6 @@
     "tailwind-clip-path": "^1.0.0"
   },
   "engines": {
-    "node": "16.x.x"
+    "node": "18.x.x"
   }
 }
