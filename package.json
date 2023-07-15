@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 8080",
-    "lint": "next lint",
-    "deploy": "firebase deploy",
-    "stage:version": "npm run build && gcloud app deploy . --project michaelm --appyaml=app.yaml --no-promote --quiet --version"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

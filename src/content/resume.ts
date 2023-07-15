@@ -12,7 +12,8 @@ export const RESUME = [
           {
             subhead: 'Leadership',
             description: [
-              `I lead the frontend execution of the Anzen software and marketing suite. Anzen provides executive risk insurance & the tools to avoid using it. We protect your business and monitor key operations data to keep you compliant.`,
+              `Engineering the frontend of the first risk management product that uses data from HR, payroll, and financial systems to help companies prevent management issues before they become claims.`,
+              `We are building the first insurance product of its kind — management insurance paired with a platform that helps companies prevent management liability risks.`,
             ],
           },
         ],
@@ -25,10 +26,7 @@ export const RESUME = [
         details: [
           {
             description: [
-              `Collaborate across a full stack to develop a DEI application that fosters inclusive environments
-              and transforms mindsets within diverse organizations. Key tasks involve enhancing
-              functionality and ensuring the smooth operation of a Node.js API, React frontend, and Drupal
-              content management system.`,
+              `Collaborated across a full stack to develop a DEI application that fosters inclusive environments and transforms mindsets within diverse organizations. Key tasks involved enhancing functionality and ensuring the smooth operation of the Aperian API, React frontend, and Drupal content management system.`,
             ],
           },
         ],
