@@ -1,20 +1,21 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { Colors, GlobalString } from '@/globals/constants';
+import { useEffect, useRef, useState } from 'react';
+import { GlobalString } from '@/globals/constants';
 import { Icons } from '@/components/Icons';
 
 const IFRAME_API_SCRIPT_ID = 'iframe-api-script';
 
-let player: YT.Player;
-
 export default function Video({ showcase }: { showcase: Showcase }) {
+  const ytApiExists = document.getElementById(IFRAME_API_SCRIPT_ID) != null;
+
   const playerRef = useRef<HTMLDivElement>(null);
+  const [player, setPlayer] = useState<YT.Player | null>(null);
 
   useEffect(() => {
     window.onYouTubeIframeAPIReady = () => {
       // @ts-ignore
-      player = new window.YT.Player(playerRef.current!, {
+      const YTPlayer = new window.YT.Player(playerRef.current!, {
         height: '100%',
         width: '100%',
         videoId: showcase.data.videoId,
@@ -27,15 +28,24 @@ export default function Video({ showcase }: { showcase: Showcase }) {
           start: showcase.data.videoStart || 0,
         },
       });
+
+      setPlayer(YTPlayer);
     };
 
-    if (document.getElementById(IFRAME_API_SCRIPT_ID)) {
+    if (ytApiExists) {
       window.onYouTubeIframeAPIReady();
       return;
     }
 
     loadIframeApi();
-  });
+
+    return () => {
+      if (player) {
+        player.destroy();
+        setPlayer(null);
+      }
+    };
+  }, []);
 
   return (
     <div className="relative overflow-hidden lg-plus:rounded-xl">
@@ -50,7 +60,8 @@ export default function Video({ showcase }: { showcase: Showcase }) {
           backgroundImage: `url(${GlobalString.SHOWCASE_IMG_SRC_BASE}/${showcase.data.img})`,
         }}
         onClick={(e: React.MouseEvent) => {
-          playVideo(e.target as HTMLButtonElement);
+          if (player === null) return;
+          playVideo(e.target as HTMLButtonElement, player);
         }}
       >
         <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-64 w-64 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[50%] bg-white/25 uppercase backdrop-blur-sm transition-all duration-200 ease-in-out group-hover/btn:bg-white/50 sm:h-80 sm:w-80">
@@ -71,14 +82,14 @@ function loadIframeApi() {
   const script = document.createElement('script');
   script.id = IFRAME_API_SCRIPT_ID;
   script.src = 'https://www.youtube.com/iframe_api';
-  const firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode?.insertBefore(script, firstScriptTag);
+  const head = document.getElementsByTagName('head')[0];
+  head.appendChild(script);
 }
 
 /**
  * Hides the poster image and plays the videos.
  */
-function playVideo(posterImg: HTMLButtonElement) {
+function playVideo(posterImg: HTMLButtonElement, player: YT.Player) {
   if (player == null) return;
 
   posterImg.classList.add('hidden');
