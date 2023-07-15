@@ -14,13 +14,13 @@ type: Design
 
 <div>
 
-![Cascante wine bottles front](https://storage.googleapis.com/michaelm.appspot.com/college-designs/cascante-front.webp)
+![Cascante wine bottles front](/static/imgs/college-designs/cascante-front.webp)
 
 </div>
 
 <div>
 
-![Cascante wine bottles back](https://storage.googleapis.com/michaelm.appspot.com/college-designs/cascante-back.webp)
+![Cascante wine bottles back](/static/imgs/college-designs/cascante-back.webp)
 
 </div>
 
@@ -28,4 +28,4 @@ type: Design
 
 <!-- Row -->
 
-![Cascante wine bottles with tote bag](https://storage.googleapis.com/michaelm.appspot.com/college-designs/cascante-tote.webp)
+![Cascante wine bottles with tote bag](/static/imgs/college-designs/cascante-tote.webp)

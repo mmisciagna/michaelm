@@ -13,10 +13,10 @@ These are a few logo designs and the landing page for the Angular Dart website t
 
 ### Angular Dart
 
-![Google design - Angular Dart](https://storage.googleapis.com/michaelm.appspot.com/google-designs/angularDart_1.webp)
+![Google design - Angular Dart](/static/imgs/google-designs/angularDart_1.webp)
 
 ### Advertiser Training Logo
 
-![Google design - Advertiser Training Logo 1](https://storage.googleapis.com/michaelm.appspot.com/google-designs/adTrainer_logo_5.webp)
+![Google design - Advertiser Training Logo 1](/static/imgs/google-designs/adTrainer_logo_5.webp)
 
-![Google design - Advertiser Training Logo 2](https://storage.googleapis.com/michaelm.appspot.com/google-designs/adTrainer_logo_6.webp)
+![Google design - Advertiser Training Logo 2](/static/imgs/google-designs/adTrainer_logo_6.webp)

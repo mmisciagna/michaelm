@@ -8,7 +8,7 @@ tags:
 
 Have you ever submitted a dev project to a designer or project manager for review and they ask why there's a blue border around the links and buttons? And they still ask you to remove it after you explain to them that it's necessary for accessibility and that users who navigate the site with a keyboard will appreciate it?
 
-![YouTube logo with focus outline](https://storage.googleapis.com/michaelm.appspot.com/tidbits-imgs/yt-trends-2022-logo-outline.webp)
+![YouTube logo with focus outline](/static/imgs/tidbits-imgs/yt-trends-2022-logo-outline.webp)
 
 **Well good news!**
 

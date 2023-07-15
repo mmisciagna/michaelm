@@ -20,9 +20,6 @@ import BrandDesigns from '@/content/showcase-md/brand-designs.md';
 import AutoCarousel from '@/content/showcase-md/auto-carousel.md';
 
 export const Showcases = [
-  AutoCarousel,
-  // Bakery,
-
   YTTrendsMd,
   YTAds,
   USofYT,
@@ -42,4 +39,7 @@ export const Showcases = [
   ProductDesigns,
   PubDesigns,
   BrandDesigns,
+
+  AutoCarousel,
+  // Bakery,
 ];

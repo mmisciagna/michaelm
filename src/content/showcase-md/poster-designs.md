@@ -14,13 +14,13 @@ type: Design
 
 <div>
 
-![Revolution Disk Golf poster 1](https://storage.googleapis.com/michaelm.appspot.com/college-designs/revolution-poster-1.webp)
+![Revolution Disk Golf poster 1](/static/imgs/college-designs/revolution-poster-1.webp)
 
 </div>
 
 <div>
 
-![Revolution Disk Golf poster 2](https://storage.googleapis.com/michaelm.appspot.com/college-designs/revolution-poster-2.webp)
+![Revolution Disk Golf poster 2](/static/imgs/college-designs/revolution-poster-2.webp)
 
 </div>
 
@@ -34,13 +34,13 @@ type: Design
 
 <div>
 
-![Social Awareness poster 1](https://storage.googleapis.com/michaelm.appspot.com/college-designs/social-awareness-poster-1.webp)
+![Social Awareness poster 1](/static/imgs/college-designs/social-awareness-poster-1.webp)
 
 </div>
 
 <div>
 
-![Social Awareness poster 2](https://storage.googleapis.com/michaelm.appspot.com/college-designs/social-awareness-poster-2.webp)
+![Social Awareness poster 2](/static/imgs/college-designs/social-awareness-poster-2.webp)
 
 </div>
 
@@ -54,7 +54,7 @@ type: Design
 
 <div>
 
-![AIGA poster](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aiga-poster.webp)
+![AIGA poster](/static/imgs/college-designs/aiga-poster.webp)
 
 </div>
 

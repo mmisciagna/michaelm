@@ -1,4 +1,4 @@
-import { Colors, GCP_STORAGE_BUCKET } from '@/globals/constants';
+import { Colors } from '@/globals/constants';
 import Nav from '@/components/Nav';
 import { Icons } from '@/components/Icons';
 
@@ -18,7 +18,7 @@ export default function Footer() {
           •
           <a
             className="transition-colors duration-300 ease-in-out hover:text-slate-800"
-            href={`${GCP_STORAGE_BUCKET}/michael-misciagna-resume.pdf`}
+            href={`/static/pdfs/michael-misciagna-resume.pdf`}
             target="_blank"
             aria-label="CV"
             download

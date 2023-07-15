@@ -14,13 +14,13 @@ type: Design
 
 <div>
 
-![Forgetting Things](https://storage.googleapis.com/michaelm.appspot.com/college-designs/book-cover-forgetting.webp)
+![Forgetting Things](/static/imgs/college-designs/book-cover-forgetting.webp)
 
 </div>
 
 <div>
 
-![The View from Mount Improbable](https://storage.googleapis.com/michaelm.appspot.com/college-designs/book-covers-the-view.webp)
+![The View from Mount Improbable](/static/imgs/college-designs/book-covers-the-view.webp)
 
 </div>
 
@@ -32,28 +32,28 @@ type: Design
 
 <div>
 
-![Happy Birthday Jack Nicholson](https://storage.googleapis.com/michaelm.appspot.com/college-designs/book-covers-happy-bday.webp)
+![Happy Birthday Jack Nicholson](/static/imgs/college-designs/book-covers-happy-bday.webp)
 
 </div>
 
 <div>
 
-![Cogs in the Great Machine](https://storage.googleapis.com/michaelm.appspot.com/college-designs/book-covers-cogs.webp)
+![Cogs in the Great Machine](/static/imgs/college-designs/book-covers-cogs.webp)
 
 </div>
 
 </div>
 
-![A Taste of the Unknown](https://storage.googleapis.com/michaelm.appspot.com/college-designs/book-covers-a-taste.webp)
+![A Taste of the Unknown](/static/imgs/college-designs/book-covers-a-taste.webp)
 
 ## African American History Museum
 
-![African American History Museum brochure 1](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-1.webp)
+![African American History Museum brochure 1](/static/imgs/college-designs/aahm-brochure-1.webp)
 
-![African American History Museum brochure 2](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-2.webp)
+![African American History Museum brochure 2](/static/imgs/college-designs/aahm-brochure-2.webp)
 
-![African American History Museum brochure 3](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-brochure-3.webp)
+![African American History Museum brochure 3](/static/imgs/college-designs/aahm-brochure-3.webp)
 
 ## Pepco
 
-![Pepco brochure](https://storage.googleapis.com/michaelm.appspot.com/college-designs/pepco-brochure.webp)
+![Pepco brochure](/static/imgs/college-designs/pepco-brochure.webp)

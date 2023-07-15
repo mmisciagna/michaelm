@@ -14,13 +14,13 @@ type: Design
 
 <div>
 
-![African American History Museum logo](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-logo.webp)
+![African American History Museum logo](/static/imgs/college-designs/aahm-logo.webp)
 
 </div>
 
 <div>
 
-![African American History Museum logo dark](https://storage.googleapis.com/michaelm.appspot.com/college-designs/aahm-logo-dark.webp)
+![African American History Museum logo dark](/static/imgs/college-designs/aahm-logo-dark.webp)
 
 </div>
 
@@ -34,13 +34,13 @@ type: Design
 
 <div>
 
-![Revolution Disk Golf logo](https://storage.googleapis.com/michaelm.appspot.com/college-designs/revolution-logo.webp)
+![Revolution Disk Golf logo](/static/imgs/college-designs/revolution-logo.webp)
 
 </div>
 
 <div>
 
-![Revolution Disk Golf t-shirt](https://storage.googleapis.com/michaelm.appspot.com/college-designs/revolution-shirt.webp)
+![Revolution Disk Golf t-shirt](/static/imgs/college-designs/revolution-shirt.webp)
 
 </div>
 
