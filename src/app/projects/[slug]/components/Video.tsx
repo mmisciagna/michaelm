@@ -7,12 +7,13 @@ import { Icons } from '@/components/Icons';
 const IFRAME_API_SCRIPT_ID = 'iframe-api-script';
 
 export default function Video({ showcase }: { showcase: Showcase }) {
-  const ytApiExists = document.getElementById(IFRAME_API_SCRIPT_ID) != null;
-
   const playerRef = useRef<HTMLDivElement>(null);
   const [player, setPlayer] = useState<YT.Player | null>(null);
+  let ytApiExists = false;
 
   useEffect(() => {
+    ytApiExists = document.getElementById(IFRAME_API_SCRIPT_ID) != null;
+
     window.onYouTubeIframeAPIReady = () => {
       // @ts-ignore
       const YTPlayer = new window.YT.Player(playerRef.current!, {

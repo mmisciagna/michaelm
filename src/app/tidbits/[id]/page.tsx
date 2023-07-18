@@ -6,12 +6,13 @@ interface Params {
   params: { id: number };
 }
 
-export default function TidbitsPage({ params }: Params) {
-  return <TidbitGroup id={params.id} />;
-}
-
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `Tidbits - ${head.title}`,
+    alternates: { canonical: `/tidbits/` },
   };
+}
+
+export default function TidbitsPage({ params }: Params) {
+  return <TidbitGroup id={params.id} />;
 }

@@ -13,6 +13,15 @@ interface Params {
   params: { slug: string };
 }
 
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const showcase = getCurrentShowcase(params.slug);
+
+  return {
+    title: `${showcase?.data.title} - Projects - ${head.title}`,
+    alternates: { canonical: '/projects' },
+  };
+}
+
 export default function ProjectPage({ params }: Params) {
   const showcase = getCurrentShowcase(params.slug);
 
@@ -101,12 +110,4 @@ export default function ProjectPage({ params }: Params) {
       </section>
     </>
   );
-}
-
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const showcase = getCurrentShowcase(params.slug);
-
-  return {
-    title: `${showcase?.data.title} - Projects - ${head.title}`,
-  };
 }

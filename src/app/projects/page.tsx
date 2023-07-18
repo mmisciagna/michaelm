@@ -3,6 +3,9 @@ import { head } from '@/globals/metadata';
 
 export const metadata: Metadata = {
   title: `Projects - ${head.title}`,
+  alternates: {
+    canonical: '/projects',
+  },
 };
 
 export default function ProjectsOverviewPage() {

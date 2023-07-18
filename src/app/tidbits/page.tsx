@@ -4,6 +4,7 @@ import { head } from '@/globals/metadata';
 
 export const metadata: Metadata = {
   title: `Tidbits - ${head.title}`,
+  alternates: { canonical: '/tidbits' },
 };
 
 export default function Tidbits() {
