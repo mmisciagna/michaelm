@@ -6,7 +6,7 @@ export const RESUME = [
       {
         header: 'Anzen',
         link: 'https://www.anzen.com/',
-        ancillaryHeader: 'Sr. Frontend Engineer',
+        ancillaryHeader: 'Senior Software Engineer',
         dates: 'Jul 2023 - Present, San Francisco Bay Area',
         details: [
           {

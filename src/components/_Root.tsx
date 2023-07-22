@@ -1,6 +1,9 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import { StorageKey } from '@/globals/constants';
 import {
   getLocalStorage,
@@ -8,9 +11,6 @@ import {
   setLocalStorage,
   setTheme,
 } from '@/globals/utils';
-import Header from '@/components/Header';
-import { useEffect } from 'react';
-import Footer from '@/components/Footer';
 
 export default function Root({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

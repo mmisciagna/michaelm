@@ -1,7 +1,7 @@
-import { Analytics } from '@vercel/analytics/react';
-import { head } from '@/globals/metadata';
-import '@/globals/globals.scss';
 import Root from '@/components/_Root';
+import '@/globals/globals.scss';
+import { head } from '@/globals/metadata';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = head;
 
